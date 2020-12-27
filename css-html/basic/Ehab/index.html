@@ -5,7 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        background-color: rgb(31, 29, 29);
+        color: white;
+    }
+    *{
+        margin: 0;
+    }
+    .first{
+        justify-content: space-between;
+    position: relative;
+        padding-left:100px ;
+        top: 100px;
+        display: flex;
+        align-items: center;
+    }
+    .personalImg{
+        padding: 2px;
+        margin-right: 300px;
+        border-radius: 40px;
+        border: 1px solid rgb(236, 214, 8);
+        object-fit: contain;
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+        transition: transform 150ms ease-in;
+    }
+    .personalImg:hover{
+        transform: scale(1.05);
+    }
+    p{
+        width: 250px;
+    }
+    .end{
+        position: absolute; 
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        background-color: rgb(156, 145, 44);
+        padding-top: 15px;
+    }
+    .flex{
+        display: flex;
+        padding-left: 43%;
+        width: 200px;
+        justify-content: space-between;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+</style>
 <body>
-    
+    <div class="first">
+        <div>
+
+        <h1>Hi, I'm Ehab melhem </h1>
+        <br>
+        <h3>Arbic: ايهاب ملحم</h3>
+       <br>
+        <h3>Hebrew: איהאב מלחם</h3>
+        <p>Education: last year student with degree B.sc computer science
+        at netanya academic college</p>
+        <br>
+        <p>So, I started <h5>full stack course with react and node js</h5> </p>
+    </div>
+    <div>
+        <img class="personalImg" src="https://scontent.fsdv3-1.fna.fbcdn.net/v/t1.0-9/107036113_3051930331529249_1596107044251197834_n.jpg?_nc_cat=108&ccb=2&_nc_sid=174925&_nc_ohc=Q1vRzzkvJaMAX8VFHVj&_nc_ht=scontent.fsdv3-1.fna&oh=72d6a3519f4f59f7c88a59f8c635d158&oe=600EE8F5" alt="">
+    </div>
+    </div>
+    <div class="end">
+        <div class="flex">
+            <a href="https://www.facebook.com/ehab.melhem/">Face book</a>
+            <a href="https://www.instagram.com/ehabml01/">Instagram</a>
+            <a href="https://github.com/ehabmelhem">Github</a>
+    </div>
+
+    </div>
 </body>
 </html>
