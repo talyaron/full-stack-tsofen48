@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    .item{
-        position: relative;
-        background-color: rgb(85, 47, 1);
-        width: 100px;
-        height: 100px;
-        margin: 5px;
-        color: white;
-        text-align: center;
+  </head>
+  <style>
+    .item {
+      position: relative;
+      background-color: rgb(85, 47, 1);
+      width: 100px;
+      height: 100px;
+      margin: 5px;
+      color: white;
+      text-align: center;
     }
-    .box{
-        position: relative; 
-        /* absolute is relative to the first position parent */
-         /* in absolute the element donot preserve the location */
-        top:30px;
-        left:100px;
-        
-        border: 3px solid gray;
-        width: fit-content;
+    .box {
+      position: relative;
+      /* absolute is relative to the first position parent */
+      /* in absolute the element donot preserve the location */
+      top: 30px;
+      left: 100px;
+
+      border: 3px solid gray;
+      width: fit-content;
     }
-    #one{
-        position: absolute;
-        /* reletive to the first positioned parent  */
-        /* in reltaive the element preserve the location */
-        top:0px;
-        right:20px;
-        background-color: tomato;
+    #one {
+      position: absolute;
+      /* reletive to the first positioned parent  */
+      /* in reltaive the element preserve the location */
+      top: 0px;
+      right: 0px;
+      background-color: tomato;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="box">
-        <div class="item">hi</div>
-        <div class="item" id='one'></div>
-        <div class="item"></div>
-        <div class="item"></div>
+      <div class="item">hi</div>
+      <div class="item" id="one"></div>
+      <div class="item"></div>
+      <div class="item"></div>
     </div>
-</body>
+  </body>
 </html>
