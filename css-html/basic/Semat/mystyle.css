@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(229, 239, 243);
+    font-family: Calibri;
+  }
+
+h1 {
+    color: rgb(57, 123, 177);
+    margin-left: 20px;
+    font-family: Calibri;
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 195px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .center {
+    text-align: center;
+
+  }
+  .avatar2 {
+    vertical-align: middle;
+    width: 60px;
+    height: 40px;
+    border-radius: 30%;
+  }
+  .avatar3 {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+  }
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    color: rgb(11, 68, 70);
+  }
+  
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.intro{
+    color:rgb(76, 152, 196)
+}
