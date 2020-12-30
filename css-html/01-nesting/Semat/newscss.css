@@ -1,0 +1,11 @@
+.box{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: fit-content;
+    }
+
+#one{
+    position: relative;
+   
+}
