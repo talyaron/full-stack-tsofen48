@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(182, 60, 60, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
 </head>
 <body>
-    
+
+<h2 style="text-align:center">Profile Card</h2>
+
+<div class="card">
+  <img src="profile.jpg" alt="John" style="width:100%">
+  <h1>Ibrahim Lahham</h1>
+  <p class="title">BS.C <a href="https://en.wikipedia.org/wiki/Software_engineer">Software engineering</a> student & Superior Practical software Engineer </p>
+  <p>Ruppin Academy & Kinneret academy</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/%D7%90%D7%91%D7%A8%D7%90%D7%94%D7%99%D7%9D-%D7%9C%D7%97%D7%90%D7%9D-01642a17a/" > <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LinkedIn_Logo_2013.svg/120px-LinkedIn_Logo_2013.svg.png" alt="Linkedin" ></a> 
+  </div>
+  <a href="ContactUs.html" class="button" ><p><button>Contact</button></p></a>
+</div>
+
 </body>
 </html>
