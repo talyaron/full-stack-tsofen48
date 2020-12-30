@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script>
-     /*   let fullName = prompt('Whats Your Full Name?');
-        if (fullName==null || fullName=='')
-        {
-            fullName = "Didnt Written any name :("
-        }
-        let imageSrc = prompt(`Your Image Src Please:`);*/
+        /*   let fullName = prompt('Whats Your Full Name?');
+           if (fullName==null || fullName=='')
+           {
+               fullName = "Didnt Written any name :("
+           }
+           let imageSrc = prompt(`Your Image Src Please:`);*/
     </script>
 </head>
 <style>
-     .eachdiv{
+    /* .eachdiv {
         position: relative;
         width: 700px;
         height: 100px;
         color: rgb(255, 0, 0);
+    } */
+
+    #photo {
+        width: 100%;
+       
     }
-    #photo{
-      width: 700px;
-      height: 400px;
-    }
-    .profile{
-        position: relative; 
+
+    .profile {
+        position: relative;
         width: 50%;
         margin-left: 25%;
     }
-    #name{
+
+    #name {
         text-align: center;
-        font-size:50px;
+        font-size: 50px;
         position: absolute;
-        color:white;
-        top:250px;
-        width:"400px";
+        color: white;
+        bottom: 0px;
+        width: 100%;
         background-color: rgba(255, 255, 255, 0.349);
     }
 </style>
+
 <body>
-<div class="profile">
-    <div class="eachdiv"> 
-        <img id="photo" src="https://avatars2.githubusercontent.com/u/76660323?s=400&u=bbf377017661a1dfdc6f75a22d22872603b8cd63&v=4" alt="Profile Photo" >
+    <div class="profile">
+
+        <img id="photo"
+            src="https://avatars2.githubusercontent.com/u/76660323?s=400&u=bbf377017661a1dfdc6f75a22d22872603b8cd63&v=4"
+            alt="Profile Photo">
+
+        <div class="eachdiv" id='name'>Mosaab Abo Rkia</div>
     </div>
-    <div class="eachdiv" id='name'>Mosaab Abo Rkia</div>
-</div>
 </body>
+
 </html>
