@@ -9,39 +9,33 @@
       body {
         background-color: aqua;
       }
-
       .box {
         position: relative;
-        text-align: center;
-        margin-top: 50px;
+
+        width: fit-content;
+        height: fit-content;
+        top: 150px;
+        left: 500px;
       }
 
-      .img {
-        /* position: relative; */
-      }
-
-      .img img {
-        position: relative;
+      img {
         height: 500px;
         width: 700px;
       }
-
       .text {
-        color: white;
-        top: 420px;
-        left: 300px;
-        opacity: 0.6;
         position: absolute;
-        background-color: gray;
-        font-size: 70px;
+        bottom: 3px;
+        background-color: rgba(173, 166, 166, 0.575);
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div class="box">
-      <div class="img">
-        <img src="./4-Dining Room_Equilibrium T18-20.jpeg" alt="Image" />
-        <div class="text">Hello World!!</div>
+      <img src="./4-Dining Room_Equilibrium T18-20.jpeg" alt="" />
+      <div class="text">
+        <h1>Hello World!!!</h1>
       </div>
     </div>
   </body>
