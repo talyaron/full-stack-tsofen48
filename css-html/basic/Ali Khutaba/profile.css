@@ -1,0 +1,113 @@
+
+body {
+    background-color: #e0e0e0 !important;
+
+}
+.container{
+    text-align: center;
+
+}
+
+.Profile {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  
+  .profile-title {
+    text-align: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 72px;
+    /* color: #333; */
+    margin-bottom: 30px;
+  }
+  
+
+.detials-sub-title{
+    margin-top: 30px;
+}
+
+
+  .sub-title {
+    color: #ff6600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .about-me {
+    text-align: left;
+
+    font-family: "Trocchi", serif;
+    font-weight: normal;
+    margin: 0;
+    color: #333;
+    font-family: "Muli", sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .proflie-img {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    z-index: 9999;
+    box-shadow: 10px 10px 5px #ccc;
+        -moz-box-shadow: 10px 10px 5px #ccc;
+        -webkit-box-shadow: 10px 10px 5px #ccc;
+        -khtml-box-shadow: 10px 10px 5px #ccc;
+  
+  }
+  
+  .image-col {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  
+  h5 {
+    margin-top: 30px;
+    color: #ff6600;
+  }
+  
+  h6 {
+    display: inline;
+  }
+  
+  @media screen and (max-width: 1400px) {
+    .proflie-img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .proflie-img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  @media screen and (max-width: 770px) {
+    .about-me-col,
+    .image-col,
+    .details-col {
+      flex: unset;
+      width: 100% !important;
+      display: block !important;
+      max-width: unset;
+    }
+    .details-col {
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .profile-title {
+      font-size: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 850px) {
+    .Profile {
+      padding-top: 150px;
+    }
+  }
+  
