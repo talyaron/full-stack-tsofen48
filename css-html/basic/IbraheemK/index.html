@@ -7,18 +7,26 @@
     <title>Document</title>
 </head>
 <style>
+    body {
+        background-color: lightblue;
+    }
+
     .dropdown {
         position: relative;
-        display: inline-block;
+        --display: inline-block;
+        color: red;
+        text-align: center;
+        font-size: medium;
     }
 
     .dropdown-content {
+        text-align: center;
         display: none;
-        position: absolute;
+        position: relative;
         background-color: #f9f9f9;
-        min-width: 160px;
+        --min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
+        --padding: 12px 16px;
         z-index: 1;
     }
 
@@ -27,18 +35,19 @@
     }
 
     p {
+        margin-top: 50px;
         color: blue;
     }
 
-    h2 {
-        color: pink;
-
-        font-size: 80px;
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        color: black;
 
     }
 
     p {
-        background-color: yellow;
+        text-align: center;
     }
 
     img {
@@ -46,22 +55,51 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        
-  border-radius: 50%;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
+    a:link,
+    a:visited {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        background-color: #f44336;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    a:hover,
+    a:active {
+        --align-items: center;
+        background-color: red;
     }
 </style>
 
 <body>
     <!--the things that the user sees-->
-    <h1>ibrhaeem Kittani</h1>
+
     <div class="dropdown">
-        <span>Mouse over me</span>
+        <h1>Ibrhaeem Kittani</h1>
+        <span>(Please Mouse over me)</span>
         <div class="dropdown-content">
-            <p>im 29 years old, computer Science Graduate, Automation Developer</p>
+            <p>Ibraheem is 29 years old, he is a computer Science Graduate. currently is working as Automation Engineer
+            </p>
         </div>
     </div>
     <img src="pho.jpg" alt="daf" width="400" height="300">
+    <p>to find my github please click at the following button :</p>
+    <a href="https://github.com/ibib12" target="_blank">This is a github link</a>
+
 </body>
 
 </html>
