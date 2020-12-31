@@ -1,0 +1,94 @@
+body{
+    background-color:black;
+    color:white;
+    background:url(https://thumbs.gfycat.com/BestMeagerHoki-small.gif);
+    background-repeat:initial;
+    background-size: 100%;
+}
+.page{
+    width: fit-content;
+}
+
+#middleBigUp{
+    padding:5px;
+    left:19%;
+    position: relative;
+    width: 60%;
+    
+}
+#middleBigUp>img{
+    position: relative;
+    width: 100%;
+}
+#middleBigUp>a{
+    position: absolute;
+    width: 95%;
+    color:rgb(0, 0, 0);
+    bottom:0;
+    padding:5px;
+}
+#leftUpGif{
+    position:absolute;
+    width: 18%;
+}
+#leftUpGif>img{
+    position:relative;
+    width: 93%;
+    padding: 10px
+}
+#rightInTallWay{
+    position: absolute;
+    margin-left:80%;
+    width: 18.70%;
+    top:5px;
+}
+#rightInTallWay>table,img {
+    width: 97%;
+    border: 3px solid rgb(0, 43, 124);
+  }
+
+  #rightInTallWay>table,td{
+    width: fit-content;
+  }
+
+ #MiddleUnderBigUp{
+    padding:5px;
+    left:19%;
+    top: 0px;
+    position: relative;
+    width: 60%;
+    height: 300px;
+}
+#MiddleUnderBigUp>img{
+    position: absolute;
+    width: 98.8%;
+    height: 97%;
+    top: 0px;
+}
+#leftUnderTallWay{
+    position: absolute;
+    border: 3px solid rgb(0, 0, 0);
+    width: 17.8%;
+    height: 80%;
+    top: 27%;
+}
+#leftUnderTallWay>td,tr,table{
+    color: white;
+    top:0;
+    font-size: 15px;
+}
+
+#leftUnderTallWay>h3{
+    color: black;
+    background: white;
+    margin: 0;
+}
+
+#tittleOfEachInformation{
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+background-color: black;
+}
+
+
