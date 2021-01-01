@@ -1,0 +1,28 @@
+.con{
+margin: auto;
+max-width: 1200px;
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-columns: repeat(3,2fr);
+    grid-template-rows: repeat(3,2fr);
+height: 400px;
+gap:20px;
+border: 2px solid;
+background-color: black;
+text-align: center;
+}
+.tik{
+    display: grid;
+    
+    
+    background-color:red;
+    column-gap: 3px;
+    row-gap: 3px;  
+    font-size: 50px;
+    text-align: center;
+   
+    
+}
+.span{
+    align-items: center;
+}

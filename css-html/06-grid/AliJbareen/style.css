@@ -22,6 +22,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+.Title {
+  display: grid;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 10vh;
+}
 
 @media screen and (max-width: 600px) {
   body {
@@ -32,6 +41,9 @@ body {
     color: #fff;
     align-items: center;
     justify-content: center;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 4vh;
   }
   .game-board {
     display: grid;
