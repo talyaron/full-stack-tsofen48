@@ -1,0 +1,37 @@
+.item{
+    background: red;
+   flex:1;
+   min-width: 200px;
+    border:1px solid black;
+}
+
+.item>img{
+    width: 100%;
+}
+#big{
+  
+}
+
+.container{
+    display: flex;
+    background-color: blue;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.container1{
+    display: flex;
+    margin-bottom:500px;
+
+    justify-content: space-between;
+
+}
+
+.item1{
+    width: 200px;
+}
+
+.item1>img{
+    width: 100%;
+}
