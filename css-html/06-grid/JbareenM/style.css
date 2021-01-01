@@ -1,0 +1,31 @@
+.container {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    background-color: black;
+    border: 20px solid black;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 300px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        background-color: black;
+        border: 20px solid black;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
