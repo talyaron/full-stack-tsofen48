@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 105px 105px 105px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+  background-color: black;
+  width: 320px;
+}
+.items {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: white;
+  margin-top: 0px;
+}
+.items > img {
+  position: relative;
+  top: 10px;
+  width: 100%;
+}
