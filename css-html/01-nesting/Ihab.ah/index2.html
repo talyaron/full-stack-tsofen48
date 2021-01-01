@@ -1,29 +1,46 @@
-<html>
-<head>
-<style>
-div.background {
-  background: url(1.GIF) repeat;
-  border: 2px solid black;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    .box {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      top: 150px;
+      left: 500px;
+    }
+    .item {
+      position: absolute;
+      bottom: 3px;
+      background-color: rgba(173, 166, 166, 0.575);
+      width: 100%;
+      text-align: center;
+    }
 
-div.transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-}
-
-div.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
-}
-</style>
-</head>
-<body>
-
-<div class="background">
-  <div class="transbox">
-    <p>ihab</p>
-  </div>
-</div>
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+    h1 {
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <img
+        src="2.GIF"
+        alt=""
+      />
+      <div class="item">
+        <h1>iHAB</h1>
+      </div>
+    </div>
+  </body>
+</html>

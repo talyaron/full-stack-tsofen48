@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        position:relative;
+        height: 45%;
+        width: 80%;
+        background-color: whitesmoke;
+        margin: auto;
+    }
+    .box>img{
+        width: 100%;
+        height: 70%;
+    }
+    .box>.title>h1{
+        color: white;
+        font-weight: bolder;
+    }
+    .box>.title{
+    position:absolute;
+    bottom: 6px;
+    width: 70%;
+    height: 50px;
+    background-color:darkblue;
+    opacity: 0.7;
+    }
+    .box>.title2>h2{
+       padding-left: 2rem;
+    }
+    .box>.title2{
+        position: absolute;
+        background-color: whitesmoke;
+    }
+    a:link {
+  text-decoration: none;
+  color: darkblue;
+   }
+   a:hover {
+  text-decoration: underline;
+  }
+  .box>.title2>a>h4{
+      padding-left: 20px;
+      border-left: darkblue solid 4px;
+      display:inline;
+  }
+  .header>.menu>ul {
+  position: relative;
+    right: 80px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    cursor: pointer;
+  
+}
+
+.header>.menu>ul>li {
+  float: left;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.header>.menu>ul>.r{
+    float: right;
+    padding:5px;
+    padding-top: 5px;
+}
+.header>.menu>ul>li>a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header>.menu>ul>li>a:hover {
+  background-color: #111;
+  
+   
+}
+.header{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 51, 102, 0.99);
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+}
+.logo>img{
+    margin-left: 24px;
+    position: relative;
+    top: 27px;
+    border: 2px solid #f6f8fa;
+    border-radius: 3px;
+    width: 80px;
+    }
+.header>.smallheader{
+      position: absolute;
+      top :50px;
+      left:150px;
+      float: left;
+    }
+.header>.smallheader>h4{
+    color: red;
+    display:inline;
+    padding-right: 20px;
+}
+.header>.menu>ul>li>.btn{
+
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    float: right;
+  
+}
+.btn:hover{
+    opacity: 0.5;
+}
+.headerRight{
+    position: relative;
+    right: 24px;
+    display: flex;
+}
+.topic1{
+   position: relative;
+   width: 400px;
+   height: 200px;
+   float: left; 
+   margin: 100px;
+   margin-right: 0;
+   margin-left: 200px;
+   padding: 20px;
+}
+.topic2{
+    position: relative;
+    width:400px;
+   height:200px;
+   float: left;
+   margin-right: 0;
+}
+.topic1>img{
+    width: 100%;
+    height: 100%;
+}
+.topic2>img{
+    width:100%;
+    height: 100%;
+}
+.news{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    
+}
+.topic1>.title{
+    position: absolute;
+    bottom: 0;
+}
+.news>.topic1>.title>h3{
+   color: white;
+
+}
+.news>.topic1>.title{
+    position: absolute;
+    background-color: darkblue;
+    opacity: 0.7;
+    width: 60%;
+    bottom: 20px;
+  
+}
+.topic2>.title{
+    position: absolute;
+    bottom: 0;
+}
+.news>.topic2>.title>h3{
+   color: white;
+
+}
+.news>.topic2>.title{
+    position: absolute;
+    background-color: darkblue;
+    opacity: 0.7;
+    width: 60%;
+    bottom: 0px;
+  
+}
+</style>
+<body style="background-color:white">
+    <div class="header">
+        <div class="logo">
+            <img src="https://d12jofbmgge65s.cloudfront.net/blog/wp-content/uploads/2019/04/Fox-news-logo.png" alt="">
+        </div>
+        <div class="menu">
+         <ul>
+            <li><a class="" href="">U.S.</a></li>
+            <li><a href="">Politics</a></li>
+            <li><a href="t">Media</a></li>
+            <li><a href="">Opinoin</a></li>
+            <li><a href="">Business</a></li>
+            <li><a href="t">Entertainment</a></li>
+            <li><a href="">Sports</a></li>
+            <li><a href="">Lifestyle</a></li>
+            <li><a href="t">TV</a></li>
+            <li><a href="">Fox Nation</a></li>
+            <li><a href="t">Listen</a></li>
+            <li><a href="">More :</a></li>
+            <li class="r"><a href=""><i class="fa fa-fw fa-search"></i></a></li>
+            <li class="r"><button class="btn" style="background-color: #1b4e81;">Login</button></li>
+            <li class="r"><button class="btn" style="background-color:#d20f26;">Watch TV</button></li>
+          </ul>
+        </div>
+          <div class="smallheader">
+            <h4>Hot Topics</h4>
+            <a href="https://www.foxnews.com/politics/josh-hawley-to-object-electoral-college-certification-jan-6"><h4 style="display: inline;">Live Updates: Second possible case of coronavirus variant investigated in Colorado</h4></a>
+        </div>
+   
+        </div>
+    </div>
+    <br><br>
+    <div class="box">
+        <img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1280/533/0d370f96aa75170e92f328b0593ad507.jpg?tl=1&ve=1" alt="">
+        <div class="title"><h1>'WE'RE SUPPOSED TO SITDOWN</h1></div>
+        <div class="title2"><a href="https://www.foxnews.com/politics/sen-hawley-blasts-hypocritical-democrats-outraged-over-election-count-objection-points-to-bush-race"><h2>GOP senator slams 'hypocritical' Dem critics as he joins election result challenge; they did it in 2005</h2></a>
+        <a href="https://www.foxnews.com/politics/josh-hawley-to-object-electoral-college-certification-jan-6"><h4>Hawley says he'll object to Electoral College certification of Biden victory on Jan. 6</h4></a>
+        <a href="https://www.foxnews.com/politics/trump-asks-supreme-court-to-void-wisconsin-election-results-in-latest-filing"><h4>Trump asks Supreme Court to void Wisconsin election results</h4></a>
+        </div>
+    </div>
+    <br><br> 
+    <div class="news">
+        <div class="topic1">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/oil-tanker.jpg?tl=1&ve=1" alt=""> 
+            <div class="title"><h3>MIDEAST TENSIONS HIGH</h3></div>
+            <div class="title2"><a href="https://www.foxnews.com/world/security-firms-suspicious-object-oil-tanker-off-iraq"><h3>Judge slams alleged Epstein enabler, Maxwell, for lies about wealth, marriage</h3></a>
+            </div>
+        </div>
+        
+        <div class="topic2">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/07/1024/576/Ghislaine-Maxwell-Sketch-Reuters.jpg?tl=1&ve=1" alt="">
+            <div class="title"><h3>SECRET HUSBAND?</h3></div>
+            <div class="title2"><a href="https://www.foxnews.com/us/federal-judge-ghislaine-maxwell-misleading-court-wealth-marriage"><h3>Maritime security firms say suspicious object on oil tanker off Iraq</h3></a>
+            </div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="topic1">
+            <img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1024/576/7e8befacc386384317df2467721ffca5.jpg?tl=1&ve=1" alt=""> 
+            <div class="title"><h3>SUDDEN CHANGE OF HEART</h3></div>
+            <div class="title2"><a href="https://www.foxnews.com/politics/democrats-who-praised-2004-objections-to-electoral-college-certification-now-slam-hawley"><h3>Top Dems once cheered electoral college challenges, now they're appalled</h3></a>
+            </div>
+        </div>
+        
+        <div class="topic2">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" alt="">
+            <div class="title"><h3>MEDICAL MISTAKE</h3></div>
+            <div class="title2"><a href="https://www.foxnews.com/us/west-virginia-national-guard-accidentally-gives-42-people-regeneron-antibody-instead-of-covid-vaccine"><h3>Dozens seeking COVID vaccine get the wrong injection</h3></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
