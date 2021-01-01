@@ -1,8 +1,8 @@
 body {
-  background-color: blueviolet;
+  background-color:palegoldenrod;
 }
 
-dogBox {
+.dogBox {
   text-align: center;
   align-items: center;
   display: flex;
@@ -10,12 +10,12 @@ dogBox {
   max-width: 400px;
   color: aliceblue;
 }
-dogBox > p {
+.dogBox > p {
   flex-grow: 1;
-  color: azure;
+  color: midnightblue;
 }
-dogBox > h2 {
-  color: azure;
+.dogBox > h2 {
+  color: midnightblue;
 }
 
 .flex {

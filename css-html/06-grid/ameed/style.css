@@ -1,0 +1,28 @@
+.game-board
+{
+	width: 450px;
+	height: 450px;
+	margin: 0 auto;
+  background-color: #0c0c0c;
+  border: 6px solid #030303;
+  border-radius: 10px;
+	
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.box
+{
+  border: 6px solid #cfcbcb;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box img{
+    width: 100px;
+	height: 100px;
+}
