@@ -1,8 +1,9 @@
 .item1{
+
     --background: red;
     width: 200px;
-   /* flex:1;
-   min-width: 200px; */
+   flex:1;
+   min-width: 200px; 
     --border:1px solid black;
 }
 
@@ -23,26 +24,8 @@
     
 }
 
-.border{
-    top: 30px;
-    left: 100px;
 
-    border: 3px solid gray;
-    width: fit-content;
-}
 
-/* .container1{
-    display: flex;
-    margin-bottom:500px;
-
-    justify-content: space-between;
-
-}
-
-.item1{
-    width: 200px;
-}
-
-.item1>img{
-    width: 100%;
+/* h1{
+--display: flex;
 } */

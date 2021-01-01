@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#ball1{
+ background-image:url('https://lh3.googleusercontent.com/proxy/_r-XqFQZ7KmuKrqb8FblIjLle5TsSm-lEx_cItXQy2weAdGOyZ4xX4VdyXjzybszbX-oAGX5mjNUVMd0ZBOMT9cN');
+ background-size: contain;
+ width: 100px;
+ height: 100px;
+ position: absolute;
+ bottom: 1px;
+ animation-name: goRight ;
+ animation-duration: 4s;
+ animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+}
+@keyframes goRight {
+
+    0% {
+        bottom: 0vh;
+        left: 0vw;
+        transform: rotate(00deg) scale(1);
+    }
+    33% {
+        bottom: 50vh;
+        left: 50vw;
+        transform: rotate(360deg) scale(1.5);
+    }
+    100% {
+        bottom: 0vh;
+        left: 100vw;
+        transform: rotate(720deg) scale(1.5);
+    }
+  
+}
+ 
+body{
+    background-image: url('https://img.freepik.com/free-photo/empty-sea-beach-background_74190-313.jpg?size=626&ext=jpg&ga=GA1.2.1239485549.1607040000');
+    background-size: cover;
+ 
+}
+#boat{
+    background-image: url('https://cdn2.iconfinder.com/data/icons/transportation-in-color/64/transportation-colored-10-512.png');
+    position: absolute;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    right: 0;
+    animation-name: goLeft;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes goLeft {
+    0% {
+        bottom: 20%;
+        right: 0;
+    }
+    100% {
+        bottom: 20%;
+        right: 100%;
+    }
+
+}
+</style>
+<body>
+ <div id="ball1"></div>
+ <div id="boat"></div>
+</body>
+</html>
+
