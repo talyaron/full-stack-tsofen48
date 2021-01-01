@@ -3,8 +3,181 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FOX News</title>
+    <title>FOX NEWS</title>
   </head>
-  <style></style>
-  <body></body>
+  <style>
+    body {
+    font-family: "Avant Garde",
+     Avantgarde, "Century Gothic",
+      CenturyGothic, AppleGothic,
+       sans-serif; font-style: normal;
+        font-variant: normal; font-weight: 700;
+         line-height: 26.4px;
+         margin: 0;
+    }
+
+    .MenuBar {
+    display: flex;
+    align-items: center;
+    color:white;
+    background-color: #003366;
+    width: 100%;
+    height: 40px;
+    justify-content: space-around;
+  }
+
+    #logoImg{
+      position: relative;
+      margin-left: 10px;
+      top: 20px;
+      border: 2px solid white;
+      width: 70px;
+    }
+
+    #menuList{
+      position: relative;
+    right: 60px;
+    display: flex;
+    width: 430px;
+    justify-content: space-between;
+    list-style-type: none;
+    cursor: pointer;
+    }
+
+
+  .loginButton {
+    color: #fff;
+    background: blue;
+    border: none;
+
+  }
+
+  .watchButton {
+    color: #fff;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menuDown {
+    width: 100%;
+    position: relative;
+    top: -10px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+
+  .leftmenuDow {
+    display: flex;
+
+    margin-left: 120px;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  .rightmenuDow {
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+
+
+  .News {
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: -30px;
+    color: blue;
+
+  }
+
+  .Articlle {
+    
+    position: relative;
+    width: fit-content;
+    display: flex;
+    color: blue;
+
+  }
+
+
+  .smallArticle {
+    margin-left: 20px;
+    max-width: 390px;
+    color: blue;
+
+  }
+
+  .ArticleContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+  }
+ 
+  </style>
+  <body>
+    <div class="container">
+      <div class="MenuBar">
+        <div class="logo">
+          <img id="logoImg"
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Fox_News_Channel_logo.svg/225px-Fox_News_Channel_logo.svg.png"
+            alt="" />
+        </div>
+        <div class="menuBarUpper">
+          <ul id="menuList">
+            <li>U.S</li>
+            <li>Politics</li>
+            <li>Media</li>
+            <li>Opinion</li>
+            <li>Business</li>
+            <li>Entertainment</li>
+            <li>More</li>
+          </ul>
+        </div>
+        <div class="rightheader">
+          <button class="loginButton">Login</button>
+          <button class="watchButton">Watch TV</button>
+        </div>
+      </div>
+      <div class="menuDown">
+        <div class="leftmenuDow">
+          <h5 style="color: red;">Hot Topics</h5>
+          <h5 style="color: blue;">LIVE UPDATES: Long lines on last day of early voting in Georgia
+          </h5>
+        </div>
+  
+        <div class="rightmenuDow">
+          <h5 style="color: red;">Markets</h5>
+          <h5 style="color: blue;">DJIA</h5>
+          <h5 style="color: green;">-0.5%</h5>
+        </div>
+      </div>
+
+      <div class="News">
+        <div class="BigArticle">
+          <div class="Articlle">
+            <img
+            src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/768/320/e47a32a9c5b6e1b4b2fe9f56fd62faad.jpg?tl=1&ve=1"
+              alt="" />
+          </div>
+          <h2>
+            What initial Georgia turnout data reveals about high-stakes Senate races as early in-person voting ends
+          </h2>
+        </div>
+        <div class="ArticleContainer">
+          <div class="smallArticle">
+            Warnock and Ossoff level misleading claims that Loeffler is 'campaigning with a Klansman'
+          </div>
+          <div class="smallArticle">
+            Georgia Sen. David Perdue to quarantine with crucial runoff vote just days away
+          </div>
+        </div>
+          
+      </div>
+
+  </body>
 </html>
