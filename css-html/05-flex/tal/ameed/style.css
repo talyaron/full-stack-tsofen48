@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(180, 177, 177);
+
+}
+.container1{
+    display: flex;
+    /* margin-bottom:100px; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:baseline;
+
+
+}
+
+.item1{
+    width: 200px;
+    background-image: url();
+    
+
+}
+
+.item1>img{
+    width: 100%;
+    
+}
+
+h1 {
+    background-color: rgba(37, 37, 37, 0.158);
+}
