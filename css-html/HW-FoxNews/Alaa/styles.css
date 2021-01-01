@@ -1,0 +1,38 @@
+
+h2{
+    position: absolute;
+    background-color: rgba(250, 235, 215, 0.493);
+    width: 100%;
+    font-style: bold;
+    color: rgb(19, 19, 138);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    bottom: 0px ;
+}
+img{
+    width: 100%;
+}
+.main-article {
+    position: relative;
+    text-align: center;
+    
+}
+.container{
+    text-align: center;
+    position: relative;
+}
+p {
+    width: 100%;
+    color: rgb(5, 5, 94);
+    font-style:  italic;
+}
+.col {
+    width: 45%;
+    padding: 10px;
+    margin: 10px;
+}
+.col1 {
+    float: right;
+}
+.col2 {
+    float: left;
+}
