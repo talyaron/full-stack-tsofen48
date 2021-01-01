@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fox News</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 1300px;
+  }
+
+
+.topnav {
+  overflow: hidden;
+  background-color:rgb(0, 0, 95);
+}
+
+.topnav a.logo{
+    position: absolute;
+    
+    background-image: url(images/fox.jpg);
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 100%;
+    border: 3px solid #fff;
+    margin-left: 0;
+    margin-top: 3px;
+    height: 96px;
+    width: 97px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a._left {
+    margin-left: 250px;
+}
+.topnav a.US_left {
+    margin-left: 150px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(150, 140, 140);
+}
+
+.topnav a.red_cover {
+    background-color: red;
+    color: white;
+}
+
+    .img{
+            width: 100%;
+            margin-top: 50px;
+            vertical-align: middle
+    }
+
+    .child{
+        position: absolute;
+        margin-left: 50px;
+        bottom: 65px;
+        font-size: 40px;
+        width: 40%;
+        align-items: flex-end;
+        background-color:rgb(0, 0, 95, 0.5);
+
+        color: white;
+    }
+    
+    .second_child{
+        position: relative;
+    }
+
+    .main_news{
+        position: relative;
+    }
+
+    .second_news {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+            
+    .second_news .image_4 {
+        width: 50%;
+    }
+            
+    .second_news img {
+        width: calc(100% - (20px * 2));
+        margin: 20px;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="container">
+       
+        <div class="topnav">
+            <a class="logo" href="//www.foxnews.com">Fox News</a>
+            <a class="US_left" href="#US">US</a>
+            <a href="#Politics">Politics</a>
+            <a href="#Media">Media</a>
+            <a href="#Opinion">Opinion</a>
+            <a href="#business">business</a>
+            <a href="#Entertainment">Entertainment</a>
+            <a href="#More">More</a>
+        
+            <a class="_left" href="#"><i class="fa fa-fw fa-search"></i></a> 
+            <a href="#Login">Login</a>
+            <a class="red_cover" href="#Watch TV">Watch TV</a>
+        </div>
+        
+        <div style="padding-left:160px; padding-top: 30px;">
+            <a class="_title" style="color: red;">Hot Topics:</a>
+            <a class="_next_title">LIVE UPDATES: First case ...</a>
+        </div>
+
+        <div class="main_news">
+            <img class="img" src="images/main.jpg" alt="main">
+            <div class="child"> <p>HISTORY IN THE MAKING</p></div>
+            <div class="second_child"><p style="color: rgb(0, 0, 95); font-size: 30px;"> First GOP senator joins ...</p></div>
+        </div>
+
+        <div class="second_news">
+            <div class="image_4"><img src="images/1st_img.jpg" />
+                <p style="margin-left: 20px; color: rgb(0, 0, 95); font-size: 30px;">
+                    McConnell introduced bill to boost stimulus checks; ...
+                </p>
+            </div>
+            <div class="image_4"><img src="images/2nd_news.jpg" />
+                <p style="margin-left: 20px; color: rgb(0, 0, 95); font-size: 30px;">B-52s fly over Mideast as U.S. warns ...</p>
+            </div>
+            <div class="image_4"><img src="images/3rd_new.jpg" />
+                <p style="margin-left: 20px; color: rgb(0, 0, 95); font-size: 30px;">SEN. RUBIO: ...</p>
+            </div>
+            <div class="image_4"><img src="images/4th_new.jpg" />
+                <p style="margin-left: 20px; color: rgb(0, 0, 95); font-size: 30px;">WATCH: Ring-cam ...</p>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blue;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: red;
+  }
+  
+  .logo{
+    width: 60px;
+    height: 60px;
+  }
+  /* ££££££££££££££££££££££££££££ */
+  .mainBody {
+    width: 90%;
+  }
+  /* ------------main news---*/
+  
+  .box{
+      position: relative;
+      /* top: 150px;
+      left: 500px; */
+      /* height: fit-content;
+      width: fit-content; */
+      height: 750px;
+      width: 750px;
+  
+      }
+  img{
+    width: 100%;
+    vertical-align: middle;
+  }
+  #one{
+      position: relative;
+      width: 100%;
+      bottom: 0px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+  }
+  /*----- 4---*/
+  table {
+    width: 100%;
+  }
+  
+  
+  
+  .box2{
+      position: relative;
+      /* top: 150px;
+      left: 500px; */
+      /* height: fit-content;
+      width: fit-content; */
+      height: 450px;
+      width: 450px;
+  
+      }
+  .img2{
+    width: 100%;
+    vertical-align: middle;
+  }
+  #one2{
+      position: relative;
+      width: 100%;
+      bottom: 0px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+  }
+  
+  
+  
+  /* ££££££££££££££££££££££££££££ */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+  .button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+  }
+  

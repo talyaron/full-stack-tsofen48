@@ -1,0 +1,21 @@
+
+.box{
+    position: relative;
+    top: 150px;
+    left: 500px;
+    height: fit-content;
+    width: fit-content;
+
+    }
+img{
+  width: 100%;
+  vertical-align: middle;
+}
+#one{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}

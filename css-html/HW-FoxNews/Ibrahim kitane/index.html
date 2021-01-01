@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fox News</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 5px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    position: relative;
+  --padding: 30px;
+  text-align: left;
+  background: white;
+}
+
+.header h1{
+    display: inline;
+    position: relative;
+  color: red;
+  left: 500px;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+  --position: relative;
+  overflow: hidden;
+  background-color: rgb(21, 21, 110);
+}
+
+/* Style the topnav links */
+.topnav a {
+    position: relative;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  --left: 20px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 50%;
+}
+
+.full {   
+  float: left;
+  width: 100%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 50%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+.search {
+    position: relative;
+    left: 33%;
+}
+
+#Watch {
+    background-color: red;
+}
+
+.fox-logo{
+    position: relative;
+    --right: 45%;
+}
+
+h2{
+    color:whitesmoke;
+    background-color: rgb(21, 21, 110);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="topnav">
+
+  <a href="#">U.S.</a>
+  <a href="#">Politics</a>
+  <a href="#">Media</a>
+  <a href="#">Opinion</a>
+  <a href="#">Business</a>
+  <a href="#">Entertainment</a>
+  <a href="#">More</a>
+
+  <a  class="material-icons" >more_vert</a>
+  <a class="search"><i  class="material-icons">search</i></a> 
+  <a href="#" style="float:right">Login</a>
+  <a href="#" id="Watch" style="float:right">Watch Tv</a>
+
+
+</div>
+
+<div class="header">
+    <div class="fox-logo">
+        <img src="logo.jpg" width="100" height="100" alt="Klematis">
+    </div>
+    <h1>Hot topics</h1>
+</div>
+
+
+<div class="full">
+    <div class="card">
+      <h2>New year hits US heartland – with many Americans happy to leave the old year behind</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <img src="australia-NYE.jpg" alt="Cinque Terre" width="100%" height="400">
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Another state confirms its first case of highly infectious coronavirus variant</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <img src="im2.jpg" alt="Cinque Terre" width="100%" height="400">
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>Trump extends restrictions on work visas, says coronavirus pandemic still disrupts 'American livelihoods'</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <img src="imt.jpg" alt="Cinque Terre" width="100%" height="400">
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+        <h2>Progressives pressure AOC, 'Squad' to force House Speaker's hand on key issue</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <img src="im1.jpg" alt="Cinque Terre" width="100%" height="400">
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+      <div class="card">
+        <h2>FULL LIST: University releases annual 'banished words' collection for 2021</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <img src="im5.jpg" alt="Cinque Terre" width="100%" height="400">
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoxNews</title>
+
+    <style>
+        body {
+            background-color: aquamarine !important;
+        }
+
+        .container {
+
+            position: relative;
+            width: 50%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .container img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .descreption {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            background: hsla(0, 0%, 98%, 0.85);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: left;
+            /*            padding: 10px 25px;*/
+        }
+
+        .mainNews {
+            position: relative;
+            border: 5px solid red;
+            margin: 20px;
+        }
+
+        .news {
+            position: relative;
+        }
+
+        .category {
+            /* background-color: aqua; */
+        }
+
+        .container h2 {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .title {
+            display: relative;
+            background-color: blue;
+            color: white;
+        }
+
+        .mainTitle {
+            Color: red;
+            font-size: 80px
+        }
+
+        .container>.mainNews:nth-child(2) {
+            position: relative;
+            border: 5px solid blue;
+        }
+
+        body>div>div:nth-child(2)>div.title {
+            background-color: red;
+            color: white;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <h1 class="mainTitle">Fox News</h1>
+        <div class="mainNews">
+            <div class="title">
+                <h2 class="glow">Stiminus Brawl</h2>
+            </div>
+            <div class="mainImg">
+                <img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1280/533/28a01f9e60254dc70a53f0c68a8cecb6.jpg?tl=1&ve=1" alt="" />
+            </div>
+            <div class="descreption">
+                <p>
+                    McConnell again blocks quick vote on $2,000 stimulus checks, slams
+                    'socialism for rich people'
+                </p>
+            </div>
+        </div>
+
+
+        <div class="mainNews">
+            <div class="title">
+                <h2 class="glow">Medical Mistake</h2>
+            </div>
+            <div class="mainImg">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" alt="" />
+            </div>
+            <div class="descreption">
+                <p>
+                    State accidentally gives dozens of people COVID treatment, not vaccine
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
