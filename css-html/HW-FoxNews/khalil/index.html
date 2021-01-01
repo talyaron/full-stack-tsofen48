@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+
+    .container {
+        position: relative;
+        width: 1000px;
+
+        background-color: coral;
+    }
+    .headline {
+        width: 100%;
+    }
+    .headline>img {
+        width: 100%;
+    }
+
+    .news {
+        position: relative;
+        width: 100%;
+        background-color: yellow;
+        overflow: hidden;
+    }
+
+    .item:nth-child(even) {
+        position: relative;
+        /* right: 0px; */
+        color: brown;
+    }
+    .item:nth-child(odd) {
+        position: relative;
+        /* left: 0px; */
+        color:darkblue;
+    }
+    .item {
+        width: 50%;
+        float: left;
+    }
+
+    .item>img {
+        width: 100%;
+    }
+
+</style>
+
+<body>
+<div class="container">
+<div class="headline">
+    <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" alt="headline">
+    <div>
+        <p>This is a headline</p>
+    </div>
+</div>
+<div class="news">
+    <div class="item">
+        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" style="width: 100%;" alt="item">
+        <div class="title">
+            <p>First</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" style="width: 100%;" alt="item">
+        <div class="title">
+            <p>Second</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" style="width: 100%;" alt="item">
+        <div class="title">
+            <p>Third</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/AP20351709454049.jpg?tl=1&ve=1" style="width: 100%;" alt="item">
+        <div class="title">
+            <p>Forth</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
