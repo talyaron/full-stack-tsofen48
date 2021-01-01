@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    color: rgb(134, 37, 37);
+}
+.continer{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.item{
+  
+    flex:1;
+   width: 200px;
+
+   display: flex;
+   flex-direction: column;
+   
+}
+
+
+ .item>img{
+  flex:9;
+  width: 200px;
+    
+}
+.item>p{
+    flex:1;
+    margin:0px;
+} 
+
