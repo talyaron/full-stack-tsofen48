@@ -1,0 +1,140 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#matrix1 {
+  width: fit-content;
+  position: relative;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(1, 1fr);
+  transform: rotate(-90deg);
+  margin: 1em auto;
+  justify-content: center;
+  width: auto;
+  overflow: hidden;
+  color: rgba(0, 255, 0, 0.7);
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+
+  background-size: contain;
+  animation-name: fall;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+#matrix2 {
+  width: fit-content;
+  position: relative;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(1, 1fr);
+  transform: rotate(-90deg);
+  margin: 1em auto;
+  justify-content: center;
+  width: auto;
+  overflow: hidden;
+  color: rgba(0, 255, 0, 0.7);
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+
+  background-size: contain;
+  animation-name: fall;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+#matrix3 {
+  width: fit-content;
+  position: relative;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(1, 1fr);
+  transform: rotate(-90deg);
+  margin: 1em auto;
+  justify-content: center;
+  width: auto;
+  overflow: hidden;
+  color: rgba(0, 255, 0, 0.7);
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+
+  background-size: contain;
+  animation-name: fall;
+  animation-duration: 12s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+#matrix4 {
+  width: fit-content;
+  position: relative;
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(1, 1fr);
+  transform: rotate(-90deg);
+  margin: 1em auto;
+  justify-content: center;
+  width: auto;
+  overflow: hidden;
+  color: rgba(0, 255, 0, 0.7);
+  text-shadow: rgba(255, 255, 255, 0.8) 0px 0px 4px;
+
+  background-size: contain;
+  animation-name: fall;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.d1 {
+  animation-name: change1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.d2 {
+  animation-name: change2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes change1 {
+  0% {
+    color: green;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@keyframes change2 {
+  0% {
+    top: 0vh;
+  }
+
+  100% {
+    top: -100vh;
+  }
+}
+
+@keyframes fall {
+  0% {
+    top: 0vh;
+  }
+
+  100% {
+    top: -100vh;
+  }
+}
