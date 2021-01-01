@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+  
+
+
+body {
+    min-width: 320px;
+    color: #666;
+    background-color: #142638;
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.content {
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+.container .header .logo img{
+    margin-left: 24px;
+    position: relative;
+    top: 1em;
+    border: 2px solid #f6f8fa;
+    border-radius: 3px;
+    width: 80px;
+    height: 5em;
+  }
+
+ul {
+    position: relative;
+    right: 20px;
+    display: flex;
+    width: 430px;
+    justify-content: space-between;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+.first {
+margin-top: 2vw;
+position:relative;
+  
+  }    
+
+        .row{
+            display: table-row;
+            left: 0px;
+            
+        }
+        
+        .second{
+        width: 100%;
+        display: flex;
+        }
+
+        .second>.cell{
+        width: 100%;
+            justify-content: space-between;
+            padding:10px;
+            
+        }
+
+        .cell div img{
+        width: 100%;
+        }
+        .first div img {
+        width: 100%;
+        height: 40vw;
+        }
+        .space{
+        width: 100%;
+        height: 3em;
+        display: flex;
+        background-color: white;
+        }
+        .space .item{
+        width: 20%;
+        justify-content:space-around;
+        text-align: center;
+        }
+        .contain-ul{
+            display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 51, 102, 0.99);
+    color: #fff;
+        }
+        .absolute{
+        width: 30%;
+        }
+        .topic{
+            position:absolute;
+        margin: 0px;
+        width: 30%;
+        top:35vw;
+        background-color: rgb(50, 81, 110);
+        opacity: 50%;
+        text-align: center;
+        }
+        .absolute .topic h3{
+        margin: 0px;
+        font-weight: 600;
+        font-size: 50px;
+        font-family:sans-serif;
+        color:white;
+        }
+        .first p {
+            font-weight: 500;
+        font-size: 40px;
+        font-family:sans-serif;
+        color:white;
+        }
+        
+
+</style>
+<body>
+  <div class="container">
+                 <div class="header">
+                     <div class="contain-ul">
+                            <div class="logo cell">
+                                    <img src="logo.jpg">
+                            </div>
+        <div class="options cell">
+            <ul>
+                <li>music</li>
+                <li>news</li>
+                <li>cars</li>
+                <li>tests</li>
+                <li>assignment</li>
+                <li>other:</li>
+              </ul>
+        </div>
+    </div>
+        <div class="space">
+            <div class="item"></div>
+            <div class="item">a</div>
+            <div class="item">b</div>
+        </div>
+                 </div>
+
+  
+
+    <div class="page">
+            <div class="table">
+                <div class="first ">
+                    <div class="cell" >
+                        <div>
+                            <img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1280/533/e47a32a9c5b6e1b4b2fe9f56fd62faad.jpg?tl=1&ve=1">
+                        </div>
+                        <div class="absolute">
+                            <div class="topic">
+                                <h3>STATE OF PLAY</h3>
+                            </div>
+                        </div>
+                        <div> 
+                            <p>
+                                What initial Georgia turnout data reveals about high-stakes Senate races as early in-person voting ends
+                            </p>
+                        </div>
+            
+                   </div>
+                </div>
+                    <div class ="second row">
+                                 <div class="cell" >
+                                      <div><img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1024/576/3142efd97a533d2dda9a5b8a6fc3afb2.jpg?tl=1&ve=1"></div>
+                                      <div> <p>Hospital staffer arrested for intentionally spoiling 500 COVID vaccine doses: cops</p></div>
+                          
+                                 </div>
+                                 <div class="cell">
+                                     <div><img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1024/576/05a20dacef98cbb85d2854bfd8a662bd.jpg?tl=1&ve=1"></div>
+                                     <div> <p>Progressives pressure AOC, 'Squad' to force House Speaker's hand on key issue</p></div>
+                                </div>
+                                     </div>
+                    <div class="second row">
+                        <div class="cell" >
+                            <div><img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/12/1024/576/banished-words.jpg?tl=1&ve=1"></div>
+                            <div> <p>FULL LIST: University releases annual 'banished words' collection for 2021</p></div>
+                
+                       </div>
+                       <div class="cell">
+                           <div><img src="https://a57.foxnews.com/hp.foxnews.com/images/2020/12/1024/576/2cf8a662ec58f29677ba6667789afffa.jpg?tl=1&ve=1"></div>
+                           <div> <p>How we're celebrating New Year's Eve in Times Square, without the party crowd</p></div>
+                      </div>
+                    </div>
+                                        
+           </div>
+    </div>  
+</div>  
+</body>
+</html>
