@@ -1,9 +1,22 @@
+h1{
+    background-color: rgba(165, 42, 42, 0.541);
+    text-align: center;
+}
+h2{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(165, 42, 42, 0.541);
+    color: wheat;
+    width: 100%;
+    text-align: center;
+}
 .item > img{
     width: 100%;
     height:400px;
     object-fit:cover;
 }
 .item{
+    position: relative;
     width: 400px;
     /* border: pink solid; */
 }
