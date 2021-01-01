@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Catalog</title>
+</head>
+<body>
+
+<style>
+    .container {
+        display: flex;
+        padding: 32px;
+        background: black;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .item {
+        flex-grow: 1;
+        width: calc(100% * (1/4) - 10px - 1px);
+        position: relative;
+    }
+
+    .item > img {
+        width: 100%;
+    }
+
+    .title {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        color: white;
+        font-size: 2vmin;
+        background: black;
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        text-align: center;
+        padding: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+
+<div class="container">
+    <div class="item">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/image_8c4aa72b.jpeg" alt="movie image">
+        <div class="title">Deadpool</div>
+    </div>
+    <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61TUX3ObSLL._AC_.jpg" alt="movie image">
+        <div class="title">Spiderman</div>
+    </div>
+    <div class="item">
+        <img src="http://www.comicbookcritic.net/wp-content/uploads/2013/03/IRON3_5x8_Banner_v7_OL.jpg" alt="movie image">
+        <div class="title">Iron Man</div>
+    </div>
+    <div class="item">
+        <img src="https://www.radtkesports.com/wp-content/uploads/1636_300_sleeavengers2sidedposter_1.png" alt="movie image">
+        <div class="title">Avengers</div>
+    </div>
+    <div class="item">
+        <img src="https://cdn.shopify.com/s/files/1/1416/8662/products/shutter_island_2010_advance_original_film_art_0900828a-61e9-41f4-a90e-cbea7c83be17_1200x.jpg?v=1607808222" alt="movie image">
+        <div class="title">Shelter Island</div>
+    </div>
+    <div class="item">
+        <img src="https://m.media-amazon.com/images/M/MV5BOTMyYTIyM2MtNjQ2ZC00MWFkLThhYjQtMjhjMGZiMjgwYjM2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="movie image">
+        <div class="title">The Platform</div>
+    </div>
+    <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71Y5pMAw8rL._AC_SL1200_.jpg" alt="movie image">
+        <div class="title">The Irishman</div>
+    </div>
+    <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/91L2r0IatgL._AC_SL1500_.jpg" alt="movie image">
+        <div class="title">Casino</div>
+    </div>
+    <div class="item">
+        <img src="https://www.arthipo.com/image/cache/catalog/poster/movie/1-758/pfilm240-movie-poster-film-baba-the-godfather-part-ii_fadc1955-1000x1000.jpg" alt="movie image">
+        <div class="title">The Godfather</div>
+    </div>
+    <div class="item">
+        <img src="https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" alt="movie image">
+        <div class="title">The Godfather II</div>
+    </div>
+    <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/51KjbtEkoeL._AC_.jpg" alt="movie image">
+        <div class="title">The Shawshank Redemption</div>
+    </div>
+    <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81cIjo6qzJL._AC_SL1481_.jpg" alt="movie image">
+        <div class="title">The Witcher</div>
+    </div>
+</div>
+</body>
+</html>

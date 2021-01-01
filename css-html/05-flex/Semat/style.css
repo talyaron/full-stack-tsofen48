@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    color: rgb(134, 37, 37);
+}
+.continer{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+<<<<<<< Updated upstream
+    justify-content: space-between;
+=======
+    justify-content: space-evenly;
+>>>>>>> Stashed changes
+}
+
+.item{
+  
+    flex:1;
+<<<<<<< Updated upstream
+   width: 200px;
+
+   display: flex;
+   flex-direction: column;
+   
+=======
+    /* width: 80xp; */
+    width:250px;
+    height: 500px;
+    /* min-height: 400px; */
+    min-width: 200px;
+    /* max-height: 300px; */
+>>>>>>> Stashed changes
+}
+
+
+ .item>img{
+<<<<<<< Updated upstream
+  flex:9;
+  width: 200px;
+=======
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+>>>>>>> Stashed changes
+    
+}
+.item>p{
+    flex:1;
+    margin:0px;
+} 
+

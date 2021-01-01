@@ -1,0 +1,30 @@
+body {
+  background-color:palegoldenrod;
+}
+
+.dogBox {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  color: aliceblue;
+}
+.dogBox > p {
+  flex-grow: 1;
+  color: midnightblue;
+}
+.dogBox > h2 {
+  color: midnightblue;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image {
+  width: 400px;
+}

@@ -1,0 +1,23 @@
+h1{
+    position: absolute;
+    width: 100%;
+    
+}
+.cell {
+    position: relative;
+    background-color: orange;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    margin:auto;
+    margin-top: 30vh ;
+    margin-bottom: 30vh ;
+    width: 40vh;
+    height: 40vh;
+    gap:5px;
+}

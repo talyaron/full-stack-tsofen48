@@ -1,0 +1,86 @@
+
+.container{
+    margin-left:25%;
+    width:100px;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    gap:5px;
+}
+.item{
+    background: url(https://cdn.shopify.com/s/files/1/0032/8790/8416/products/tic-tac-toe-game-bag-hand-printed-textile_1_844_900x.jpg?v=1594326132);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    width:200px;
+    height:200px;
+}
+#X:hover{
+    background:url(https://www.pinclipart.com/picdir/middle/99-992857_inner-page-closing-comments-tic-tac-toe-x.png);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+#O:hover{
+    background:url(https://www.freeiconspng.com/uploads/circle-icon-22.png);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+#tittle{
+    margin-left:40%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:120%;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .container{
+        margin-left:20%;
+        gap:3px;
+    }
+    .item{
+        width:150px;
+        height:150px;
+    }
+    #tittle{
+        margin-left:35%;
+        font-size:100%;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 575px) {
+    .container{
+        margin-left:15%;
+        gap:2px;
+    }
+    .item{
+        width:100px;
+        height:100px;
+    }
+    #tittle{
+        margin-left:30%;
+        font-size:80%;
+    }
+
+
+}
+
+@media only screen and (max-width: 356px) {
+    .container{
+        margin-left:10%;
+        gap:1px;
+    }
+    .item{
+        width:70px;
+        height:70px;
+    }
+    #tittle{
+        margin-left:25%;
+        font-size:70%;
+    }
+
+
+}
