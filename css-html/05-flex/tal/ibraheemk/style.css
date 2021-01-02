@@ -1,14 +1,17 @@
-.item1{
-
+.oustide{
+    position: relative;
     --background: red;
     width: 200px;
-   flex:1;
+   --flex:0.5;
    min-width: 200px; 
-    --border:1px solid black;
+    border:1px solid black;
 }
 
-.item1>img{
+.oustide>img{
+    float: left;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -18,6 +21,7 @@
     flex-wrap: wrap;
 
     margin-bottom:500px;
+    flex-direction: row;
 
     justify-content: space-between;
     align-items: center;
@@ -26,6 +30,19 @@
 
 
 
-/* h1{
---display: flex;
-} */
+h1{
+    background-size: contain, cover;
+    max-width: 500px;
+  margin: auto;
+    background-repeat: no-repeat;
+
+    --background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    font-weight: bolder;
+    background-color:gray;
+    --opacity: 0.6;
+    width: cover;
+}
+
+
