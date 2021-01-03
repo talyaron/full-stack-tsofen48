@@ -1,7 +1,3 @@
-// set an object about your family (baba, ab, yaba, aum, yama), add it to array, am's familiy chal's family
-
-// const [yourObj, amObj, chalObj]
-
 const fstFam = {
   Father: { age: 54, name: "Naeel" },
   Mother: { age: 51, name: "Ayat" },

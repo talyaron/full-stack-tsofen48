@@ -36,4 +36,6 @@ console.log(arr)
 
 // set an object about your family (baba, ab, yaba, aum, yama), add it to array, am's familiy chal's family 
 
-const [yourObj, amObj, chalObj]
+const [yourObj, amObj, chalObj];
+
+
