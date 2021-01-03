@@ -1,0 +1,52 @@
+h1 {
+  animation-name: write;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.container {
+  transition: all 10s;
+  display: flex;
+  width: fit-content;
+  transition: border-bottom 500ms ease-in-out;
+}
+@keyframes write {
+  0% {
+    top: 100px;
+    left: 0vw;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    top: 100px;
+    left: 43vw;
+    color: lightcoral;
+  }
+}
+@keyframes draw {
+  0% {
+    top: 170px;
+    left: 0vw;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    top: 170px;
+    left: 30vw;
+    width: 280px;
+    background-color: lightcoral;
+  }
+}
+.border {
+  height: 1px;
+  width: 0px;
+  background-color: black;
+  animation: draw;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
