@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+.header, .footer {
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    background: rgba(231,76,60 ,1);
+ }
+
+#wrapper {
+    position: relative;
+    animation-name: goRight;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.content {
+    background: rgba(236,240,241 ,1);
+    display: flex;
+}
+
+.content__img {
+    flex: 1;
+    background: url("./mohammad.jpg");
+    background-size: 100% 100%;
+}
+
+.content__info {
+    flex: 2;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.content__info > ul {
+    list-style-type: none;
+    color: black;
+}
+
+.footer {
+    height: 50px;
+    color: black;
+    line-height: 50px;
+    background: rgba(189,195,199 ,1);
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+    .content__img, .content__info {
+        flex: 1;
+    }
+    .content__img {
+        min-height: 300px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header, .footer {
+        font-size: 18px;
+    }
+    .content__info {
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .header, .footer {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .footer {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1050px) {
+    body {
+        padding: 0 300px;
+    }
+}
+
+@keyframes goRight {
+    0% {
+        top: 0vh;
+        transform: rotate(00deg) scale(1);
+    }
+    100% {
+        top: 40vh;
+        transform: rotate(360deg) scale(1.5);
+    }
+}

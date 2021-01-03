@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="protflio" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: pink;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  
+ 
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+img{
+    width:400px;
+    height: 200px;
+}
+.big{
+    height: 500px;
+}
+.photonormal{
+    width: 400px;
+    height: 400px;
+}
+</style>
+</head>
+<body>
+
+
+<div class="main">
+
+<h1>MyLife</h1>
+<hr>
+<img src="1074.JPG" class="photonormal">
+<h2>PORTFOLIO</h2>
+<p>Called me yara , Im 19 years old ,I write a protfolio explain what i do in my life , Enjoy...!!</p>
+
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="https://www.kodable.com/learn/wp-content/uploads/2019/08/learning-gif-5.gif" alt="Learn" style="width:100%">
+      <h3>what do i learned</h3>
+      <p>I learned at arara high school , domain physic and computer science in the same time i start BA of computer science at netanya college academy 
+          I finished school at 2019.
+      </p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://media4.giphy.com/media/l0MYFebwHWySTU5Lq/giphy.gif" alt="engaged" style="width:100%">
+      <h3>get engaged</h3>
+      <p>I get engaged in 23.10.2020 from my friend at netanya academy .</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://media0.giphy.com/media/26BRq9PYFLeJl3WLu/source.gif" alt="fitness" style="width:100%">
+      <h3>my fitness</h3>
+      <p>I started to care of my body recentely, the best choice i ever take in my life ,I lost about 5 kg ,its a nice feeling to wear the same clothes i weared before but more beautiful and vast.and my body become more healthy.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="https://static01.nyt.com/images/2015/03/29/books/review/29sandage-gif/29sandage-gif-articleLarge.gif?quality=75&auto=webp&disable=upscale" alt="Work" style="width:100%">
+      <h3>BA</h3>
+      <p>I start my study at 2015 when i was 15 years old.then i finished my BA at 2020 .it take 5 years because we(my friends which in the same project)
+          learn at high school too.
+      </p>
+      <br>
+     
+    </div>
+  </div>
+
+</div>
+
+<div class="content">
+  <img src="https://media0.giphy.com/media/l2SqhfruhSrkSOyL6/source.gif" alt="Work" class="big" style="width:100%">
+  <h3>Some Other Work</h3>
+  <p>I start work in max stock at hedera i worked 6 months then i left because the last year of my study begin .</p>
+  <p>I worked at betah tekvah too . in the both jobs i worked Cashier.</p>
+</div>
+
+
+</div>
+
+</body>
+</html>
