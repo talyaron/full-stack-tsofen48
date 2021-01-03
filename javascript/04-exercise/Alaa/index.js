@@ -17,9 +17,7 @@ function getAvrageAge(familyTree) {
   let sum = 0,
     count = 0;
   for (let category in familyTree) {
-    console.log(familyTree[category]);
-    for (let person in familyTree[category]) {
-      console.log(person);
+     for (let person in familyTree[category]) {
       sum += familyTree[category][person];
       count++;
     }
@@ -27,7 +25,7 @@ function getAvrageAge(familyTree) {
   return sum / count;
 }
 
-console.log(getAvrageAge(family));
+// console.log(getAvrageAge(family));
 
 let family2 = [
   { name: "dad", age: 53 },
@@ -42,3 +40,4 @@ function getAvrageAge2(familyTree) {
   family2.map((person) => person.age).reduce((sum, age) => (sum += age)) /
     family2.length;
 }
+console.log(getAvrageAge2(family2));
