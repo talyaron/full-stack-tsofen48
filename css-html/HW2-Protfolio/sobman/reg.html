@@ -1,0 +1,157 @@
+﻿<html>
+<link rel="stylesheet" type="text/css" href="2StyleSheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/paa.css"> 
+ <link rel="icon" href="picture/logo.png" type="image">
+    <link rel="stylesheet" type="text/css" href="css/pic.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/paa.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+
+<head>
+    <script language="javascript" type="text/javascript">
+
+        function bdok(form) {
+            var passed = false;
+
+            if (form.fullname.value == "") {
+                alert("Enter Your Full Name");
+            }
+            else if (form.user.value == "") {
+                alert("Please Enter a Username");
+            }
+            else if (form.pass.value == "") {
+                alert("Please Enter An password");
+            }
+            else if (form.repass.value != form.pass.value) {
+                alert("your passwords didn't match");
+            }
+
+            else if (form.email.value == "") {
+                alert("Please Enter An Email");
+            }
+
+            else if (form.email.value.indexOf("@") == -1) {
+                alert("Please Enter A Valid Email");
+            }
+            else if (form.reemail.value.indexOf(".") == -1) {
+                alert("Please enter A Valid Email");
+            }
+            else if (form.reemail.value != form.email.value) {
+                alert("emails didn't match");
+            }
+            else if (form.phone.value.length != 10) {
+                alert("Enter A Correct Phone Number");
+            }
+            else if (isNaN(form.phone.valuelength != 10)) {
+                alert("Phone Only Contains Numbers ");
+            }
+            else if (isNaN(form.phone.value)) {
+                alert("Phone Only Contains Numbers ");
+            }
+            else {
+                passed = true;
+            }
+            return passed;
+        }
+    </script>
+    <title>
+        Subscribtion Form
+    </title>
+</head>
+
+<body>
+    <center>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="GalleryPage.html">Gallery</a></li>
+            
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Operating</a>
+                <div class="dropdown-content">
+                    <a href="b.html">S-CLASS</a>
+                    <a href="a.html">E-CLASS</a>
+                    <a href="k.html">C-CLASS</a>
+                    <a href="m.html">CLA</a>
+                    <a href="s.html">G-WAGON</a>
+                </div>
+            </li>
+            <li><a href="ProductsPage.html">Products</a></li>
+            <li><a href="reg.html">Countact Us</a></li>
+        </ul>
+
+    </center>
+  <righ><img src="mercedes benz mark.jpg" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark 2.png" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark.jpg" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark 2.png" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark.jpg" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark 2.png" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark.jpg" width="150px" height="100px"></righ>
+<righ><img src="mercedes benz mark 2.png" width="150px" height="100px"></righ>
+    
+ 
+					
+        		   
+       <div class="container">
+    <form action="/action_page.php">
+    <label for="fname" >First Name: * </label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required="required">
+
+    <label for="lname">Last Name: *</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required="required">
+ GENDER     
+    <input name="gender" id="Radio1" type="radio" value="m" />  MALE 
+    <input name="gender" id="Radio2" type="radio" value="f" checked /> FEMALE
+
+    <label for="email" style="font-size: 15px; ">Email: *</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" tabindex="2" required="required" class="mail">
+         
+
+    <label for="subject">Subject: *</label>
+    <input type="text" id="subject" name="subject" placeholder="Your subject.." required="required">
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:200px; font-family: 'Raleway', Arial, sans-serif;"></textarea>
+
+    <input type="submit" value="Submit">
+ 
+  </form>
+
+		   
+          
+
+ 
+       
+           Leave FeedBack :
+    <textarea rows=20 cols=55 name=message> </textarea>
+		  
+
+    <input type=submit value="send">             <input type=reset value="clear">
+
+
+          
+		   </pre>
+
+</div>
+    </form>
+    </center>
+<div class="footer">
+    
+    <ul>
+      <p style="float: left; margin-left: 20px; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">&copy;Mercedes benz</p>
+      <li href="#"><img src="icon/ig.png" style="height: 35px; width: 40px;">
+      <li><a href="https://he-il.facebook.com/MercedesBenz"><img src="icon/twitter.png" style="height: 35px; width: 40px;">
+      <li href="#"><img src="icon/fb.png" style="height: 35px; width: 40px;">
+      <div style="clear: both;"></div>
+    </ul>
+
+<div>
+
+</body>
+</html>
+
+
+
+
+

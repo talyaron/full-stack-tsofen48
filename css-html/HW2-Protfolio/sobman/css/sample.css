@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Style the header */
+.top{
+    margin-top: 15px;
+
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 550px; /* Should be removed. Only for demonstration */
+}
+
+/* Left column */
+.column.left {
+    width: 30%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+/* right column */
+.column.right{
+    width: 15%;
+    box-shadow: 0px 3px 3px 3px #888888;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+article{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.chose {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: Helvetica, sans-serif;
+  padding: 10px 50px;
+  margin-top: 40px;
+ 
+}
+
+.choose a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left:50px;
+  font-family: arial;
+  font-weight: bold;
+  float: left;
+
+
+}
+
+.chose a:hover {
+  background-color: #E6E6FA;
+  color: black;
+}
+
+.chose a.active {
+  background-color: #DC143C;
+  color: white;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 48px;
+  letter-spacing: 1px;
+
+}
+.price s {
+  margin-right: 8px;
+  opacity: 0.5;
+  font-size: 0.9em;
+}

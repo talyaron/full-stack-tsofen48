@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-size: 20px;
+
+}
+
+.header {
+  background-color: #E6E6FA;
+  padding: 10px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #191970;
+  font-family: Helvetica, sans-serif;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 20px;
+  font-family: arial;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  background-color: #E6E6FA;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #DC143C;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+---------
+
+.slideshow-container {
+  max-width: 50px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {display:none;}
+
+p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: justify;
+  font-size: 15px;
+
+}
+
+
+
+
+
+

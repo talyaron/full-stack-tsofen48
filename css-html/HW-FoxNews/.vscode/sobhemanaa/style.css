@@ -1,4 +1,5 @@
 .con{
+<<<<<<< Updated upstream
 margin: auto;
 max-width: 1200px;
 display: grid;
@@ -25,4 +26,11 @@ text-align: center;
 }
 .span{
     align-items: center;
+=======
+    display: flex;
+}
+.item{
+    display: flex;
+    
+>>>>>>> Stashed changes
 }
