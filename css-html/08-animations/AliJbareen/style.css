@@ -121,11 +121,11 @@ body {
 
 @keyframes change2 {
   0% {
-    top: 0vh;
+    color: green;
   }
 
   100% {
-    top: -100vh;
+    color: black;
   }
 }
 
