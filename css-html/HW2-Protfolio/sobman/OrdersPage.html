@@ -1,0 +1,150 @@
+﻿<html>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+<head>
+    <script language="javascript" type="text/javascript">
+
+        function bdok(form) {
+            var passed = false;
+
+            if (form.fullname.value == "") {
+                alert("Enter Your Full Name");
+            }
+            else if (form.user.value == "") {
+                alert("Please Enter a Username");
+            }
+            else if (form.pass.value == "") {
+                alert("Please Enter An password");
+            }
+            else if (form.repass.value != form.pass.value) {
+                alert("your passwords didn't match");
+            }
+
+            else if (form.email.value == "") {
+                alert("Please Enter An Email");
+            }
+
+            else if (form.email.value.indexOf("@") == -1) {
+                alert("Please Enter A Valid Email");
+            }
+            else if (form.reemail.value.indexOf(".") == -1) {
+                alert("Please enter A Valid Email");
+            }
+            else if (form.reemail.value != form.email.value) {
+                alert("emails didn't match");
+            }
+            else if (form.phone.value.length != 10) {
+                alert("Enter A Correct Phone Number");
+            }
+            else if (isNaN(form.phone.valuelength != 10)) {
+                alert("Phone Only Contains Numbers ");
+            }
+            else if (isNaN(form.phone.value)) {
+                alert("Phone Only Contains Numbers ");
+            }
+            else {
+                passed = true;
+            }
+            return passed;
+        }
+    </script>
+    <title>
+        Subscribtion Form
+    </title>
+</head>
+
+<body>
+    <center>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="GalleryPage.html">Gallery</a></li>
+            <li><a href="my site.html">MY site</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Operating</a>
+                <div class="dropdown-content">
+                    <a href="b.html">BMW</a>
+                    <a href="a.html">Audi</a>
+                    <a href="k.html">kia</a>
+                    <a href="m.html">Mercedes</a>
+                    <a href="s.html">Chevrolet</a>
+                </div>
+            </li>
+            <li><a href="ProductsPage.html">Products</a></li>
+            <li><a href="reg.html">Countact Us</a></li>
+        </ul>
+
+    </center>
+    <pre>
+    <center>
+    <form name="reg" action="confirm.htm" onSubmit="return bdok(reg);">
+    <h1> Fill Out The Fields:</h1><br>
+
+
+
+
+           
+		   
+		   
+           Full Name: <input type=text name=fullname> <br>
+
+
+
+		   
+		   
+            GENDER     
+    <input name="gender" id="Radio1" type="radio" value="m" />  MALE 
+    <input name="gender" id="Radio2" type="radio" value="f" checked /> FEMALE 
+      
+		   
+		   Username: <input type=text name=user>
+ 
+		   Password <input type=password name=pass>
+
+ 
+		  
+         Retype Password <input type=password name=repass>
+
+ 
+	
+           Email address: <input type=text name=email>
+
+ 
+		   
+   Retype Email address: <input type=text name=reemail>
+
+ 
+		   
+		 Phone number: <input type=text name=phone> <br>
+
+
+		   
+           Sorts Of Intrest     
+                        PC GAMES<input name="gam" id="Checkbox1" type="checkbox" />
+   
+                   PC UPGRADES <input name="up" id="Checkbox2" type="checkbox" />
+  
+		  AMD VS INTEL <input name="vs" id="Checkbox2" type="checkbox" />
+  
+                   SETUP WARS <input name="set" id="Checkbox3" type="checkbox" />
+
+ 
+       
+           Leave FeedBack Of your Exprience So Far:
+    <textarea rows=20 cols=55 name=message> </textarea>
+		  
+
+    <input type=submit value="send">             <input type=reset value="clear">
+
+
+          
+		   </pre>
+
+
+    </form>
+    </center>
+</body>
+</html>
+
+
+
+
+

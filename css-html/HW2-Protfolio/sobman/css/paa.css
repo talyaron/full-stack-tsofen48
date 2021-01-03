@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    margin: auto;
+    background-image: url(images1/mercedes benz mark.jpg);
+     background-size: 20%;
+    background-repeat: repeat;
+    background-color: red;
+}
+
+
+
+
+ul li:hover,
+.active
+{
+	background: gray;
+	color: white;
+}

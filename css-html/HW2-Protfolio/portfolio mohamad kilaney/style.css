@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #D8D8D8;
+}
+
+
+.navBar {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    background: linear-gradient(to right, #D8D8D8	, grey, #D8D8D8	);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    justify-content: space-around;
+
+}
+
+.navBar .logo {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navBar .list a {
+    font-size: large;
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+}
+
+.navBar .socailNav img {
+    margin-right: 7px;
+}
+
+.header {
+    height: 380px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.header .card {
+    margin-top: 80px;
+    width: 400px;
+    text-align: center;
+
+}
+
+.header .card .title {
+    font-size: 50px;
+    font-weight: bold;
+    animation: blinker 1s linear infinite;
+
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.containerTitle {
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container .projectCard {
+    border: 2px solid grey;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+}
+
+.container .projectCard img{
+margin: 15px;
+}

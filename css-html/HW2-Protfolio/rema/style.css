@@ -1,0 +1,413 @@
+ body{
+    background-image: url('img/background.jfif');
+    background-size:cover; 
+   } 
+   .bottomdiv{
+    background-color:rgb(28, 31, 38,0.9); 
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    } 
+.group{
+    position:absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    bottom: 30%;
+    left:10%;
+    animation: moveright 5s;
+
+}
+.item>a>button{
+   background-color:rgb(28, 31, 38,0.8);
+   border:balck solid 7px;
+   border-radius: 50%;
+   text-align: center;
+   font-size: 16px;
+   color: whitesmoke;
+   font-weight: bold;
+   width:110px;
+   height:110px;
+   border: rgb(15, 14, 14,0.4) solid 2px;  
+}
+.item>a>button:hover {
+    color: black;
+    box-shadow: 0 0 0 7px #fff; 
+    cursor: grab;
+  }
+  .picture{
+    background-image: url('img/profileimg.jpg');
+    background-size: cover;
+    position: absolute;
+    bottom: 40%;
+    right:10%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    animation: imganimation 4s;
+  }
+  @keyframes imganimation {
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    50%,
+    100% {
+        width: 300px;
+        height: 300px;
+    }
+  }
+  @keyframes moveright {
+    from {left: 0px;}
+    to {left: 10%;}
+  }
+   h1 {
+    position: absolute;
+    bottom: 10%;
+    right:5%;
+    font-size: 4em;
+    padding: 0;
+    color: white;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+      0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+      0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+      -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+  }
+  span {
+    transform: scale(0.9);
+    display: inline-block;
+  }
+  span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+  }
+  span:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+  }
+  @keyframes bop {
+    0% {
+      transform: scale(0.9);
+    }
+    50%,
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bopB {
+    0% {
+      transform: scale(0.9);
+    }
+    80%,
+    100% {
+      transform: scale(1) rotateZ(-3deg);
+    }
+  }
+  
+  @keyframes up {
+    100% {
+       transform: translateY(0%);
+    }
+ }
+ /* for protfolio page */
+ @media only screen and (max-width: 600px) {
+  .group {
+      grid-template-columns: auto;
+      gap: 5px;
+      width: 100%;
+      height: 60%;
+      bottom: 5%;
+      left:0;
+      animation: 0;
+  }
+  .item>a>button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color:rgb(28, 31, 38,0.9);
+  }
+  .picture{
+    display: none;
+  }
+  h1{
+    top: 0;
+    right:0;
+  }
+  .bottomdiv{
+    display: none;
+  }
+}
+
+ .container>.abouttext{
+     position: absolute;
+     top: 10%;
+     left: 8%;
+     width: 40%;
+     height: 55%;
+     border-radius: 10%;
+     background-color:rgb(28, 31, 38,0.6);
+     animation: moveabouttext 5s;
+
+ }
+ @keyframes moveabouttext {
+    from {left: 0px;}
+    to {left: 8%;}
+  }
+.container>.abouttext>p{
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: whitesmoke;
+    font-weight:400;
+    width: 80%;
+    left: 20px;
+}
+.container>.picture{
+    background-image: url('img/profileimg.jpg');
+    background-size: cover;
+    position: absolute;
+    bottom: 40%;
+    right:10%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+    animation: toright 5s;
+}
+@keyframes toright {
+    from {right: 0px;}
+    to {right: 10%;}
+  }
+  #backB{
+      position: absolute;
+      bottom: 15%;
+      left: 6px;
+  }
+   /* for about page */
+ @media only screen and (max-width: 600px) {
+  .container>.abouttext {
+      width: 100%;
+      top: 10%;
+      left:0;
+      border-radius: 0;
+      animation: 0;
+  }
+  .container>.abouttext>p{
+    width: 100%;
+    left:0;
+  }
+  #backB {
+    background-color:rgb(28, 31, 38,0.9);
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+  }
+  .container>.picture{
+    display: none;
+  }
+}
+
+h3{
+    position: relative;
+    text-align: center;
+    font-family: Georgia, serif;
+    color: whitesmoke;
+  }
+
+#div2Edu{
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 40%;
+    height: 70%;
+    border-radius: 10%;
+    background-color:rgb(28, 31, 38,0.6);
+    animation: moveleft 5s;
+}
+#div2Edu>p{
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: whitesmoke;
+    font-weight:400;
+    width: 85%;
+    left: 20px;
+}
+   .icon{
+    font-size:20px;
+    color:whitesmoke;
+    position: relative;
+}
+#div2Edu>h3{
+    position: relative;
+    text-align: center;
+    font-family: Georgia, serif;
+    color: whitesmoke;
+}
+@keyframes moveleft  {
+    from {right: 0px;}
+    to {right: 8%;}
+  }
+   /* for education page */
+ @media only screen and (max-width: 600px) {
+  #div2Edu {
+      width: 100%;
+      bottom: 10%;
+      left:0;
+      border-radius: 0;
+      right: 0;
+      top: 65%;
+      background-color:rgb(28, 31, 38,0.7);
+      animation: 0;
+  }
+  #div2Edu>p{
+    width: 100%;
+    left:0;
+    font-size: 17px;
+  }
+  #backB {
+    background-color:rgb(28, 31, 38,0.9);
+    width: 100%;
+    height: 10%;
+    top:0;
+    left: 0;
+  }
+  .container>.picture{
+    display: none;
+  }
+  .container>.abouttext {
+    width: 100%;
+    left:0;
+    border-radius: 0;
+    top: 10%;
+    background-color:rgb(28, 31, 38,0.7);
+    animation: 0;
+}
+}
+
+.addtext{
+      position:absolute;
+      left: 20%;
+      color: whitesmoke;
+      font-family: Georgia, serif;
+      font-size: 19px;
+
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 40px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .social{
+      text-align: center;
+  }
+  .iconPhone{
+    font-size:25px;
+    color:whitesmoke;
+    position: relative;
+  }
+ /* for contact page */
+ @media only screen and (max-width: 600px) {
+  .container>.abouttext {
+   height: 80%;
+   animation: 0;
+ }
+}
+
+  .lang{
+      position: relative;
+      width: 65%;
+      align-items: center;
+  }
+  .lanP{
+    position: relative;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: whitesmoke;
+    font-weight:400;
+    width: 85%;
+}
+#skillsdiv{
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    right: 40%;
+    height: 70%;
+    border-radius: 10%;
+    background-color:rgb(28, 31, 38,0.6);
+    animation: up 5s;
+}
+@keyframes up  {
+    from {top: 100%;}
+    to {top: 10%;}
+  }
+  #div2skills{
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    height: 70%;
+    border-radius: 10%;
+    background-color:rgb(28, 31, 38,0.6);
+    animation: moveleft 5s;
+    width: 20%;
+  }
+  #languagetxt{
+    height:70%;
+    width:20%;
+  }
+   /* for skills page */
+ @media only screen and (max-width: 600px) {
+   .lanP {
+    font-size: 17px;
+  }
+  #skillsdiv{
+    width: 100%;
+    top:10%;
+    right: 0;
+    border-radius: 0;
+    animation: 0;
+
+  }
+  #backB {
+    background-color:rgb(28, 31, 38,0.9);
+    width: 100%;
+    height: 10%;
+    top:0;
+    left: 0;
+  }
+  #div2skills{
+    top:70%;
+    width: 100%;
+    right: 0;
+    animation: 0;
+    
+  }
+  #languagetxt{
+    width: 100%;
+    top:130%;
+    animation: 0;
+  }
+}

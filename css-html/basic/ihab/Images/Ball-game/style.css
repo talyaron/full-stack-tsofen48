@@ -4,6 +4,13 @@ body {
     background-color: cornflowerblue;
   }
   
+  .plr {
+    position: absolute;
+    top:-90px;
+    left: 280px;
+    width: 420px;
+    height: 720px;
+  }
   .ball {
     width: 100px;
     height: 100px;
