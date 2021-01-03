@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gray;
+    background-color: lightgray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration : none; 
+    color : white;
+}
+
+a:hover {
+
+    color: lightgray;
+}
+
+header {
+    background-color: purple;
+    border-bottom: 1px solid lightgray;
+}
+
+.wrapper {
+    overflow: auto;
+    clear: both;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#cat {
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    height: 100px;
+    animation: nyan 5s linear infinite;
+}
+
+@keyframes nyan {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+        
+    }
+}
+
+
+#name {
+    float: left;
+    padding: 20px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    #name {
+      display: none;
+    }
+  }
+
+nav {
+    float: right; 
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+nav a {
+
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.border {
+
+    border-right: 1px solid #F0F0F0;
+
+}
+
+section {
+    margin: auto;
+    overflow: auto;  
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    flex: 1 0 auto;
+    min-height: calc(75vh - 122px);
+}
+
+#about {
+    padding: 30px 30px 20px 30px;
+    margin-top: 30px;
+    width: 60%;
+    border: solid black 1px;
+    border-radius: 15px;
+    position: relative;
+}
+
+#profile {
+    height: 30%;
+    width: 20%;
+    float: left; 
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+h1 {
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    color: purple;
+
+}
+
+
+
+#contact {
+    padding: 30px 30px 20px 30px;
+    margin-top: 30px;
+    width: 60%;
+    border: solid black 1px;
+    border-radius: 15px; 
+}
+
+
+  
+#email {
+    margin-top: 20px;
+}
+  
+#message {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+input {
+    font: .9em/1.5em "handwriting", 'Arial';
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    background: none;
+  }
+
+textarea {
+    font: .9em/1.5em "handwriting", 'Arial';
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    background: none;
+  }
+
+
+button {
+    padding: 20px;
+    font: bold 1em 'Arial';
+    border: none;
+    background: purple;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  
+  button:hover,
+  button:focus {
+    outline: none;
+    background: peru;
+    color: #FFF;
+  }
+
+
+#portfolio {
+    padding: 30px 30px 20px 30px;
+    margin-top: 30px;
+    width: 60%;
+    border: solid black 1px;
+    border-radius: 15px; 
+    
+}
+
+.photo-size {
+    height: 222px;
+    width: 316px;
+}
+
+#content-portfolio p {
+    text-align: center;
+    background: purple;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color   : #FFF;
+    padding: 20px;
+    position: relative;
+    top: -90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#content-portfolio {
+    overflow: auto;
+    clear: both;
+
+}
+
+.wrap-project {
+
+    float: left;
+}
+
+
+div #project1,
+div #project2,
+div #project3,
+div #project4,
+div #project5 {
+    height: 280px;
+    margin-left: 30px;
+}
+
+.spacer {
+    height:100px;
+}
