@@ -1,66 +1,64 @@
 .button {
-    transition: all 400ms;
-    color: white;
+  transition: all 400ms;
+  color: white;
+  background-color: violet;
+  border-radius: 10px;
+  padding: 20px 50px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.491);
+  width: fit-content;
+  position: relative;
+}
+
+.button:hover {
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.491);
+  /* transform: scale(1.3); */
+
+  animation: moveRight 500ms;
+}
+
+@keyframes moveRight {
+  from {
     background-color: violet;
-    border-radius: 10px;
-    padding: 20px 50px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.491);
-    width: fit-content;
-    position: relative;
-}
-
-.button:hover{
-    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.491);
-    /* transform: scale(1.3); */
-
-    animation: moveRight 500ms;
-}
-
-@keyframes moveRight{
-    from{
-        background-color:violet;
-    } to{
-        background-color:rgb(198, 108, 198);
-    }
+  }
+  to {
+    background-color: rgb(198, 108, 198);
+  }
 }
 
 #ball {
-    background-image: url('https://lh3.googleusercontent.com/proxy/WL3ses0NTY9OZNDdFQz661cg5U8IYP1HzOKAiVJrX-tF8Vqq104S1NYxIDl6Q1uSeUNHdd8HCYcY23rIRSVxlaiaaRhm8hEYTGdxBqSpGlxUt6GGDBjC');
-    width: 150px;
-    height: 150px;
-    background-size: contain;
-    animation-name: goRight;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    position: relative;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  background-image: url("https://lh3.googleusercontent.com/proxy/WL3ses0NTY9OZNDdFQz661cg5U8IYP1HzOKAiVJrX-tF8Vqq104S1NYxIDl6Q1uSeUNHdd8HCYcY23rIRSVxlaiaaRhm8hEYTGdxBqSpGlxUt6GGDBjC");
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  animation-name: goRight;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 @keyframes goRight {
-    0% {
-        top: 0vh;
-        left: 0vw;
-        transform: rotate(00deg) scale(1);
-    }
-    33% {
-        top: 80vh;
-        left: 0vw;
-        transform: rotate(360deg) scale(1.5);
-    }
-    66% {
-        top: 80vh;
-        left: 50vw;
-        transform: rotate(720deg) scale(1.5);
-    }
-    100% {
-        top: 40vh;
-        left: 70vw;
-        transform: rotate(980deg) scale(1.5);
-    }
-}
-
-
+  0% {
+    top: 0vh;
+    left: 0vw;
+    transform: rotate(00deg) scale(1);
+  }
+  33% {
+    top: 80vh;
+    left: 0vw;
+    transform: rotate(360deg) scale(1.5);
+  }
+  66% {
+    top: 80vh;
+    left: 50vw;
+    transform: rotate(720deg) scale(1.5);
+  }
+  100% {
+    top: 40vh;
+    left: 70vw;
+    transform: rotate(980deg) scale(1.5);
+  }
 }
