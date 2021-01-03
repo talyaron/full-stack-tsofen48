@@ -1,0 +1,160 @@
+﻿
+<html>
+<head>
+<title>Mercedes Benz pictures</title>
+ <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            background-color:deepskyblue;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+
+<tr>
+
+</tr>
+
+<script>
+
+
+    var pictures = new Array(9);
+    var counter = 0;
+
+
+    function initialize() {
+
+        pictures[0] = new Image(50, 50);
+        pictures[0].src = "images1/e-class interior.jpg";
+        pictures[1] = new Image(50, 50);
+        pictures[1].src = "images1/s2.jpg";
+        pictures[2] = new Image(50, 50);
+        pictures[2].src = "images1/s3.jpg";
+        pictures[3] = new Image(50, 50);
+        pictures[3].src = "images1/s-class front.jpg";
+        pictures[4] = new Image(50, 50);
+        pictures[4].src = "images1/s-class front 2.jpg";
+        pictures[5] = new Image(50, 50);
+        pictures[5].src = "images1/s-class rear.jpg";
+        pictures[6] = new Image(50, 50);
+        pictures[6].src = "images1/s-class side.jpg";
+        pictures[8] = new Image(50, 50);
+        pictures[8].src = "images1/e-class rear.jpg";
+        pictures[9] = new Image(50, 50);
+        pictures[9].src = "images1/maxresdefault.jpg";
+    }
+
+
+    function upDate() {
+
+        counter++;
+        if (counter > 9) {
+            counter = 0;
+        }
+        document.imgDisplay.src = pictures[counter].src;
+        document.myForm.txtDescription.value = description[counter];
+    }
+    function goBack() {
+
+        counter--;
+        if (counter < 9) {
+            counter != 0;
+        }
+        document.imgDisplay.src = pictures[counter].src;
+        document.myForm.txtDescription.value = description[counter];
+    }
+
+</script>
+</head>
+
+<body  onLoad = "initialize()">
+<center>
+   <ul>
+       <li><a href="index.html">Home</a></li>
+        <li><a href="GalleryPage.html">Gallery</a></li>
+
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Operating</a>
+            <div class="dropdown-content">
+                <a href="b.html">S-CLASS</a>
+                <a href="a.html">E-CLASS</a>
+                <a href="k.html">A-CLASS</a>
+                <a href="m.html">CLA</a>
+                <a href="s.html">G-WAGON</a>
+            </div>
+        </li>
+        <li><a href="ProductsPage.html">Products</a></li>
+        <li><a href="reg.html">Countact Us</a></li>
+    </ul>
+
+    </center>
+     
+    <center>
+        <div class="info"">
+			<br><br>
+			<i><font color="red"  size = "20px">
+			<b>
+			<h1>cars<h1>
+			</font></i>
+			</b>
+			</div>	
+				<br><br>
+        </center>
+    <center>
+<form name = "myForm">
+<img src = "images1/mercedes benz company.jpg"
+     name = "imgDisplay"
+	 height = 400
+     width = 800
+    >
+<br>
+
+
+<br>
+<input type = "button" value = ">" onClick = "upDate()"/>
+<input type = "button" value = "<" onClick = "goBack()"/>
+
+</form>
+</center>
+   
+
+</p>
+</body>
+</html>

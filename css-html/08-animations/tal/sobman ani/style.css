@@ -1,0 +1,75 @@
+
+
+@keyframes moveRight{
+    from{
+        background-color:violet;
+    } to{
+        background-color:rgb(198, 108, 198);
+    }
+}
+
+#ball {
+    background-image: url('https://i.ytimg.com/vi/SFDfXlMBN68/maxresdefault.jpg');
+    background-repeat: repeat-x;
+    width: 150px;
+    height: 80px;
+    background-size: contain;
+    animation-name: goRight;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    position: relative;
+  animation-iteration-count: infinite;
+   /* animation-direction: alternate;*/
+   /* animation-timing-function: ease-in-out;*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes goRight {
+    0% {
+        top: 0vh;
+        left: 0vw;
+        
+    }
+    33% {
+        top: 0vh;
+        left: 100vw;
+        
+    }
+    
+}
+.button{
+    font-size:  100px;
+    position: relative;
+    bottom: 100px;
+}
+#ball1 {
+    background-image: url('https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/916x515/quality/95/http://www.blogcdn.com/www.autoblog.com/media/2007/03/lambo_press_06.jpg');
+    background-repeat: repeat-x;
+    width: 150px;
+    height: 80px;
+    background-size: contain;
+    animation-name: goRight;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    position: relative;
+  animation-iteration-count: infinite;
+   /* animation-direction: alternate;*/
+   /* animation-timing-function: ease-in-out;*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+#ball2 {
+    background-image: url('https://assets.website-files.com/5b4a3b3971d099f78f362505/5dd41c13547108a96dd3f669_8.jpg');
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    width: 150px;
+    height: 80px;
+    background-size: contain;
+    animation-name: goRight;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    position: relative;
+  animation-iteration-count: infinite;
+   /* animation-direction: alternate;*/
+   /* animation-timing-function: ease-in-out;*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}

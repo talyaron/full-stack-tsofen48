@@ -1,0 +1,41 @@
+body {
+  margin:0;
+}
+
+.navbar {
+
+  overflow: hidden;
+  background-color: #191970;
+  position: fixed;
+  width: 85%;
+  position: inherit;
+  margin-top: 40px;
+  margin-left: 205px;
+  margin-right: 0px;
+  border-radius: 6px;
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 30px;
+  font-weight: bold;
+  font-family: arial;
+}
+
+.navbar a:hover {
+  background-color:#E6E6FA;
+  color: black;
+}
+
+.navbar a.active {
+  background-color:   #DC143C;
+  color: white;
+}
+
