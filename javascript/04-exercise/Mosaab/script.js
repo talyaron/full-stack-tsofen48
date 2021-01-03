@@ -15,6 +15,10 @@ family.forEach(element => {
         howManyBiggerThan6++;
     }
 });
-//console.log(total / howManyBiggerThan6)
+/*
+let total1=0;
+let Biggerthan6 = family.filter(e=> e.age > 6);
+Biggerthan6.forEach(e=>total1 += e.age)
+console.log(total1 / Biggerthan6.length)*/
 
 alert(`Sum of Bigger Than 6 Years Age = ${total} \n Bigger Than 6 years = ${howManyBiggerThan6} \n The avg ${total / howManyBiggerThan6}`)
