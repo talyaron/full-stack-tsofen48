@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Staatliches&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <div id="myNav" class="overlay">
+            <a class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">About</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">Projects</a>
+              <a href="#">ContactMe</a>
+            </div>
+          </div>
+       <span  class="options" onclick="openNav()">&#9776; </span>
+        <div class="item box1"></div>
+        <div class="item box2">
+            <div class="welcome">HI THERE!</div>
+            <div class="topic"><div class="first">I'M</div><div class="name">IBRAHIM LAHHAM</div></div>
+            <div class="content">I'm a software engineering student , I am passionate about building excellent software that improves the lives of those around me.</div>
+            <div class="readme"></div>
+
+        </div>
+        <div class="item box3">
+            <div class="menu">
+                <div class="menu-item menu1">
+                    <i class="fa fa-home" style="font-size:30px;color:white"></i>
+                </div>
+                <div class="menu-item menu2">
+                    <i class="fa fa-user-o" style="font-size:30px;color:white;"></i>
+                </div>
+                <div class="menu-item menu3">
+                    <i class="fa fa-suitcase" style="font-size:30px;color:white"></i>
+                </div>
+                <div class="menu-item menu4">
+                    <i class="fa fa-envelope-open-o" style="font-size:30px;color:white"></i>
+                </div>
+                <div class="menu-item menu5">
+                    <i class="fa fa-comment-o" style="font-size:30px;color:white"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
+</html>
