@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p id=""></p>
+
+<script>
+
+let sum=0;
+let people = [{name: "ihab hassuna", age:20}, {name: "dani", age:25} ,
+{name: "yossi", age:30}]; 
+
+for (i = 0; i < people.length; i++) 
+{    
+     if(people[i].age>22)
+     {
+       sum+=people[i].age;
+     }
+       console.log(people[i]); 
+    }
+       console.log("the calculate avg is = "+sum/people.length);
+
+
+       people.forEach(element => 
+    console.log(people));
+
+
+    
+
+</script>
+
+</body>
+</html>
+
