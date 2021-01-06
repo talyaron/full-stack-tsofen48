@@ -18,8 +18,9 @@
     }
 
     .item {
-        background-color: plum;
-        transition: all 300ms;
+        background-color:pink;
+        transition: all 1500ms;
+        position:relative;
     }
 </style>
 
@@ -148,8 +149,14 @@
             items.forEach(item => {
                 let rgb = `rgb(${Math.random() * 255}, ${Math.random() * 255},  ${Math.random() * 255})`;
                 item.style.background = rgb;
+                item.style.transform = `rotate(${Math.random() * 180}deg)`;
+                item.style.borderRadius = `${Math.random() * 50}px`;
+                item.style.zIndex = `${Math.random() * 50}`;
+                item.style.top = `${Math.random() * 150}px`;
+                item.style.left = `${Math.random() * 150}px`;
+                item.style.boxShadow = `${Math.random() * 20}px ${Math.random() * 20}px ${Math.random() * 60}px rgba(0, 0, 0, 0.555)`;
             })
-        }, 500)
+        }, 1500)
 
 
     </script>
