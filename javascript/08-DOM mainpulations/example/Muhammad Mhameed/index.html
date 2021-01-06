@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 3px;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .item {
+      background-color: plum;
+      transition: all 500ms;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+
+    <script>
+      console.log("start");
+      console.dir(document); //object Document Object Model
+      document.title = "This document weas hacked";
+
+      let items = document.querySelectorAll(".item");
+      console.log(items);
+      setInterval(() => {
+        items.forEach((item) => {
+          let rgb = `rgb(${Math.random() * 255}, ${Math.random() * 255},  ${
+            Math.random() * 255
+          })`;
+          item.style.background = rgb;
+          item.style.height = Math.random() * 30 + "vh";
+          item.style.width = Math.random() * 30 + "vw";
+          item.style.transform = "rotate(" + Math.random() * 360 + "deg)";
+        });
+      }, 300);
+    </script>
+  </body>
+</html>
