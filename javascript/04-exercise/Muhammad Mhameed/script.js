@@ -22,8 +22,10 @@ let count = 0;
 let sum = 0;
 myFamily.forEach(function (el) {
   for (let i in el) {
-    count++;
-    sum += el[i].age;
+    if (el[i].age > 6) {
+      count++;
+      sum += el[i].age;
+    }
   }
 });
 
