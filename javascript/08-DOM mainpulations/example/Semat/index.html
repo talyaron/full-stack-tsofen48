@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        console.log('start')
+        console.dir(document) //object Document Object Model
+        document.title = 'This document weas hacked';
+        
+
+        // catch the "root element"
+        let root = document.querySelector('#root')
+        console.dir(root)
+        root.write("Hello World");
+    </script>
+</body>
+</html>
