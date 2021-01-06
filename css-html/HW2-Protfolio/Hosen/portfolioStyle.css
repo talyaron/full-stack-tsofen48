@@ -1,0 +1,229 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.mainCover {
+  height: 100vh;
+  top: 0px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mainTitle h1 {
+  text-align: center;
+  width: 80%;
+  font-size: 9vh;
+  margin: auto;
+  margin-top: 100px;
+  color: black;
+}
+.genyPic {
+  width: 200px;
+  position: relative;
+  left: 180px;
+  top: 0px;
+  animation-name: shake;
+  animation-duration: 2s;
+  opacity: 0.8;
+  animation-iteration-count: infinite;
+  float: left;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.project {
+  width: 300px;
+  height: 250px;
+}
+.project img {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  border-radius: 10px;
+  border: solid 2px black;
+  /* cursor: pointer; */
+  transition: all 0.35s ease-in-out;
+}
+.project img:hover {
+  transform: scale(1.3);
+}
+.projects {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 70px;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+.projectsTitle,
+.contactMeTitle,
+.aboutMeTitle {
+  width: fit-content;
+  margin: 70px auto;
+  border-radius: 10px;
+  border-bottom: solid 10px;
+}
+.contactInputsContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  position: relative;
+  gap: 40px;
+  font-weight: bold;
+}
+.contactInputs {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.contactInputs input {
+  margin-bottom: 10px;
+  height: 25px;
+  width: 300px;
+}
+.submitBtn {
+  display: flex;
+  margin: 50px auto;
+  width: 150px;
+  height: 40px;
+  padding: 8px;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 2px;
+}
+.submitBtn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.2);
+  transition: all ease-in-out 0.3s;
+}
+.footer {
+  height: 300px;
+  width: 100%;
+}
+.aboutMe {
+  text-align: CENTER;
+  width: 80%;
+  margin: 270px AUTO;
+}
+.background {
+  position: absolute;
+  width: 400px;
+  right: 55px;
+  bottom: 15px;
+  z-index: -10;
+}
+.x {
+  float: RIGHT;
+  display: FLEX;
+  justify-content: space-around;
+  width: 65%;
+  position: relative;
+  top: 30px;
+  opacity: 0.7;
+}
+.navBar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  font-size: 30px;
+  font-weight: bold;
+  top: -40px;
+}
+.navBar li {
+  cursor: pointer;
+}
+body a {
+  text-decoration: none;
+  transition: all ease-in 1s;
+  color: black;
+}
+.menuBar {
+  display: none;
+}
+.aboutMe p {
+  text-align: start;
+  width: 80%;
+  margin: auto;
+}
+@media only screen and (max-width: 900px) {
+  .menuBar {
+    display: block;
+    position: relative;
+    top: 60px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .x {
+    display: none;
+  }
+  .mainTitle h1 {
+    font-size: 7vh;
+    margin-top: -115px;
+  }
+  body {
+    background-color: lightblue;
+  }
+  .genyPic {
+    width: 100px;
+    left: 10px;
+    top: 70px;
+  }
+  .background {
+    position: absolute;
+    width: 200px;
+    right: 0px;
+    bottom: 25px;
+    z-index: -10;
+  }
+  .projects {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .contactInputsContainer {
+    grid-template-columns: auto;
+  }
+  .moreDetailsTitle {
+    position: initial !important;
+  }
+  .moreDetails {
+    width: 300px;
+  }
+  .navBar {
+    left: -20px;
+    top: -80px;
+  }
+  .logo {
+    position: relative;
+    top: 17px;
+  }
+  .aboutMe p {
+    width: 100%;
+  }
+}
