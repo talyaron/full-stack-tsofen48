@@ -143,15 +143,27 @@
       let j = 0;
 
       setInterval(() => {
+        if (j === 0) {
+          items.forEach((item) => {
+            item.style.borderRadius = "0px";
+          });
+        }
         items[j].style.borderRadius = "999px";
         let rgb = `rgb(${Math.random() * 255}, ${Math.random() * 255},  ${
           Math.random() * 255
         })`;
         items[j].style.background = rgb;
-        if (j === 99) j = 0;
+        if (j === 99) {
+          items.forEach((elm) => {
+            elm.style.borderRadius = "0px";
+            elm.style.background = "plum";
+          });
+
+          j = -1;
+        }
         j++;
         console.log(j);
-      }, 500);
+      }, 100);
     </script>
   </body>
 </html>
