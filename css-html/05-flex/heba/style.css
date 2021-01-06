@@ -1,0 +1,44 @@
+.item{
+    
+    
+   min-width: 100px;
+    border:1px solid black;
+   position: relative; 
+}
+
+.item>img{
+    width: 90%;
+    height: 90%;
+}
+
+
+.container{
+    display: flex;
+    
+   justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 32px;
+    
+}
+.header {
+    
+    text-align: center;
+    border: 3px solid gray;
+    color:gray;
+    font-size: 30px;
+  }
+  
+  
+.city-name{
+    width: 40%;
+     position: absolute;
+        top: 80%;
+        color:black;
+        
+        
+        background: rgba(122, 108, 108, 0.5); /* Black background with 0.5 opacity */
+        text-align: center;
+        font-size: 30px;
+        padding: 8px;
+        
+}
