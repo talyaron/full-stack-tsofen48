@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let red_blue_news = 
+            [{  img:"img/tr.jpg",
+                header:"                            ترامب يعترف بفوز بايدن بعد يوم من اقتحام الكونجرس",
+                txt:"اعترف الرئيس الأمريكي دونالد ترامب يوم الخميس وللمرة الأولى، بأن جو بايدن سيكون الرئيس القادم للولايات المتحدة، وذلك بعد يوم من اقتحام أنصار ترامب لمبنى ...",
+                color:"blue" },
+            {   img:"img/lia.jpg",
+                header:"                            الفنانة ليال عبود تعيش حالة من القلق                        ",
+                txt:' أكدت معلومات فنية أن الفنانة اللبنانية ليال عبود تعيش حالة من القلق على والدتها التي أصيبت بأزمة صحية قبل أيام، و تتولى هي شخصياً رعايتها في منزلها، ',
+                color:"red" },
+            {   img:"img/wea.jpg",
+                header:"                            حالة الطقس : أجواء دافئة وصافية نهارا وباردة ليلا                        ",
+                txt:"يتوقع الراصد الجوي اليوم الجمعة، ألا يطرأ تغيير يذكر على درجات الحرارة التي تكون فوق معدلاتها بنحو 4-6 درجات . ويسود طقس بارد نسبياً في ساعات ...",
+                color:"blue" },
+            {   img:"img/ftb.jpg",
+                header:"                            ‘الدنيا دوارة‘ .. أستون فيلا يواجه ليفربول بفريق الرديف                        ",
+                txt:"يستعد ليفربول لمواجهة أستون فيلا، ضمن منافسات الدور الثالث من بطولة كأس الاتحاد الإنجليزي، مساء اليوم الجمعة، ولكن اللقاء تُحيط به شكوك كبيرة، في ظل ...",
+                color:"red" 
+            }]   
+
+        red_blue_news.forEach(elem=>{
+            var header = document.createElement("p");
+            var txt = document.createElement("p");
+            var item = document.createElement("div");
+            var img = document.createElement("img");
+            header.style.color = "white";
+            header.style.fontWeight = 900;
+            header.innerHTML = elem.header;
+            txt.style.color = "white";
+            txt.innerHTML = elem.txt;
+            img.src = elem.img;
+            
+            item.style.direction = "rtl";
+            item.appendChild(header);
+            item.appendChild(txt);
+           
+            var container = document.createElement("div");
+            container.style.display = "flex";
+            container.style.marginLeft = "20%";
+            container.style.marginRight = "20%";
+            container.style.backgroundColor = elem.color;
+            container.appendChild(img);
+            container.appendChild(item);
+            
+            document.getElementsByTagName("body")[0].appendChild(container);
+        })
+
+    </script>
+</body>
+</html>
