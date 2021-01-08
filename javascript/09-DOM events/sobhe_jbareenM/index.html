@@ -22,9 +22,9 @@
         </div>
        
 
-        <button class="container animated rotateIn delay-3s" id="teras">teras</button>
-        <button class="container animated rotateIn delay-3s" id="ztem">ztem</button>
-        <button class="container animated rotateIn delay-3s" id="gvena">gvena</button>
+        <button class="container animated rotateIn delay-3s" id="teras" onClick="add_piza()">teras</button>
+        <button class="container animated rotateIn delay-3s" id="ztem" onClick="add_piza()">ztem</button>
+        <button class="container animated rotateIn delay-3s" id="gvena" onClick="add_piza()">gvena</button>
 
         <!-- <label class="container animated rotateIn delay-3s">teras
             <input type="checkbox">
@@ -49,6 +49,28 @@
     
     </div>
 
+    <script>
+        let total=0;
+        let sum=0;
+      function add_piza()
+      {
+          
+      }
+       document.querySelector('#teras').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+
+       document.querySelector('#gvena').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+       document.querySelector('#ztem').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+       console.log(total)
+    </script>
     
     
 </body>
