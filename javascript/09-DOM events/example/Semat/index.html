@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='theButton' onclick='handleStartAlert()'>Press Me!</button>
+    <!-- inline event -->
+    <input id="myText" type='text' placeholder="eneter your name" onkeyup='handleInput(event)'>
+
+    <p id='double' style="background-color: burlywood;color: brown;font-size: large;"></p>
+</body>
+<script>
+
+
+// Print 
+var inputBox = document.getElementById('myText');
+
+inputBox.onkeyup = function(){
+    document.getElementById('double').innerHTML = inputBox.value;
+}
+
+
+// Alert
+document.getElementById("theButton").addEventListener("click", function() {
+
+var message = document.getElementById("myText").value;
+alert( message );
+
+}, false);
+
+
+</script>
+</html>
