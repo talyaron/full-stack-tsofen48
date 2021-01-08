@@ -1,0 +1,31 @@
+.article {
+       display: flex;
+       flex-direction: row-reverse;
+       text-align: end;
+       background: antiquewhite;
+       padding-right: 10px;
+       border-radius: 10px;
+       width: fit-content;
+       /* margin-bottom: 2rem; */
+       max-width: 500px;
+       margin: 0.5rem auto;
+       color: white;
+     }
+     .title {
+       font-size: 20px;
+       overflow: hidden;
+       max-height: 4.9em;
+       line-height: 1.2rem;
+     }
+     .subTitle {
+       padding-left: 10px;
+       text-align: end;
+       overflow: hidden;
+       max-height: 4.9em;
+       line-height: 1.2rem;
+       font-size: 19px;
+     }
+     .articleImg {
+       max-width: 150px;
+       border-radius: 10px 0 0 10px;
+     }

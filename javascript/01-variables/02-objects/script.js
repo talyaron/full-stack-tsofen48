@@ -33,9 +33,14 @@ const obj2 = { foo: 'bar', baz: 42 };
 arr[3] = obj;
 
 console.log(arr)
+let family= {yaba:"ghali", yama:"Omi", ahoi:"albaghel"};
 
+console.log(family)
 // set an object about your family (baba, ab, yaba, aum, yama), add it to array, am's familiy chal's family 
 
+<<<<<<< Updated upstream
 const [yourObj, amObj, chalObj];
 
+=======
+>>>>>>> Stashed changes
 
