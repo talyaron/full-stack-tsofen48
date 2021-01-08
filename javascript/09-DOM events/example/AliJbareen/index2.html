@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <script>
+            function handleSubmit(event){
+                event.preventDefault()
+                console.log(event)
+            }
+      </script>
+    <div id="wrapper">
+        <div id="inputs">
+        <div>
+      <center><form id="forom" method="submit">
+        <h1>Order</h1>
+        Full name: <input type="text" name="firstname" ><br/>
+        Address:<input type="email" name="email" placeholder="1234 Tel Aviv">
+       <br/>
+          <p>Pizza toppings</p>
+          <input type='checkbox' checked>Cheese
+          <input type='checkbox'>Mushrooms
+          <input type='checkbox'>Olives
+          <p>Comments:</br></p>
+            <textarea></textarea>
+            <p></p>
+        <input type="submit" value="Submit" onclick="handleSubmit(forom)">
+      </form>
+      </div>
+      </div>
+  </body>
+</html>
