@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='theButton'>Press Me!</button>
+    <!-- inline event -->
+    <input type='text' id="_input" placeholder="eneter your name" value="">
+</body>
+<script>
+
+    document.querySelector('#theButton').addEventListener('click', function() {
+        alert(document.getElementById('_input').value);
+    });
+
+</script>
+</html>

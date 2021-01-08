@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let input = document.createElement("input");
+    input.className = "userData";
+    document.body.append(input);
+    let button = document.createElement("button");
+    button.innerHTML='alert my text!'
+    button.addEventListener("click", (event) => {
+      console.log("event.target.value", event.target.value);
+      alert(`${document.querySelector('.userData').value}`)
+    });
+    document.body.append(button)
+  </script>
+</html>
