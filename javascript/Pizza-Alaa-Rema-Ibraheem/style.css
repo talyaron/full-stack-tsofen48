@@ -1,0 +1,50 @@
+body{
+    background-image: url('https://wallpaperaccess.com/full/462773.jpg');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif; 
+    padding: 10%;
+}
+
+h4{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+    width: 50%;
+}
+div{
+    left: 20px;
+}
+.pizza-details{
+    top: 10%;
+    width: 50%;
+    height: 45%;
+}
+.customer-details{
+    top: 60%;
+    width: 50%;
+}
+.input,select{
+    position: relative;
+    left: 25px;
+    width: 50%;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 15px;
+    display:inline;
+    background-color: whitesmoke;
+    opacity: 0.5;
+  
+
+}
+@keyframes moveright {
+    from {left: 0px;}
+    to {left: 25px;}
+  }
+
+.subButt{
+    position: absolute;
+    left: 20px;
+    bottom:0;
+}
+.toppings{
+    color:whitesmoke;
+}

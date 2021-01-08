@@ -33,3 +33,11 @@ function changePizzaNumber(e) {
     }
     currentPizzaNumberElement.placeholder = currentPizzaNumber;
 }
+
+function saleCalculation() {
+        
+    if(document.getElementById('w3-check').checked) { 
+       alert('for all Olives lovers- you Won - 15% Sale !');
+       } 
+
+}
