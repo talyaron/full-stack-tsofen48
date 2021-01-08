@@ -1,7 +1,67 @@
 body{
-    background-image: url('');
+    background-image: url('https://wallpaperaccess.com/full/462773.jpg');
     background-size: cover;
+    font-family: 'Poppins', sans-serif; 
 }
-input,select{
-    width: 40%;
+hr{
+    
+    color: whitesmoke;
+    font-weight:bolder;
+}
+label{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+    width: 50%;
+}
+div{
+    position:absolute;
+    left: 20px;
+}
+.div1{
+    top: 10%;
+    width: 50%;
+    height: 45%;
+ 
+}
+.divQ{
+    position: relative;
+    left: 10px;
+}
+.div3{
+    top: 60%;
+    width: 50%;
+}
+.input,select{
+    position: relative;
+    left: 25px;
+    width: 50%;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 15px;
+    display:inline;
+    background-color: whitesmoke;
+    opacity: 0.5;
+  
+
+}
+@keyframes moveright {
+    from {left: 0px;}
+    to {left: 25px;}
+  }
+.radio{
+    position: relative;
+    
+    
+}
+.sel{
+    width: 30%;   
+}
+#selSize{
+    width: 15%;
+    margin-right: 380px;
+}
+.subButt{
+    position: absolute;
+    left: 20px;
+    bottom:0;
 }

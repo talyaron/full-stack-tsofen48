@@ -1,77 +1,6 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <form>
-        <section>
-            <label for="pizzatype">Choose Pizza Type : </label>
-            <select name="pizzatype">
-                <option value="margarita"> Margarita (fresh mozzarella and basil with sauce)</option>
-                <option value="Mushroom">Mondo Mushroom (all the mushrooms you can handle)</option>
-                <option value="sausage">Classic sausage (Italian sausage and peppers)</option>
-                <option value="Vegetables">Vegetables! (seasonal veggie medley)</option>
-                <option value="Custom"> Custom (design your own!)</option>
-            </select>
-            <hr><br><br>
-            <label for="pizzasize">Choose Pizza Size : </label>
-            <select name="pizzasize">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="Xlarge">Xlarge</option>
-
-
-            </select>
-
-            <div class="quantityChange">
-                <label> How Many Pizzas You Want?</label><br>
-                <button class="plus">+</button>
-                <input type="text" class="quantity" disabled='true' style="width: 20px; text-align: center;"
-                    placeholder="1">
-                <button class="minus">-</button>
-            </div>
-
-        </section>
-        <section>
-            <input type="radio" class="w3-check" value="Olives">
-            <label>Olives</label><br>
-            <input type="radio" value="Cheese">
-            <label>Cheese</label><br>
-            <input type="radio" value="Pepperoni">
-            <label>Pepperoni</label><br>
-            <input type="radio" value="Corn">
-            <label>Corn</label><br>
-        </section>
-        <section>
-            <hr><br>
-            <label>Name</label>
-            <input type="text" name="name" class="w3-input w3-hover-green">
-            <br>
-            <label>Phone</label>
-            <input type="text" name="phone" class="w3-input w3-hover-green"><br>
-            <br>
-            <label>Address</label>
-            <input type="text" name="address" class="w3-input w3-hover-green"><br>
-            <br>
-        </section>
-        <button type="submit" name="submit">Submit</button>
-        <div></div>
-    </form>
-
-    <script src="./index.js"></script>
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,59 +8,67 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <form>
-       <section>
-           <label for="pizzatype">Choose Pizza Type : </label>
-        <select name="pizzatype" class="w3-select">
-            <label for="pizzasize" class="w3-select">Choose Pizza Size : </label>
-            <option value="margarita"> Margarita (fresh mozzarella and basil with sauce)</option>
-            <option value="Mushroom">Mondo Mushroom (all the mushrooms you can handle)</option>
-            <option value="sausage">Classic sausage (Italian sausage and peppers)</option>
-            <option value="Vegetables">Vegetables! (seasonal veggie medley)</option>
-            <option value="Custom"> Custom (design your own!)</option>
-          </select>
-          <hr><br><br>
-          <label for="pizzasize" class="w3-select">Choose Pizza Size : </label>
-          <select name="pizzasize">
-            <option value="" disabled selected>Choose your option</option>
-              <option value="small">Small</option>
-              <option value="Medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="Xlarge">Xlarge</option>
-             
-
+        <div class="div1">
+            <label for="pizzatype">Choose Pizza Type : </label>
+            <select name="pizzatype" class="sel">
+                <option value="margarita"> Margarita (fresh mozzarella and basil with sauce)</option>
+                <option value="Mushroom">Mondo Mushroom (all the mushrooms you can handle)</option>
+                <option value="sausage">Classic sausage (Italian sausage and peppers)</option>
+                <option value="Vegetables">Vegetables! (seasonal veggie medley)</option>
+                <option value="Custom"> Custom (design your own!)</option>
             </select>
+            <hr>
+            <label for="pizzasize">Choose Pizza Size : </label>
+            <select name="pizzasize" class="sel" id="selSize">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="Xlarge">Xlarge</option>
+                <br>
+              
+                 <input type="radio" class="w3-check" value="Olives" class="w3-radio radio"> 
+                <label>Olives</label><br>
+                <input type="radio" value="Cheese" class="w3-radio radio"> 
+                <label>Cheese</label><br>
+                <input type="radio" value="Pepperoni" class="w3-radio radio">
+                <label>Pepperoni</label><br>
+                <input type="radio" value="Corn" class="w3-radio radio">
+                <label>Corn</label><br>
 
-            <label>Quantity</label>
+                <br>
+                <div class="quantityChange divQ">
+                    <label> How Many Pizzas You Want?</label><br>
+                    <button class="plus">+</button>
+                    <input type="text" class="quantity" disabled='true' style="width: 20px; text-align: center;"
+                        placeholder="1">
+                    <button class="minus">-</button>
+                </div>
+            </div>
+        
+      
 
-       </section>
-       <section>
-           <input type="radio"class="w3-check" value="Olives">
-           <label>Olives</label><br>
-           <input type="radio" value="Cheese">
-           <label>Cheese</label><br>
-           <input type="radio" value="Pepperoni">
-           <label>Pepperoni</label><br>
-           <input type="radio" value="Corn">
-           <label>Corn</label><br>
-       </section>
-    <section>
-        <hr><br>
-      <label>Name</label>
-      <input type="text" name="name" class="w3-input w3-hover-green">
-      <br>
-      <label>Phone</label>
-      <input type="text" name="phone" class="w3-input w3-hover-green"><br>
-      <br>
-      <label>Address</label>
-      <input type="text" name="address" class="w3-input w3-hover-green"><br>
-      <br>
-    </section>
-    <button type="submit" name="submit">Submit</button>
-    <div>
-        You Have A Discount</div>
+   
+        <div class="div3">
+            <hr>
+            <label>Name</label>
+            <input type="text" name="name" class="w3-input w3-hover-green input"><br><br>
+            <label>Phone</label>
+            <input type="text" name="phone" class="w3-input w3-hover-green input"><br><br>
+         
+            <label>Address</label>
+            <input type="text" name="address" class="w3-input w3-hover-green input"><br><br>
+          
+            <button type="submit" name="submit" class="subButt">Submit</button>
+        </div>
+       
+            
+        
     </form>
+
+    <script src="./index.js"></script>
 </body>
->>>>>>> Stashed changes
+
 </html>
