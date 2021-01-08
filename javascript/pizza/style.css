@@ -1,0 +1,26 @@
+body{
+    background-image: url('https://wallpaperaccess.com/full/462773.jpg');
+    background-size: cover;
+}
+input,select{
+    width: 40%;
+}
+<div class="quantityChange">
+        <label> How Many Pizzas You Want?</label><br>
+        <button class="plus">+</button>
+        <input type="text" class="quantity" disabled='true' style="width: 20px; text-align: center;" placeholder="1">
+        <button class="minus">-</button>
+        <script>
+            let plusBtn = document.querySelector('button.plus');
+            !!plusBtn && plusBtn.addEventListener('click', changePizzaNumber);
+            let minusBtn = document.querySelector('button.minus');
+            !!minusBtn && minusBtn.addEventListener('click', changePizzaNumber);
+
+            function changePizzaNumber(e) {
+                let currentPizzaNumberElement = document.querySelector('input.quantity');
+                let currentPizzaNumber = !!currentPizzaNumberElement && parseInt(currentPizzaNumberElement.placeholder);
+
+                if (e.target.className.indexOf('minus') > -1) {
+                    if (currentPizzaNumber == 0) {
+                        alert('can not decrease more!');
+    
