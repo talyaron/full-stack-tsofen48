@@ -36,5 +36,5 @@ articles.forEach(element => {
     box.appendChild(subtitle);
     div.appendChild(img);
     div.appendChild(box);
-    document.getElementsByTagName("body")[0].appendChild(div);
+    document.getElementsByTagName("body")[0].appendChild(div); //This wouldn't work, if the DOM will change
 });
