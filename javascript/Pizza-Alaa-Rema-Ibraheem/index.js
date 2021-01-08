@@ -2,6 +2,7 @@
 addQuantityFunctionality();
 submissionFunctionality();
 
+
 /**
  * Function Definitions
  */
@@ -37,11 +38,13 @@ function changePizzaNumber(e) {
 }
 
 function saleCalculation() {
-
+    let message='';
     if (document.getElementById('w3-check').checked) {
-        alert('for all Olives lovers- you Won - 15% Sale !');
+        message='for all Olives lovers- you Won - 15% Sale !';
+    }else{
+        message='';
     }
-
+    return message;
 }
 
 function submissionFunctionality() {
@@ -57,10 +60,7 @@ function handleSubmit(e) {
         toppings = document.querySelectorAll('input[type="checkbox"]'),
         quantity = document.querySelector('input.quantity');
 
-    let orderDetails = document.createElement('h4');
-    orderDetails.innerHTML = JSON.stringify(createOrder(pizzaType, pizzaSize, toppings, quantity));
-
-    document.querySelector('div.order-details').appendChild(orderDetails);
+    openForm(createOrder(pizzaType, pizzaSize, toppings, quantity))
 }
 
 function createOrder(pizzaType, pizzaSize, toppings, quantity) {
@@ -76,3 +76,18 @@ function createOrder(pizzaType, pizzaSize, toppings, quantity) {
     console.log(order);
     return order;
 }
+
+function openForm(order) {
+
+    document.getElementById("orderForm").style.display = "block";
+    document.getElementById("type").innerHTML=order.Type;
+    document.getElementById("size").innerHTML=order.Size;
+    document.getElementById("toppings").innerHTML=order.Toppings;
+    document.getElementById("quantity").innerHTML=order.Quantity;
+    document.getElementById("Sale").innerHTML=saleCalculation();
+  }
+  
+  function closeForm() {
+    document.getElementById("orderForm").style.display = "none";
+    clearInputs();
+  }

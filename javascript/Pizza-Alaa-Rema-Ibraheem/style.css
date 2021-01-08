@@ -35,18 +35,84 @@ div{
   
 
 }
-@keyframes moveright {
-    from {left: 0px;}
-    to {left: 25px;}
-  }
-
-.subButt{
-    position: absolute;
-    left: 20px;
-    bottom:0;
+.subBtn{
+  background-color: rgb(10, 69, 71);
+  position:relative;
+  left:5%;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
 }
 .toppings{
     color:whitesmoke;
 }
-.order-details{
+  /* The popup form - hidden by default */
+.form-popup {
+  background-color: rgb(51, 49, 49,0.8);
+  display: none;
+  top: 10px;
+  position: fixed;
+  bottom:40%;
+  z-index: 9;
+  width: 40%;
+  height: 70%;
+  text-align: center;
+  border-radius: 15px;
+  
 }
+.cancel {
+  background-color: red;
+  position:absolute;
+  left: 35%;
+  bottom: 2px;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.cancel:hover,.subBtn:hover{
+    opacity: 0.6;
+}
+.form-container {
+  max-width: 30%;
+  background-color: white;
+  
+}
+#size,#type,#toppings,#quantity,#Sale{
+    font-size: 20px;
+    font-weight: bolder;
+    color:red;
+}
+label{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 15px;
+}
+@media only screen and (max-width: 600px) {
+    .input,select {
+        left: 0px;
+        width: 80%;
+    }
+    div,.customer-details,.customer-details {
+        width: 100%;
+        left: 0px;
+    }
+    body{
+        padding: 2%;
+    }
+    .form-popup{
+        width: 80%;
+        left: 10%;
+        height:90%;
+    }
+    .subBtn{
+        width: 50%;
+        top:184%;
+    }
+  }
