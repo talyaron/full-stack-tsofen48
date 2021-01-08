@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body onload="myFunction()">
+<div class="center">
+
+<div class="Item">
+    <p></p>
+    <div class="PicDiv"></div>
+    <div class="TxtDiv"></div>
+</div>
+
+<div class="Item">
+    <p></p>
+    <div class="PicDiv"></div>
+    <div class="TxtDiv"></div>
+</div>
+
+<div class="Item">
+    <p></p>
+    <div class="PicDiv"></div>
+    <div class="TxtDiv"></div>
+</div>
+
+<div class="Item">
+    <p></p>
+    <div class="PicDiv"></div>
+    <div class="TxtDiv"></div>
+</div>
+
+<div class="Item">
+    <p></p>
+    <div class="PicDiv"></div>
+    <div class="TxtDiv"></div>
+</div>
+
+
+
+</div>
+<style>
+
+div.PicDiv {
+    background-image: url("Images/2.jpg");
+}
+
+</style>
+<script>
+
+
+
+document.getElementByClassName("Item").onload = function() {myFunction()};
+function myFunction() {
+   var BigBlock = document.getElementsByClassName("center");
+   BigBlock[0].style.margin = "auto";
+   BigBlock[0].style.width = "520px";
+   BigBlock[0].style.height= "550px";
+   BigBlock[0].style.border = "3px solid black"; 
+   BigBlock[0].style.padding = "10px";
+   
+   
+  var ContDiv = document.getElementsByClassName("Item");
+  for (i = 0; i < ContDiv.length; i++) {
+  ContDiv[i].style.display= "inline-block";
+  ContDiv[i].style.position = "relative";
+  ContDiv[i].style.border = "1px solid";
+  ContDiv[i].style.margin = "Auto"; 
+  ContDiv[i].style.width = "500px";
+  ContDiv[i].style.height = "100px";
+  ContDiv[i].href = "#";
+}
+  
+  var picDiv = document.getElementsByClassName("PicDiv");
+  for (i = 0; i < picDiv.length; i++) {
+  picDiv[i].style.position = "absolute";
+  picDiv[i].style.top = "0px";
+  picDiv[i].style.left = "0px";
+  picDiv[i].style.width = "150px";
+  picDiv[i].href = "#";
+  //picDiv[i].style.background-image= url("https://pms.panet.co.il/online/images//articles/2021/01/07-01-2021/karam/019/54d79cfd-70fe-44c3-8b17-4d7abde3177f.jpg");
+  picDiv[i].style.height = "100px";
+  picDiv[i].style.border = "1px solid #73AD21";
+  picDiv[i].style.backgroundColor = "white";
+  
+  }
+  
+  //var h1= document.createElement('h2');
+   //h1.innerHTML = "Description";
+  var TxtDiv = document.getElementsByClassName("TxtDiv");
+  for (i = 0; i < TxtDiv.length; i++) {
+   // TxtDiv[i].innerHTML = h1.innerHTML; '<a href="' + abc + '">Link</a>';
+   TxtDiv[i].innerHTML = "<a href=#>" ;
+    TxtDiv[i].innerHTML += "فوز ثالث على التوالي حققه الليلة فريق هبوعيل اكسال على حساب الهابط من الدرجة العليا سكتسيا نيس تسيونا بهدفين دون مقابل، في المباراة التي جمعتهما";
+    TxtDiv[i].innerHTML += "</a>" ;
+    TxtDiv[i].style.color = "white";
+    TxtDiv[i].style.textAlign = "right";
+    TxtDiv[i].style.position=  "absolute";
+  TxtDiv[i].style.top= "0px";
+  TxtDiv[i].style.right= "0px";
+  TxtDiv[i].style.width="350px"; 
+  TxtDiv[i].style.height= "100px";
+  TxtDiv[i].style.backgroundColor= "red";
+  if(i>0){
+      if(TxtDiv[i-1].style.backgroundColor=="red")
+      {
+        TxtDiv[i].style.backgroundColor = "darkblue";
+      }
+      else
+      {
+        TxtDiv[i].style.backgroundColor = "red";
+      }
+
+  }
+}
+  
+
+  //x[0].style.min-height: "500px";
+ //
+
+
+
+  
+}
+</script>
+
+</body>
+</html>

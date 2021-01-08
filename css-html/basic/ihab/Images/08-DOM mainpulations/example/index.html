@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> what a funny think</p>
+    <button onclick="Push()">Push The Button</button>
+<script>
+    let Var = setInterval(Do,300); 
+    
+    function Do() 
+    {
+        let x= document.body;
+        if(x.style.backgroundColor=="red")
+        {
+            x.style.backgroundColor = "black";
+        }
+        else
+        {
+            x.style.backgroundColor = "red";
+        }
+    }
+    function Push() {
+        clearInterval(Var); 
+    }
+
+    </script>
+</body>
+</html>
