@@ -61,8 +61,19 @@ div{
   height: 70%;
   text-align: center;
   border-radius: 15px;
-  
+  animation: popUpimation  2s;
 }
+@keyframes popUpimation {
+    0% {
+        width: 50px;
+        height: 50px;
+    }
+    50%,
+    100% {
+        width: 40%;
+        height: 70%;
+    }
+  }
 .cancel {
   background-color: red;
   position:absolute;
@@ -110,6 +121,7 @@ label{
         width: 80%;
         left: 10%;
         height:90%;
+        animation: none;
     }
     .subBtn{
         width: 50%;
