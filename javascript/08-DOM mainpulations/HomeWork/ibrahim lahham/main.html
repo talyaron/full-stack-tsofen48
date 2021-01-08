@@ -111,10 +111,10 @@
 
 
     arr.map((element, index) => {
-      x = x.concat(`<div style="background-color:` + getRandomColor() + `;border-radius: 4%;" class="grid-container">
-  <div  class="grid-item item1">`+ element['title'] + `</div>
-  <div  class="grid-item item2"><img src="`+ element['image'] + `"></div>
-  <div  class="grid-item item3">`+ element['subTitle'] + ` </div>  
+      x = x.concat(`<div style="background-color:${getRandomColor()};border-radius: 4%;" class="grid-container">
+  <div  class="grid-item item1">${element['title']}</div>
+  <div  class="grid-item item2"><img src="${element['image']}"></div>
+  <div  class="grid-item item3">${element['subTitle']} </div>  
 </div>`);
     })
     document.getElementById('articles').innerHTML = x;
