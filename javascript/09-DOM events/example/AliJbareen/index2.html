@@ -8,27 +8,65 @@
   </head>
   <body>
       <script>
-            function handleSubmit(event){
-                event.preventDefault()
-                console.log(event)
-            }
+    function validateform(){  
+        event.preventDefault();
+    let name=document.forom.fullname.value;
+    let Address = document.forom.adress.value;
+    let with_olives = document.forom.olives.checked;
+    let with_chesse =document.forom.cheese.checked;
+    let with_mushroms=document.forom.mushroms.checked;
+
+    let price = 60;
+    if(with_mushroms){
+        price+=5
+    }
+    if(with_chesse){
+        price+=5
+    }
+
+    if(with_olives){
+        price*=0.9
+    }
+
+    alert(price)
+    
+    var thename = document.createElement("p");
+    var theprice = document.createElement("p");
+    var toppings = document.createElement("p");
+    var theAdress = document.createElement("p");
+
+
+    thename.innerHTML = name;
+    theAdress.innerHTML = Address;
+    theprice.innerHTML = price;
+    
+
+
+    var container = document.createElement("div");
+    container.appendChild(thename);
+    container.appendChild(theprice);
+    container.appendChild(toppings);
+
+    
+    document.getElementsByTagName("body")[0].appendChild(container);
+
+    }
       </script>
     <div id="wrapper">
         <div id="inputs">
         <div>
-      <center><form id="forom" method="submit">
+      <center><form name="forom" method="submit"  onsubmit="return validateform()">
         <h1>Order</h1>
-        Full name: <input type="text" name="firstname" ><br/>
-        Address:<input type="email" name="email" placeholder="1234 Tel Aviv">
+        Full name: <input type="text" name="fullname" ><br/>
+        Address:<input name="adress" placeholder="1234 Tel Aviv">
        <br/>
           <p>Pizza toppings</p>
-          <input type='checkbox' checked>Cheese
-          <input type='checkbox'>Mushrooms
-          <input type='checkbox'>Olives
-          <p>Comments:</br></p>
-            <textarea></textarea>
+          <input name='cheese' type='checkbox' checked>Cheese
+          <input name='mushroms' type='checkbox'>Mushrooms
+          <input name='olives' type='checkbox'>Olives
             <p></p>
-        <input type="submit" value="Submit" onclick="handleSubmit(forom)">
+            <input type="submit" value="Order">
+            
       </form>
       </div>
       </div>
