@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-rows: repeat(10, 1fr);
+        /* gap: 3px; */
+        /* width: 70%; */
+        /* gap: 20px; */
+        padding-right: 15%;
+        padding-left: 15%;
+
+
+    }
+
+    .item {
+        position: relative;
+        background-color: plum;
+        transition: all 300ms;
+    }
+
+    .inside {
+        margin: auto;
+        margin-block-start: 0;
+        text-align: right;
+        object-fit: cover;
+        margin-left: 300px;
+        margin-right: 10px;
+        color: blanchedalmond;
+        /* padding-right: 100; */
+    }
+
+    img {
+        position: absolute;
+        align-items: center;
+        float: left;
+        object-fit: cover;
+        width: 30%;
+        height: 100%;
+
+        /* max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0; */
+    }
+
+    h1 {
+        text-align: right;
+        margin-left: 100px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+     
+        <div class="item">
+            <div class="inside">
+                <h1>هبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي</h1>
+                <p>فوز ثالث على التوالي حققه الليلة فريق هبوعيل اكسال على حساب الهابط من الدرجة العليا سكتسيا نيس تسيونا
+                    بهدفين دون مقابل، في المباراة التي جمعتهما</p>
+            </div>
+            <img src="https://pms.panet.co.il/online/images//articles/2021/01/07-01-2021/karam/019/54d79cfd-70fe-44c3-8b17-4d7abde3177f.jpg"
+                alt="Cinque Terre" width="100%" height="400">
+
+        </div>
+        <div class="item">
+            <div class="inside">
+                <h1>د. سعيد :‘ من السهل الوصول الى تطعيم للطفرات الجديدة ‘</h1>
+                <p>عبّر علماء بريطانيون عن قلقهم من سلالة كورونا الجنوب افريقية ، مؤكدين انها أكثر خطورة ، فيما قال
+                    خبراء انهم يتخوفون من عدم فعالية اللقاح ضدها .</p>
+            </div>
+            <img src="https://pms.panet.co.il/online/images//articles/2021/01/05-01-2021/netn/05/6.jpg"
+                alt="Cinque Terre" width="100%" height="400">
+        </div>
+        <div class="item">
+            <div class="inside">
+                <h1>ما حقيقة اعتزال يسرا التمثيل بعد الشفاء من كورونا ؟</h1>
+                <p>ما حقيقة اعتزال يسرا التمثيل بعد الشفاء من كورونا ؟
+                    موقع بانيت وصحيفة بانوراما
+                    نفى مصدر مقرب من الفنانة يسرا كل ما تردد طوال الساعات الماضية عن اتخاذها قرارا باعتزال التمثيل
+                    والتفرغ للعبادة، إذا منّ الله عليها بالشفاء من فيروس كورونا، واستطاعت</p>
+            </div>
+            <img src="https://pms.panet.co.il/online/images//articles/2020/10/26-10-2020/dana/04/545.PNG"
+                alt="Cinque Terre" width="100%" height="400">
+        </div>
+        <div class="item">
+            <div class="inside">
+                <h1>هبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي</h1>
+                <p>فوز ثالث على التوالي حققه الليلة فريق هبوعيل اكسال على حساب الهابط من الدرجة العليا سكتسيا نيس تسيونا
+                    بهدفين دون مقابل، في المباراة التي جمعتهما</p>
+            </div>
+            <img src="https://pms.panet.co.il/online/images//articles/2021/01/07-01-2021/SHARIF/25/GettyImages-1188134603.jpg"
+                alt="Cinque Terre" width="100%" height="400">
+        </div>
+
+    </div>
+
+    <script>
+        console.log('start')
+        console.dir(document) //object Document Object Model
+        document.title = 'This document weas hacked';
+
+        let items = document.querySelectorAll('.item')
+        console.log(items)
+        items.forEach(item=>{
+            console.log(item.children[0])
+        })
+ 
+
+
+        let container = document.querySelector('.container')
+        container.style.gap = '20px';
+        container.style.width = '70%';
+
+        let img = document.querySelector('img')
+        let inside = document.querySelector('.item>.inside')
+        let h1 = document.querySelector('h1');
+        //h1.style.color = 'white';
+        // h1.forEach(i=>{
+        //     i.style.color = 'white';
+        // })
+
+        Object.entries(h1).forEach(i => {
+            i.style.color = 'white';
+        })
+
+        items.forEach((item, index) => {
+            item.style.display = 'flex';
+            item.style.flexdirection = 'column';
+            item.style.flexwrap = 'wrap';
+            if (index % 2 == 0)
+                item.style.background = 'red';
+            else if (index % 4 == 1)
+                item.style.background = 'blue';
+            else  if (index % 4 == 3)  
+                item.style.background = 'black';
+            item.style.height = '30vh';
+
+            //     Object.entries(h1).forEach(i => {
+                item.children[0].style.color = 'white';
+            // })
+            //item.img.style.object-fit ='cover'
+            //h1.style.background = 'white'
+            //item.div.style.
+            //item.style.margin= '100';
+            //items.style = 
+            //let rgb = `rgb(${Math.random() * 255}, ${Math.random() * 255},  ${Math.random() * 255})`;
+            //item.style.background = 'red';
+            //item.style.transition(30)
+        })
+        //}, 500)
+
+
+    </script>
+</body>
+
+</html>
