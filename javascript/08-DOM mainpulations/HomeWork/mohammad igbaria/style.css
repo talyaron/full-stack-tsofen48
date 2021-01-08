@@ -1,0 +1,13 @@
+.article {
+  border: 2px solid rgb(56, 50, 61);
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 20px;
+  background: rgb(106, 163, 158);
+}
+img[id^="article-image-"] {
+  width: 250px;
+  height: 200px;
+  background: rgb(180, 180, 219);
+}
