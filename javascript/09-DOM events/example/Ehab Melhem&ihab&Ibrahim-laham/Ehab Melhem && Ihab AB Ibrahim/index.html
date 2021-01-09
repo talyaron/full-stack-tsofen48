@@ -24,10 +24,10 @@
         <div id="second_line" class="line"></div>
         <div id="third" class="circle"><span>Payment</span></div>
       </div>
-      <div class="forms">
+      <div class="forms" name="myForm">
         <form class="personal__details anmati">
           <div class="item">
-            <input placeholder="Full name" type="text" />
+            <input id="Name" placeholder="Full name"  type="text" />
           </div>
           <div class="item">
             <input placeholder="adrress" type="text" />
@@ -38,7 +38,7 @@
           <div class="item">
             <input placeholder="Enter your Phone Number" type="text" />
           </div>
-          <button type="submit">Next</button>
+          <button type="submit" onclick="DoValidate()">Next</button>
         </form>
         <!-- order -->
         <form class="order">

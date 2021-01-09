@@ -15,6 +15,12 @@ second.style.display = "none";
 second_line.style.display = "none";
 third.style.display = "none";
 
+function DoValidate(params) {
+      
+      alert("you must fill it");
+    }
+
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   order.style.display = "block";
