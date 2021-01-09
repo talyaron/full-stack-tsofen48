@@ -3,6 +3,7 @@ body{
     background-size: cover;
     font-family: 'Poppins', sans-serif; 
     padding: 10%;
+    position: relative;
 }
 
 h4{
@@ -128,3 +129,213 @@ label{
         top:184%;
     }
   }
+
+
+  
+
+
+
+
+
+
+  .wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .wrapper .slice {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 35px solid #FEFCC6;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    z-index: 10;
+  }
+  .wrapper .slice:before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: -45px;
+    width: 30px;
+    height: 15px;
+    background: #FEFCC6;
+    border-radius: 100%;
+    border-top: 5px solid #E57A19;
+    z-index: -1;
+  }
+  .wrapper .slice .tomato {
+      
+    background: #A30000;
+    position: absolute;
+    border-radius: 100%;
+  }
+  .wrapper .slice .tomato:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    top: -37px;
+    left: 1px;
+  }
+  .wrapper .slice .tomato:nth-child(2) {
+    width: 7px;
+    height: 7px;
+    top: -25px;
+    left: -7px;
+  }
+  .wrapper .slice .olive {
+    background: #A30000;
+    position: absolute;
+    border-radius: 100%;
+  }
+  .wrapper .slice .olive:nth-child(3) {
+    width: 4px;
+    height: 4px;
+    top: -14px;
+    left: -1px;
+  }
+  .center {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    animation-name: goAround;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .slice:nth-child(1) {
+    animation-name: slide-in-1;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-1 {
+    from {
+      transform: translateX(-50%) rotate(60deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(60deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+  .slice:nth-child(2) {
+    animation-name: slide-in-2;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.4s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-2 {
+    from {
+      transform: translateX(-50%) rotate(120deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(120deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+  .slice:nth-child(3) {
+    animation-name: slide-in-3;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.6s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-3 {
+    from {
+      transform: translateX(-50%) rotate(180deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(180deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+  .slice:nth-child(4) {
+    animation-name: slide-in-4;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.8s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-4 {
+    from {
+      transform: translateX(-50%) rotate(240deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(240deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+  .slice:nth-child(5) {
+    animation-name: slide-in-5;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-5 {
+    from {
+      transform: translateX(-50%) rotate(300deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(300deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+  .slice:nth-child(6) {
+    animation-name: slide-in-6;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-delay: 1.2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  @keyframes slide-in-6 {
+    from {
+      transform: translateX(-50%) rotate(360deg) translateY(-30px);
+      visibility: visible;
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg) translateY(-15px);
+      visibility: visible;
+    }
+  }
+
+  @keyframes goAround {
+    0% {
+      top: 10%;
+      left: 10%;
+    }
+    25% {
+      top: 10%;
+      left: 90%;
+    }
+    50% {
+        left: 90%;
+        top: 90%;
+    }
+    75% {
+        left: 5%;
+        top: 90%;
+    }
+
+    100% {
+        left: 5%;
+        top: 10%;
+      }
+  }
+  
