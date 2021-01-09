@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #teras{
+        display: flex;
+    }
+</style>
+<body>
+    
+    <button id="teras" onClick="add_piza()" > add teras</button>
+    <button id="ztem" onClick="add_piza()" > add ztem </button>
+    <button id="gvena" onClick="add_piza()" > add gvena</button>
+    <script>
+        let total=0;
+        let sum=0;
+      function add_piza()
+      {
+          
+      }
+       document.querySelector('#teras').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+
+       document.querySelector('#gvena').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+       document.querySelector('#ztem').addEventListener('click',e=>{
+           total++;
+        console.log(total);
+       })
+       console.log(total)
+    </script>
+</body>
+</html>
