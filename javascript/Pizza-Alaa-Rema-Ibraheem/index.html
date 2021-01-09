@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="pizza-details">
+            <div class="pizzatype">
+                <h4 for="pizzatype">Choose Pizza Type : </h4>
+                <select name="pizzatype" class="sel">
+                    <option value="margarita"> Margarita (fresh mozzarella and basil with sauce)</option>
+                    <option value="Mushroom">Mondo Mushroom (all the mushrooms you can handle)</option>
+                    <option value="sausage">Classic sausage (Italian sausage and peppers)</option>
+                    <option value="Vegetables">Vegetables! (seasonal veggie medley)</option>
+                    <option value="Custom"> Custom (design your own!)</option>
+                </select>
+            </div>
+            <hr>
+            <div class="pizzasize">
+                <h4 for="pizzasize">Choose Pizza Size : </h4>
+                <select name="pizzasize" class="sel" id="selSize">
+                    <option value="small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="Xlarge">Xlarge</option>
+                    <br>
+                </select>
+            </div>
+            <div class="toppings">
+                <h4>Toppings:</h4>
+                <input type="checkbox" id="w3-check" value="Olives"> Olives<br>
+                <input type="checkbox" value="Cheese"> Cheese<br>
+                <input type="checkbox" value="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" value="Corn"> Corn<br>
+            </div>
+
+            <br>
+            <div class="quantityChange divQ">
+                <h4> How Many Pizzas You Want?</h4><br>
+                <button class="plus">+</button>
+                <input type="text" class="quantity" disabled='true' style="width: 25px; text-align: center;"
+                    placeholder="1">
+                <button class="minus">-</button>
+            </div>
+        </div>
+
+        <div class="customer-details">
+            <hr>
+            <h4>Name</h4>
+            <input type="text" name="name" class="w3-input w3-hover-green input"><br><br>
+            <h4>Phone</h4>
+            <input type="text" name="phone" class="w3-input w3-hover-green input"><br><br>
+
+            <h4>Address</h4>
+            <input type="text" name="address" class="w3-input w3-hover-green input"><br><br>
+
+        </div>
+
+        <div class="submit">
+            <button class="subBtn" type="submit" name="submit" onclick='saleCalculation()'>Submit</button>
+            
+        </div>
+        <div class="order-details">
+            
+        </div>
+
+        <div class="form-popup" id="orderForm">
+            <form  class="form-container">
+                <br>
+              <label><b>Your Order</b></label><br><br>
+
+              <label><b>Pizza Type : </b></label><br>
+              <label><b id="type"></b></label><br>
+          
+              <label><b>Pizza Size : </b></label><br>
+              <label><b id="size"></b></label><br>
+          
+              <label><b>Toppings: </b></label><br>
+              <label><b id="toppings"></b></label><br>
+          
+              <label><b>Quantity : </b></label><br>
+              <label><b id="quantity"></b></label><br>
+
+              <label><b id="Sale"></b></label><br><br>
+          
+               <br><br>
+              <button type="button" class="cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+    </form>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
