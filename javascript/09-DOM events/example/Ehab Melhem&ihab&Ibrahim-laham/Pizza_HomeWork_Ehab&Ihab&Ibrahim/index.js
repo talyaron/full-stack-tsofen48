@@ -106,7 +106,7 @@ payment.addEventListener("submit", (e) => {
         input.value +
         " so you order " +
         result +
-        " pizza with addintos " +
+        " pizza Pizza with following toppings : " +
         add +
         "and you pay for it :" +
         cost.innerText
