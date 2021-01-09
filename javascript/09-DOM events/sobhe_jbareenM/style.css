@@ -12,23 +12,54 @@ body{
     font-family: monospace;
 }
 
+.button_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
 .container{
     position: relative;
-    flex-direction: column;
-    border-radius: 20%;
-    padding: 10px;
-    /* border: 1px solid black; */
-    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    text-align: center;
+}
+
+.cost_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+.cost{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: green;
+    padding: 3px;
+    font-size: 40px;
+    width: 100px;
+    justify-content: center;
+}
+
+.cost_container>button{
+    padding: 3px;
+    font-size: 25px;
+    width: 300px;
+    margin-left: 25%;
+    justify-content: center;
 }
 
 .order{
     position: relative;
-    flex-direction: column;
     border-radius: 20%;
     padding: 5px;
     background-color: blanchedalmond;
-    /* border: 1px solid black; */
-    margin-top: 100px;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
 }
 
 .card{
@@ -180,7 +211,57 @@ span.element4{
         box-shadow: 0 25px 57px rgba(0, 0, 0, 0, 0.66);
         animation: card 1.6s ease;
     }
+
+    .button_container{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
     
+    .container{
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .cost_container{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .cost{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: green;
+        padding: 3px;
+        font-size: 20px;
+        width: 60px;
+        justify-content: center;
+    }
+    
+    .cost_container>button{
+        padding: 3px;
+        font-size: 13px;
+        width: 150px;
+        margin-left: 25%;
+        justify-content: center;
+    }
+    
+    .order{
+        position: relative;
+        border-radius: 20%;
+        padding: 2px;
+        background-color: blanchedalmond;
+        margin-top: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+   
     @keyframes card{
         0%{
             width: 0;

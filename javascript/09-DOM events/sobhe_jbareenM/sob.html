@@ -3,134 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JbareenM</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open_Sans+Condensed:300,400,500,600,700">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
 </head>
+<style>
+    #teras{
+        display: flex;
+    }
+</style>
 <body>
-
-    <div class="card">
-        <div class="three_dots animated slower zoomIn delay-3s">
-            <span></span>
-        </div>
-
-        <div class="title">
-            <h1 class="animated fadeInUp delay-2s">Sobhe & Mohamad pizza order</h1>
-            <h4 class="animated fadeInDown delay-3s">Pizza List</h4>
-        </div>
-       
-
-        <button class="container animated rotateIn delay-3s" id="teras" onClick="add_piza(1)">teras</button>
-        <button class="container animated rotateIn delay-3s" id="ztem" onClick="add_piza(2)">ztem</button>
-        <button class="container animated rotateIn delay-3s" id="gvena" onClick="add_piza(3)">gvena</button>
-        <button class="container animated rotateIn delay-3s" id="total" >$cost</button>
-        <button class="container animated rotateIn delay-3s" id="gvena" onClick="add_piza(4)">Clear</button>
-
-        <!-- <label class="container animated rotateIn delay-3s">teras
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container animated rotateIn delay-3s">ztem
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <label class="container animated rotateIn delay-3s">gvena
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label> -->
-
-          <button id="cal" onclick="total()" class="order animated rotateIn delay-3s">Order </button>
     
-        <div class="elements">
-            <span class="element2 animated rotateIn delay-4s"></span>
-            <span class="element3 animated rotateIn delay-4s"></span>
-            <span class="element4 animated rotateIn delay-5s"></span>
-        </div>
-    
-    </div>
-
+    <button id="teras" onClick="add_piza()" > add teras</button>
+    <button id="ztem" onClick="add_piza()" > add ztem </button>
+    <button id="gvena" onClick="add_piza()" > add gvena</button>
     <script>
-        let totalztem=0;
-        let totalteras=0;
-        let totalgvena=0;
+        let total=0;
         let sum=0;
-      function add_piza(r)
+      function add_piza()
       {
-        if(r==1) 
-        document.getElementById('teras').style.backgroundColor = 'Red';
-        if(r==2)
-         document.getElementById('ztem').style.backgroundColor = 'Red';
-        if(r==3)
-        document.getElementById('gvena').style.backgroundColor = 'Red';
-        if(r==4)
-        {
-            r==0;
-            document.getElementById('teras').style.backgroundColor = 'White';
-            document.getElementById('ztem').style.backgroundColor = 'White';
-            document.getElementById('gvena').style.backgroundColor = 'White';
-            totalztem=totalgvena=totalteras=0;
-            document.getElementById('total').innerHTML=0;
-
-        }
-
+          
       }
        document.querySelector('#teras').addEventListener('click',e=>{
-           if(totalteras==0)
-           {
-               totalteras++;
-           }
-           else 
-           {
-               totalteras==0;
-           }
+           total++;
+        console.log(total);
        })
 
        document.querySelector('#gvena').addEventListener('click',e=>{
-        if(totalgvena==0)
-           {
-              
-               totalgvena++;
-           }
-           else 
-           {
-               totalgvena==0;
-           }
-           
+           total++;
+        console.log(total);
        })
        document.querySelector('#ztem').addEventListener('click',e=>{
-        if(totalztem==0)
-           {
-               totalztem++;
-               alert("קבלתה הנתחה של 15%");
-           }
-           else{
-               totalztem==0;
-           }
+           total++;
+        console.log(total);
        })
-       function total()
-       {
-           let calu=0,temp=0;
-           if(totalteras==1)
-           {
-               calu+=20;
-           }
-           if(totalgvena==1)
-           {
-               calu+=20;
-           }
-           if(totalztem==1)
-           {
-               calu+=20;
-               calu=calu-calu*0.2;
-           }
-           document.getElementById('total').innerHTML=calu;
-        
-       }
-       
+       console.log(total)
     </script>
-    
-    
 </body>
 </html>

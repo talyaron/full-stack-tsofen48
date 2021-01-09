@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    #teras{
-        display: flex;
-    }
-</style>
-<body>
-    
-    <button id="teras" onClick="add_piza()" > add teras</button>
-    <button id="ztem" onClick="add_piza()" > add ztem </button>
-    <button id="gvena" onClick="add_piza()" > add gvena</button>
-    <script>
-        let total=0;
-        let sum=0;
-      function add_piza()
-      {
-          
-      }
-       document.querySelector('#teras').addEventListener('click',e=>{
-           total++;
-        console.log(total);
-       })
+    <title>JbareenM</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open_Sans+Condensed:300,400,500,600,700">
 
-       document.querySelector('#gvena').addEventListener('click',e=>{
-           total++;
-        console.log(total);
-       })
-       document.querySelector('#ztem').addEventListener('click',e=>{
-           total++;
-        console.log(total);
-       })
-       console.log(total)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <div class="three_dots animated slower zoomIn delay-3s">
+            <span></span>
+        </div>
+
+        <div class="title">
+            <h1 class="animated fadeInUp delay-2s">Sobhe & Mohamad pizza order</h1>
+            <h4 class="animated fadeInDown delay-3s">Pizza List</h4>
+        </div>
+       
+        <div class="button_container">
+            <p class="container animated rotateIn delay-3s">20$</p>
+            <p class="container animated rotateIn delay-3s">20$</p>
+            <p class="container animated rotateIn delay-3s">20$</p>
+            <button class="container animated rotateIn delay-3s" id="teras" onClick="add_piza(1)">teras</button>
+            <button class="container animated rotateIn delay-3s" id="ztem" onClick="add_piza(2)">ztem</button>
+            <button class="container animated rotateIn delay-3s" id="gvena" onClick="add_piza(3)">gvena</button>
+        </div>
+
+        <button class="cost animated rotateIn delay-3s" id="total" >$cost</button>
+
+        <div class="cost_container">
+            <button class="animated rotateIn delay-3s" id="gvena" onClick="add_piza(4)">Clear</button>
+            <button id="cal" onclick="total()" class="order animated rotateIn delay-3s">Order </button>
+        </div>
+
+        <!-- <label class="container animated rotateIn delay-3s">teras
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container animated rotateIn delay-3s">ztem
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container animated rotateIn delay-3s">gvena
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label> -->
+
+    
+        <div class="elements">
+            <span class="element2 animated rotateIn delay-4s"></span>
+            <span class="element3 animated rotateIn delay-4s"></span>
+            <span class="element4 animated rotateIn delay-5s"></span>
+        </div>
+    
+    </div>
+    <script src="MS.js"></script>
+
+    <script>
+        
+       
     </script>
+    
+    
 </body>
 </html>
