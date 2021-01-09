@@ -24,7 +24,7 @@
         <div id="second_line" class="line"></div>
         <div id="third" class="circle"><span>Payment</span></div>
       </div>
-      <div class="forms" name="myForm">
+      <div class="forms">
         <form class="personal__details anmati">
           <div class="item">
             <input id="name" placeholder="Full name" type="text" />
@@ -33,11 +33,11 @@
             <input id="adress" placeholder="adrress" type="text" />
           </div>
           <div class="item">
-            <input id="email" placeholder="Enter your email" type="email" />
+            <input placeholder="Enter your email" type="email" />
           </div>
           <div class="item">
             <input
-              id="PhoneNumber"
+              id="phoneNumber"
               placeholder="Enter your Phone Number"
               type="text"
             />
@@ -59,24 +59,16 @@
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a onclick="check(this)" class="dropdown-item" href="#"
-                    >Large</a
-                  >
+                  <a class="dropdown-item" href="#">Large</a>
                 </li>
                 <li>
-                  <a onclick="check(this)" class="dropdown-item" href="#"
-                    >Medium</a
-                  >
+                  <a class="dropdown-item" href="#">Medium</a>
                 </li>
                 <li>
-                  <a onclick="check(this)" class="dropdown-item" href="#"
-                    >Small</a
-                  >
+                  <a class="dropdown-item" href="#">Small</a>
                 </li>
                 <li>
-                  <a onclick="check(this)" class="dropdown-item" href="#"
-                    >Special</a
-                  >
+                  <a class="dropdown-item" href="#">Special</a>
                 </li>
               </ul>
             </div>
@@ -86,44 +78,34 @@
             <ul>
               <li>
                 <label>Olivs</label>
-                <input id="olivs" type="checkbox" />
+                <input type="checkbox" />
               </li>
               <li>
                 <label>Corn</label>
-                <input id="Corn" type="checkbox" />
+                <input type="checkbox" />
               </li>
               <li>
                 <label>Onion</label>
-                <input id="Onion" type="checkbox" />
+                <input type="checkbox" />
               </li>
             </ul>
           </div>
 
-          <button type="submit">Check Totall</button>
+          <button type="submit">Next</button>
         </form>
         <!-- payment -->
         <form class="payment">
-          <input
-            id="visa"
-            class="item"
-            placeholder="0000 0000 0000 0000"
-            type="number"
-          />
-          <input
-            id="code"
-            class="item"
-            placeholder="Verfication Code..."
-            type="text"
-          />
+          <input class="item" placeholder="0000 0000 0000 0000" type="number" />
+          <input class="item" placeholder="Verfication Code..." type="text" />
           <div class="calec">
-            <input id="date_1" type="text" />
+            <input type="text" />
             <label>/</label>
-            <input id="date_2" type="text" />
+            <input type="text" />
           </div>
 
           <div class="item" class="total">
             <label>Total</label>
-            <label id="tot" class="totla">$0.00</label>
+            <label class="totla">$0.00</label>
           </div>
 
           <button class="item" type="submit">Submit</button>
