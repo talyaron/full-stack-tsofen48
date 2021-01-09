@@ -51,6 +51,18 @@ form.addEventListener("submit", (e) => {
 order.addEventListener("submit", (e) => {
   e.preventDefault();
   add = "";
+  if (result === "Large") {
+    tot = 60;
+  }
+  if (result === "Medium") {
+    tot = 45;
+  }
+  if (result === "Small") {
+    tot = 20;
+  }
+  if (result === "Special") {
+    tot = 110;
+  }
   if (tot === 0) {
     alert("please choose size");
   } else {
