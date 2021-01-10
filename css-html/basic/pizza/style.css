@@ -1,0 +1,31 @@
+
+/*Downloaded from https://www.codeseek.co/SindhujaD/pizza-order-form-AuCvf */
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Patrick+Hand+SC|Waiting+for+the+Sunrise);
+body{
+  font-family:Patrick Hand SC;
+  font-size:25px;
+  background-image:url('https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table.jpg');
+  background-size:cover;
+}
+h1{
+  font-family:Cabin Sketch;
+  font-size:80px;
+}
+form{
+  background-color:#211e1e98;
+  color:white;
+  border-radius:5px;
+  height:auto;
+  width:450px;
+}
+#wrapper{
+  margin-top:-30px;
+ float:center;
+}
+.order > button:active,
+
+input{
+  font-family:Waiting for the Sunrise;
+  font-size:17px;
+  font-weight:bold;
+}
