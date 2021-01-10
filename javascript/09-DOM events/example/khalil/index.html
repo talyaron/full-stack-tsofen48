@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Patrick+Hand+SC|Waiting+for+the+Sunrise);
+
+    body {
+        font-family: Patrick Hand SC;
+        font-size: 1.5em;
+        background-size: cover;
+    }
+
+    #thanks {
+        font-size: 2em !important;
+    }
+
+    h1 {
+        font-family: Cabin Sketch;
+        font-size: 5em;
+    }
+
+    form {
+        background-color: #211e1e;
+        color: white;
+        border-radius: 10px;
+        height: auto;
+        width: 30%;
+    }
+
+    #invoice {
+        background-color: #211e1e;
+        color: white;
+        border-radius: 10px;
+        height: auto;
+        width: 30%;
+        display: none;
+    }
+
+    #wrapper {
+        margin-top: -50px;
+        float: center;
+    }
+
+    input {
+        font-family: Waiting for the Sunrise;
+        font-size: 0.7em;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+        #invoice {
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        body {
+            background-color: #211e1e;
+        }
+    }
+</style>
+
+<script>
+    function processOrder() {
+        event.preventDefault();
+        let name = document.orderForm.name.value;
+        let address = document.orderForm.address.value;
+        let cheese = document.orderForm.cheese.checked;
+        let olives = document.orderForm.olives.checked;
+        let pepperoni = document.orderForm.pepperoni.checked;
+
+        if (name == "" || address == "") {
+            alert("Please fill all fields!");
+            return;
+        }
+
+        let toppingsText = "";
+        let totalPrice = 60;
+        if (cheese) {
+            toppingsText += "Cheese";
+            totalPrice *= 0.9;
+        }
+        if (olives) {
+            toppingsText += " Olives";
+            totalPrice += 5;
+        }
+        if (pepperoni) {
+            toppingsText += " Pepperoni";
+            totalPrice += 5;
+        }
+
+        let inputForm = document.querySelector("#myForm");
+        inputForm.style.display = "none";
+        let invoiceDiv = document.querySelector("#invoice");
+        invoiceDiv.style.display = "block";
+
+        let customerHTML = document.querySelector("#customer");
+        let addressHTML = document.querySelector("#address");
+        let toppingsHTML = document.querySelector("#toppings");
+        let priceHTML = document.querySelector("#price");
+
+        customerHTML.innerHTML = "Customer: " + name;
+        toppingsHTML.innerHTML = "Your Pizza contains: " + toppingsText;
+        addressHTML.innerHTML = "Delivering to: " + address;
+        priceHTML.innerHTML = "Total Price is: " + totalPrice;
+
+
+    }
+</script>
+
+<body>
+    <div id="wrapper">
+        <div id="inputs">
+            <center>
+                <form id="myForm" name="orderForm" action="#" method="submit" onsubmit="return processOrder()">
+                    <h1>Pizza</h1>
+                    First name: <input type="text" name="name" placeholder="John Smith"><br />
+                    Address:<input type="address" name="address" placeholder="1234 Street City, ST Zip">
+                    <br />
+                    <p>Pizza toppings (Check all that apply)</p>
+                    <input name="cheese" type='checkbox' checked>Cheese
+                    <input name="olives" type='checkbox'>Olives
+                    <input name="pepperoni" type='checkbox'>Pepperoni
+                    <p>Comments:</br></p>
+                    <textarea></textarea>
+                    <p></p>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="invoice">
+                    <h1>Invoice</h1>
+                    <p id="thanks">Thanks for your order!</p>
+                    <p id="customer">Customer: </p>
+                    <p id="address">Delivering to: </p>
+                    <p id="toppings">Your pizza contains: </p>
+                    <p id="price">Total price is: </p>
+                </div>
+            </center>
+
+        </div>
+
+</body>
+
+</html>
