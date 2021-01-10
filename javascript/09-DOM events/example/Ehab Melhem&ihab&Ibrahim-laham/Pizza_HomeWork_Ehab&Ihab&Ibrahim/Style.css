@@ -1,0 +1,201 @@
+.container {
+  position: absolute;
+  left: 20vw !important;
+  top: 50px;
+}
+.img {
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+.circle {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(62, 230, 62);
+  border-radius: 999px;
+  text-align: center;
+}
+.circle > span {
+  position: relative;
+  top: 20px;
+  color: white;
+}
+.header {
+  width: 100%;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.line {
+  width: 300px;
+  height: 3px;
+  background-color: rgb(62, 230, 62);
+  margin: 5px;
+}
+label {
+  color: white;
+}
+.personal__details,
+.order,
+.payment {
+  margin-right: 220px;
+  margin-top: 10px;
+  margin-left: -80px;
+  border: 1px solid rgb(62, 230, 62);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.personal__details > button,
+.payment > button {
+  margin-left: 50px;
+  margin-top: 10px;
+  background-color: rgb(62, 230, 62);
+  width: 100px;
+  height: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.personal__details > button:active,
+.order > button:active,
+.payment > button:active {
+  transform: scale(0.75);
+}
+.forms {
+  display: flex;
+}
+.item {
+  margin: 10px;
+}
+.order > button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgb(62, 230, 62);
+  width: 80px;
+  height: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+li {
+  list-style-type: none;
+}
+/* .flex {
+  margin-left: 43vw;
+  margin-top: 150px;
+  border: 1px solid black;
+  width: fit-content;
+  text-align: center;
+  padding: 10px;
+  background-color: whitesmoke;
+} */
+.total {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  /* margin-top: 80px; */
+}
+.calec {
+  display: flex;
+  align-items: center;
+}
+.calec > input {
+  width: 50px;
+  height: 30px;
+  margin: 2px;
+  margin-left: 10px;
+}
+
+.calec > label {
+  font-size: 30px;
+  font-weight: 300;
+}
+.anmati {
+  animation-name: goRight;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.anmat_2 {
+  animation-name: change;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.anmat_3 {
+  animation-name: rightt;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.line_anmation {
+  animation-name: build_line;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+.change_color {
+  animation-name: change;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  position: relative;
+  /* animation-iteration-count: infinite; */
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+@keyframes goRight {
+  0% {
+    left: -420px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rightt {
+  0% {
+    right: -420px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes build_line {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 230px;
+  }
+}

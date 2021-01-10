@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url("pizza.jpg");
+    font-family: monospace;
+}
+
+.button_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.container{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    text-align: center;
+}
+
+.cost_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+}
+
+.cost{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: green;
+    padding: 3px;
+    font-size: 40px;
+    width: 100px;
+    justify-content: center;
+}
+
+.cost_container>button{
+    padding: 3px;
+    font-size: 25px;
+    width: 300px;
+    margin-left: 25%;
+    justify-content: center;
+}
+
+.order{
+    position: relative;
+    border-radius: 20%;
+    padding: 5px;
+    background-color: blanchedalmond;
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.card{
+    width: 600px;
+    height: 500px;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 25px 57px rgba(0, 0, 0, 0, 0.66);
+    animation: card 1.6s ease;
+}
+
+@keyframes card{
+    0%{
+        width: 0;
+        height: 5px;
+        padding: 0;
+    }
+    50%{
+        width: 600px;
+        height: 5px;
+        padding: 0;
+    }
+    100%{
+        padding: inherit;
+        height: 500px;
+    }
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.card .three_dots{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    float: left;
+}
+.card .three_dots span{
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    background-color: #f4de9a;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.card .three_dots span:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: #f49ac1;
+    border-radius: 50%;
+}
+
+.card .three_dots span:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #a3f49a;
+    border-radius: 50%;
+}
+
+.card .title{
+    padding-top: 50px
+}
+
+.card .title h1{
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    font-size: 52px;
+    font-weight: 400;
+    color: #303030;
+    z-index: 1;
+}
+
+.card .title h4{
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #6d6d6d;
+    margin-top: 10px;
+}
+
+.elements span{
+    position: absolute;
+}
+
+span.element1{
+    top: 10%;
+    left: 10%;
+    border: 35px solid #fff264;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(90deg);
+}
+
+span.element2{
+    bottom: 10%;
+    right: 5%;
+    border: 35px solid #fff264;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    opacity: 0.7;
+}
+
+span.element3{
+    bottom: 10%;
+    left: 35%;
+    border: 10px solid #9c79ff;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    opacity: 0.6;
+}
+
+span.element4{
+    top: 15%;
+    right: 7%;
+    border: 16px solid #9c79ff;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 600px) {
+    .card{
+        width: 400px;
+        height: 300px;
+        display: inline-block;
+        background-color: #fff;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+        box-shadow: 0 25px 57px rgba(0, 0, 0, 0, 0.66);
+        animation: card 1.6s ease;
+    }
+
+    .button_container{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+    
+    .container{
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .cost_container{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .cost{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: green;
+        padding: 3px;
+        font-size: 20px;
+        width: 60px;
+        justify-content: center;
+    }
+    
+    .cost_container>button{
+        padding: 3px;
+        font-size: 13px;
+        width: 150px;
+        margin-left: 25%;
+        justify-content: center;
+    }
+    
+    .order{
+        position: relative;
+        border-radius: 20%;
+        padding: 2px;
+        background-color: blanchedalmond;
+        margin-top: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+   
+    @keyframes card{
+        0%{
+            width: 0;
+            height: 5px;
+            padding: 0;
+        }
+        50%{
+            width: 400px;
+            height: 5px;
+            padding: 0;
+        }
+        100%{
+            padding: inherit;
+            height: 300px;
+        }
+    }
+    
+    .img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .card .three_dots{
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        float: left;
+    }
+    .card .three_dots span{
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        background-color: #f4de9a;
+        border-radius: 50%;
+        margin-left: 20px;
+    }
+    
+    .card .three_dots span:before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        background-color: #f49ac1;
+        border-radius: 50%;
+    }
+    
+    .card .three_dots span:after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 20px;
+        width: 100%;
+        height: 100%;
+        background-color: #a3f49a;
+        border-radius: 50%;
+    }
+    
+    .card .title{
+        padding-top: 50px
+    }
+    
+    .card .title h1{
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+        font-weight: 400;
+        color: #303030;
+        z-index: 1;
+    }
+    
+    .card .title h1:before{
+        content: '';
+        position: absolute;
+        top: 13px;
+        right: 0;
+        width: 50%;
+        height: 70%;
+        background-color: #a3efff;
+        z-index: -1;
+        animation: title 7s ease;
+    }
+    
+    @keyframes title{
+        0%, 80%{
+            width: 0;
+        }
+    }
+    
+    .card .title h4{
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #6d6d6d;
+        margin-top: 10px;
+    }
+    
+    .elements span{
+        position: absolute;
+    }
+    
+    span.element1{
+        top: 10%;
+        left: 5%;
+        border: 15px solid #fff264;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        transform: rotate(90deg);
+    }
+    
+    span.element2{
+        bottom: 10%;
+        right: 5%;
+        border: 15px solid #fff264;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        opacity: 0.7;
+    }
+    
+    span.element3{
+        bottom: 10%;
+        left: 35%;
+        border: 10px solid #9c79ff;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        opacity: 0.6;
+    }
+    
+    span.element4{
+        top: 15%;
+        right: 7%;
+        border: 10px solid #9c79ff;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        opacity: 0.4;
+    }
+}
