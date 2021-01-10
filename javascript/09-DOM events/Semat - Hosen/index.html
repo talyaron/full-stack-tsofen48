@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Round Moon Pizza</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <script src="script.js"></script>
+
+    <div class="placeTitle">
+      <!-- <h1 style="margin: 0">Pizza</h1> -->
+      <img class="logo" src="./logo/logo.PNG" alt="" />
+    </div>
+    <div
+      class="form"
+      style="text-align: center"
+      onsubmit="checkOrder(event)"
+      onchange="totalPrice(event)"
+    >
+      <form action="">
+        <div class="sizeContainer">
+          <img class="pizzaSize" src="./logo/pngegg.png" alt="" />
+          <h2 class="subTitle">Size :</h2>
+          <!-- <div class=""></div> -->
+          <div class="sizeOptions">
+            <div class="sizeOption">
+              <label for="small">
+                <input type="radio" name="size" value="small" id="small" />
+                <span class="sizeOp">S</span> <br />
+                <span class="price"> 45 ₪ </span>
+              </label>
+            </div>
+            <div class="sizeOption">
+              <label for="medium">
+                <input type="radio" name="size" value="medium" id="medium" />
+                <span class="sizeOp">M</span> <br /><span class="price">
+                  55 ₪
+                </span>
+              </label>
+            </div>
+            <div class="sizeOption">
+              <label for="large">
+                <input type="radio" name="size" value="large" id="large" />
+                <span class="sizeOp">L</span> <br /><span class="price">
+                  65 ₪
+                </span></label
+              >
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <div class="toppings">
+          <h2 class="subTitle">Topping :</h2>
+          <p>
+            <span>*</span> Up to 3 For <span>Free</span>, more Extras for 3 ₪
+            per topping
+          </p>
+          <div class="top container">
+            <label for="tuna">
+              <input type="checkbox" name="topping" value="tuna" id="tuna" />
+              Tuna
+              <span class="checkmark"></span
+            ></label>
+          </div>
+
+          <div class="top container">
+            <label for="tomato">
+              <input
+                type="checkbox"
+                name="topping"
+                value="Tomatos"
+                id="tomato" />
+              Fresh Tomatoes
+              <span class="checkmark"></span
+            ></label>
+          </div>
+
+          <div class="top container">
+            <label for="corn">
+              <input type="checkbox" name="topping" value="corn" id="corn" />
+              Corn
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="ExtraCheese">
+              <input
+                type="checkbox"
+                name="topping"
+                value="ExtraCheese"
+                id="ExtraCheese" />
+              Extra Cheese
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="olives">
+              <input
+                type="checkbox"
+                name="topping"
+                value="olives"
+                id="olives" />
+              olives
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="paper">
+              <input type="checkbox" name="topping" value="paper" id="paper" />
+              Bell peppers
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="mushrooms">
+              <input
+                type="checkbox"
+                name="topping"
+                value="mushrooms"
+                id="mushrooms" />
+              Mushrooms
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="onion">
+              <input type="checkbox" name="topping" value="onion" id="onion" />
+              Onion
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="salami">
+              <input
+                type="checkbox"
+                name="topping"
+                value="salami"
+                id="salami" />
+              Salami
+              <span class="checkmark"></span
+            ></label>
+          </div>
+          <div class="top container">
+            <label for="jalapenoPoppers">
+              <input
+                type="checkbox"
+                name="topping"
+                value=" jalapenoPoppers"
+                id="jalapenoPoppers" />
+              Jalapeno poppers
+              <span class="checkmark"></span
+            ></label>
+          </div>
+        </div>
+
+        <div class="drinks">
+          <h2 class="subTitle">Drinks</h2>
+          <!-- <p>
+            <span class="price"><span>* </span> Price : 10 ₪ </span>
+          </p> -->
+          <div class="drink">
+            <input type="radio" name="drink" value="Cola" id="cola" />
+            <br />
+            <label for="cola"
+              ><span class="drinkName">Coca Cola 10 ₪ </span
+              ><img class="drinkImage" src="./logo/colaImage.png" alt=""
+            /></label>
+          </div>
+          <div class="drink">
+            <input type="radio" name="drink" value="fanta" id="fanta" />
+            <br />
+            <label for="fanta"
+              ><span class="drinkName">Fanta 10 ₪ </span>
+              <img
+                class="drinkImage fantaImg"
+                src="./logo/fantaImage.png"
+                alt=""
+            /></label>
+          </div>
+
+          <div class="drink">
+            <input type="radio" name="drink" value="sprite" id="sprite" />
+            <br />
+            <label for="sprite"
+              ><span class="drinkName">Sprite 10 ₪ </span>
+              <img
+                class="drinkImage spriteImg"
+                src="./logo/sptiteImage.png"
+                alt=""
+              />
+            </label>
+          </div>
+
+          <div class="drink">
+            <input type="radio" name="drink" value="none" id="none" />
+            <br />
+            <label for="none"> I'll skip this </label>
+          </div>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="deliveryOrPickup">
+          <div class="userDetails">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name : Tal Yaron"
+            />
+
+            <input type="number" name="phone" placeholder="Phone : 050566448" />
+          </div>
+
+          <h3 class="subTitle">Delivery Or Pickup</h3>
+          <input type="radio" name="delivery" value="delivery" id="delivery" />
+          <label for="delivery">Delivery </label>
+          <input type="radio" name="delivery" value="pickup" id="pickup" />
+          <label for="pickup">Pickup </label>
+
+          <div class="dlivey">
+            dliveyDiv*dliveyDivdliveyDiv*dliveyDivdliveyDiv*dliveyDivdliveyDiv*dliveyDiv
+            <div class="adress">
+              <textarea
+                class="userAdress"
+                name="address"
+                id=""
+                cols="60"
+                rows="5"
+                placeholder="&#10; write your Full adress as example : &#10;&#10;12 Shderot Yerushalayim 68021 Tel Aviv - Yafo "
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="pickup">
+            PickupDiv*PickupDivPickupDiv*PickupDivPickupDiv*PickupDivPickupDiv*PickupDiv
+          </div>
+
+          <input
+            class="asadasd"
+            type="time"
+            min="now"
+            name="pickUpTime"
+            onchange="minTime()"
+            id="pickUpTime"
+          />
+        </div>
+        <div class="total">
+          <h4>
+            Total :
+            <h4 id="totalPrice">0</h4>
+            ₪
+          </h4>
+        </div>
+        <button type="submit">Order</button>
+      </form>
+    </div>
+  </body>
+</html>
