@@ -1,22 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+//components
+import Card from './view/components/Card/Card';
+
+const name = 'Mhmd';
+
+function App() { //component
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hi Ibrahim {name}!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Card title='hi' img='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mothers-day-flower-bouquet-1588610191.jpg?crop=1.00xw:0.892xh;0,0.108xh&resize=1200:*' />
+        <Card title='bye' />
+        <Card title='boohi'  />
+        <Card title='ba' />
+        <Card title='be' />
+        <Card title='bla' />
+        <Card title='blo' />
+
+        <h2>Learn to code</h2>
       </header>
     </div>
   );
