@@ -5,6 +5,10 @@ function check() {
   else button.disabled = false;
 }
 button.addEventListener("click", () => {
-  alert(input.value);
+  console.log(input.value)
+  if(input.value !== ''){
+    alert(input.value);
+  }
+  
 });
-setInterval(check, 1);
+// setInterval(check, 1);

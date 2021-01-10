@@ -1,27 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #theButton {
+        transition: all 2500ms;
+    }
+</style>
+
 <body>
-    <button id='theButton' onclick='handleStartAlert()'>Press Me!</button>
-    <!-- inline event -->
-    <input type='text' placeholder="eneter your name" onkeyup='handleInput(event)'>
+    <form onsubmit='handleSubmit(event)'>
+
+        <!-- inline event -->
+        <input onfocus="handleFocus(event)" onblur="handleBlur(event)" type='text' name='name'
+            placeholder="eneter your name" onkeyup='handleInput(event)'>
+        <input type='color' name='color'>
+        <input type="datetime-local" name='date'>
+        <button type="submit" id='theButton' onclick='handleStartAlert(event)'>Press Me!</button>
+    </form>
 </body>
 <script>
-    function handleStartAlert(){
-        alert("You pressed me!!!!")
+
+    const theButton = document.querySelector('#theButton')
+    theButton.ontransitionend = (e) => {
+        console.log('teransition end')
     }
 
-    document.querySelector('#theButton').addEventListener('click', e=>{
-        alert('Go ahead')
-    })
+    function handleFocus(e) {
+        e.target.style.background = 'red'
 
-    function handleInput(e){
+    }
+    function handleBlur(e) {
+        e.target.style.background = 'blue'
+
+    }
+    function handleStartAlert(e) {
+        e.target.style.background = `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`
+        // alert("You pressed me!!!!")
+    }
+
+    // document.querySelector('#theButton').addEventListener('click', e => {
+    //     alert('Go ahead')
+    // })
+
+    function handleInput(e) {
         console.log(e.key)
         console.log(e.target.value)
     }
+
+    function handleSubmit(e) {
+        try {
+            e.preventDefault();
+
+            let data = fromFormToObject(e.target)
+
+            console.log('result is........')
+            console.log(data)
+        } catch (e) {
+            console.error(e)
+        }
+    }
+
+
+    function fromFormToObject(form) {
+        try {
+            let data = {};
+
+            for (let i = 0; i < form.length - 1; i++) {
+                
+                if(typeof form[i].value != 'string') throw new Error('value is not a string');
+
+                data[form[i].name] = form[i].value;
+
+            }
+
+            return (data)
+        } catch (e) {
+            console.error(e)
+            return(false)
+        }
+    }
 </script>
+
 </html>
