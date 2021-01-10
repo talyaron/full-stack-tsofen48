@@ -1,0 +1,20 @@
+.card{
+    background-color: rgb(2, 16, 138);
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    position: relative;
+    
+}
+.card img{
+    width: 100%;
+}
+
+.headline {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
