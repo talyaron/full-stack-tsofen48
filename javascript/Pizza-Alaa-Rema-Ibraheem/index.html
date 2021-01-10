@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form>
+    <form class="main-form">
         <div class="pizza-details">
             <div class="pizzatype">
                 <h4 for="pizzatype">Choose Pizza Type : </h4>
@@ -42,12 +42,12 @@
             </div>
 
             <br>
-            <div class="quantityChange divQ">
+            <div class="quantityChange ">
                 <h4> How Many Pizzas You Want?</h4><br>
-                <button class="plus">+</button>
+                <button class="plus" style="width: 25px; text-align: center;">+</button>
                 <input type="text" class="quantity" disabled='true' style="width: 25px; text-align: center;"
                     placeholder="1">
-                <button class="minus">-</button>
+                <button class="minus" style="width: 25px; text-align: center;">-</button>
             </div>
         </div>
 
@@ -65,35 +65,38 @@
 
         <div class="submit">
             <button class="subBtn" type="submit" name="submit" onclick='saleCalculation()'>Submit</button>
-            
+
         </div>
         <div class="order-details">
-            
+
         </div>
 
-        <div class="form-popup" id="orderForm">
-            <form  class="form-container">
-                <br>
-              <label><b>Your Order</b></label><br><br>
+        <div class="popup" id="popup">
 
-              <label><b>Pizza Type : </b></label><br>
-              <label><b id="type"></b></label><br>
-          
-              <label><b>Pizza Size : </b></label><br>
-              <label><b id="size"></b></label><br>
-          
-              <label><b>Toppings: </b></label><br>
-              <label><b id="toppings"></b></label><br>
-          
-              <label><b>Quantity : </b></label><br>
-              <label><b id="quantity"></b></label><br>
+            <br>
+            <label style="font-size: xx-large;"><b>Your Order</b></label><br><br>
 
-              <label><b id="Sale"></b></label><br><br>
-          
-               <br><br>
-              <button type="button" class="cancel" onclick="closeForm()">Close</button>
-            </form>
-          </div>
+            <label><b>Pizza Type: </b></label>
+            <label><b id="type"></b></label><br><br>
+
+            <label><b>Pizza Size: </b></label>
+            <label><b id="size"></b></label><br><br>
+
+            <label><b>Toppings: </b></label><br>
+            <label><b id="toppings"></b></label><br><br>
+
+            <label><b>Quantity: </b></label>
+            <label><b id="quantity"></b></label><br><br>
+
+            <div class="discount">
+                <label><b id="Sale"></b></label><br><br><br>
+            </div>
+
+
+            <br><br>
+            <button type="button" class="cancel" onclick="closeForm()">Close</button>
+
+        </div>
 
     </form>
 

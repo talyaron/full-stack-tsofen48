@@ -38,11 +38,11 @@ function changePizzaNumber(e) {
 }
 
 function saleCalculation() {
-    let message='';
+    let message = '';
     if (document.getElementById('w3-check').checked) {
-        message='for all Olives lovers- you Won - 15% Sale !';
-    }else{
-        message='';
+        message = 'For All Olives Lovers - You Won - 15% Sale !!';
+    } else {
+        message = '';
     }
     return message;
 }
@@ -79,15 +79,23 @@ function createOrder(pizzaType, pizzaSize, toppings, quantity) {
 
 function openForm(order) {
 
-    document.getElementById("orderForm").style.display = "block";
-    document.getElementById("type").innerHTML=order.Type;
-    document.getElementById("size").innerHTML=order.Size;
-    document.getElementById("toppings").innerHTML=order.Toppings;
-    document.getElementById("quantity").innerHTML=order.Quantity;
-    document.getElementById("Sale").innerHTML=saleCalculation();
-  }
-  
-  function closeForm() {
-    document.getElementById("orderForm").style.display = "none";
+
+    document.getElementById("popup").style.display = "block";
+    setTimeout(() => {
+        document.getElementById("type").innerHTML = order.Type;
+        document.getElementById("size").innerHTML = order.Size;
+        document.getElementById("toppings").innerHTML = order.Toppings;
+        document.getElementById("quantity").innerHTML = order.Quantity;
+    }, 600);
+
+    setTimeout(() => {
+        document.getElementById("Sale").innerHTML = saleCalculation();
+    }, 600);
+
+}
+
+function closeForm() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("Sale").innerHTML = "";
     clearInputs();
-  }
+}
