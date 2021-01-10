@@ -1,0 +1,187 @@
+/* *{
+  background-image: url("logo/l1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+
+.placeTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  border: dotted 10px;
+  border-radius: 89px;
+  max-width: 800px;
+  margin: auto;
+}
+.logo {
+  z-index: -2;
+}
+
+.pizzaSize {
+  width: 280px;
+  margin-top: 80px;
+}
+.sizeOption {
+  width: fit-content;
+}
+
+.sizeOptions {
+  display: flex;
+  justify-content: space-around;
+  max-width: 450px;
+  margin: auto;
+}
+.sizeOp {
+  /* position: relative;
+  bottom: 55px;
+  font-weight: bold;
+  left: 4px; */
+
+  position: relative;
+  bottom: 26px;
+  font-weight: bold;
+  right: 60px;
+  font-size: 25px;
+}
+/* .sizeContainer input[type="radio"] {
+  border: 0px;
+  width: 100%;
+  height: 50px;
+} */
+body input[type="radio"] {
+  /* border: 0px;
+  width: 100%;
+  height: 50px; */
+  border: 0px;
+  width: 80px;
+  height: 70px;
+}
+.price {
+  position: relative;
+  bottom: 10px;
+  color: #e91e63;
+  font-weight: blod;
+  font-weight: bold;
+  right: 9px;
+}
+.drinkImage {
+  /* width: 80px;
+  height: 70px; */
+  width: 70px;
+  height: 68px;
+  position: relative;
+  bottom: 85px;
+  /* right: 45px; */
+  right: 72px;
+}
+.fantaImg {
+  /* right: 25px; */
+  width: 60px;
+  height: 55px;
+  bottom: 78px;
+  right: 51px;
+}
+.spriteImg {
+  width: 66px;
+  height: 62px;
+  position: relative;
+  bottom: 82px;
+  right: 53px;
+}
+.drinkName {
+  position: relative;
+  right: -40px;
+  bottom: 45px;
+}
+.userAdress {
+  width: 90%;
+  max-width: 500px;
+}
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 344px;
+  text-align: start;
+  padding-left: 35px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.subTitle {
+  /* border: solid; */
+  width: fit-content;
+  padding: 20px;
+  margin-bottom: 20px auto;
+  /* display: flex; */
+  margin: 19px auto;
+  position: relative;
+  width: 380px;
+  text-align: initial;
+  max-width: 450px;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgba(238, 238, 238, 0.863);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: rgba(204, 204, 204, 0);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #e91e63;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* //////////////////////////////// */
