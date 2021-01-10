@@ -159,7 +159,46 @@
         })
         //}, 500)
 
+//-----------------------------------------------------------------------------------------
+// the true to do : 
+// you need to delete what you did before :
+articles = [{title:'eeeeeeeeeeeeeeهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي', subTitle:'eeeeeeeeeeeeeeهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي', image:'https://pms.panet.co.il/online/images//articles/2021/01/07-01-2021/karam/019/54d79cfd-70fe-44c3-8b17-4d7abde3177f.jpg', color:'#d10606'},
+{title:'dddddddddddddddddddddddهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي', subTitle:'   eeeeeeeeeeeeeeهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي ', image:'https://pms.panet.co.il/online/images//articles/2020/10/26-10-2020/dana/04/545.PNG', color:'#133272'},
+{title:'cccccccccccccccهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي', subTitle:' بارد نسبياً في ساعات ...', image:'https://pms.panet.co.il/online/images//articles/2020/10/26-10-2020/dana/04/545.PNG', color:'#d10606'},
+{title:'هبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التواليbbbbbbbbbbbbbb', subTitle:'eeeeeeeeeeeeeeهبوعيل اكسال يعزز موقعه في القمة بفوز ثالث على التوالي', image:'https://pms.panet.co.il/online/images//articles/2020/10/26-10-2020/dana/04/545.PNG', color:'#222222'}];
 
+articles.forEach(e => {
+    let articleel = document.createElement("div");
+    let img = document.createElement("img");
+    let title = document.createElement("h3");
+    let subTitle = document.createElement("h5");
+    let inside = document.createElement("div");
+    
+
+    articleel.appendChild(img);
+    articleel.appendChild(inside);
+    inside.appendChild(title);
+    inside.appendChild(subTitle);
+
+
+    title.innerText = e.title;
+    subTitle.innerText = e.subTitle;
+    img.src = e.image;
+    inside.style.backgroundColor = e.color;
+
+    title.style.color = "#ffffff";
+    subTitle.style.color = "#ffffff";
+    articleel.style.display = "flex";
+    articleel.style.marginLeft = "25%";
+    articleel.style.marginTop = "8px";
+    inside.style.textAlign = "right";
+    inside.style.width = "60%";
+    inside.style.display = "absolute";
+    inside.style.padding = "8px";
+
+
+    document.getElementsByTagName("body")[0].appendChild(articleel);
+});
     </script>
 </body>
 
