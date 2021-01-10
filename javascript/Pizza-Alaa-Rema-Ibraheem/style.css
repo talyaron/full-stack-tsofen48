@@ -1,17 +1,21 @@
 body{
-    background-image: url('https://wallpaperaccess.com/full/462773.jpg');
+    background-image: url('https://wallpaperaccess.com/full/424569.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(31, 14, 2);
     font-family: 'Poppins', sans-serif; 
     padding: 10%;
     position: relative;
+    color: black;
 }
 
 h4{
-    color: whitesmoke;
+    color: black;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bolder;
     width: 50%;
 }
+
 div{
     left: 20px;
 }
@@ -31,10 +35,8 @@ div{
     box-shadow: 5px 10px 18px #888888;
     border-radius: 15px;
     display:inline;
-    background-color: whitesmoke;
-    opacity: 0.5;
-  
-
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
 }
 .subBtn{
   background-color: rgb(10, 69, 71);
@@ -46,20 +48,29 @@ div{
   cursor: pointer;
   width: 20%;
   opacity: 0.9;
+  border-radius: 5px;
 }
 .toppings{
-    color:whitesmoke;
+    color: black;
+    font-weight: bold;
+}
+
+.main-form{
+  background-color: rgba(245, 245, 245, 0.692);
+  padding: 10%;
+  border-radius: 10px;
 }
   /* The popup form - hidden by default */
-.form-popup {
-  background-color: rgb(51, 49, 49,0.8);
+.popup {
+  background-color: rgba(48, 45, 45, 0.918);
   display: none;
   top: 10px;
   position: fixed;
-  bottom:40%;
+  margin: 20vw;
+  padding: 10px;
   z-index: 9;
-  width: 40%;
-  height: 70%;
+  width: 600px;
+  height: 500px;
   text-align: center;
   border-radius: 15px;
   animation: popUpimation  2s;
@@ -71,8 +82,8 @@ div{
     }
     50%,
     100% {
-        width: 40%;
-        height: 70%;
+        width: 600px;
+        height: 500px;
     }
   }
 .cancel {
@@ -87,24 +98,24 @@ div{
   width: 30%;
   margin-bottom:10px;
   opacity: 0.8;
+  border-radius: 5px;
 }
 .cancel:hover,.subBtn:hover{
     opacity: 0.6;
 }
 .form-container {
-  max-width: 30%;
+  max-width: 50%;
   background-color: white;
   
 }
 #size,#type,#toppings,#quantity,#Sale{
-    font-size: 20px;
-    font-weight: bolder;
-    color:red;
+    color:rgb(255, 255, 255);
+    font-style: italic;
 }
 label{
-    color: whitesmoke;
-    font-weight: bolder;
-    font-size: 15px;
+    color: rgb(253, 249, 249);
+    
+    font-size: 20px;
 }
 @media only screen and (max-width: 600px) {
     .input,select {
@@ -118,7 +129,7 @@ label{
     body{
         padding: 2%;
     }
-    .form-popup{
+    .popup{
         width: 80%;
         left: 10%;
         height:90%;
@@ -127,16 +138,11 @@ label{
     .subBtn{
         width: 50%;
         top:184%;
+        
     }
   }
 
-
-  
-
-
-
-
-
+/* Pizza animation */
 
   .wrapper {
     width: 100px;
@@ -202,7 +208,7 @@ label{
     left: 10%;
     transform: translate(-50%, -50%);
     animation-name: goAround;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
