@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 10px;
+    background-color: rgb(2, 16, 138);
+    border: 2px solid black;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}
+.card img{
+    width: 300px;
+}
