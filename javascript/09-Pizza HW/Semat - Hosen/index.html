@@ -166,7 +166,7 @@
             <input type="radio" name="drink" value="Cola" id="cola" />
             <br />
             <label for="cola"
-              ><span class="drinkName">Coca Cola 10 ₪ </span
+              ><span class="drinkName"> Cola 10 ₪ </span
               ><img class="drinkImage" src="./logo/colaImage.png" alt=""
             /></label>
           </div>
@@ -207,24 +207,33 @@
 
         <div class="deliveryOrPickup">
           <div class="userDetails">
+            <label class="detailLabel" for="none">  Name : </label>
+
             <input
               type="text"
               name="fullName"
+              class="userDetailsInputs"
               placeholder="Full Name : Tal Yaron"
             />
+            <label class="detailLabel" for="none"> phone : </label>
 
-            <input type="number" name="phone" placeholder="Phone : 050566448" />
-          </div>
+            <input class="userDetailsInputs" type="number" name="phone" placeholder="Phone : 050566448" />
+              </div>
 
           <h3 class="subTitle">Delivery Or Pickup</h3>
-          <input type="radio" name="delivery" value="delivery" id="delivery" />
-          <label for="delivery">Delivery </label>
+          <input  type="radio" name="delivery" value="delivery" id="delivery" />
+          <label class="dORp" for="delivery">Delivery </label>
           <input type="radio" name="delivery" value="pickup" id="pickup" />
-          <label for="pickup">Pickup </label>
+          <label class="dORp" for="pickup">Pickup </label>
+<br>
+<br>
+<br>
+<br>
 
           <div class="dlivey">
-            dliveyDiv*dliveyDivdliveyDiv*dliveyDivdliveyDiv*dliveyDivdliveyDiv*dliveyDiv
             <div class="adress">
+              <label for="adress">please enter your adress address:</label>
+              <br>
               <textarea
                 class="userAdress"
                 name="address"
@@ -236,12 +245,12 @@
             </div>
           </div>
 
-          <div class="pickup">
-            PickupDiv*PickupDivPickupDiv*PickupDivPickupDiv*PickupDivPickupDiv*PickupDiv
-          </div>
+<br>
+<br>
 
+   <h4 for="pickUpTime">when You want it ? </h4>
           <input
-            class="asadasd"
+            class="orderTime"
             type="time"
             min="now"
             name="pickUpTime"
@@ -249,15 +258,57 @@
             id="pickUpTime"
           />
         </div>
+        <br>
+        <br>
+        <br>
+
         <div class="total">
-          <h4>
+          <label class="totalPrice">
             Total :
-            <h4 id="totalPrice">0</h4>
+            <label id="totalPrice">0</label>
             ₪
-          </h4>
+          </label>
         </div>
-        <button type="submit">Order</button>
-      </form>
+        <button type="submit" class="button orderButton">Order</button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+<div class="orderData" style="background-color: burlywood;">
+  <h4>Dear <span id="userName"></span> we got your order list, Thank you!</h4>
+  <span>-------------------------</span>
+  <h5 style="margin: 10px;">Oder Details</h5>
+  <span>-------------------------</span>
+  <div class="">
+    <label for="orderSize">orderSize : </label>
+
+    <label id="orderSize" style="width: fit-content;"></label>
+  </div>
+ 
+
+  <label for="orderToppings">orderToppings : </label>
+  <label id="orderToppings"></label>
+<br>
+  <label for="orderDrinks">orderDrinks : </label>
+  <label id="orderDrinks"></label>
+
+
+  <br>
+  <span>-------------------------</span>
+  <br>
+  <label for="orderTotalPrice">Total : </label>
+
+  <label id="orderTotalPrice"></label>
+  <br>
+  <label class="orderTotalPriceAfterDisc" for="orderTotalPriceAfterDisc">Total : </label>
+  <label id="orderTotalPriceAfterDisc"></label>
+  
+  
+</div>
+  
     </div>
   </body>
+
 </html>

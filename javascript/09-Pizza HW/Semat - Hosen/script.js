@@ -1,12 +1,8 @@
-
-   //onChange call to calculate Total Price
-   let totalPrice = (e) => {
-    e.preventDefault();
-    myTotal();  //Total in Real-Time
-
+//onChange call to calculate Total Price
+let totalPrice = (e) => {
+  e.preventDefault();
+  myTotal(); //Total in Real-Time
 };
-
-
 
 // var TotalDiscount=0;
 // Submit
@@ -14,7 +10,7 @@ function checkOrder(e) {
   e.preventDefault();
   try {
     console.log("ee", e.target);
-    let olives=false;
+    let olives = false;
     let orderData = {
       size: "",
       toppings: [],
@@ -37,7 +33,7 @@ function checkOrder(e) {
         orderData.size = element.value;
       } else if (element.name == "topping" && element.checked) {
         orderData.toppings.push(element.value);
-        if(element.value=='olives')olives=true;
+        if (element.value == "olives") olives = true;
       } else if (element.name == "drink" && element.checked) {
         orderData.drinks = element.value;
       } else if (element.name == "fullName") {
@@ -59,113 +55,119 @@ function checkOrder(e) {
     });
 
     console.log("orderData", orderData);
-  
-    orderData.total=document.getElementById("totalPrice").innerText;
-  // console.log(orderData);
-  // totalDiscount.apply(null,orderData);
-var TotalDiscount=0;
-console.log(olives);
-if(olives){
-  TotalDiscount = (orderData.total)*90/100;
-};
 
-console.log(TotalDiscount);
+    orderData.total = document.getElementById("totalPrice").innerText;
+    // console.log(orderData);
+    // totalDiscount.apply(null,orderData);
+    var TotalDiscount = 0;
+    console.log(olives);
+    if (olives) {
+      TotalDiscount = (orderData.total * 90) / 100;
+    }
+    setOrderData(orderData, TotalDiscount);
 
-
-
-
-} catch (error) {
-  console.error(error);
+    console.log(TotalDiscount);
+  } catch (error) {
+    console.error(error);
+  }
 }
-}
-
-
 
 let minTime = () => {
   let t = document.getElementById("pickUpTime");
   // t.max = "14:00";
   t.min = "00:00";
-    try{
-  if (t.value > "11:00") {
-    t.style.background = "green";
-  } else {
-    t.style.background = "red";
-  }
-  console.log("cccccc", t);
-}catch(error) {
+  try {
+    if (t.value > "11:00") {
+      t.style.background = "green";
+    } else {
+      t.style.background = "red";
+    }
+    console.log("cccccc", t);
+  } catch (error) {
     console.error(error);
-
+  }
 };
-};
 
-function myTotal(){
-
+function myTotal() {
   var globalTotalPrice = 0;
 
+  let myTotalToppings = [];
 
-  let myTotalToppings=[];
+  try {
+    const children = [...document.getElementsByTagName("input")];
+    children.forEach((child) => {
+      let orderData = {
+        size: "",
+        toppings: [],
+        drinks: "",
+        total: 0,
+      };
+      let prices = {
+        size: { small: 45, medium: 55, large: 65 },
+        topping: 3,
+        drinks: 10,
+      };
 
-  try{
-  const children = [...document.getElementsByTagName('input')];
-  children.forEach((child) => { 
-  
+      element = child;
+      if (element.name == "size" && element.checked) {
+        globalTotalPrice += prices.size[element.value];
+        console.log("total : ", globalTotalPrice);
+        orderData.size = element.value;
+      } else if (element.name == "drink" && element.checked) {
+        if (element.value == "none") {
+          console.log(element.value);
+          // globalTotalPrice += 0;
+        } else {
+          console.log(prices.drinks);
+          console.log(element);
+          globalTotalPrice += prices.drinks;
 
-  
-  let orderData = {
-    size: "",
-    toppings: [],
-    drinks: "",
-    total: 0,
-  };
-  let prices = {
-    size: { small: 45, medium: 55, large: 65 },
-    topping: 3,
-    drinks: 10,
-  };
+          console.log("total : ", globalTotalPrice);
+          orderData.drinks = element.value;
+          console.log(element.value);
+        }
+      } else if (element.name == "topping" && element.checked) {
+        myTotalToppings.push(element.value);
 
-  element = child;
-  if (element.name == "size" && element.checked) {
-    globalTotalPrice += prices.size[element.value];
-    console.log("total : ", globalTotalPrice);
-    orderData.size = element.value;
-    
-
-  } else if (element.name == "drink" && element.checked) {
-    if (element.value == "none") {
-      console.log(element.value);
-      // globalTotalPrice += 0;
-    } else {
-      console.log(prices.drinks);
-      console.log(element);
-       globalTotalPrice += prices.drinks;
- 
-      console.log("total : ", globalTotalPrice);
-      orderData.drinks = element.value;
-      console.log(element.value);
-    }
-  } else if (element.name == "topping" && element.checked) {
-    myTotalToppings.push(element.value);
-
-    if(myTotalToppings.length>3)
-    globalTotalPrice += 3;
-   
-    
-
-  }
-  document.getElementById("totalPrice").innerText = globalTotalPrice;
-  
-  });
-
-
-}catch(error) {
+        if (myTotalToppings.length > 3) globalTotalPrice += 3;
+      }
+      document.getElementById("totalPrice").innerText = globalTotalPrice;
+    });
+  } catch (error) {
     console.error(error);
-
-};
-};
-
+  }
+}
 
 // Check if you got a discount because of choosing olives as one othe toppings
 // function totalDiscount(x){
 //   console.log(x);
 
 // };
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+let setOrderData = (orderData, orderTotalPriceAfterDisc) => {
+  document.getElementById("userName").innerHTML = orderData.fullName;
+  document.getElementById("orderSize").innerHTML = orderData.size;
+  document.getElementById(
+    "orderToppings"
+  ).innerHTML = orderData.toppings.toString();
+  document.getElementById("orderDrinks").innerHTML = orderData.drinks;
+  document.getElementById("orderTotalPrice").innerHTML = orderData.total + " ₪";
+  if (orderTotalPriceAfterDisc != 0) {
+    document.getElementById(
+      "orderTotalPriceAfterDisc"
+    ).innerHTML = orderTotalPriceAfterDisc;
+    document.getElementById("orderTotalPriceAfterDisc").style.display = "block";
+
+    document.getElementById("orderTotalPrice").style.textDecoration =
+      "line-through";
+  }
+  document.querySelector(".orderData").style.display = "block";
+};
