@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+   
+    float: left;
+    width: 300px;
+    padding: 10px;
+    height: 500px; /* Should be removed. Only for demonstration */
+  }
+  .column2{
+      float:left;
+      widows: 100%;
+      height: 100%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#F8F8FF;
+  }
+
+
+  h1{
+      text-align: center;
+    animation: color-change 1s infinite;
+    
+  }
+
+  img{
+      width:963px;
+      height: 400px;
+  }
+  .center {
+    height: 200px;
+    width: 400px;
+    background: black;
+
+    position: fixed;
+    top: 150px;
+    left: 150px;
+    
+    
+  }
+
+  @keyframes color-change {
+    0% { color: black; }
+    50% { color: red; }
+    100% { color: black; }
+  }
+  
+  
+  .btn-group .button {
+    background-color: rgb(220, 20, 60); /* Green */
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+    display: block;
+    height: 100px;
+  }
+  
+  .btn-group .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+  
+  .btn-group .button:hover {
+    background-color: black;
+  }
+
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.container>.head {
+    width: 100%;
+    height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container>.head>h1 {
+    margin-top: 2vh;
+}
+
+.container>.size , .drink {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container>.size>.item {
+    text-align: center;
+    background-color: #d4d2b3;
+    border: 3px solid #797760;
+}
+
+.container>.size>.s {
+    margin-top: 8vh;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container>.size>.s>h4 {
+    padding: 0.3rem 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container>.size>.m {
+    margin-top: 6vh;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.container>.size>.m>h4 {
+    padding: 0.6rem 0;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.container>.size>.l {
+    margin-top: 4vh;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container>.size>.l>h4 {
+    padding: 0.3rem 0;
+    font-size: 58px;
+    font-weight: bold;
+}
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #f2f2f2;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 10px;
+    gap: 4px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item > h5{
+    font-size: 60%;
+}
+
+
+.grid-item > .f{
+    font-size: 130%;
+}
+
+.drink , .Additions{
+    margin-top: 10px;
+}
+
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+      margin-top: 20px;
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container-a {
+      margin-top: 10px;
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 95%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  a {
+    color: #2196F3;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
