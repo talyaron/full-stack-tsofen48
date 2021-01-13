@@ -1,12 +1,9 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
-import Example from "./Card";
-import { Icon, Grid, Image } from 'semantic-ui-react';
+
+import Card from "./Card";
+
 import './App.css';
-const extra = (<a>
-  <Icon name='user' />
-  {Math.floor(Math.random() * Math.floor(255))} Friends
-</a>);
+
 
 
 const data = [
@@ -51,26 +48,24 @@ const data = [
 
 const App = () => (
   <div
-    style={{ 
-      backgroundColor: "#" + ((1 << 24) * Math.random() | 0).toString(16),
-    }}>
-    <Container style={{
-      backgroundColor: "#" + ((1 << 24) * Math.random() | 0).toString(16),
-    } }>
+    style={{ background: `#${((1 << 24) * Math.random() | 0).toString(16)}` }}>
+    <div className='container' style={{ background: `#${((1 << 24) * Math.random() | 0).toString(16)}` }}>
 
 
-      {data.map((card,index)=>{
+      {data.map((card, index) => {
         return (
-            <Example
-              img={card.img}
-              name={card.name}
-              meta={card.meta}
-              desc={card.desc}
-              extra={extra}
-            />
-          )})}
+          <Card
+            key={index}
+            img={card.img}
+            name={card.name}
+            meta={card.meta}
+            desc={card.desc}
+            
+          />
+        )
+      })}
 
-    </Container>
+    </div>
   </div>
 );
 
