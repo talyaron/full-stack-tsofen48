@@ -1,13 +1,15 @@
-import './Card.css'
+import './OneComp.css'
 import React from "react"
 
 function OneComp(props) {
     return (
         <div className='card'>
-           
-        </div>
+           <h1>{props.nameOf}</h1>
+        <p>{props.title}</p>
+        <img alt="" src={props.img} />
+       </div>
     )
 }
 
-export default Card
+export default OneComp;
 
