@@ -1,14 +1,16 @@
 import React from 'react'
-import { Card, Icon } from 'semantic-ui-react'
+import './Card.css';
 
-const profileCard = (data) => (
-  <Card
-    image={data.img}
-    header={data.name}
-    meta={data.meta}
-    description={data.desc}
-    extra={data.extra}
-  />
-)
 
-export default profileCard
+const Card = (props) => {
+
+  const { img, name, meta, desc } = props;
+
+  return (
+    <div className='card'>
+      <img src={img} alt='img' />
+      <p>{name}</p>
+    </div>)
+}
+
+export default Card
