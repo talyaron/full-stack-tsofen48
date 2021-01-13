@@ -1,10 +1,10 @@
 import './Card.css'
+import React from "react"
 
-function Card(props) {
+function OneComp(props) {
     return (
         <div className='card'>
-            {props.title}
-            <img src={props.img} alt='flowers' />
+           
         </div>
     )
 }

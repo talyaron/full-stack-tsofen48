@@ -4,9 +4,10 @@ import React from "react"
 function Card(props) {
     return (
         <div className='card'>
-            {props.title}
-            <img src={props.img} alt='flowers' />
-        </div>
+           <h1>{props.nameOf}</h1>
+        <p>{props.title}</p>
+        <img alt="" src={props.img} />
+       </div>
     )
 }
 
