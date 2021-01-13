@@ -1,3 +1,11 @@
 body {
   background-color: whitesmoke;
 }
+.app {
+  display: flex;
+  background-color: whitesmoke;
+  height: 100vh;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
