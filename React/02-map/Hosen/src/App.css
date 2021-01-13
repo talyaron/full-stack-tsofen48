@@ -1,0 +1,23 @@
+.imagesContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  flex: 0 30%;
+  /*demo*/
+  box-sizing:border-box;
+  
+}
+.title{
+  text-align: center;
+font-size: 40px;
+width: fit-content;
+border-bottom: solid 2px black;
+margin: auto;
+margin-bottom: 30px;
+}
+body{
+  background-color: teal;
+  
+}
