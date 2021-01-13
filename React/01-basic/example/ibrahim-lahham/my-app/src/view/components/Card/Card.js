@@ -5,6 +5,7 @@ function Card(props) {
         <div className='card'>
             {props.title}
             <img src={props.img} alt='flowers' />
+            {props.value} 
         </div>
     )
 }
