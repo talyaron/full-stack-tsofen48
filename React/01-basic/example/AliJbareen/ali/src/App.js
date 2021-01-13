@@ -51,86 +51,25 @@ const data = [
 
 const App = () => (
   <div
-    style={{
+    style={{ 
       backgroundColor: "#" + ((1 << 24) * Math.random() | 0).toString(16),
     }}>
     <Container style={{
       backgroundColor: "#" + ((1 << 24) * Math.random() | 0).toString(16),
-    }}>
-      <Grid columns={3} divided>
-        <Grid.Row>
-          <Grid.Column>
+    } }>
+
+
+      {data.map((card,index)=>{
+        return (
             <Example
-              img={data[0]['img']}
-              name={data[0]['name']}
-              meta={data[0]['meta']}
-              desc={data[0]['desc']}
+              img={card.img}
+              name={card.name}
+              meta={card.meta}
+              desc={card.desc}
               extra={extra}
             />
-          </Grid.Column>
-          <Grid.Column>
+          )})}
 
-            <Example
-              img={data[1]['img']}
-              name={data[1]['name']}
-              meta={data[1]['meta']}
-              desc={data[1]['desc']}
-              extra={extra}
-            />
-
-          </Grid.Column>
-          <Grid.Column>
-
-            <Example
-              img={data[2]['img']}
-              name={data[2]['name']}
-              meta={data[2]['meta']}
-              desc={data[2]['desc']}
-              extra={extra}
-            />
-          </Grid.Column>
-
-          <Grid.Row>
-            <Grid.Column>
-            </Grid.Column>
-          </Grid.Row>
-
-
-          <Grid.Column>
-
-
-            <Example
-              img={data[3]['img']}
-              name={data[3]['name']}
-              meta={data[3]['meta']}
-              desc={data[3]['desc']}
-              extra={extra}
-            />
-          </Grid.Column>
-          <Grid.Column>
-
-
-            <Example
-              img={data[4]['img']}
-              name={data[4]['name']}
-              meta={data[4]['meta']}
-              desc={data[4]['desc']}
-              extra={extra}
-            />
-          </Grid.Column>
-          <Grid.Column>
-
-
-            <Example
-              img={data[5]['img']}
-              name={data[5]['name']}
-              meta={data[5]['meta']}
-              desc={data[5]['desc']}
-              extra={extra}
-            />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
     </Container>
   </div>
 );
