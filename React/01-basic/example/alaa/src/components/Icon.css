@@ -1,0 +1,12 @@
+.icon{
+    border-radius: 50%;
+    /* border: solid rgba(216, 8, 8, 0.876);
+    position: relative;
+    width: fit-content; */
+    /* margin: 1%; */
+    /* height: fit-content; */
+}
+.icon img{
+    width:50px;
+  }
+  
