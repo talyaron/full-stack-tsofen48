@@ -1,13 +1,15 @@
-import './Card.css'
+import './ThreeComp.css'
 import React from "react"
 
 function ThreeComp(props) {
     return (
-        <div className='card'>
-           
-        </div>
+        <div className='ThreeComp'>
+        <h1>{props.nameOf}</h1>
+        <p>{props.title}</p>
+        <img alt="" src={props.img} />
+        </div> 
     )
 }
 
-export default Card
+export default ThreeComp;
 
