@@ -2,8 +2,13 @@
   text-align: center;
   background-color: #282c34;
 }
-.Container {
+.container {
+  display: grid;
   background-color: #282c34;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100vw;
 }
 .App-header {
   background-color: #282c34;
@@ -16,15 +21,5 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
