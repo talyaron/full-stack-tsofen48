@@ -1,0 +1,17 @@
+.card{
+    /* margin: 10px; */
+    border-radius: 10px;
+    background-color: rgb(82, 141, 197);
+    color: white;
+    text-align: center;
+    padding: 10px;
+   margin: 10px;
+}
+.card text{
+
+    font-family: Calibri;
+}
+.card img{
+    width: 200px;
+    height: 100px;
+}
