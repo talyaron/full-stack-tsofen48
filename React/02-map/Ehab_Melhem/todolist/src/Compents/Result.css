@@ -1,0 +1,11 @@
+.result {
+  margin-left: 43vw;
+  margin-top: 100px;
+  width: 300px;
+}
+.header {
+  display: flex;
+}
+.result a {
+  text-decoration: none;
+}
