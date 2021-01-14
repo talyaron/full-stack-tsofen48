@@ -27,6 +27,9 @@ if(e.target.value === "1")
  else if(e.target.value === "3"){
   setOperator('+')
  }  
+ else if(e.target.value === "4"){
+  setOperator('-')
+ }  
  else if(e.target.value === "Operator"){
   setOperator('nullIt')
  }
