@@ -1,0 +1,23 @@
+.group{
+    top: 20px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: auto auto auto;
+    height:70%;
+  
+}
+.card{
+    color: rgb(8, 8, 8);
+    display:inline-block;
+    background-size: contain; 
+    border:rgba(0, 0, 0, 0.856) double 3px;
+     text-align: center;
+     width: 300px;
+     height: 350px;
+
+}
+.card img{
+    width: 99%;
+    height: 90%;
+}
