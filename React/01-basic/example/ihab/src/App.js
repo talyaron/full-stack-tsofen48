@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import React, { Component }  from 'react';
+import React from 'react';
 
-function App() {
+//components
+//import OneComp from "./components/OneComp/OneComp"
+import TwoComp from "./components/TwoComp/TwoComp"
+//import ThreeComp from "./components/ThreeComp/ThreeComp"
+
+const name = 'Ihabs A.H Page';
+const Comps= [
+{nameOf:'Component 1', title:"Nice Flowers", img:'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mothers-day-flower-bouquet-1588610191.jpg?crop=1.00xw:0.892xh;0,0.108xh&resize=1200:*' },
+{nameOf:"Component 2", title:"Nice Gray Cat", img:'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg'},
+{nameOf:"Component 3", title:"Nice Gray Lama", img:"https://pixnio.com/free-images/2018/12/02/2018-12-02-19-17-09-1200x801.jpg" }
+]
+
+function App() { //component
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+           {name}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div class="container">
+          { Comps.map((comp, index) => {
+               return (<TwoComp nameOf={comp.nameOf} title={comp.title} img={comp.img}></TwoComp>
+               )})
+          }
+      
+      
+       </div>
       </header>
     </div>
   );
