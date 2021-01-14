@@ -1,0 +1,21 @@
+.imageToShow {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  padding: 20px;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+.imgFrame {
+  width: 300px;
+  height: 300px;
+}
+.frame {
+  position: relative;
+  width: fit-content;
+  height: 300px;
+}
+.image{
+       margin: 20px;
+       flex: 1 2 20%;
+}
