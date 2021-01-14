@@ -55,7 +55,8 @@ if(e.target.value === "1")
               default:
                 break;
     }
-    setImg(<img alt="img" style={{width:"50px",height:"50px"}} src="https://orig00.deviantart.net/1d7c/f/2017/098/1/6/loading_logo_c_c_by_junguler-db53ay7.gif"/>);
+    
+    setImg(<img alt="img" style={{width:"50px",height:"50px"}} src="https://i0.wp.com/hpscans.com/wp-content/uploads/2020/10/loading.gif"/>);
   
   console.log(firstNumber)
     setTimeout(function(){
@@ -86,7 +87,7 @@ if(e.target.value === "1")
     <option value="4">-</option>
   </select>
   <br/>
- <button className="btn btn-primary" onClick={totalIt}>Calculate {imageloading}</button>
+ <button className="btn btn-primary" onClick={totalIt}>Calculator {imageloading}</button>
 <div>
 
 <h1>{text}</h1>
