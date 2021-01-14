@@ -1,9 +1,9 @@
 import './Card.css'
-function group() {
+function Group() {
     return (
         <div className='group'>
         </div>
     )
 }
 
-export default group
+export default Group
