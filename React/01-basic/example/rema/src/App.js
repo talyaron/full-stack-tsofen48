@@ -1,36 +1,78 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Card from './view/components/Card/Card';
-import group from './view/components/Card/group';
+import Shape from './view/components/Card/Shape';
+import React, { useState } from 'react';
+
+
 
 function uniqueId(){
   return "id" + Math.random().toString(16).slice(2)
 }
 
 const items = [
-{id:uniqueId(),img:'https://cars.usnews.com/images/article/202011/128724/P90289697_highRes.jpg',title:'mini cooper'},
-{id:uniqueId(),img:'https://images-na.ssl-images-amazon.com/images/I/61-dIdk0gPL._AC_SX679_.jpg',title:'m&ms'},
-{id:uniqueId(),img:'https://images.heb.com/is/image/HEBGrocery/002083693' ,title:'pringles'},
-{id:uniqueId(), img:'https://imgproxy.natucate.com/PAd5WVIh-tjEKQM4Z6tm6W1J4Yc2JIYWrKEroD1c7mM/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlYXJ0ZW4vNmMwODZlYmEtNzk3Yi00ZDVjLTk2YTItODhhNGM4OWUyODdlLzM3NjYwMTQ2NjMtMTU2NzQzMzYxMi8xMl9kYW5pZWxfY2FuX2JjLTIwNy5qcGc',title:'quiet places'}
+{id:uniqueId(),img:'https://icon-library.com/images/circle-icon/circle-icon-9.jpg',title:'circle'},
+{id:uniqueId(),img:'https://www.clker.com/cliparts/N/A/G/S/5/f/red-square-button-md.png',title:'square'},
+{id:uniqueId(),img:'https://lh3.googleusercontent.com/proxy/gNz7mKVwXUmhFLZVs4Zz59_6zLMIHoteKTzrdEveIfgXBe4NYeL1U9eRf7DOrYCQB3es1dLtGYdhd6v0w6ZVAfoA',title:'triangle'}
 ]
 
+
 function App() {
+
+  var [randomShape, setShape] = useState('')
+  const [Circounter, setCirCounter] = useState(0)
+  const [squcounter, setSquCounter] = useState(0)
+  const [tricounter, setTriCounter] = useState(0)
+  const handleClick =  e => {
+
+    let item = items[Math.floor(Math.random() * items.length)];
+    randomShape=item.img;
+    setShape(randomShape);
+    
+    
+    if(item.title=='circle'){
+    const newCirCounter = Circounter + 1;
+    setCirCounter(newCirCounter);
+    }
+    if(item.title=='square'){
+      const newSquCounter = squcounter + 1;
+      setSquCounter(newSquCounter);
+    }
+    if(item.title=='triangle'){
+      const newTriCounter = tricounter + 1;
+      setTriCounter(newTriCounter);
+    }
+  }
   return (
     <div className="App">
       <header className="App-header">
-      <group>
-       
-       {items.map((item, index) => {
+        <group>
+      {items.map((item, index) => {
          
-         return (<Card
+         return (<Shape 
+           key={item.id}
            title={item.title}
-           img={item.img} />)
+           img={item.img}/> )
        })
        }
-        </group>
-    
-       
+     </group>
+     <div><img  className="randomShape" src={randomShape} alt=''></img></div>
+     <div className="CircleCounter">
+     <p>
+         Circle Counter <span>({Circounter})</span>
+          </p>
+          </div>
+          <div className="SquareCounter">
+          <p>
+         Square Counter <span>({squcounter})</span>
+          </p>
+          </div>
+          <div className="TraingleCounter">
+          <p>
+         Traingle Counter <span>({tricounter})</span>
+          </p>
+          </div>
       </header>
+      <button className="button" onClick={handleClick}>Click Me</button>
     </div>
   );
 }
