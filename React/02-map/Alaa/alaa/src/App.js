@@ -22,6 +22,7 @@ function App() {
               innerText={question.innerText}
               answers={question.answers}
               key={index}
+              appState={{score, setScore}}
             />
           );
         })
