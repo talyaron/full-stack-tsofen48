@@ -1,0 +1,73 @@
+
+body {
+    background-color: #9266ff;
+    }
+    
+    .App {
+        background-color: #3f3160;
+        min-height: 500px;
+        width: 400px; 
+        margin: 40px auto;
+    }
+    
+    .App input {
+        background-color: rgb(27,112,137);
+        border: 0;
+        width: 200px;
+        height: 50px;
+        padding: 0 20px;
+        margin: 20px;
+        font-size: 18px;
+        border-radius: 10px;
+        color: #fff;
+    
+    }
+    
+    .App input::placeholder{
+        color: rgb(255,255,255,0.5);
+    }
+    
+    .App input:focus{
+        outline: none;
+    }
+    
+    .App button{
+        height: 50px;
+        width: 80px;
+        border-radius: 5px;
+        border: 0;
+        background-color: rgb(202,156,24);
+        cursor: pointer;
+        font-display: bolder;
+        color: #fff;
+    
+    }
+    
+    #button1 {
+      position: relative;
+      background-color: fuchsia;
+      border: none;
+      font-size: 15px;
+      color: #FFFFFF;
+      padding: 0px;
+      width: 100px;
+      text-align: left;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 12px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #button1 button {
+    
+      text-align: right;
+    
+    }
+    .App h2{
+        color: white;
+        margin-left: 100px;
+        padding: 0px;
+        margin-top:0;
+    }
