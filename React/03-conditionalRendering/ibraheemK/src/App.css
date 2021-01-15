@@ -1,0 +1,24 @@
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+#right{
+  --position: relative;
+  --right: 30%;
+  margin : 0px
+}
+#left{
+  --position: relative;
+  --top: 30%;
+  margin : 300px
+}
+
+#right>button{
+  background-color: rgb(12, 32, 211);
+}
+#left>button{
+  background-color: red;
+}
+
