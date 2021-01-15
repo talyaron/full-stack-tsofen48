@@ -28,7 +28,7 @@ function App() {
     return (<div>
       
       <button onClick={handleInputChange}>Change to input</button>
-      <button onClick={handleSwitch} className={ok ? 'blue' : 'green'} >{ok ? 'OK' : 'not OK'}</button>
+      <button onClick={handleSwitch} className={ok ? 'blue' : 'green'} >{ok ? document.getElementById('.App').style.backgroundColor='red' : 'not OK'}</button>
     </div>)
   }
 }
