@@ -5,17 +5,12 @@
   background-color: blue;
 }
 #right{
-  position: relative;
+  --position: relative;
   --right: 30%;
   margin : 0px
 }
 #left{
-  position: relative;
+  --position: relative;
   --top: 30%;
   margin : 300px
-}
-
-p{
-  position: absolute;
-  margin: 0px;
 }

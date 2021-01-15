@@ -17,16 +17,17 @@ function App() {
 
   if (isInput) {
     return (
-      <div>
-        <button id ='left' onClick={handleInputChange}>click me</button>
+      <div id ='left'>
+        <button  onClick={handleInputChange}>click me</button>
         <p> you cant catch me</p>
       </div>
     )
   } else {
-    return (<div>
+    return (<div id ='right'>
       
-      <button id ='right'onClick={handleInputChange}>click me</button>
+      <button onClick={handleInputChange}>click me</button>
       <p> you cant catch me</p>
+      
     </div>)
   }
 }
