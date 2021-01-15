@@ -1,12 +1,16 @@
 .icon{
     border-radius: 50%;
-    /* border: solid rgba(216, 8, 8, 0.876);
-    position: relative;
-    width: fit-content; */
-    /* margin: 1%; */
-    /* height: fit-content; */
-}
-.icon img{
     width:50px;
-  }
+    background-color: brown;
+    height: 100px;
+    background-color: rgba(161, 37, 37, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;  
+    margin: 100px;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
+
+
   
