@@ -1,0 +1,23 @@
+.maindiv{
+  width: 100%;
+  height: 100%;
+  background-color:black;
+}
+.yellow{
+  position:absolute;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  width: 20%;
+  height: 10%;
+  background-color:rgb(180, 180, 78);
+  color: black;
+}
+.img{
+  position: relative;
+  top: 20px;
+   height: 120%;
+}
+.divon{
+  background-color: lightgoldenrodyellow;
+}
