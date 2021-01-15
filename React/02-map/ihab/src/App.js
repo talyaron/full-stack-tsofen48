@@ -66,10 +66,9 @@ deleteItem(id){
 				 {this.state.list.map(item => {
 					 return(
 						 <li key={item.id}>
-						  {item.value}
-						 <button class="button button1" onClick={() => this.deleteItem(item.id)} 
-							 >
-							 X					
+						  
+						 <button class="btnDlt" onClick={() => this.deleteItem(item.id)}>
+							 {item.value}   [X]				
 						 </button>
 						 </li>
 					 )
