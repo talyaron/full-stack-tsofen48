@@ -1,0 +1,14 @@
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+#right{
+  position: relative;
+  right: 30%;
+}
+#left{
+  position: relative;
+  top: 30%;
+}
