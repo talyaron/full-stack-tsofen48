@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.night{
+  background-color: black;
+  padding:20%;
+}
+.light{
+  background-color: white;
+  padding:20%;
+}
+img{
+  width: 40%;
+  margin: auto;
+  padding:10%;
+}
+#scary-house{
+  display: none;
+  /* margin-bottom: 30%; */
+  border: solid yellow;
+}
+#regular-house{
+  border: solid yellow;
+}
+
+
+
+
+
+
+
+

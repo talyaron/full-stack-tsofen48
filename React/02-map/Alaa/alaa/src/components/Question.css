@@ -19,3 +19,11 @@
     font-weight: bold;
     font-size: 20px;
 }
+
+.question--true{
+    background-color: green;
+}
+
+.question--false{
+    background-color: red;
+}
