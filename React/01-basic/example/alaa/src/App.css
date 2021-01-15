@@ -12,28 +12,35 @@
 
 
 .App-header {
-  /* min-height: 100vh; */
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: black;
 }
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto auto;
-
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    ". header ."
+    ". icons . "
+    " ";
+  border: solid black;  
+  margin: 10%;
 }
 
 .grid-item {
   background-color: rgba(161, 37, 37, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  /* font-size: 30px; */
   text-align: center;  
   margin: 100px;
+  border: solid black;
 }
 
-/* .linkedin-link {
-  color: #4c9cb3;
-} */
+.profile-info{
+  /* grid-column-start: 2;
+  grid-column-end: 3; */
+  border: solid black;
+}
 
 

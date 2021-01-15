@@ -1,0 +1,55 @@
+.iconBtn {
+  color: lightcoral !important;
+}
+.container {
+  margin-left: 43vw;
+  margin-top: 150px;
+  width: fit-content;
+}
+.flex {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightcoral;
+  border-radius: 999px;
+}
+.flex > input {
+  padding: 7px;
+  margin-left: 6px;
+  border: none;
+  outline: none;
+  background-color: whitesmoke;
+}
+body {
+  background-color: whitesmoke;
+}
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  height: 25px;
+  color: white;
+  background-color: lightcoral;
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+.btn:hover {
+  color: lightcoral;
+  background-color: white;
+  border: 1px solid lightcoral;
+}
+.btn:active {
+  transform: scale(0.75);
+}
+.stam {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  height: 25px;
+  color: white;
+  background-color: rgb(116, 76, 76);
+  border-radius: 999px;
+  outline: none;
+}
