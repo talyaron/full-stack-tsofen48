@@ -1,0 +1,73 @@
+.App{
+  text-align: center;
+  
+}
+
+
+
+.my-image {
+  border-radius: 20%;
+  width: 250px;
+  height: 250px;
+}
+
+
+.App-header {
+  /* min-height: 100vh; */
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto ;
+  
+
+}
+
+.grid-item {
+  background-color: rgba(82, 85, 84, 0.568);
+  border: 2.5px double rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;  
+  margin: 100px;
+  width: auto;
+  height: auto;
+
+}
+
+
+.grid-item-b {
+
+gap: 15px;
+display: grid;
+grid-row: auto;
+width: 50px;
+height: 50px;
+align-content: center;
+}
+button{
+  color: rgb(204, 13, 13);
+  background-color: rgba(207, 16, 16, 0.295);
+  
+}
+.button:active {
+  margin-left:500px;
+  color: blue;
+}
+
+.body-dark{
+  background-color: black;
+  background-size:100%;
+}
+.body-light{
+  background-color: rgb(180, 158, 158);
+  background-size:100%;
+}
+
+
+
+
+
