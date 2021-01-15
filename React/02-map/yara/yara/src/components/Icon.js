@@ -2,32 +2,31 @@
 import './Icon.css';
 import React, { useState } from 'react';
 
+
+
+
 function Icon(props) {
-    //const price = useState(0)
-    //const {[counter, setCounter] [price,setCounter]} = useState(0)
-
-    const [counter, setCounter] = useState(0)
+    const {score, setScore} = props.appState;
+    const [counter, setCounter] = useState(0);
+   
+    const i=props.price
     const handleClick = e => {
-
+         
         setCounter(counter + 1)
-        //setCounter(price+10)
+        
+        
+        setScore(score+i);
         console.log('click', counter)
-        // console.log(price+10)
+       
 
     }
-
+    
     return (
         <div className="icon">
-            <button onClick={handleClick}>{props.title} x{counter}</button>
-
+            <button onClick={handleClick}>{props.title} x{counter} {props.price}$</button>
+            
         </div>
 
     );
 }
 export default Icon
-/*
-img
-button
-img
-button
-*/
