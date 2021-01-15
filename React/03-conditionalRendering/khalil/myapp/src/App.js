@@ -20,7 +20,7 @@ function App() {
   } else {
     return (
       <div className='light'>
-        <img src='https://png.pngtree.com/png-vector/20190820/ourlarge/pngtree-light-bulb-icon-vector--light-bulb-ideas-symbol-illustration-png-image_1694700.jpg' alt='b'></img>
+        <img src='https://freepngimg.com/thumb/bulb/4-yellow-light-bulb-png-image.png' alt='b'></img>
         <button onClick={handleButton}>Surprise!</button>
       </div>
     );

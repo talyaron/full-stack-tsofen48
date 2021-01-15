@@ -7,6 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  width: 400px;
 }
 
 .light > button {
@@ -27,6 +28,7 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+  max-width: 500px;
 }
 
 .dark > button {
