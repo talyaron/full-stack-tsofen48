@@ -4,19 +4,22 @@ import React,{useState} from "react"
 function ToDoCom(props) {
 
 
-    
+    const [uniqID, setuiqID]  = useState(0);
     const [Counter, setCounter] = useState(0); 
 
     function newHandler(e){
+      
       let NewCounter = Counter+1;
+      setuiqID(NewCounter+ Math.random());
       if(document.getElementById("texrToDo").value!=="")
       {
-      document.getElementById("ListTxt").innerHTML+="<br/>"+NewCounter+". "+
-      document.getElementById("texrToDo").value;
+       
+      document.getElementById("txtul").innerHTML+="<li id ="+uniqID+">"+NewCounter+". "+
+      document.getElementById("texrToDo").value+" </li>";
       document.getElementById("texrToDo").value="";
       setCounter(NewCounter); 
     }
-      
+    
      // console.log(NewCounter); 
     }
 
@@ -30,8 +33,11 @@ function ToDoCom(props) {
       <div className="container">
         <button id="btn" onClick={newHandler}>Add Item</button>
         <h5 id="Coutertxt">Items: {Counter}</h5></div>
-        <h7 id="ListTxt"></h7> 
-        </div>
+        <ul id="txtul">
+       
+       </ul>
+        
+      </div>
     )
 }
 

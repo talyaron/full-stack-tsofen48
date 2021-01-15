@@ -1,25 +1,84 @@
-import './App.css';
-import React from 'react';
+import React, {Component} from 'react'; 
+import './App1.css'; 
 
-//component
-import ToDoCom from "./components/ToDoCom/ToDoCom";
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			newItem:"",
+			list:[]
+		}
+	}
 
+	updateInput(key, value){
+		this.setState({
+           [key]: value
+		});
 
-const name = 'Ihabs To-Do List'; 
+	}
 
-function App() { //component
-  return (
-    <div className="App">
-      <header className="App-header">        
-        <p>
-           {name}
-        </p>
-        <div class="container">
-        <ToDoCom></ToDoCom>      
-       </div>
-      </header>
-    </div>
-  );
+	addItem() {
+		const newItem={
+			id: 1+ Math.random(),
+			value: this.state.newItem.slice()
+		
+		};
+
+		//copr of list item
+		const list = [...this.state.list];
+
+		list.push(newItem);
+
+		this.setState({
+			list,
+			newItem:""
+		
+		});
+	}
+	
+deleteItem(id){
+	const list = [...this.state.list];
+
+	const updatedList = list.filter(item => item.id !== id);
+
+	this.setState({list: updatedList});
 }
 
-export default App;
+	render() {
+		return (
+		<div className="App">
+      <div>
+			<h2> Ihab To Do List</h2>
+			 <br/>
+			 <input
+			 type="text"
+			 placeholder="Type item here.."
+			 value={this.state.newItem}
+			 onChange={e => this.updateInput("newItem", e.target.value)}
+			 />
+			 <button
+			 onClick={() => this.addItem()}
+			 >
+				 Add
+			 </button>
+			 <br/>
+			 <ul>
+				 {this.state.list.map(item => {
+					 return(
+						 <li key={item.id}>
+						  {item.value}
+						 <button class="button button1" onClick={() => this.deleteItem(item.id)} 
+							 >
+							 X					
+						 </button>
+						 </li>
+					 )
+				 })}
+			 </ul>
+		 </div>
+		</div>
+		);
+	}
+}
+
+export default App; 
