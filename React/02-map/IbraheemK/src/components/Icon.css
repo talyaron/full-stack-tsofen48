@@ -7,6 +7,9 @@
     /* height: fit-content; */
 }
 .icon img{
-    width:50px;
+    object-fit: cover;
+    --background-size:cover;
+    width:100px;
+    height:100px;
   }
   
