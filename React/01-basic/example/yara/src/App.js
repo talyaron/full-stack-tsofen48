@@ -22,7 +22,7 @@ function App() {
         >
           hello,im yara 19 years old . ؤ
         </a>
-        {icons.map((icon, index) => {
+        {img.map((icon, index) => {
          
          return (<Icon
            key={index}
