@@ -42,6 +42,20 @@ button {
   border-radius: 10px;
   color: white;
   font-size: large;
+
+  position: relative;
+  animation: infinite;
+  animation-name: move;
+  animation-duration: 4s;
+  animation-delay: -1s;
+}
+
+@keyframes move {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
 
 .myWindow{
