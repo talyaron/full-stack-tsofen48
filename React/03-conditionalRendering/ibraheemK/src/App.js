@@ -27,6 +27,7 @@ function App() {
       
       <button onClick={handleInputChange}>click me</button>
       <p> you cant catch me</p>
+      {/* alert("Hello! I am an alert box!!"); */}
       
     </div>)
   }
