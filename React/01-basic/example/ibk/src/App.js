@@ -4,6 +4,7 @@ import './App.css';
 import Card1 from './view/components/Card1/Card1';
 import Card2 from './view/components/Card2/Card2';
 import Card3 from './view/components/Card3/Card3';
+// You only need one card (Tal)
 
 
 const rabbit = 'arnab';
