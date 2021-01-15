@@ -1,0 +1,36 @@
+.App {
+  background-color: black;
+}
+
+
+.light > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.light > button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.dark {
+  height: 100vh;
+  min-height : 100vh;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+}
+
+.dark > img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.dark > button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
