@@ -7,6 +7,6 @@ function Imag(props) {
             <img src={props.img} alt={props.title} />
         </div>
     );
-}
+ }
 
 export default Imag
