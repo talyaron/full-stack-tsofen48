@@ -41,6 +41,7 @@ function App() {
             Alaa Saabni-Mograbi ({counter})
           </p>
         </div>
+        
         <button onClick={handleClick}>Add 1</button>
         <div className="grid-item">
 

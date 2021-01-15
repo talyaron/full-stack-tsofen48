@@ -11,9 +11,30 @@ function App() {
     setFirstNumber(e.target.value);
   }
 
+<<<<<<< HEAD
   function changeSecondNumber(e) {
     setSecondNumber(e.target.value);
   }
+=======
+function changeOperator(e){
+if(e.target.value === "1")
+{
+  setOperator('/')
+}
+ else if(e.target.value === "2"){
+   setOperator('*')
+ }   
+ else if(e.target.value === "3"){
+  setOperator('+')
+ }  
+ else if(e.target.value === "4"){
+  setOperator('-')
+ }  
+ else if(e.target.value === "Operator"){
+  setOperator('nullIt')
+ }
+}
+>>>>>>> main
 
   function changeOperator(e) {
     setOperator(e.target.value);

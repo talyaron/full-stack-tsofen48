@@ -1,0 +1,66 @@
+
+body {
+  background: url('https://facn7.github.io/w3hkproject/background.jpg');
+}
+.toDoTitle {
+  color: black;
+  text-align: center;
+  font-size: 8vh;
+  font-family: Permanent Marker, sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+.taskInput {
+  display: flex;
+  margin: auto;
+
+  font-size: 30px;
+  font-family: Permanent Marker, sans-serif;
+  width: 85%;
+  /* min-width: ; */
+  max-width: 1000px;
+  border: 0.2rem;
+  border-radius: 5%;
+  border-style: solid;
+  border-color: red;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.addTaskBtn {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: black;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+}
+.addTaskBtn:hover {
+  color: black;
+  background-color: white;
+  border: solid 2px black;
+}
+.taskInputContainer {
+  display: flex;
+  max-width: 500px;
+  margin: auto;
+  width: 95%;
+  display: flex;
+    max-width: 500px;
+
+}
+.toDoList{
+  width: 90%;
+  /* margin: 500px; */
+  margin: auto;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  right: 30px;
+}

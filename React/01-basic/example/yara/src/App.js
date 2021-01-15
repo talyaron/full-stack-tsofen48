@@ -20,9 +20,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          hello,im yara 19 years old . 
+          hello,im yara 19 years old . ؤ
         </a>
-        {icons.map((icon, index) => {
+        {img.map((icon, index) => {
          
          return (<Icon
            key={index}

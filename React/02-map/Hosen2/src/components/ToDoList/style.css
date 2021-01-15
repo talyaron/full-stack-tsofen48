@@ -1,0 +1,21 @@
+.task{
+       background: transparent;
+       padding: 5px;
+       margin: 10px;
+       display: flex;
+       justify-content: center;
+       border: solid 5px black;
+       border-radius: 10px;
+}
+.btn{
+       width: 35px;
+       height: 35px;
+       position: relative;
+       top: 35px;
+       margin-left: 10px;
+       border-radius: 50%;
+       /* border: none; */
+       outline: none;
+       cursor: pointer;
+       border: solid 1px black;
+}

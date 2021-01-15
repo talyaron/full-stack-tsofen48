@@ -18,7 +18,7 @@ const items = [
 
 function App() {
 
-  var [randomShape, setShape] = useState('')
+  var [randomShape, setShape] = useState('https://cdn.iconscout.com/icon/premium/png-256-thumb/question-mark-2025980-1707297.png')
   const [Circounter, setCirCounter] = useState(0)
   const [squcounter, setSquCounter] = useState(0)
   const [tricounter, setTriCounter] = useState(0)
