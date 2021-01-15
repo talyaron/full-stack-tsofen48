@@ -1,0 +1,15 @@
+.App{
+  background-color: black;
+}
+
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+
+img{
+  width:300px;
+  height: 300px;
+}

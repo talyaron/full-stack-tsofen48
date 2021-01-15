@@ -24,7 +24,7 @@ class App extends Component {
 		
 		};
 
-		//copr of list item
+		// list item
 		const list = [...this.state.list];
 
 		list.push(newItem);

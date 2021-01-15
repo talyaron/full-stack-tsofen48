@@ -1,0 +1,27 @@
+body{
+  background-color:cornflowerblue;
+}
+button{
+  animation: colorful 10s ease infinite ;
+}
+.movedown{
+  margin:500px;
+  background-color:blueviolet;
+  color:white;
+}
+.moveup{
+  margin: 0px;
+  background-color:white;
+  color:black;
+}
+@keyframes colorful{
+0%{
+  background-color:red;
+}
+50%{
+  background-color:green;
+}
+100%{
+  background-color:red;
+}
+}
