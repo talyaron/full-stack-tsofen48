@@ -18,16 +18,16 @@ function App() {
   if (isInput) {
     return (
       <div id ='left'>
-        <button  onClick={handleInputChange}>click me</button>
+        <button  onMouseOver={handleInputChange}>click me</button>
         <p> you cant catch me</p>
       </div>
     )
   } else {
     return (<div id ='right'>
       
-      <button onClick={handleInputChange}>click me</button>
+      <button onMouseOver={handleInputChange}>click me</button>
       <p> you cant catch me</p>
-      {/* alert("Hello! I am an alert box!!"); */}
+      
       
     </div>)
   }
