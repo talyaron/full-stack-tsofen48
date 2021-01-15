@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 
 
 function App() {
-  const [isInput, setIsInput] = useState(true)
+  const [isInput, setIsInput] = useState(false)
 
 
 
@@ -19,13 +19,14 @@ function App() {
     return (
       <div>
         <button id ='left' onClick={handleInputChange}>click me</button>
-        
+        <p> you cant catch me</p>
       </div>
     )
   } else {
     return (<div>
       
       <button id ='right'onClick={handleInputChange}>click me</button>
+      <p> you cant catch me</p>
     </div>)
   }
 }
