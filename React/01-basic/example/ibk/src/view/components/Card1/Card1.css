@@ -1,10 +1,14 @@
 .card1{
-    border-radius: 10px;
-    background-color: rgb(2, 16, 138);
+    --border-radius: 10px;
+    --background-color: rgb(2, 16, 138);
     color: white;
     text-align: center;
-    padding: 10px 30px;
+    padding: 20px 40px;
+    margin: 10px;
 }
 .card1 img{
-    width: 90px;
+    width: 100px;
+    height : 100px;
+    float: right;
+    margin: 10px;
 }
