@@ -9,9 +9,23 @@ import {
 } from "react-router-dom";
 
 export default function App() {
-  const [pressed, setPressed] = useState(false);
-  function changeBorderColor() {
-    setPressed(!pressed)
+  const [detailsPressed, setdetailsPressed] = useState(false);
+  const [exDetailsPressed, setexDetailsPressed] = useState(false);
+  const [votePressed, setvotePressed] = useState(false);
+  function clickDetailsTap() {
+    setdetailsPressed(!detailsPressed)
+    setexDetailsPressed(false)
+    setvotePressed(false)
+  }
+  function clickExtDetailsTap() {
+    setdetailsPressed(false)
+    setexDetailsPressed(!exDetailsPressed)
+    setvotePressed(false)
+  }
+  function clickVoteTap() {
+    setdetailsPressed(false)
+    setexDetailsPressed(false)
+    setvotePressed(!votePressed)
   }
   return (<div className='container'>
     <div className='header'><div className='imgContainer'><img className='profileImg' src='https://photof8.com/wp-content/uploads/2016/10/FutureAst007-2.jpg'></img><h3>עיסאווי פריג</h3></div></div>
@@ -20,13 +34,13 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link onClick={changeBorderColor} className={pressed ? 'pressed-a' : 'not-pressed-a'} to="/details">סיכום פרטים</Link>
+              <Link onClick={clickDetailsTap} className={detailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/details">סיכום פרטים</Link>
             </li>
             <li>
-              <Link to="/extraDetails">עוד מידע</Link>
+              <Link onClick={clickExtDetailsTap} className={exDetailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/extraDetails">עוד מידע</Link>
             </li>
             <li>
-              <Link to="/vote">ניתוני הצבעה</Link>
+              <Link onClick={clickVoteTap} className={votePressed ? 'pressed-a' : 'not-pressed-a'} to="/vote">ניתוני הצבעה</Link>
             </li>
           </ul>
         </nav>
