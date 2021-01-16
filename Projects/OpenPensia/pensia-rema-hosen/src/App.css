@@ -1,0 +1,115 @@
+.container{
+  direction: rtl;
+}
+ul{
+  width: 100%;
+  height: 30%;
+  padding-right: 0;
+}
+li{
+  display: inline;
+}
+li a {
+  display:inline-block;
+  padding: 10px;
+  text-decoration: none;
+  width: 20%;
+  color: rgb(160, 149, 149);
+  font-weight: bolder;
+  border-bottom:2px solid rgb(160, 149, 149);
+}
+.pressed-a{
+  color:rgb(41, 37, 53);
+  border-bottom:2px solid rgb(41, 37, 53);
+}
+.not-pressed-a{
+  color: rgb(160, 149, 149);
+  border-bottom:2px solid rgb(160, 149, 149);
+}
+.header{
+  width: 100%;
+  height:max-content;
+  background-color: rgb(41, 37, 53);
+  text-align: center;
+  
+}
+.profileImg{
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+.imgContainer{
+  padding-right: 35%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 30%;
+  height: 40%;
+}
+.header>.imgContainer>h3{
+  color: white;
+  font-size: x-large;
+}
+.textContainer{
+  padding-right: 20px;
+}
+p{
+  color: rgb(160, 149, 149);
+}
+h4{
+color:  rgb(41, 37, 53);
+}
+.linkedin-buttonContainer{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.linkedin-buttonContainer>button{
+  background-color: rgb(48, 113, 187);
+  border-radius: 15px;
+  box-shadow: transparent;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 17px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.linkedin-buttonContainer>button>span{
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.linkedin-buttonContainer>button:hover span {
+  padding-right: 25px;
+}
+.paragraph-1>.button-container-row-1>button,.paragraph-1>.button-container-row-2>button{
+    color: white;
+    background-color: rgb(41, 37, 53);
+    border-radius: 15px;
+    box-shadow: transparent;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: block;
+    width: 130px;
+    transition: all 0.5s;
+}
+.paragraph-1>.button-container-row-1{
+    position:absolute;
+    left: 5%;
+    top: 57%;
+}
+.paragraph-1>.button-container-row-2{
+  position:absolute;
+  left: 5%;
+  top: 65%;
+}
+.paragraph-1>.button-container-row-1>button>span,.paragraph-1>.button-container-row-2>button>span{
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+.paragraph-1>.button-container-row-1>button:hover span,.paragraph-1>.button-container-row-2>button:hover span {
+  padding-right: 25px;
+}
