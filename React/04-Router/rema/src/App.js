@@ -60,7 +60,6 @@ function Details() {
     <div className='paragraph-4'><h4>ניגוד עניינים</h4><p>אין</p></div>
     <div className='paragraph-5'><h4>קרוב משפחה של בעל שליטה</h4><p>בן דוד של מנכ"ל הראל פיננסים</p></div>
     <div className='linkedin-buttonContainer'><button><span>צפייה בנתונים בלינקדאין</span></button></div>
-    {/* <div className='buttons-container'><button>בהווה</button><button>בהווה</button></div> */}
     </div>;
 }
 
