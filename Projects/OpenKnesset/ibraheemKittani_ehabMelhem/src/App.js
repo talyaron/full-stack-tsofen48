@@ -1,56 +1,34 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-export default function App() {
+import "./App.css";
+import Header from "./components/Header";
+import Naom from "./components/Naom";
+import Taknon from "./components/Taknon";
+import Time from "./components/Time";
+function App() {
+  //JSX
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+    <div>
+      {/* Header */}
+      <Header />
+      <div className="container">
+        <div className="up">
+          <Taknon />
+          <Naom />
+        </div>
+        <div className="down">
+          <Time data={timeHistoryData} text="היסטוריה" />
+          <Time data={timeFutreData} text="עתיד" />
+        </div>
       </div>
-    </Router>
+    </div>
   );
 }
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
+let timeHistoryData = [
+  { date: "17.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+  { date: "12.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+  { date: "08.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+];
+let timeFutreData = [
+  { date: "22.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+];
+export default App;

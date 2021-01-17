@@ -30,7 +30,6 @@ function App() {
           margin-left:${postion}px;
             transition: margin-left 600ms ease-in-out;
         }
-      
         `}</style>
       <button className="btn" onClick={change}>
         {value}
