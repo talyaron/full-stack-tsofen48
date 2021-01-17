@@ -1,5 +1,5 @@
 {
-  "name": "sobhe",
+  "name": "alaa",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,10 +7,9 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
     "react": "^17.0.1",
-    "react-animated-css": "^1.2.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "react-swift-slider": "^6.5.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -36,5 +35,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "keywords": [],
+  "author": " <Alaa-S-M>",
+  "license": "ISC"
 }
