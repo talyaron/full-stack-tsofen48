@@ -2,6 +2,7 @@ import './Question.css';
 import React, {useState, useEffect}from 'react';
 
 import Answer from './Answer'
+import { func } from 'prop-types';
 
 function Question(props) {
     const {score, setScore} = props.appState;
@@ -13,6 +14,13 @@ function Question(props) {
         if(isCorrect===1){ setIsAnsweCorrect('question--true')}
         else if(isCorrect===-1){setIsAnsweCorrect('question--false')}
     },[isCorrect])
+
+
+
+    function handleRemove(i){
+        console.log(i);
+        // dispatch(addTodo(question));
+    }
 
     return (
         <div className={`q-component ${isAnsweCorrect}`}>
@@ -27,10 +35,12 @@ function Question(props) {
                             rightAnswer={answer.rightAnswer}
                             key={index}
                             appState={{score, setScore}}
-                            isAnswerCorrect={{isCorrect, setIsCorrect}}
+                            isAnswerCorrect={{isCorrect, setIsCorrect}}              
                         />
                     );
                 })}
+                
+            {/* <button onClick={handleRemove(e)}>remove</button> */}
             </div>
         </div>
     );
