@@ -20,4 +20,13 @@ export const removeTodo = id => ({
   payload: { id }
 });
 
+export const addQuestion = question => ({
+  type: ADD_QUESTION,
+  payload: {
+    question
+  }
+});
+
+
+
 export const setFilter = filter => ({ type: SET_FILTER, payload: { filter } });

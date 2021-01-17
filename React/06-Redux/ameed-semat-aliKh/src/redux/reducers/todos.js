@@ -1,16 +1,16 @@
 import { ADD_TODO, TOGGLE_TODO, REMOVE_TODO } from "../actionTypes";
 
 const initialState = {
-  todos: []
+  questions: []
 };
 
 const todoReducers = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO: {
-      const { id, content } = action.payload;
+      const { question } = action.payload;
       return {
         ...state,
-        todos: [...state.todos, { id, content, completed: false }]
+        questions: [...state.questions, { id, content, completed: false }]
       }
 
     };

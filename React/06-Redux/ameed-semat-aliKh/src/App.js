@@ -45,16 +45,38 @@
 // }
 
 // export default App;
-
-
+import { useSelector, useDispatch } from 'react-redux';
+// import { addTodo } from './redux/actions';
 import './App.css';
 import React, { useState } from 'react';
-
+import { ADD_TODO } from './redux/actionTypes';
 //components
 import Question from './components/Question';
 
 function App() {
+
+  // const [taskTxt, setTaskTxt] = useState('')
+  // const dispatch = useDispatch();
   const [score, setScore] = useState(0);
+  // const state = useSelector(state=>state);
+  // console.log(state)
+
+  // function handleAdd(e) {
+  //   e.preventDefault();
+  //   dispatch(addTodo(questionObj));
+  //   setTaskTxt('');
+  //   e.target.reset();
+  // }
+
+
+
+
+
+  function addQuestion(quetion){
+
+    // cahnge questionObj to quetion
+    dispatch(addQuestion(questionObj));
+  }
 
   return (
     <div className="App">
@@ -64,6 +86,10 @@ function App() {
           <hr/>
           <p> are you ready?</p>
         </div>
+
+    
+      {/*get question info from user by inputs .... */}
+        
         {questions.map((question, index) => {
 
           return (
@@ -86,6 +112,30 @@ function App() {
 }
 
 export default App;
+
+
+ var questionObj =
+ {
+  questionText: "q",
+  answers: [
+    {
+      answerText: 'a',
+      rightAnswer: false
+    },
+    {
+      answerText: 'b',
+      rightAnswer: false
+    },
+    {
+      answerText: 'c',
+      rightAnswer: false
+    },
+    {
+      answerText: 'd',
+      rightAnswer: false
+    }
+  ]
+}
 
 
 const questions = [
@@ -130,68 +180,6 @@ const questions = [
         rightAnswer: false
       }
     ]
-  },
-  {
-    innerText: "q3",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q4",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q5",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
   }
+ 
 ];
