@@ -18,16 +18,20 @@ const icons = [
 ]
 
 
-function App() {
+ function App() {
   const [counter, setCounter] = useState(0)
 
   const handleClick = e => {
-    
+    // let animals = ['lion','rabbit','panter','tiger']
+    // animals.forEach(el=> {
+    //   const newCounter = el
+        
     const newCounter = counter + 1;
     setCounter(newCounter)
 
     console.log('click', newCounter)
-
+    
+  //})
 
   }
   return (
