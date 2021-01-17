@@ -1,148 +1,56 @@
 import './App.css';
-import React, { useState } from 'react';
-
+import { addQuestion } from './redux/actions';
+import { useDispatch } from 'react-redux';
 //components
-import Question from './components/Question';
+import Questions from './components/Questions';
+
 
 function App() {
-  const [score, setScore] = useState(0);
+  let score = 0;
+  const dispatch = useDispatch();
 
+  function handleAdd(e) {
+    e.preventDefault();
+    // validate the input
+    let questionValues = getQuestionValues();
+    dispatch(addQuestion(questionValues));
+
+  }
   return (
     <div className="App">
       <header className="App-header">
         <div className="quiz-header">
           <h2>Quiz App</h2>
-          <hr/>
+          <hr />
           <p> are you ready?</p>
         </div>
-        {questions.map((question, index) => {
 
-          return (
-            <Question
-              innerText={question.innerText}
-              answers={question.answers}
-              key={index}
-              appState={{score, setScore}}
-            />
-          );
-        })
-        }
+        <form onSubmit={handleAdd}>
+
+          <input id='question' type='text' placeholder='your Qusetion' />
+          <input id='right_answer' type='text' placeholder='First Answer (the right answer)' />
+          <input id='answer2' type='text' placeholder='Second Answer' />
+          <input id='answer3' type='text' placeholder='Third Answer' />
+          <input id='answer4' type='text' placeholder='Fourth Answer' />
+          <button type='submit'>Add Question</button>
+        </form>
         <div className="score">
           score: {score}
         </div>
 
       </header>
+      <Questions></Questions>
     </div>
   );
 }
 
 export default App;
 
-
-const questions = [
-  {
-    innerText: "q1",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q2",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q3",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q4",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  },
-  {
-    innerText: "q5",
-    answers: [
-      {
-        innerText: 'a',
-        rightAnswer: true
-      },
-      {
-        innerText: 'b',
-        rightAnswer: false
-      },
-      {
-        innerText: 'c',
-        rightAnswer: false
-      },
-      {
-        innerText: 'd',
-        rightAnswer: false
-      }
-    ]
-  }
-];
+function getQuestionValues() {
+  let question = document.querySelector('#question');
+  let rightAnswer = document.querySelector('#question');
+  let answer2 = document.querySelector('#answer2');
+  let answer3 = document.querySelector('#answer3');
+  let answer4 = document.querySelector('#answer4');
+  return [question, rightAnswer, answer2, answer3, answer4];
+}
