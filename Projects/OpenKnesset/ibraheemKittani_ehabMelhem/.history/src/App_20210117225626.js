@@ -6,6 +6,7 @@ import Taknon from "./components/Taknon";
 import Time from "./components/Time";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 function App() {
+  //JSX
   return (
     <div>
       {/* Header */}

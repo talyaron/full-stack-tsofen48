@@ -5,6 +5,14 @@ import Naom from "./components/Naom";
 import Taknon from "./components/Taknon";
 import Time from "./components/Time";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
+let timeHistoryData = [
+  { date: "17.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+  { date: "12.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+  { date: "08.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+];
+let timeFutreData = [
+  { date: "22.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
+];
 function App() {
   return (
     <div>
@@ -23,12 +31,5 @@ function App() {
     </div>
   );
 }
-let timeHistoryData = [
-  { date: "17.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
-  { date: "12.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
-  { date: "08.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
-];
-let timeFutreData = [
-  { date: "22.8.19", first: "ישיבת המליאה", second: "נאומים בני דקה" },
-];
+
 export default App;

@@ -1,0 +1,15 @@
+.time {
+  width: 400px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: right;
+}
+.time__info {
+  display: flex;
+  margin-left: 150px;
+  width: 500px;
+}
+.time__info > h5 {
+  margin-right: 10px;
+}
