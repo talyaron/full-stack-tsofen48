@@ -1,17 +1,11 @@
 .contaner {
   width: 390px;
+  border: 1px solid black;
   margin: 0 auto;
   position: relative;
   top: 100px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
