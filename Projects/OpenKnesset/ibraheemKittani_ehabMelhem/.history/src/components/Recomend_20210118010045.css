@@ -1,0 +1,29 @@
+.recomnde {
+  width: 80%;
+  margin-top: 50px;
+  height: 300px;
+  background-color: white;
+  margin-left: 100px;
+  position: relative;
+}
+.recomend__info {
+  width: 80%;
+  position: relative;
+  top: 60px;
+  display: flex;
+}
+.select {
+  width: 200px;
+  height: 30px;
+  direction: rtl;
+}
+.reomnde__FirstHalf {
+  text-align: right;
+  margin-left: 200px;
+  border: 1px solid black;
+  height: 240px;
+}
+.btn {
+  position: relative;
+  top: 130px;
+}
