@@ -1,0 +1,50 @@
+.App {
+  text-align: right;
+  background-color: lightgrey;
+}
+
+.App-logo {
+  height: 100px;
+  width: 100px;
+  left: 200px;
+  top: 0px;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color:#3D4257;
+
+  height: 183pt;
+  direction: rtl;
+  display: flex;
+  
+  
+
+  font-size: calc(10px + 2vmin);
+  color: black;
+ }
+
+.App-link {
+  color: #61dafb;
+}
+h5{
+  color: #B7BCCC;
+  opacity: 100%;
+  
+}
+.right{
+  float:right;
+  direction: rtl;
+  margin-left: 0px;
+  text-align: right;
+}
+.center{
+  padding-top: -3000px;
+  text-align: center;
+  justify-content: center;
+}
+.back{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  padding: 20px;
+}
