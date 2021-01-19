@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+  
   /* background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png); */
   background-size:100%;
   background-repeat: no-repeat;
@@ -23,16 +23,12 @@
   color: #4c9cb3;
 } */
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: white;
+
+
+.inside{
+
+  position: relative;
+  padding: 200px;
   
-}
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 10px solid rgba(228, 224, 224, 0.8);
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+  
 }

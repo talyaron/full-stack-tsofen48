@@ -75,9 +75,34 @@ function App() {
   function addQuestion(quetion){
 
     // cahnge questionObj to quetion
-    dispatch(addQuestion(questionObj));
+
+    // imp comm.
+    // dispatch(addQuestion(questionObj));
   }
 
+// onSubmit - to add a new Question
+// function handleSubmit(e){
+
+//   // e.preventDefault();
+//   console.log
+//   // TODO
+// }
+const handleSubmit = event => {
+
+  event.preventDefault();
+  
+};
+
+
+function onTestClick(e) {
+  e.preventDefault();
+  alert('here');
+};
+
+
+
+
+  // main App Body
   return (
     <div className="App">
       <header className="App-header">
@@ -87,7 +112,31 @@ function App() {
           <p> are you ready?</p>
         </div>
 
-    
+        {/* onSubmit={handleSubmit()} */}
+    <div className="qForm" >
+      <form className="questionForm" 
+      // onSubmit={e => e.preventDefault()}
+      onSubmit={e => this.onTestClick(e)}
+
+      >
+
+
+          {/* ///////////////////////////////////////////////////////////////////////////// */}
+        <input placeholder="Enter a Question" class="newQuestion" type="text" />
+        <div className="formAnswers">
+        <input placeholder="a. first answer" className="questionA" type="text" />
+        <input placeholder="b. second answer" className="questionB" type="text" />
+        <input placeholder="c. third answer" className="questionC" type="text" />
+        <input placeholder="d. fourth answer" className="questionD" type="text" />
+        <input placeholder="Right answer:(a,b,c,d)" class="" type="text" />
+        </div>
+      <button type="submit">Add a New Question</button>
+     
+      </form>
+
+
+
+    </div>
       {/*get question info from user by inputs .... */}
         
         {questions.map((question, index) => {
