@@ -7,6 +7,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import ExtraDetails from './components/ExtraDetails/ExtraDetails';
+import Details from './components/Details/Details';
 
 export default function App() {
   const [detailsPressed, setdetailsPressed] = useState(false);
@@ -27,6 +29,14 @@ export default function App() {
     setexDetailsPressed(false)
     setvotePressed(!votePressed)
   }
+
+  let setPressed= (e)=>{
+    if (document.getElementById('pressed-a')) {
+      document.getElementById('pressed-a').id=''
+    }
+    e.target.id='pressed-a'
+    
+  }
   return (<div className='container'>
     <div className='header'><div className='imgContainer'><img className='profileImg' src='https://photof8.com/wp-content/uploads/2016/10/FutureAst007-2.jpg'></img><h3>עיסאווי פריג</h3></div></div>
     <Router>
@@ -34,14 +44,15 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link onClick={clickDetailsTap} className={detailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/details">סיכום פרטים</Link>
+              <Link onClick={setPressed} className={detailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/details">סיכום פרטים</Link>
             </li>
             <li>
-              <Link onClick={clickExtDetailsTap} className={exDetailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/extraDetails">עוד מידע</Link>
+              <Link onClick={setPressed} className={exDetailsPressed ? 'pressed-a' : 'not-pressed-a'} to="/extraDetails">עוד מידע</Link>
             </li>
             <li>
-              <Link onClick={clickVoteTap} className={votePressed ? 'pressed-a' : 'not-pressed-a'} to="/vote">ניתוני הצבעה</Link>
+              <Link onClick={setPressed} className={votePressed ? 'pressed-a' : 'not-pressed-a'} to="/vote">ניתוני הצבעה</Link>
             </li>
+
           </ul>
         </nav>
 
@@ -63,24 +74,9 @@ export default function App() {
     </div> );
 }
 
-function Details() {
-  return <div className='textContainer'><div className='paragraph-1'><h4>נסיון תעסוקתי</h4><p>מנכ"ל פוקס</p>
-   <div className='button-container-row-1'><button><span>בהווה</span></button></div><p>
-    דירקטור קו השקעות</p>
-    <div className='button-container-row-2'><button><span>בהווה</span></button></div>
-    <p>סמנכ"ל כספים מחסני חשמל</p><p> אלוף משנה 8200</p></div>
-    <div className='paragraph-2'><h4>מומחיות פיננסית</h4><p>יש מומחיות</p></div>
-    <div className='paragraph-3'><h4>השכלה</h4><p>לימודי משפטים, אוניברסיטת בר אילן</p><p>קורס ברמנים, בר מאסטר</p><p>לימודי דת ורוח, האוניברסיטה הפתוחה</p></div>
-    <div className='paragraph-4'><h4>ניגוד עניינים</h4><p>אין</p></div>
-    <div className='paragraph-5'><h4>קרוב משפחה של בעל שליטה</h4><p>בן דוד של מנכ"ל הראל פיננסים</p></div>
-    <div className='linkedin-buttonContainer'><button><span>צפייה בנתונים בלינקדאין</span></button></div>
-    </div>;
-}
 
-function ExtraDetails() {
-  return <h2></h2>;
-}
 
-function Vote() {
-  return <h2></h2>;
-}
+
+  function Vote() {
+    return <h2></h2>;
+  }
