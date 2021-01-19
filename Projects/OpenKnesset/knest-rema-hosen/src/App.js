@@ -21,7 +21,7 @@ export default function App() {
             <Route path="/submitSuggestion">
              
               <ToolHistoryTakanonFutureDiv className='ToolHistoryTakanonFutureDiv'></ToolHistoryTakanonFutureDiv>
-             <div className='SuggestionFromContainer'><SuggestionFrom></SuggestionFrom></div>
+              <SuggestionFrom></SuggestionFrom>
               
             </Route>
 

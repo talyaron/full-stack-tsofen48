@@ -1,9 +1,9 @@
 .mainDiv{
     direction: rtl;
-    position:absolute;
-    top: 25%;
-    right: 17%;
+    position:relative;
+    padding-top: 22%;
     width: 65%;
+    padding-bottom: 5%;
   }
   .Parliamentary-tools-container{
     display:grid;
@@ -37,6 +37,7 @@
     width: 330px;
     font-weight: 500;
     padding-right: 10px;
+    color: black;
   
   }
   .tooltip{
