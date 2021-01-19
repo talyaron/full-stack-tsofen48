@@ -74,3 +74,11 @@ h4 {
   color: rgb(160, 149, 149);
   border-bottom: 2px solid rgb(160, 149, 149);
 }
+.SuggestionFromContainer{
+  position:absolute;
+  top: 75%;
+  height: 60%;
+  width: 65%;
+  right: 17%;
+  border: black solid 5px;
+}
