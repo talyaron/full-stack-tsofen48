@@ -20,7 +20,6 @@ h6 {
   text-align: center;
   margin-top: 40px;
   color: #3b4c89;
-  font-weight: 500;
 }
 .thump {
   font-size: 55px !important;
@@ -44,7 +43,7 @@ h6 {
   position: relative;
   top: 5px;
   color: #324483;
-  font-weight: 600;
+  font-weight: 700;
 }
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -54,6 +53,5 @@ h6 {
     position: relative;
     width: 396px;
     top: 0px;
-    border: none;
   }
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import "./Information.css";
 
-function Information({ withNum, without }) {
+function Information({ with , without }) {
   return (
     <div className="information">
       <div className="information__data info__top">
-        <h1>{withNum}%</h1>
+        <h1>{with}%</h1>
         <p>בעד</p>
       </div>
       <div className="information__data info__middle info__top">
-        <h1>{without}%</h1>
+        <h1>20%</h1>
         <p>נגד</p>
       </div>
     </div>

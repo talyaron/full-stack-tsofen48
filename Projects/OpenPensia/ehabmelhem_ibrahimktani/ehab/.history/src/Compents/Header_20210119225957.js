@@ -10,7 +10,7 @@ function Header({ company, Icon, name }) {
         <ChevronRightIcon />
       </div>
       <Avatar className="avatar" src={Icon} alt="Ehab" />
-      <h4>{name}</h4>
+      <h4>איהאב מלחם</h4>
     </div>
   );
 }

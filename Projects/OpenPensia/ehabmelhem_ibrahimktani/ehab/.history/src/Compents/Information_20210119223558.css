@@ -20,5 +20,5 @@
   display: flex;
 }
 .info__middle {
-  border-left: 1px solid #d9dce4;
+  border-left: 1px solid gray;
 }

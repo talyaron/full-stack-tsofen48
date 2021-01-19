@@ -9,7 +9,7 @@ function Information({ withNum, without }) {
         <p>בעד</p>
       </div>
       <div className="information__data info__middle info__top">
-        <h1>{without}%</h1>
+        <h1>20%</h1>
         <p>נגד</p>
       </div>
     </div>

@@ -14,7 +14,7 @@ function App() {
           name="איהאב מלחם"
         />
         <Navbar />
-        <Information withNum={80} without={20} />
+        <Information width={80} without={20} />
         <p>?מה הבחינה שלך</p>
         <div className="thumps">
           <div className="thumpItem">

@@ -1,12 +1,8 @@
-body {
-  background-color: #ffffff;
-}
 .contaner {
   width: 390px;
   margin: 0 auto;
   position: relative;
   top: 100px;
-  border: 1px solid #e1e1e1;
 }
 h1,
 h2,
@@ -19,13 +15,9 @@ h6 {
 .contaner > p {
   text-align: center;
   margin-top: 40px;
-  color: #3b4c89;
-  font-weight: 500;
 }
 .thump {
   font-size: 55px !important;
-  color: #324483 !important  ;
-  cursor: pointer;
 }
 .thumps {
   margin-top: 20px !important;
@@ -36,15 +28,6 @@ h6 {
 .thumpItem {
   padding: 50px;
   width: fit-content;
-  margin-right: 10px;
-  background-color: #fafafa;
-  text-align: center;
-}
-.thumpItem > p {
-  position: relative;
-  top: 5px;
-  color: #324483;
-  font-weight: 600;
 }
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -52,8 +35,6 @@ h6 {
 @media only screen and (max-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
   .contaner {
     position: relative;
-    width: 396px;
     top: 0px;
-    border: none;
   }
 }

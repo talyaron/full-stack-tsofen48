@@ -13,12 +13,11 @@
 }
 .information__data > p {
   margin-top: 10px;
-  color: #55596c;
 }
 .information {
   justify-content: space-between;
   display: flex;
 }
 .info__middle {
-  border-left: 1px solid #d9dce4;
+  border-left: 1px solid gray;
 }
