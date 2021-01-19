@@ -3,6 +3,7 @@ import './App.css';
 
 //components
 import Head from './components/Head.js';
+import Info from './components/Info.js';
 /*import Icon from './components/Icon.js';
 const myImgSrc = "https://media-exp1.licdn.com/dms/image/C4E03AQFWZrT9WGRmHA/profile-displayphoto-shrink_400_400/0/1516827527497?e=1616025600&v=beta&t=mppJLKNmcZbNq5TzMGravh3TvnK84LgfqipAdFK2Wgc";
 
@@ -65,18 +66,24 @@ function App() {
   return(
 
     <div className="App">
-        <Head/>
-        <div class="grid-container">
-          <div class="grid-item">1</div>
-          <div class="grid-item">2</div>
-          <div class="grid-item">3</div>
+        <div>
+          <Head/>
+        </div>
+    
+        
+         
+       <div className ="inside">
+      {/* <div className="grid-container">
+          <div className="grid-item">1</div>
+          <div className="grid-item">2</div>
+          <div className="grid-item">3</div>
+          </div>*/}
+          <Info/>
         </div>
 
+     
 
-
-
-
-
+       
 
 
     </div>
