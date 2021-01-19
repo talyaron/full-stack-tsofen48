@@ -1,25 +1,22 @@
 import './Answer.css';
-import React, { useState } from 'react';
+import React from 'react';
+// import { useDispatch } from 'react-redux';
 
 function Answer(props) {
 
-    const {score, setScore} = props.appState;
-    const { setIsCorrect} = props.isAnswerCorrect
-
-    const [isRight, setIsRight] = useState('answer--neutral');
-    const handleClick = (e) => {
-        if(props.rightAnswer === true){
-            setIsRight('isRight--true');
-            setScore(score + 1);
-            setIsCorrect(1);
-        } else{
-            setIsRight('isRight--false');
-            setScore(score -1)
-            setIsCorrect(-1)
-        }
-    }
+    // const handleClick = (e) => {
+    //     if(props.rightAnswer === true){
+    //         setIsRight('isRight--true');
+    //         setScore(score + 1);
+    //         setIsCorrect(1);
+    //     } else{
+    //         setIsRight('isRight--false');
+    //         setScore(score -1)
+    //         setIsCorrect(-1)
+    //     }
+    // }
     return (
-            <button className={`answer ${isRight}`} onClick={handleClick}>
+            <button className="answer">
                 {props.innerText}
             </button> 
     );

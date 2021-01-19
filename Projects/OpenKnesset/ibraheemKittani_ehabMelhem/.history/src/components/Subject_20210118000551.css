@@ -1,0 +1,11 @@
+.subject {
+  display: flex;
+}
+.subject__text,
+.subject__logo {
+  background-color: #414141;
+}
+.subject__text {
+  margin-left: 290px;
+  width: 100px;
+}

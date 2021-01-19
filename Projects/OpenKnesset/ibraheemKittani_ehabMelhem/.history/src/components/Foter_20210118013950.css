@@ -1,0 +1,10 @@
+.foter {
+  position: absolute;
+  top: 1300px;
+}
+.first {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  float: right;
+}
