@@ -1,0 +1,13 @@
+.send_vote{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-right: 20px;
+    background-color: #3d4257;
+    box-shadow: 0 12px 6px -3px #ccc;
+}
+
+.send_vote>p{
+    padding : 15px;
+    color: white;
+}

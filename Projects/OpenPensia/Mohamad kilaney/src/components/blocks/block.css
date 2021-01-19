@@ -1,0 +1,25 @@
+.block {
+    padding: 8px;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 2px solid #E2E2EA;
+}
+
+.block>.title {
+    color: #324483;
+    font-size: 16px;
+    font-family: 'Assistant', sans-serif;
+}
+
+.block>.text {
+    color: #717480;
+    font-size: 12px;
+    opacity: 60%;
+    font-family: 'Assistant', sans-serif;
+}
+
+.block>.link {
+    color: #324483;
+    font-size: 12px;
+    font-family: 'Assistant', sans-serif;
+}
