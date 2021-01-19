@@ -1,0 +1,26 @@
+.container{
+    background-color: #3d4257;
+    height: 330px;
+    color: #a4a7b1;
+    direction: rtl;
+    align-items: center;
+    text-align: center;
+}
+.page_above{
+    align-items: center;
+    padding-top: 15px;
+    margin-right: 20px;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#bank_select{
+    margin-top: 30px;
+    color: seashell;
+    font-size: 1.3cm;
+    padding-bottom: 60px;
+}
+#ChevronRightIcon{
+    cursor: pointer;
+}
