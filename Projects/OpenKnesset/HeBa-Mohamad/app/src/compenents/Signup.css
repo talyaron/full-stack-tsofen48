@@ -1,0 +1,34 @@
+/* .container{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 10px solid rgba(228, 224, 224, 0.8);
+} */
+
+.q-component{
+  width: 40%;
+  min-width: fit-content;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  
+}
+.all-answers{
+  display: grid;
+  grid-template-columns:  auto auto;
+  
+}
+
+.question-text{
+  padding: 10%;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.question--true{
+  background-color: green;
+}
+
+.question--false{
+  background-color: red;
+}

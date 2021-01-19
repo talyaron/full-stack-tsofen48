@@ -1,0 +1,14 @@
+.label{
+  width: auto;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  outline: none;
+  margin: 0px 10px 10px 10px;
+  font-size: 20px;
+}
+
