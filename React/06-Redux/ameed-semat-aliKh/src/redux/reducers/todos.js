@@ -7,7 +7,8 @@ const initialState = {
 const todoReducers = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO: {
-      const { question } = action.payload;
+      // const { question } = action.payload;
+      const { id, content} = action.payload;
       return {
         ...state,
         questions: [...state.questions, { id, content, completed: false }]
