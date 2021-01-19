@@ -12,6 +12,7 @@ const directors = [{ img : p1, name : "רונית אברמוזון רוקח", un
 
 function App() {
   return (
+    <body>
     <div className="container">
       <Header />
       <h1 id="directir_select">בחר/י שני דירקטורים רגילים</h1>
@@ -28,6 +29,7 @@ function App() {
       <SendVote />
 
     </div>
+    </body>
 
   );
 }

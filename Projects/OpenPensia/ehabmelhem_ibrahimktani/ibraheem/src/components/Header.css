@@ -1,26 +1,42 @@
-.container{
+.container1{
     background-color: #3d4257;
-    height: 330px;
+    /* height: 230px; */
     color: #a4a7b1;
     direction: rtl;
     align-items: center;
     text-align: center;
+    /* margin-top: 30%; */
+    object-fit:contain;
+    /* display: flex;
+    flex-direction: column; */
 }
 .page_above{
+    
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
     align-items: center;
     padding-top: 15px;
     margin-right: 20px;
     width: 55%;
-    display: flex;
+
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 10%;
+}
+.page_above>h1{
+    font-size: large;
 }
 #bank_select{
-    margin-top: 30px;
+    margin-top: 5%;
     color: seashell;
-    font-size: 1.3cm;
-    padding-bottom: 60px;
+    font-size: large;
+    /* font-size: 1.3cm; */
+    padding-bottom: 5%;
 }
 #ChevronRightIcon{
     cursor: pointer;
+}
+
+.container1>h1{
+    font-size: large;
 }
