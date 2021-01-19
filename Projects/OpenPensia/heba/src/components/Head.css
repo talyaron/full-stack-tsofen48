@@ -1,0 +1,26 @@
+.container{
+
+    position: relative;
+    padding: 80px;
+    background: rgb(72, 69, 92);
+    background-clip: padding-box;
+
+}
+
+h{
+   position: absolute;
+   top:10px;
+   left:45%;
+}
+
+img{
+   
+   border-radius: 50%;
+   display: block;
+   width: 100px;
+   height: 100px;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
