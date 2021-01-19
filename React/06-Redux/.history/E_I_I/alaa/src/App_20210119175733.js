@@ -23,6 +23,7 @@ function App() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const stam = useSelector((state) => state.question.question);
+  console.log(state.question.question);
   console.log(state.score.score);
   return (
     <div className="App">
@@ -31,7 +32,7 @@ function App() {
           <h2>Quiz App</h2>
           <hr />
           <p> are you ready?</p>
-          <div className="final-score">score: {state.score.score}</div>
+          <div className="final-score">score: {score}</div>
         </div>
         <form className="q-component">
           <label>Text</label>

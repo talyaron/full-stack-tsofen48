@@ -6,9 +6,9 @@ export const addQuestion = (content) => ({
     content,
   },
 });
-export const addScore = (add) => ({
+export const addQuestion = (add) => ({
   type: ADD_SCORE,
   payload: {
-    add,
+    content,
   },
 });
