@@ -25,13 +25,13 @@ export default function App() {
         <nav>
           <ul>
             <li>
-              <Link onClick={setPressed} className='pressed-a' to="/details">סיכום פרטים</Link>
+              <Link onClick={setPressed}  to="/details">סיכום פרטים</Link>
             </li>
             <li>
-              <Link onClick={setPressed} className='pressed-a'to="/extraDetails">עוד מידע</Link>
+              <Link onClick={setPressed} to="/extraDetails">עוד מידע</Link>
             </li>
             <li>
-              <Link onClick={setPressed} className='pressed-a' to="/vote">ניתוני הצבעה</Link>
+              <Link onClick={setPressed}  to="/vote">ניתוני הצבעה</Link>
             </li>
 
           </ul>

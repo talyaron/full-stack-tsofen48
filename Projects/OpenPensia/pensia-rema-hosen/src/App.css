@@ -23,15 +23,6 @@ li a {
   color: rgb(160, 149, 149);
   font-weight: bolder;
 }
-/* commented to remove the border bottom temporary */
-/* .pressed-a {
-  color: rgb(41, 37, 53);
-  border-bottom: 2px solid rgb(41, 37, 53);
-}
-.not-pressed-a {
-  color: rgb(160, 149, 149);
-  border-bottom: 2px solid rgb(160, 149, 149);
-} */
 .header {
   width: 100%;
   height: max-content;
