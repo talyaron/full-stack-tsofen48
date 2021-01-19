@@ -1,0 +1,32 @@
+.icon{
+    border-radius: 50%;
+
+}
+
+p{
+    direction: rtl;
+    line-height: 50px;
+}
+h6{
+    direction: rtl;
+    line-height: 5px;
+}
+h4{
+    text-decoration: underline;
+    direction: rtl;
+    
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    border: 8px solid white;
+    padding: 5px;
+    margin: 50px;
+    box-shadow: 5px 10px #888888;
+    
+  }
+
+
+ 
+  
