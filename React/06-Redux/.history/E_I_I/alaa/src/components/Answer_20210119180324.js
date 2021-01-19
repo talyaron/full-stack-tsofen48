@@ -14,11 +14,11 @@ function Answer(props) {
     if (props.rightAnswer === true) {
       setIsRight("isRight--true");
       setIsCorrect(1);
-      dispatch(addScore(+1));
+      dispatch(addScore(state + 1));
     } else {
       setIsRight("isRight--false");
       setIsCorrect(-1);
-      dispatch(addScore(-1));
+      dispatch(addScore(state - 1));
     }
   };
   return (

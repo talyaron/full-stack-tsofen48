@@ -1,7 +1,6 @@
 import "./Answer.css";
 import React, { useState } from "react";
 import { addScore } from "../redux/action";
-import { useSelector, useDispatch } from "react-redux";
 
 function Answer(props) {
   const { score, setScore } = props.appState;
@@ -13,12 +12,14 @@ function Answer(props) {
   const handleClick = (e) => {
     if (props.rightAnswer === true) {
       setIsRight("isRight--true");
+      setScore(score + 1);
       setIsCorrect(1);
-      dispatch(addScore(+1));
+      dispatch(addScore(state + 1));
     } else {
       setIsRight("isRight--false");
+      setScore(score - 1);
       setIsCorrect(-1);
-      dispatch(addScore(-1));
+      dispatch(addScore(state - 1));
     }
   };
   return (
