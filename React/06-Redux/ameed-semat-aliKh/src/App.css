@@ -69,10 +69,35 @@
 }
 
 
+.questionForm{
+  width: 40%;
+  min-width: fit-content;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  
+}
+.formAnswers{
+  display: grid;
+  grid-template-columns:  auto auto;
+  
+}
 
 
-
-
+input{
+  width: auto;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  outline: none;
+  margin: 0px 10px 10px 10px;
+  font-size: 20px;
+}
 
 
 
