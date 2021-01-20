@@ -72,8 +72,16 @@ li{
   cursor: pointer;
   font-size: 16px;
   font-weight: lighter;
+  border-bottom: solid #efefef00;
 }
 .nav>li:hover{
+  border-bottom: solid black;
+}
+.main-title{
+  cursor: pointer;
+  border-bottom: solid rgba(255, 255, 255, 0);
+}
+.main-title:hover{
   border-bottom: solid black;
 }
 #app-header #logo{
@@ -119,3 +127,4 @@ img{
   display: flex;
   align-items: center;
 }
+
