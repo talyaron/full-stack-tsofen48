@@ -12,8 +12,11 @@ html{
   background-color: #efefef;
 }
 .App-header {
+<<<<<<< Updated upstream
   display: flex;
   flex-direction: column;
+=======
+>>>>>>> Stashed changes
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: black;
@@ -64,6 +67,10 @@ ul{
   width: 80%;
   padding: 0%;
   margin:0%;
+<<<<<<< Updated upstream
+=======
+  margin-right: auto;
+>>>>>>> Stashed changes
   margin-left: auto;
 }
 li{
@@ -85,7 +92,10 @@ li{
   border-bottom: solid black;
 }
 #app-header #logo{
+<<<<<<< Updated upstream
  
+=======
+>>>>>>> Stashed changes
   margin: 0;
   font-size: 20px;
   line-height: 100%;
@@ -122,9 +132,16 @@ img{
 .path .current-tab-name{
   width: fit-content;
   font-size: inherit;
+<<<<<<< Updated upstream
 }
 .row{
   display: flex;
   align-items: center;
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> Stashed changes
+=======
 
+>>>>>>> main

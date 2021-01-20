@@ -9,8 +9,11 @@ export default function SuggestionFrom() {
   };
   return (
     <div className="suggestionFromContainer">
+<<<<<<< Updated upstream
     <div className='title'><icon className="fa fa-bullhorn icon" style={{marginRight:"20px"}}></icon>
     <div className="vertical-line"></div><h6>הגשת הצעה</h6></div>
+=======
+>>>>>>> Stashed changes
       <form className="suggestionFrom" onSubmit={handleSubmit}>
         <div>
           <label className="suggestionSubject">נושא הצעה לסדר :</label>
