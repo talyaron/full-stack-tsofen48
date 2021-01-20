@@ -16,24 +16,24 @@ function Question(props) {
     // },[isCorrect])
 
     const questions = useSelector(state => state.questions.questions);
-
+    // console.log(questions);
     return (
         <div className="questions">
             {questions.map((question, index) => {
                 return (<div key={index} className="q-component">
                     <div className="question-text">
-                        {question.content}
+                        {question.content.question}
                     </div>
                     <div className="all-answers">
-                        {/* {question.answers.map((answer, index) => {
+                        {question.content.Answers.map((answer, index) => {
                             return (
-                                <Answer
+                                  <Answer
                                     innerText={answer}
-                                    rightAnswer={index === 1 ? true : false}
+                                    rightAnswer={index === 0 ? true : false}
                                     key={index}
                                 />
-                            );
-                        })} */}
+                             ); 
+                         })} 
                     </div>
                 </div>
 

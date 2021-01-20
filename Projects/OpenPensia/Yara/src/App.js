@@ -48,6 +48,8 @@ function App() {
         })
         }
       </div>
+      <div className="center">
+      <button>שלח את ההצבעה שלי!</button></div>
     </div>
   );
 

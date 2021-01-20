@@ -12,7 +12,7 @@ function TwoComp(props) {
     }
 
     return (
-        <div className='TwoComp'>
+        <div classNameName='TwoComp'>
         <h1>{props.nameOf}</h1>
         <p>{props.title}</p>
         <img alt="" src={props.img} />
