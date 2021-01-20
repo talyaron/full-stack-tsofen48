@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SuggestionFrom from "./components/SuggestionFrom/SuggestionFrom";
 import ToolHistoryTakanonFutureDiv from "./components/ToolHistoryTakanonFutureDiv/ToolHistoryTakanonFutureDiv";
+import Header from "./components/Header/Header";
 
 export default function App() {
 
@@ -19,7 +20,7 @@ export default function App() {
           <Switch>
 
             <Route path="/submitSuggestion">
-             
+             <Header></Header>
               <ToolHistoryTakanonFutureDiv className='ToolHistoryTakanonFutureDiv'></ToolHistoryTakanonFutureDiv>
               <SuggestionFrom></SuggestionFrom>
               
