@@ -1,14 +1,37 @@
 
+.grid-bigcon{
 
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  background-color:white;
+  padding: 10px;
+  
+  
+  
+
+}
+
+.item2{
+
+  position: relative;
+  border: 3px solid black;
+  padding: 40px;
+  top:50px;
+  font-size: 30px;
+  text-align: right;
+  padding-left: 40px;
+  height: 5px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     background-color:white;
     padding: 10px;
     grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    
     
   }
+
   .grid-item {
     position: relative;
     border: 3px solid black;
@@ -17,7 +40,7 @@
     font-size: 30px;
     text-align: right;
     padding-left: 40px;
-    height: 30px;
+    height: 5px;
     
   }
   p{
@@ -30,9 +53,8 @@
  h4{
    position: relative;
    text-align: right;
-   padding-right: 60px;
-   padding-top: 20px;
-   top:40px;
+   
+   bottom:60px;
  }
 
 
