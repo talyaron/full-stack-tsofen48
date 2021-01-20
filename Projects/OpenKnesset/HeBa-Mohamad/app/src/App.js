@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import './App.css';
 
 import Head from './components/Head.js';
@@ -35,3 +36,18 @@ function _getData() {
       info: "הגשת דרישה ליו״ר הכנסת על ידי 25 ח״כים לכינוס מליאה מיוחדת שתדון בהצעה לסדר היום."
     }];
 }
+=======
+
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      
+
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> Stashed changes
