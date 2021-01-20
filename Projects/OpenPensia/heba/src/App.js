@@ -72,14 +72,14 @@ function App() {
     
         
          
-       <div className ="inside">
+       {/* <div className ="inside"> */}
       {/* <div className="grid-container">
           <div className="grid-item">1</div>
           <div className="grid-item">2</div>
           <div className="grid-item">3</div>
           </div>*/}
           <Info/>
-        </div>
+        {/* </div> */}
 
      
 
