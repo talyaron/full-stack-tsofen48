@@ -1,0 +1,22 @@
+.taknon {
+  width: 400px;
+  background-color: white;
+  border-radius: 2px;
+  text-align: right;
+  padding-left: 10px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.taknon__data {
+  display: flex;
+  position: relative;
+  width: 300px;
+  top: 60px;
+  right: -150px;
+}
+.taknon__data > h5 {
+  margin-right: 10px;
+}
+.articl {
+  width: 600px !important;
+}

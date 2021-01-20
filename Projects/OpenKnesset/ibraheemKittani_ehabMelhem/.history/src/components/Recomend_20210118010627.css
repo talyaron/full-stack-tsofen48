@@ -1,0 +1,40 @@
+.recomnde {
+  width: 80%;
+  margin-top: 50px;
+  height: 300px;
+  background-color: white;
+  margin-left: 100px;
+  position: relative;
+}
+.recomend__info {
+  border: 1px solid black;
+
+  width: 100%;
+  position: relative;
+  top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  width: 200px;
+  height: 30px;
+  direction: rtl;
+}
+.reomnde__FirstHalf {
+  text-align: right;
+  margin-left: 200px;
+  height: 240px;
+}
+.btn {
+  position: relative;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  border: 3px solid black;
+  top: 140px;
+  background-color: white;
+  border-radius: 5px;
+}
+.reomnde__SecindHalf {
+  text-align: right;
+}

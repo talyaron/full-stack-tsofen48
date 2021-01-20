@@ -1,0 +1,10 @@
+.naom {
+  width: 395px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 2px;
+  text-align: right;
+}
+.naom > p > span {
+  color: rgb(5, 124, 235);
+}

@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  useParams
 } from "react-router-dom";
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users/mainuser">Users</Link>
             </li>
           </ul>
         </nav>
@@ -31,7 +32,7 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
+          <Route path="/users/:uid">
             <Users />
           </Route>
           <Route path="/">
@@ -52,5 +53,6 @@ function About() {
 }
 
 function Users() {
-  return <h2>Users</h2>;
+  const {uid} = useParams();
+  return <h2>User with id: {uid}</h2>;
 }

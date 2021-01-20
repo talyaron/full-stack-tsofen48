@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  /* position: relative; */
+}
+
+.App-header {
+  position:  sticky;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  background-color: rgb(61, 66, 87);
+  display: block;
+  top:0;
+  
+}
+body{
+  /* position:absolute; */
+}
+.add-info-btn{
+  background-color:rgb(61, 66, 87);
+  color: rgb(226, 227, 230);
+  width: 60%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 3%;
+  border: none !important;
+  outline:none !important;
+  
+}
+.add-info-btn:hover{
+  background-color:rgb(49, 53, 77);
+  
+}
+.company-name{
+  color: rgb(167, 172, 188);
+  font-size: 20px;
+  margin-bottom: 10%;
+  padding-top:3%;
+}
+
+.candidate-name{
+  color: rgb(253, 253, 253);
+  font-size: 24px;
+  padding: 5%;
+}
+nav{
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 0%;
+  border-bottom: solid rgb(167, 172, 188);
+  box-shadow: 5px 10px 18px #b1afaf80;
+  position: sticky;
+}
+ul{
+  display: flex;
+  width: 80%;
+  padding: 0%;
+  margin:0%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+li{
+  list-style-type: none;
+  padding:10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+}
+.active-nav{
+  display: flexbox;
+  color:rgb(94, 108, 157);
+  border-bottom: solid rgb(94, 108, 157);
+
+}
+.non-active-nav{
+  color: rgb(167, 172, 188);
+}

@@ -1,0 +1,14 @@
+.article {
+  padding: 10px 30px;
+  width: 90%;
+  border-bottom: solid 2px rgb(226 226 234);
+  margin: auto;
+}
+.articleSource {
+  color: #324483;
+  font-weight: 500;
+  font-size: 22px;
+}
+.articleLink {
+  color: #324483;
+}

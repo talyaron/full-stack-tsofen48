@@ -1,0 +1,54 @@
+.recomnde {
+  width: 80%;
+  margin-top: 50px;
+  height: fit-content;
+  background-color: white;
+  margin-left: 100px;
+  text-align: right;
+  box-shadow: 3px 3px 5px 6px rgb(148, 45, 45); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.recomend__info {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.select {
+  width: 200px;
+  height: 30px;
+  direction: rtl;
+}
+.reomnde__FirstHalf {
+  text-align: right;
+  margin-left: 300px;
+  height: 240px;
+}
+.btn {
+  position: relative;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  border: 3px solid black;
+  top: 70%;
+  background-color: white;
+  border-radius: 5px;
+}
+.reomnde__SecindHalf {
+  text-align: right;
+}
+.reomnde__SecindHalf > input {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 15px;
+  border: 5px solid black;
+  outline: none;
+  width: 366px;
+  margin-bottom: 3px;
+}
+.reomnde__SecindHalf > textarea {
+  outline: none;
+  margin-top: 5px;
+  border: 5px solid black;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+.foter {
+  position: absolute;
+  top: 1300px;
+  width: 100%;
+  border-top: 4px solid rgb(20, 20, 32);
+  padding-top: 15px;
+}
+.first {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  float: right;
+}
+.middle {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.second {
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+.second > img {
+  margin-left: 200px;
+}

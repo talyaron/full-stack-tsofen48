@@ -1,0 +1,64 @@
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color:white;
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    
+  }
+  .grid-item {
+    position: relative;
+    border: 3px solid black;
+    padding: 40px;
+    top:50px;
+    font-size: 30px;
+    text-align: right;
+    padding-left: 40px;
+    height: 30px;
+    
+  }
+  p{
+    position: relative;
+    bottom:60px;
+    font-size: 20px;
+    color: rgb(167, 172, 188);
+ }
+
+ h4{
+   position: relative;
+   text-align: right;
+   padding-right: 60px;
+   padding-top: 20px;
+   top:40px;
+ }
+
+
+ .button {
+  position: relative;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color:  rgb(72, 69, 92);
+  border: none;
+  border-radius: 15px;
+  right: 300px;
+  bottom: 20px;
+  
+}
+
+.button:hover {background-color:rgb(42, 40, 53)}
+
+.button:active {
+  background-color: rgb(42, 40, 53);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+

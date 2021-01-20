@@ -1,0 +1,21 @@
+.person {
+  color: rgb(0, 113, 148);
+}
+.item {
+  color: rgb(78, 78, 78);
+}
+.active {
+  font-weight: bold;
+  color: black;
+}
+.header {
+  text-align: right;
+  border: 1px solid black;
+}
+.header__data {
+  display: flex;
+}
+.header__info {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.App {
+  direction: rtl;
+  background-color:rgb(233, 230, 230);
+  min-height: 100vh;
+}
+
+.inside{
+  position: relative;
+  padding-top: 80px;
+  padding-right: 80px;
+  padding-left: 30vh;
+
+}

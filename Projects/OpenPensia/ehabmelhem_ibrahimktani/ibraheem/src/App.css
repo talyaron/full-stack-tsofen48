@@ -1,0 +1,26 @@
+.container{
+width: 20%;
+position: relative;
+left: 40%; 
+/* margin-bottom: 100px; */
+direction: rtl;
+border: 1px solid #e2e2ea; 
+margin-top: 7%;
+background-color:#ffffff;
+
+}
+
+body{
+  background-color: #fafafa;
+  /* width: 20%;
+  margin-left: 40%; */
+  /* margin-bottom: 300px; */
+}
+
+#directir_select{
+  font-size: medium;
+  margin-top: 5%;
+  text-align: right;
+  margin-right: 2.5%;
+  color: #324483;
+}
