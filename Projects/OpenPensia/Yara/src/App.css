@@ -1,50 +1,85 @@
-.App {
-  text-align: right;
-  background-color: lightgrey;
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600&display=swap');
+*{
+  padding: 0px;
+  margin: 0px;
 }
-
-.App-logo {
-  height: 100px;
-  width: 100px;
-  left: 200px;
-  top: 0px;
-  pointer-events: none;
-}
-
 .App-header {
   background-color:#3D4257;
-
   height: 183pt;
-  direction: rtl;
-  display: flex;
-  
-  
-
-  font-size: calc(10px + 2vmin);
-  color: black;
  }
 
-.App-link {
-  color: #61dafb;
-}
-h5{
-  color: #B7BCCC;
-  opacity: 100%;
-  
-}
-.right{
-  float:right;
-  direction: rtl;
-  margin-left: 0px;
-  text-align: right;
-}
-.center{
-  padding-top: -3000px;
-  text-align: center;
-  justify-content: center;
-}
 .back{
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   padding: 20px;
 }
+
+.container-title {
+  height: 23px;
+}
+
+.container-title>h3 {
+  text-align: center;
+  font-family:Assistant;
+  color: #B7BCCC;
+  padding-top: 16px;
+  padding-left: 37px;
+  font-size: calc(10px + 2vmin);
+}
+
+.container-title>span {
+  position: absolute;
+  top: 0px;
+  right: 16px;
+ 
+  color: #B7BCCC;
+}
+.center{
+  text-align: center;
+}
+
+
+h2{
+  color: #FFFFFF;
+  opacity:60%;
+  padding-left: 37px;
+  text-align: center;
+  padding-top: 72px;
+  font-size: 24px;
+}
+
+
+.text{
+  /*padding-top: 50px;*/
+  
+  padding-left: 37px;
+  color: #FFFFFF;
+  opacity:60%;
+  text-align: center;
+  margin-top: -5px;
+  font-size: 16px;
+  font-family: 'Assistant';
+  
+ 
+}
+.poalim{
+  
+  
+ padding-top: 50px;
+  font-size: 20px;
+  color: #FFFFFF;
+  opacity:100%;
+  text-align: center;
+  font-family: 'Assistant';
+}
+.choose{
+  color:#324483;
+  opacity:100%;
+  text-align: right;
+  font-family: 'Assistant';
+  font-size: 16px;
+  padding-top: 20px;
+  padding-right: 16px;
+}
+
+/*--------------------*/
