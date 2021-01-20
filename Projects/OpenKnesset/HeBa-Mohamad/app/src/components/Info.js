@@ -1,31 +1,18 @@
 import './Info.css';
 
-function Info(){
-
-    
+function Info(props){
     return (
-           <div>
-              <div className="grid-container">
-                 <div className="grid-item"> 
-                    <h4> שאילתה רגילה </h4> 
-                    <p>  שאלה לשר על עניין שבתחום תפקידו,אתה מפנה חבר כנסת שאינו </p>
-                 </div>
-               <div className="grid-item">
-                <h4> שאילתה רגילה </h4> 
-                <p>  שאלה לשר על עניין שבתחום תפקידו,אתה מפנה חבר כנסת שאינו </p>
-               </div>
-               <div className="grid-item">
-                <h4> שאילתה רגילה </h4> 
-                <p>  שאלה לשר על עניין שבתחום תפקידו,אתה מפנה חבר כנסת שאינו </p>
-               </div>
-              </div>
-          </div>
-         
-          
-          
-        
+        <div className='grid-container'>
+            {props._data.map((data, index)=>{
+                return(
+                    <div className='grid-item' key={index}>
+                        <h2 className='_dataTitle'> {data.title} </h2>
+                        <a className='_dataInfo'> {data.info} </a>
+                    </div>
+                );
+            })}
+        </div>
     );
-
 }
 
 export default Info

@@ -1,83 +1,115 @@
 .container{
-    display: flex;
     position: relative;
-    padding: 10px;
-    /* background: rgb(72, 69, 92);
-    background-clip: padding-box; */
-
+    display: flex;
+    margin-right: 30px;
+    /* padding: 80px; */
+    /* background: rgb(72, 69, 92); */
+    /* background-clip: padding-box; */
 }
 
 h{
    position: relative;
    top:50px;
-   left:45%;
-   padding-right: 50px;
-   margin-left: auto;
+   font-weight: 900;
+   color: rgb(46, 42, 42);
 }
 
 img{
-   
    width: 100px;
    height: 100px;
-   margin-left: auto;
-   
-}
-.topnav {
-   display: flex;
-   /* width: 100%; */
-   text-align: center;
-   padding: 0%;
-   border-bottom: solid rgb(77, 80, 90);
-   
-   
-  
-
-  
 }
 
-/* .topnav {
-  float: left;
-  display: block;
-  
-  text-align: center;
-  
+.active{
+  position: relative;
+  font-weight: 900;
+}
+
+.logo-image{
+  position: relative;
+  margin-right: auto;
+}
+
+.logo-image>img{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-image>a{
+  position: relative;
+  color: black;
   text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
-
-  
-} */
+    list-style-type: none;
+    font-size: 16px;
+}
 
 
+.topnav {
+  display: flex;
+  /* text-align: center; */
+  border-bottom: solid rgb(77, 80, 90);
+}
 
+
+.topnav>a {
+  position: relative;
+  margin-left: 50px;
+  color: black;
+  text-decoration: none;
+    list-style-type: none;
+    padding:10px;
+    font-size: 16px;
+}
 
 .topnav a:hover {
   border-bottom: 3px solid  rgb(72, 69, 92);
-  
   position: relative;
-  left:200px;
-  
 }
 
-.topnav a.active {
-  
-  
-  color: rgb(72, 69, 92);
-  position: relative;
-  left:70px;
-  
-  padding: 14px 10px 0px 800px ;
-  font-weight: 900;
-  
+.undernav{
+  display: flex;
+  margin-left: 10vh;
+  margin-top: 10px;
 }
 
-.topnav a.active-no {
-   position: relative;
-   left:100px;
-   padding: 14px 100px 0px 70px ;
-   color: rgb(167, 172, 188);
-   
- }
+.undernav>.logout{
+    position: relative;  
+    margin-right: auto;
+    color: rgb(48, 98, 155);
+    text-decoration: none;
+    list-style-type: none;
+}
 
+.undernav>.maakav{
+  position: relative;  
+  margin-right: 10px;
+  color: rgb(48, 98, 155);
+  text-decoration: none;
+  list-style-type: none;
+}
 
+.undernav>.split{
+  position: relative;  
+  margin-right: 10px;
+  color: rgb(48, 98, 155);
+  text-decoration: none;
+  list-style-type: none;
+}
 
+.undernav>.main_page{
+  position: relative;  
+  color: rgb(48, 98, 155);
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+.undernav>.current_page{
+  position: relative;  
+  color: rgb(48, 98, 155);
+  text-decoration: none;
+  list-style-type: none;
+  margin-right: 10px;
+}
