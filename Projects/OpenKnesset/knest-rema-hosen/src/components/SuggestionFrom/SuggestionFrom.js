@@ -9,7 +9,7 @@ export default function SuggestionFrom() {
   };
   return (
     <div className="suggestionFromContainer">
-    <div className='title'><icon className="fa fa-bullhorn icon"></icon>
+    <div className='title'><icon className="fa fa-bullhorn icon" style={{marginRight:"20px"}}></icon>
     <div className="vertical-line"></div><h6>הגשת הצעה</h6></div>
       <form className="suggestionFrom" onSubmit={handleSubmit}>
         <div>
