@@ -3,7 +3,11 @@ import React from 'react';
 
 //components
 import Cards from './components/Cards.js';
+<<<<<<< Updated upstream
 const hrefs=getHrefsFromDataBase();
+=======
+
+>>>>>>> Stashed changes
 const tools = getCardsFromDataBase();
 let currentTabName = 'כלים פרלמנטריים';
 let userType = 'לוח מעקב';
@@ -11,6 +15,7 @@ let userType = 'לוח מעקב';
 function App() {
   return (
     <div className='App'>
+<<<<<<< Updated upstream
       <header id='App-header' class='container App-header'>
         <div class='row'>
           <div id='logo' class='span4 clearfix'>
@@ -21,6 +26,15 @@ function App() {
           </div>
         </div>
       
+=======
+      <header id='app-header' class='container App-header'>
+        <div class='row'>
+          <div id='logo' class='span4 clearfix'>
+            <h1><a href='https://oknesset.org/'><img src='https://oknesset.org/static/img/oknesset-logo.png' alt='oknesset-logo' /><span>כנסת פתוחה</span></a></h1>
+          </div>
+        </div>
+
+>>>>>>> Stashed changes
         <ul class='nav nav-pills'>
           <li id='nav-parties'><a href='/members/index.html'>ח'כים וסיעות</a></li>
           <li id='nav-committees'><a href='/committees/index.html'>ועדות</a></li>
@@ -46,6 +60,7 @@ function App() {
 }
 
 export default App;
+<<<<<<< Updated upstream
 function getHrefsFromDataBase() {
   return [
     {
@@ -62,6 +77,8 @@ function getHrefsFromDataBase() {
     }
   ];
 }
+=======
+>>>>>>> Stashed changes
 
 function getCardsFromDataBase() {
   return [
@@ -78,4 +95,8 @@ function getCardsFromDataBase() {
       content: "הגשת דרישה ליו'ר הכנסת על ידי 25 ח'כים לכינוס מליאה מיוחדת שתדון בהצעה לסדר היום"
     }
   ];
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

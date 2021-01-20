@@ -1,0 +1,16 @@
+.icon{
+    border-radius: 50%;
+    width:50px;
+    background-color: brown;
+    height: 100px;
+    background-color: rgba(161, 37, 37, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;  
+    margin: 100px;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
+
+
+  
