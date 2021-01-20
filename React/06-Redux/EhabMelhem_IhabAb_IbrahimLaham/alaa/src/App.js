@@ -23,7 +23,11 @@ function App() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const stam = useSelector((state) => state.question.question);
+<<<<<<< Updated upstream
   console.log(state.score.score);
+=======
+  console.log(state.question.question);
+>>>>>>> Stashed changes
   return (
     <div className="App">
       <header className="App-header">
@@ -31,7 +35,10 @@ function App() {
           <h2>Quiz App</h2>
           <hr />
           <p> are you ready?</p>
+<<<<<<< Updated upstream
           <div className="final-score">score: {state.score.score}</div>
+=======
+>>>>>>> Stashed changes
         </div>
         <form className="q-component">
           <p>
@@ -154,6 +161,10 @@ function App() {
             />
           );
         })}
+<<<<<<< Updated upstream
+=======
+        <div className="final-score">score: {score}</div>
+>>>>>>> Stashed changes
       </header>
     </div>
   );
