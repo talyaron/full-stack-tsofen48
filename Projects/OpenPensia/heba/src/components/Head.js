@@ -6,6 +6,7 @@ function Head(){
 
     
     return (
+<<<<<<< Updated upstream
            <div>
             <div className="container">
                  <h>  בנק הפועלים</h>
@@ -19,6 +20,15 @@ function Head(){
               </div>
               
               </div> 
+=======
+            <div className="container">
+                 <h> פנק הפועלים</h>
+                 <img src={heba} alt="heba"/>
+                 
+                 
+
+            </div>
+>>>>>>> Stashed changes
     );
 
 }
