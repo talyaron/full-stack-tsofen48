@@ -3,8 +3,41 @@ import './App.css';
 
 //components
 import Card from './view/components/Card/Card';
+function uniqueId() {
+  return "id" + Math.random().toString(16).slice(2)
+}
 
-const name = 'Mhmd';
+const icons = [
+ { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Onelogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Twologo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Threelogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Fourlogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/3/35/Fivelogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Sixlogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sevenl.png' },
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Eightlogo.png'},
+  { id: uniqueId(), img: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Ninelogo.png'},
+]
+let c=0;
+let sum=0;
+let op="add";
+function reply_click(clicked_id)
+  {
+      alert(clicked_id);
+  }
+const handleClick =  e => {
+
+
+//console.dir(e.target.innerText)
+let x=document.querySelector("input");
+let y=document.querySelector("input2");
+if(e.target.id=="+"){ }
+if(e.target.id=="="){ x.value=(Number(x.value)+(Number(e.target.id)+1));y.value=sum;sum=0;}
+else {if (op=="add"){x.value=(Number(x.value)+(Number(e.target.id)+1));sum=sum+Number(e.target.id)+1;}}
+//console.log(e.target.id)
+
+
+}
 
 function App() { //component
   return (
@@ -12,16 +45,27 @@ function App() { //component
       <header className="App-header">
        
         <p>
-       <h1> Iris (plant)</h1>
+       <h1> Calculter</h1>
         </p>
         <div className="container">
-        <Card title='Blue Magic flower' img='https://www.homestratosphere.com/wp-content/uploads/2018/05/iris-hollandica-052918-min.jpg' value="These flowers are deep purple and have bright yellow blotches on its falls. Best when grown in full sun and in medium moisture, the Blue Magic grows up to 26 inches tall and is deer and rabbit resistant." />
-        <Card title='Casablanca' img='https://www.homestratosphere.com/wp-content/uploads/2018/05/casablanca-iris-052918-min.jpg' value="With clump-forming, bright violet blue petals, deep purple veins, and pale yellow bases, they can grow up to three feet tall and two feet wide."/>
-        <Card title='Professor Blaauw flower' img='https://www.homestratosphere.com/wp-content/uploads/2018/05/variegata-iris-052918-min.jpg' value="This flower has lavender blooms with dark purple veins and yellow throats, and they bloom in early- to mid-summer. " />
-        <Card title='ba' img='https://isteam.wsimg.com/ip/363b4a4a-9dc4-11e4-89cd-14feb5d9f2e6/ols/32_original/:/rs=w:600,h:600' value="With white petals and bright yellow falls, they bloom in late spring to early summer and have won several international flower awards"/>
+        {icons.map((icon, index) => {
 
+return (<Card
+             id={index} img={icons[index].img} onClick={handleClick} />
+               )
+})
+
+}
         </div>
-        <h2>Learn to code</h2>
+        <div className="second">
+        <label for="lname">Screen</label>
+      <input id="input" type="text" id="lname" name="lname" disabled value="0"/>
+      <label for="lname">Result</label>
+      <input id="input2" type="text"   disabled value="0"/>
+      <img id="+" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Addlogo.png" onClick={handleClick}></img>
+      <img id="=" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Equallogo.png" onClick={handleClick}></img>
+        </div>
+   
       </header>
     </div>
   );

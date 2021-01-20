@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  background-image: url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+  /* background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png); */
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+
+.my-image {
+  border-radius: 50%;
+}
+
+
+.App-header {
+  /* min-height: 100vh; */
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+.grid-item {
+  background-color: rgba(161, 37, 37, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  /* font-size: 30px; */
+  text-align: center;  
+  margin: 100px;
+}
+
+/* .linkedin-link {
+  color: #4c9cb3;
+} */
+
+

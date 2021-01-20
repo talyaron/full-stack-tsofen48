@@ -1,6 +1,6 @@
 .card{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content:space-between;
     border-radius: 10px;
     background-color: rgb(2, 16, 138);
@@ -14,9 +14,9 @@
   /* animation-iteration-count: infinite; */
      animation-direction: alternate;
     animation-timing-function: ease-in-out;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content:stretch;
-    width: 500px;;
+   
  
     justify-content: center;
   } 
@@ -33,7 +33,7 @@
     margin-left: auto;
     margin-right: auto;
  
-    width: 400px;
+    width:70px;
     animation-name: goLeft;
     animation-duration: 2s;
     animation-fill-mode: forwards;

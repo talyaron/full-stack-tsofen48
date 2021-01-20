@@ -7,7 +7,7 @@ let initialState = {
 const questionsReducers = (state = initialState, action) => {
     switch (action.type) {
         case ADD_QUESTION: {
-            const { id, content } = action.payload;
+            const { id, content} = action.payload;
             return {
                 ...state,
                 questions: [...state.questions, { id, content }] // content = [ question , answers] ;

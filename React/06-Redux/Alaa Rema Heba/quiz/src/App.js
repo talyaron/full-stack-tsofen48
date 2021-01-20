@@ -3,11 +3,13 @@ import { addQuestion } from './redux/actions';
 import { useDispatch } from 'react-redux';
 //components
 import Questions from './components/Questions';
-
+import { useSelector } from 'react-redux';
 
 function App() {
   let score = 0;
   const dispatch = useDispatch();
+  score = useSelector(state => state.score);
+
 
   function handleAdd(e) {
     e.preventDefault();
@@ -47,10 +49,12 @@ function App() {
 export default App;
 
 function getQuestionValues() {
-  let question = document.querySelector('#question');
-  let rightAnswer = document.querySelector('#question');
-  let answer2 = document.querySelector('#answer2');
-  let answer3 = document.querySelector('#answer3');
-  let answer4 = document.querySelector('#answer4');
-  return [question, rightAnswer, answer2, answer3, answer4];
+  let question = document.getElementById("question").value;
+  let rightAnswer = document.getElementById("right_answer").value;
+  let answer2 = document.getElementById("answer2").value;
+  let answer3 = document.getElementById("answer3").value;
+  let answer4 = document.getElementById("answer4").value;
+  let Answers=[rightAnswer,answer2,answer3,answer4]
+  let questionToAdd={question:question,Answers:Answers};
+  return questionToAdd;
 }
