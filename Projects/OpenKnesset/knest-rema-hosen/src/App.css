@@ -32,12 +32,7 @@ li a {
   color: rgb(160, 149, 149);
   border-bottom: 2px solid rgb(160, 149, 149);
 } */
-.header {
-  width: 100%;
-  height: max-content;
-  background-color: rgb(41, 37, 53);
-  text-align: center;
-}
+
 .profileImg {
   width: 30%;
   height: 30%;

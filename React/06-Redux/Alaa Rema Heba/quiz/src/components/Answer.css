@@ -12,11 +12,11 @@
     font-size: 20px;
 }
 
-.isRight--true{
+#isRight--true{
     background-color: green;
 }
 
-.isRight--false{
+#isRight--false{
     background-color: red;
 }
 

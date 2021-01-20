@@ -19,4 +19,25 @@
 .director2 > p {
     width: 200px;
     /* border: 2px solid #e2e2ea; */
+    color: #3e4655;
+    cursor: pointer;
+}
+
+.active{
+    color: rgb(10, 245, 10);
+    cursor: pointer;
+}
+
+.disactive{
+    color: red;
+    cursor: pointer;
+}
+
+.normal{
+    color: #848fb5;
+    cursor: pointer;
+}
+.info{
+    color: #3e4655;
+    cursor: pointer;
 }

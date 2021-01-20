@@ -12,6 +12,8 @@ html{
   background-color: #efefef;
 }
 .App-header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: black;
@@ -62,7 +64,6 @@ ul{
   width: 80%;
   padding: 0%;
   margin:0%;
-  margin-right: auto;
   margin-left: auto;
 }
 li{
@@ -71,11 +72,20 @@ li{
   cursor: pointer;
   font-size: 16px;
   font-weight: lighter;
+  border-bottom: solid #efefef00;
 }
 .nav>li:hover{
   border-bottom: solid black;
 }
+.main-title{
+  cursor: pointer;
+  border-bottom: solid rgba(255, 255, 255, 0);
+}
+.main-title:hover{
+  border-bottom: solid black;
+}
 #app-header #logo{
+ 
   margin: 0;
   font-size: 20px;
   line-height: 100%;
@@ -113,3 +123,8 @@ img{
   width: fit-content;
   font-size: inherit;
 }
+.row{
+  display: flex;
+  align-items: center;
+}
+
