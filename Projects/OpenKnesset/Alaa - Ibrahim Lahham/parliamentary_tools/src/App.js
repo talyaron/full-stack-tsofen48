@@ -14,10 +14,7 @@ function App() {
       <header id='App-header' class='container App-header'>
         <div class='row'>
           <div id='logo' class='span4 clearfix'>
-            <h1><a href='https://oknesset.org/'><img src='https://oknesset.org/static/img/oknesset-logo.png' alt='oknesset-logo' /></a></h1>
-          </div>
-          <div className="title"><span>כנסת פתוחה</span>
-
+            <h1><a href='https://oknesset.org/'><img src='https://oknesset.org/static/img/oknesset-logo.png' alt='oknesset-logo' /><span className='main-title'>כנסת פתוחה</span></a></h1>
           </div>
         </div>
       
@@ -29,7 +26,7 @@ function App() {
       </header>
       <section className='secondary-nav-bar'>
         <div className='path'>
-          דף הבית /
+          <a href='https://oknesset.org/'> דף הבית </a>/
             <span className='current-tab-name'> {currentTabName} </span>
         </div>
 
