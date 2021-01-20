@@ -14,9 +14,9 @@ function Head(){
                  
               </div>
              <div className="topnav">
-             <a className="active" href="#home">Home</a>
-             <a className="active-no" href="#news">News</a>
-             <a className="active-no" href="#contact">Contact</a>
+             <a className="active" >סיכום פרטים</a>
+             <a className="active-no" href="#news"> עוד מידע</a>
+             <a className="active-no" href="#contact">ניתוני  הצבעה</a>
               </div>
               
               </div> 
