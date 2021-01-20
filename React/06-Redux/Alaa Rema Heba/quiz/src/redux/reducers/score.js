@@ -1,23 +1,13 @@
 import { UPDATE_SCORE } from "../actionTypes";
 
-let initialState = {
-    score: 0
-};
-
-const scoreReducers = (state = initialState, action) => {
+const scoreReducers = (state = 0, action) => {
     switch (action.type) {
-        case UPDATE_SCORE: {
-            const score = action.payload;
-            return {
-                ...state,
-                score: ++score
-            }
-
-        };
+        case UPDATE_SCORE: 
+            return state+action.payload;
 
         default:
             return state;
     }
-}
+};
 
 export default scoreReducers;
