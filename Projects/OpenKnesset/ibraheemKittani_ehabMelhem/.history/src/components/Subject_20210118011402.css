@@ -1,0 +1,26 @@
+.subject {
+  display: flex;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  width: fit-content;
+  /* position: relative; */
+  /* right: 0px; */
+  float: right;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+.subject__text,
+.subject__logo {
+  background-color: #414141;
+}
+.subject__logo {
+  margin-left: 1px;
+  padding: 5px;
+}
+.subject__text {
+  /* margin-left: 243px; */
+  width: 110px;
+  float: right;
+  color: #d3d2d2;
+}

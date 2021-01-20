@@ -1,0 +1,19 @@
+.subject {
+  display: flex;
+  margin-bottom: 10px;
+}
+.subject__text,
+.subject__logo {
+  background-color: #414141;
+}
+.subject__logo {
+  margin-left: 1px;
+  padding: 5px;
+}
+.subject__text {
+  height: fit-content;
+  padding-left: 5px;
+  padding: 10px;
+  margin-left: 230px;
+  width: 130px;
+}

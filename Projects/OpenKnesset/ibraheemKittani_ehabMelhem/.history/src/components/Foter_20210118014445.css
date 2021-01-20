@@ -1,0 +1,18 @@
+.foter {
+  position: absolute;
+  top: 1300px;
+  width: 100%;
+  border-top: 6px solid rgb(20, 20, 32);
+}
+.first {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  float: right;
+}
+.middle {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}

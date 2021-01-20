@@ -1,0 +1,8 @@
+.foter {
+  position: absolute;
+  direction: rtl;
+  top: 1300px;
+}
+.first {
+  display: flex;
+}
