@@ -1,38 +1,35 @@
 .App {
   text-align: center;
+  
+  /* background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png); */
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-color: rgb(233, 230, 230);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-image {
+  border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* min-height: 100vh; */
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .linkedin-link {
+  color: #4c9cb3;
+} */
+
+
+
+.inside{
+
+  position: relative;
+  padding: 200px;
+  
+  
 }
