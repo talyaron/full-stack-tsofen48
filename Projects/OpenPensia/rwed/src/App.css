@@ -36,15 +36,14 @@
   text-align: center;
 }
 .likedislike {
-  padding: 50px;
-  width: fit-content;
-  right: 10px;
-  height: 40pt;
+  width: 50px;
+  height: 50pt;
   display: flex;
   background-color: #fafafa;
   top: 5px;
   color: #324483;
   margin: 0 auto;
+  object-fit: contain;
 }
 .h4 {
   text-align: center;
