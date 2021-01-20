@@ -6,6 +6,7 @@ import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 function Director(props) {
+<<<<<<< Updated upstream
     // const input = 0;
     // function isInput(){
     //     if(props.unlikeColor){
@@ -24,6 +25,17 @@ function Director(props) {
             {/* ` ${line && ""}` */}
             <ThumbUpAltIcon className={props.likeColor ? "active" : "normal"}/>
             <InfoOutlinedIcon className="info"/>
+=======
+    return (
+        <div className="director">
+            <img src={props.img} />
+            <p>{props.name}</p>
+            <div id="icon1"><ThumbDownIcon /></div>
+            <ThumbUpAltIcon />
+            <InfoOutlinedIcon />
+            
+
+>>>>>>> Stashed changes
         </div>
     );
 }
