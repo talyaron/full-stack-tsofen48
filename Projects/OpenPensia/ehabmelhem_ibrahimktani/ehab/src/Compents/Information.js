@@ -1,6 +1,7 @@
 import React from "react";
 import "./Information.css";
 
+<<<<<<< Updated upstream
 function Information({ withNum, without }) {
   return (
     <div className="information">
@@ -12,6 +13,12 @@ function Information({ withNum, without }) {
         <h1>{without}%</h1>
         <p>נגד</p>
       </div>
+=======
+function Information() {
+  return (
+    <div className="information">
+      <h1>information</h1>
+>>>>>>> Stashed changes
     </div>
   );
 }
