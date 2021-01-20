@@ -12,16 +12,16 @@
     font-size: 20px;
 }
 
-.isRight--true{
+.true{
     background-color: green;
 }
 
-.isRight--false{
+.false{
     background-color: red;
 }
 
-.answer:hover{
-    background-color: rgba(23, 199, 23, 0.603);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+#answer:hover{
+    background-color: rgba(199, 181, 23, 0.603);
+    box-shadow: 0 12px 16px 0 rgba(194, 4, 4, 0.24), 0 17px 50px 0 rgba(185, 17, 17, 0.19);
       
 }

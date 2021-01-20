@@ -2,10 +2,10 @@ export const isRightReducer = (state=false,action) => {
     switch (action.type){
 
         case "isRightIsTrue":
-            return "green";
+            return "true";
 
             case "isRightIsFalse":
-                return "red";
+                return "false";
 
                 default:
             return state;    

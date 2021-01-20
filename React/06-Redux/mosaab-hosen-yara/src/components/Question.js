@@ -10,11 +10,6 @@ function Question(props) {
     const isCorrect = useSelector(state => state.isCorrect)
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        if(isCorrect===1){ dispatch(isRightTrue())}
-        else if(isCorrect===-1){dispatch(isRightFalse())}
-    },[isCorrect])
-
     return (
         <div  className={`q-component`}>
             <div className="question-text">
@@ -26,7 +21,7 @@ function Question(props) {
                         <Answer
                             innerText={answer.innerText}
                             rightAnswer={answer.rightAnswer}
-                            key={index}
+                            index={index}
                         />
                     );
                 })}

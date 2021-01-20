@@ -16,20 +16,25 @@ function Answer(props) {
 
     const handleClick = (e) => {
         if(props.rightAnswer === true){
+           // console.log(e.id)
             dispatch(NotCorrect())
             dispatch(upOne())
             dispatch(isRightTrue())
+           // document.getElementById(e.id).style.backgroundColor="red"
         } 
         else{
            dispatch(itsAnCorrect());
            dispatch(downOne());
            dispatch(isRightFalse())
+           //console.log(e.id)
         }
     }
     return (
-            <button className={`answer ${isRight}`} onClick={handleClick}>
+        <div name={`${props.key}`} className={`${isRight}`}> 
+            <button id={`${props.index}`} className={`answer`}  onClick={handleClick}>
                 {props.innerText}
             </button> 
+            </div>
     );
 
 }
