@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
+#eachBarDiv{
+    margin: 60px 260px;
+    border: 9px solid white;
+    background-color: #e5e5e5;
+   /* box-shadow: 0 28px 10px #777;*/
+}
+/*#eachBarDiv:hover{
+    box-shadow: 15px -8px 5px -2px rgb(44, 44, 44);
+}*/
+h2 , h1{
+    margin-bottom: 0;
+}
+h2{
+    margin-top: 0;
+}
+
+#contentTittle{
+    font-size: 1.2rem;
+}
+#content{
+    font-size: 27px;
+}
+.letsPadding{
+    padding: 2px
+}
+
+
+
+.effect2
+{
+  position: relative;
+}
+
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 28px 10px #777;;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
