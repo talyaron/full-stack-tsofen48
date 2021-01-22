@@ -23,7 +23,11 @@ function App() {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
   const stam = useSelector((state) => state.question.question);
+<<<<<<< Updated upstream
   console.log(state.score.score);
+=======
+  console.log(state.question.question);
+>>>>>>> Stashed changes
   return (
     <div className="App">
       <header className="App-header">
@@ -31,10 +35,17 @@ function App() {
           <h2>Quiz App</h2>
           <hr />
           <p> are you ready?</p>
+<<<<<<< Updated upstream
           <div className="final-score">score: {state.score.score}</div>
+=======
+>>>>>>> Stashed changes
         </div>
         <form className="q-component">
-          <label>Text</label>
+          <p>
+            add the question article and after that insert the question and
+            after that check the right answer
+          </p>
+          <label>Question article</label>
           <input
             value={input}
             onChange={(e) => {
@@ -42,76 +53,85 @@ function App() {
             }}
             type="text"
           />
-          <div className="answers">
-            <input
-              value={answer1}
-              onChange={(e) => {
-                setAnswer1(e.target.value);
-              }}
-              type="text"
-            />
-            <input
-              checked={flag1}
-              onChange={(e) => {
-                setFlag1(!flag1);
-                setFlag2(false);
-                setFlag3(false);
-                setFlag4(false);
-              }}
-              type="checkbox"
-            />
-            <input
-              value={answer2}
-              onChange={(e) => {
-                setAnswer2(e.target.value);
-              }}
-              type="text"
-            />
-            <input
-              checked={flag2}
-              onChange={(e) => {
-                setFlag2(!flag2);
-                setFlag1(false);
-                setFlag3(false);
-                setFlag4(false);
-              }}
-              type="checkbox"
-            />
-            <input
-              value={answer3}
-              onChange={(e) => {
-                setAnswer3(e.target.value);
-              }}
-              type="text"
-            />
-            <input
-              onChange={(e) => {
-                setFlag3(!flag3);
-                setFlag1(false);
-                setFlag4(false);
-                setFlag2(false);
-              }}
-              checked={flag3}
-              type="checkbox"
-            />
-            <input
-              value={answer4}
-              onChange={(e) => {
-                setAnswer4(e.target.value);
-              }}
-              type="text"
-            />
-            <input
-              onChange={(e) => {
-                setFlag4(!flag4);
-                setFlag1(false);
-                setFlag2(false);
-                setFlag3(false);
-              }}
-              checked={flag4}
-              type="checkbox"
-            />
+          <div className="add_compent">
+            <div className="answers">
+              <input
+                value={answer1}
+                onChange={(e) => {
+                  setAnswer1(e.target.value);
+                }}
+                type="text"
+              />
+              <label>first answer</label>
+              <input
+                checked={flag1}
+                onChange={(e) => {
+                  setFlag1(!flag1);
+                  setFlag2(false);
+                  setFlag3(false);
+                  setFlag4(false);
+                }}
+                type="checkbox"
+              />
+              <input
+                value={answer2}
+                onChange={(e) => {
+                  setAnswer2(e.target.value);
+                }}
+                type="text"
+              />
+              <label>second answer</label>
+
+              <input
+                checked={flag2}
+                onChange={(e) => {
+                  setFlag2(!flag2);
+                  setFlag1(false);
+                  setFlag3(false);
+                  setFlag4(false);
+                }}
+                type="checkbox"
+              />
+              <input
+                value={answer3}
+                onChange={(e) => {
+                  setAnswer3(e.target.value);
+                }}
+                type="text"
+              />
+              <label>third answer</label>
+
+              <input
+                onChange={(e) => {
+                  setFlag3(!flag3);
+                  setFlag1(false);
+                  setFlag4(false);
+                  setFlag2(false);
+                }}
+                checked={flag3}
+                type="checkbox"
+              />
+              <input
+                value={answer4}
+                onChange={(e) => {
+                  setAnswer4(e.target.value);
+                }}
+                type="text"
+              />
+              <label>last answer</label>
+              <input
+                onChange={(e) => {
+                  setFlag4(!flag4);
+                  setFlag1(false);
+                  setFlag2(false);
+                  setFlag3(false);
+                }}
+                checked={flag4}
+                type="checkbox"
+              />
+            </div>
           </div>
+
           <button
             type="submit"
             onClick={(e) => {
@@ -141,6 +161,10 @@ function App() {
             />
           );
         })}
+<<<<<<< Updated upstream
+=======
+        <div className="final-score">score: {score}</div>
+>>>>>>> Stashed changes
       </header>
     </div>
   );
