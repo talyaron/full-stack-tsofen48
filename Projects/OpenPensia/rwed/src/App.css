@@ -23,24 +23,44 @@
 .likeunlike {
   padding: 50px;
   width: fit-content;
-  right: 10px;
   display: flex;
-  background-color: #fafafa;
+  background-color: #FFFFFF;
   position: relative;
-  top: 5px;
+  top: 20px;
   color: #324483;
   margin: 0 auto;
+  
+}
+.imgdislike {
+ margin-left: 200px;
+}
+.likeunlike>h8 {
+  margin-left: 30px;
+}
+.likeunlike>h9 {
+  margin-right: 30px;
 }
 .h8 {
+  color: #3D4257;
   font-size: 40px;
   text-align: center;
+  margin-right: 30px;
+  font-weight: bold;
+
+}
+.h9 {
+  color: #3D4257;
+  font-weight: bold;
+
+  font-size: 40px;
+  text-align: center;
+  margin-left: 30px;
 }
 .likedislike {
-  width: 50px;
-  height: 50pt;
+  width: 300px;
+  height: 40pt;
   display: flex;
   background-color: #fafafa;
-  top: 5px;
   color: #324483;
   margin: 0 auto;
   object-fit: contain;
@@ -48,6 +68,24 @@
 .h4 {
   text-align: center;
 
+}
+.badani {
+  font-weight: bold;
+
+}
+.notbadani {
+  margin-left: 220px;  font-weight: bold;
+
+  }
+.bad {
+  margin-left: 50px;  font-weight: bold;
+}
+.good {
+  margin-left: 20px;  font-weight: bold;
+}
+.box {
+  display: grid;
+  flex :auto;
 }
 .navbar {
   display: grid;
@@ -74,7 +112,7 @@ color:lightsalmon;
 
 .line{
   background-color: #3d4257;
-  width: 2px;
+  width: 1px;
 height: 100px;
 }
 @media (prefers-reduced-motion: no-preference) {
