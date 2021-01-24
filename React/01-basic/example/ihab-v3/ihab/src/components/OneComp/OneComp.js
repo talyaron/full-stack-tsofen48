@@ -21,9 +21,7 @@ function OneComp(props) {
   <a id="logoID" className="logo">התחבר למערכת<img id="logo2" src={logo2} alt=""></img></a>
   <div className="header-right">
     <span class="active" href="#">ח"כים וסיעות</span>
-     <span href="#contact">ועדות</span>
-      
-
+    <span href="#contact">ועדות</span>
     <span href="#about">כלים פרלמנטריים</span>
   </div>
 </div>
@@ -76,8 +74,9 @@ function OneComp(props) {
             
               <div className="absolute14"> 
               <img  id ="img4"src={imageAtid} alt=""/> 
-              <p id="sub14"> <br/> {props.listblock.block}
-              </p>
+              <p id="sub14"> <br/> נאומים בני דקה (תיקון מס 112)  
+           51. (א) מתוך דף הפייסבוק של האקדמיה ללשון העברית: המילה סתם מוכרת לנו כבר מן המשנה, למשל אם של עבודה זרה
+            </p>
              </div>
 
           </div>
