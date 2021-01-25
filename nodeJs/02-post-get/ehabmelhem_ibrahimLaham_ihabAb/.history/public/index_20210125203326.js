@@ -1,4 +1,4 @@
-// Ehab Melhem Ibrahim Laham Ihab Ab
+// Ehab Melhem Ibrahim Laham Ihab 
 let add = document.getElementById("add");
 let input = document.getElementById("input");
 let root = document.getElementById("root");
