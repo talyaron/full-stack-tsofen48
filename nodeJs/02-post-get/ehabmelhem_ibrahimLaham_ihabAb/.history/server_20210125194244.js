@@ -11,19 +11,13 @@ let id = 0;
 
 //routes
 
-app.get("/sort", (req, res) => {
-  images.sort((a, b) => b.score - a.score);
-  res.send(images);
-});
-
 app.get("/get-image", (req, res) => {
   res.send(images);
 });
 
 app.post("/add-score", (req, res) => {
-  const { iD, Score } = req.body;
-  images.find((elm) => elm.id === iD).score += Score;
-  console.log(images.find((elm) => elm.id === iD));
+  const { id } = req.body;
+  images.find(elm=>elm.src)
 });
 
 app.post("/add-image", (req, res) => {

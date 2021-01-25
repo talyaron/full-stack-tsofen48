@@ -6,24 +6,21 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 const images = [];
 let id = 0;
-
+const users = [
+  { name: "Kilani", password: "222222222" },
+  { name: "Yara", password: "111" },
+  { name: "Ihab", password: "444444" },
+];
 // Ajax
 
 //routes
-
-app.get("/sort", (req, res) => {
-  images.sort((a, b) => b.score - a.score);
-  res.send(images);
-});
 
 app.get("/get-image", (req, res) => {
   res.send(images);
 });
 
 app.post("/add-score", (req, res) => {
-  const { iD, Score } = req.body;
-  images.find((elm) => elm.id === iD).score += Score;
-  console.log(images.find((elm) => elm.id === iD));
+  const { id } = req.body;
 });
 
 app.post("/add-image", (req, res) => {

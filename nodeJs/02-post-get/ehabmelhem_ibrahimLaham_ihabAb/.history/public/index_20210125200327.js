@@ -5,7 +5,7 @@ let show = document.getElementById("show");
 
 show.addEventListener("click", (e) => {
   var all = [];
-  root.innerHTML = "";
+  root.ine
   fetch("/get-image")
     .then((r) => r.json())
     .then((data) => {
@@ -197,8 +197,6 @@ document.getElementById("btn").addEventListener("click", (e) => {
       all.map((elm) => {
         console.log("in map");
         let p = document.createElement("p");
-        let p1 = document.createElement("p");
-        p1.innerText = elm.score + "";
         let div = document.createElement("div");
         div.className = "item";
         p.innerText = "Has been voted";
@@ -350,7 +348,6 @@ document.getElementById("btn").addEventListener("click", (e) => {
         div.appendChild(span3);
         div.appendChild(span4);
         div.appendChild(span5);
-        div.appendChild(p1);
         div.id = elm.id + "";
         root.appendChild(div);
       });

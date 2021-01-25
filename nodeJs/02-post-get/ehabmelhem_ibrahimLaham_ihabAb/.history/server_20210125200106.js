@@ -12,8 +12,9 @@ let id = 0;
 //routes
 
 app.get("/sort", (req, res) => {
+  var newImages = [...images];
   images.sort((a, b) => b.score - a.score);
-  res.send(images);
+  res.send(newImages);
 });
 
 app.get("/get-image", (req, res) => {

@@ -197,8 +197,8 @@ document.getElementById("btn").addEventListener("click", (e) => {
       all.map((elm) => {
         console.log("in map");
         let p = document.createElement("p");
-        let p1 = document.createElement("p");
-        p1.innerText = elm.score + "";
+        let p = document.createElement("p");
+        p.ine
         let div = document.createElement("div");
         div.className = "item";
         p.innerText = "Has been voted";
@@ -350,7 +350,6 @@ document.getElementById("btn").addEventListener("click", (e) => {
         div.appendChild(span3);
         div.appendChild(span4);
         div.appendChild(span5);
-        div.appendChild(p1);
         div.id = elm.id + "";
         root.appendChild(div);
       });

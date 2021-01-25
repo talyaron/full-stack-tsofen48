@@ -197,8 +197,8 @@ document.getElementById("btn").addEventListener("click", (e) => {
       all.map((elm) => {
         console.log("in map");
         let p = document.createElement("p");
-        let p1 = document.createElement("p");
-        p1.innerText = elm.score + "";
+        let p = document.createElement("p");
+        p.innerText = elm.score + "";
         let div = document.createElement("div");
         div.className = "item";
         p.innerText = "Has been voted";
