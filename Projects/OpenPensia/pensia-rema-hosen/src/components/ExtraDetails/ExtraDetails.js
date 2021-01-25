@@ -11,7 +11,7 @@ export default function ExtraDetails(props) {
       setArticlesDetails(res)
     }) 
   }, [])
-  // let articlesDetails=[{articleTitle:'tghhhh',subTitle:'hgfdd',linkToArticle:'https://www.google.com/search?q=images&safe=strict&sxsrf=ALeKk01u4tNhZ6mtZ29G5hG3g1y45gRwPw:1611430003986&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiv3d7H5LLuAhVToXEKHf8rCdYQ_AUoAXoECBMQAw&biw=1422&bih=684#imgrc=a9B7raWE3PxoBM'}];
+ 
   return (
     <div className="extraDetails">
       <div className="moreInfoBtnContainer">
