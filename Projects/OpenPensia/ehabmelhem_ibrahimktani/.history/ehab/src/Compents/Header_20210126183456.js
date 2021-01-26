@@ -11,7 +11,7 @@ function Header({ company, Icon, name }) {
       </div>
       <Avatar className="avatar" src={Icon} alt="Ehab" />
       <h4>{name}</h4>
-    </div>
-  );
+
 }
+
 export default Header;

@@ -60,15 +60,19 @@ h5,
 h6 {
   font-weight: 600;
 }
+>>>>>>> Stashed changes
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait and Landscape */
 @media only screen and (max-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
   .contaner {
     position: relative;
+<<<<<<< Updated upstream
     width: 396px;
     top: 0px;
     border: none;
+=======
     top: 0px;
+>>>>>>> Stashed changes
   }
 }

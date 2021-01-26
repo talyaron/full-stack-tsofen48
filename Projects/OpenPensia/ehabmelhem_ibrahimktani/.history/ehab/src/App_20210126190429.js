@@ -28,7 +28,7 @@ function App() {
           name={personal_data.name}
         />
         <Navbar />
-        <Information withNum={voted.with} without={voted.without} />
+        <Information withNum={80} without={20} />
         <p>?מה הבחינה שלך</p>
         <div className="thumps">
           <div className="thumpItem">
