@@ -12,6 +12,10 @@ function Information({ withNum, without }) {
         <h1>{without}%</h1>
         <p>נגד</p>
       </div>
+function Information() {
+  return (
+    <div className="information">
+      <h1>information</h1>
     </div>
   );
 }

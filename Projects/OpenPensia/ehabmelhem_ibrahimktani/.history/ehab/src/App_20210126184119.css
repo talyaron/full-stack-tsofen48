@@ -66,9 +66,12 @@ h6 {
 @media only screen and (max-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
   .contaner {
     position: relative;
+<<<<<<< Updated upstream
     width: 396px;
     top: 0px;
     border: none;
+=======
     top: 0px;
+>>>>>>> Stashed changes
   }
 }

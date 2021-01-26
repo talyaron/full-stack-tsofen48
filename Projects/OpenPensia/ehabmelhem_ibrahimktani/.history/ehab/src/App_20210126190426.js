@@ -14,11 +14,9 @@ function App() {
     .then((data) => {
       setPersonal(data);
     });
-  fetch("/vote")
-    .then((r) => r.json())
-    .then((data) => {
-      setVoted(data);
-    });
+    fetch("/vote").then(r=>r.json()).then((data)=>{
+      set
+    })
   return (
     <div className="app">
       <div className="contaner">
@@ -28,7 +26,7 @@ function App() {
           name={personal_data.name}
         />
         <Navbar />
-        <Information withNum={voted.with} without={voted.without} />
+        <Information withNum={80} without={20} />
         <p>?מה הבחינה שלך</p>
         <div className="thumps">
           <div className="thumpItem">

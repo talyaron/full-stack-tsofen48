@@ -12,8 +12,6 @@ function Information({ withNum, without }) {
         <h1>{without}%</h1>
         <p>נגד</p>
       </div>
-    </div>
-  );
-}
+
 
 export default Information;

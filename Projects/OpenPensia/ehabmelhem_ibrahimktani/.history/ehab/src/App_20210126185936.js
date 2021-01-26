@@ -8,27 +8,23 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [personal_data, setPersonal] = useState([]);
-  const [voted, setVoted] = useState([]);
-  fetch("/get-user")
-    .then((r) => r.json())
-    .then((data) => {
-      setPersonal(data);
-    });
-  fetch("/vote")
-    .then((r) => r.json())
-    .then((data) => {
-      setVoted(data);
-    });
+  useEffect(() => {
+    fetch("/get-user")
+      .then((r) => r.json())
+      .then((data) => {
+        setPersonal(data);
+      });
+  }, []);
   return (
     <div className="app">
       <div className="contaner">
         <Header
           company={personal_data.company}
           Icon={personal_data.src}
-          name={personal_data.name}
+          name={}
         />
         <Navbar />
-        <Information withNum={voted.with} without={voted.without} />
+        <Information withNum={80} without={20} />
         <p>?מה הבחינה שלך</p>
         <div className="thumps">
           <div className="thumpItem">
