@@ -4,3 +4,8 @@
 .blue{
   background-color: blue;
 }
+.background{
+  background-color: white;
+  width: 500px;
+  height: 1000px;
+}
