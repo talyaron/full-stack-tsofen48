@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JbareenM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1>Hi</h1>
+    <a href="page2.html">Link to page 2</a>
+    <button onclick="getUsers()">Get users</button>
+    <div id="root"></div>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name">
+        <input type="text" name="password">
+        <input type="submit" value='send'>
+    </form>
+
+    <form onsubmit="handleAdd(event)">
+        <input type="text" name="url">
+        <input type="submit" value='send'>
+    </form>
+    
+    <button onclick="getUrls()">Get images</button>
+    <div class="container" id="root_urls" onsubmit="addScore(event)"></div>
+    <button onclick="SortUrls()">Sort images</button>
+    <div class="container" id="sorted_urls" onsubmit="addScore(event)"></div>
+    
+</body>
+<script src="index.js"></script>
+
+</html>
