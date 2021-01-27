@@ -1,12 +1,12 @@
 import './Answer.css';
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { increment, decrement } from "../store/modules/count/actions";
 
 function Answer(props) {
 
     // const {score, setScore} = props.appState;
-    const count = useSelector(state => state.count.counter);
+    //const count = useSelector(state => state.count.counter);
     const dispatch = useDispatch();
 
     const { setIsCorrect} = props.isAnswerCorrect;

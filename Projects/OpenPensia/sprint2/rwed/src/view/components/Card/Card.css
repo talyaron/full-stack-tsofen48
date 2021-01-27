@@ -1,0 +1,22 @@
+.group{
+   
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    height:90%;
+  
+}
+.card{
+    color: white;
+    display:inline-block;
+    background-size: contain; 
+    border:whitesmoke solid 5px;
+     text-align: center;
+     width: 500px;
+     height: 500px;
+
+}
+.card img{
+    width: 90%;
+    height: 90%;
+}

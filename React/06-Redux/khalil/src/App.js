@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -7,7 +7,6 @@ import store from "./store";
 import Main from './components/Main';
 
 function App() {
-  const [score, setScore] = useState(0);
 
   return (
     <Provider store={store}>
