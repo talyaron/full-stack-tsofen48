@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <input type="text" name="" id="input" onkeyup='handleChange(event)'>
+    <script>
+        function handleChange(e) {
+            localStorage.setItem('input', e.target.value);
+            document.querySelector('#root').innerText = e.target.value;
+        }
+
+        let inputInStorage = localStorage.getItem('input')
+        document.querySelector('#root').innerText = inputInStorage;
+        document.querySelector('#input').value = inputInStorage
+
+    </script>
+</body>
+
+</html>
