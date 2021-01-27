@@ -22,6 +22,24 @@ app.get('/get-users', isAdmin, (req, res, next) => {
   
 })
 
+
+app.post('/check-login', (req, res) => {
+
+  
+  const { name } = req.body;
+  console.log(name);
+  // const index = users.findIndex(user => user.name === name);
+  // if (index === -1) {
+
+  //   users.push({ name, password })
+  // }
+
+  res.send({ ok: true })
+})
+
+
+
+
 function isAdmin(req, res, next){
   console.log(req.cookies)
 
@@ -47,5 +65,5 @@ function checkAdmin (req, res, next)  { //middleware
 
 
 
-const port = process.env.POST || 3000
-app.listen(port, () => { console.log(`\x1b[36m Server running on port ${port}  🔥`) });
+
+app.listen(3000, () => { console.log('listen on port 3000') });
