@@ -1,4 +1,11 @@
 import React from "react";
+
+
+//component 
+import Card from './view/component/card/Card';
+
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,7 +52,12 @@ export default function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return (<div>
+
+<h2>Home</h2>
+  <Card/> 
+    </div>
+  )
 }
 
 function About() {
