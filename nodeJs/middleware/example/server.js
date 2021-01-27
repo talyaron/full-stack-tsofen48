@@ -4,9 +4,36 @@ var cookieParser = require('cookie-parser')
 
 app.use(cookieParser())
 
+
+
 app.use(express.static('public'));
 
-app.use((req, res, next) => {
+app.use(checkAdmin);
+
+const users = [{name:'Mohamad', role:'admin'}, {name:'Tal', role:'public'}]
+
+app.get('/get-users', isAdmin, (req, res, next) => {
+
+  // res.cookie('role', 'admin', { maxAge: 90000000000, httpOnly: true });
+  
+  
+    res.send({ ok: true, users });
+  
+  
+})
+
+function isAdmin(req, res, next){
+  console.log(req.cookies)
+
+  if (req.cookies.role !== 'admin'){
+    res.send({ok:'not so good'})
+  } else{
+    next()
+  }
+  
+}
+
+function checkAdmin (req, res, next)  { //middleware
   console.log(req.cookies)
 
   if (req.cookies.role === 'admin') res.authorized = true;
@@ -14,21 +41,7 @@ app.use((req, res, next) => {
 
   res.authorized
   next();
-})
-
-const users = [1, 2, 3, 4, 5, 7]
-
-app.get('/get-users', (req, res, next) => {
-
-  // res.cookie('cookieName', 'admin', { maxAge: 90000000000, httpOnly: true });
-  
-  if (res.authorized) {
-    res.send({ ok: true, users });
-  } else {
-    res.send({ ok: false });
-  }
-  
-})
+}
 
 
 
