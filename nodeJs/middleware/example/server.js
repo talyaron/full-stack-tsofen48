@@ -47,5 +47,5 @@ function checkAdmin (req, res, next)  { //middleware
 
 
 
-
-app.listen(3000, () => { console.log('listen on port 3000') });
+const port = process.env.POST || 3000
+app.listen(port, () => { console.log(`\x1b[36m Server running on port ${port}  🔥`) });
