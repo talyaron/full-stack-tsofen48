@@ -1,5 +1,5 @@
 import './Main.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { Provider, useSelector } from "react-redux";
 import store from "../store";
 
@@ -7,7 +7,6 @@ import store from "../store";
 import Question from './Question';
 
 function Main() {
-  const [score, setScore] = useState(0);
   const count = useSelector(state => state.count.counter);
 
   return (
@@ -26,7 +25,7 @@ function Main() {
                 innerText={question.innerText}
                 answers={question.answers}
                 key={index}
-                appState={{ score, setScore }}
+                // appState={{ score, setScore }}
               />
             );
           })
