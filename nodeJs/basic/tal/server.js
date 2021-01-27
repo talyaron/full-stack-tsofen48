@@ -2,14 +2,13 @@ const express = require('express');
 const app = express();
 
 
-app.use(express.static('public'));
+
  
-app.get('/', function (req, res) {
-  res.send('<h1><a href="/home">Hello World...</a></h1>')
+app.get('/get-users',  (req, res)=> {
+  res.send({ok:true})
 })
 
-app.get('/home', function (req, res) {
-    res.send('<h1>This is home</h1>')
-  })
+app.use(express.static('public'));
+
  
-app.listen(3000)
+app.listen(3000, ()=>{console.log('listen on port 3000')});
