@@ -1,0 +1,21 @@
+.moreInfoBtnContainer{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-top: 40px;
+     }
+     .moreInfoBtn{
+       height: 50px;
+       font-size: 16px;
+       color: white;
+       padding: 8px 16px;
+       background-color: #3D4257;
+       border-radius: 8px;
+       border: none;
+       outline: none;
+       cursor: pointer;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       width: 90%;
+       max-width: 400px;
+     
+     }
