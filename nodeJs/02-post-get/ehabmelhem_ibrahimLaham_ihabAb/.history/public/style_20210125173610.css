@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+}
+.container {
+  width: fit-content;
+  margin: 0 auto;
+}
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 10px;
+}
+.item {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item > img {
+  margin-right: 100px;
+}
+.checked {
+  color: orange;
+}
+span {
+  cursor: pointer;
+}

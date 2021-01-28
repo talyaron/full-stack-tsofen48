@@ -29,7 +29,7 @@ function App() {
       <header className="App-header grid-container">
 
         <div className="grid-item profile-info">
-          <img src={myImgSrc} className="my-image" alt="me" />
+          <div className='box' style={{backgroundImage:`url(https://www.aviv-flower.co.il/images/2019/03/03/home_a-3.jpg)`}}/>
           <p>
             Alaa Saabni-Mograbi
         </p>
