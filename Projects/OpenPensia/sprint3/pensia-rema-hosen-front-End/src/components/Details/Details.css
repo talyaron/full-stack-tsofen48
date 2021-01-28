@@ -1,0 +1,77 @@
+.linkedin-buttonContainer {
+       padding-top: 20px;
+       padding-bottom: 20px;
+     }
+     .linkedin-buttonContainer > button {
+       background-color: #0e76a8;
+       border-radius: 15px;
+       box-shadow: transparent;
+       color: white;
+       text-align: center;
+       font-size: 20px;
+       padding: 17px;
+       transition: all 0.5s;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       cursor: pointer;
+     }
+     .linkedin-buttonContainer > button > span {
+       cursor: pointer;
+       position: relative;
+       transition: 0.5s;
+     }
+     .linkedin-buttonContainer > button:hover span {
+       padding-right: 25px;
+     }
+     .paragraph-1 > .button-container-row-1 > button,
+     .paragraph-1 > .button-container-row-2 > button {
+       color: white;
+       background-color: rgb(41, 37, 53);
+       border-radius: 15px;
+       box-shadow: transparent;
+       text-align: center;
+       padding: 10px;
+       transition: all 0.5s;
+       cursor: pointer;
+       display: block;
+       width: 130px;
+       transition: all 0.5s;
+     }
+     .paragraph-1 > .button-container-row-1 {
+       position: absolute;
+       left: 5%;
+       top: 57%;
+     }
+     .paragraph-1 > .button-container-row-2 {
+       position: absolute;
+       left: 5%;
+       top: 65%;
+     }
+     .paragraph-1 > .button-container-row-1 > button > span,
+     .paragraph-1 > .button-container-row-2 > button > span {
+       cursor: pointer;
+       position: relative;
+       transition: 0.5s;
+     }
+     .paragraph-1 > .button-container-row-1 > button:hover span,
+     .paragraph-1 > .button-container-row-2 > button:hover span {
+       padding-right: 25px;
+     }
+     @media only screen and (max-width: 1080px) {
+       li a {
+         /* width: 29%; */
+       }
+       .paragraph-1 > .button-container-row-1 {
+         top: 49%;
+       }
+       .paragraph-1 > .button-container-row-2 {
+         top: 56%;
+       }
+       .paragraph-1 > .button-container-row-1 > button,
+       .paragraph-1 > .button-container-row-2 > button {
+         padding: 7px;
+       }
+       .linkedin-buttonContainer > button {
+         width: 94%;
+       }
+     }
+     
