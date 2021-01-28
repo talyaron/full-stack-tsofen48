@@ -34,7 +34,7 @@ function userType (req,res,next){
   }else{
     res.cookie('role', 'public', { maxAge: 90000000000, httpOnly: true });
   }
-  res.send({isAdmin})
+  res.send({articlesAboutDirector:[],isAdmin})
 
 }
 

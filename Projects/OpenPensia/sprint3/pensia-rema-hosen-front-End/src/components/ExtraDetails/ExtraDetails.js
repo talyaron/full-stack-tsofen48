@@ -10,7 +10,7 @@ export default function ExtraDetails(props) {
       fetch(`https://pensia-rema-hosen-backend.herokuapp.com/${window.location.search}`).then(response=>{
     
     return response.json()}).then(res=>{
-
+     
       setArticlesDetails(res.articlesAboutDirector);
       setShowMoreInfoBtn(res.isAdmin);
      
