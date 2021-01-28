@@ -4,7 +4,7 @@ var cookieParser = require("cookie-parser");
 const usersRouter = require("./router/users");
 
 app.use(addcookie());
-app.use("/users", addcookie, usersRouter);
+app.use("/users", addcookie,usersRouter);
 
 const user = {
   company: "בנק הפועלים",

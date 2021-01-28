@@ -1,10 +1,5 @@
 const express = require("express");
 const app = express();
-var cookieParser = require("cookie-parser");
-const usersRouter = require("./router/users");
-
-app.use(addcookie());
-app.use("/users", addcookie, usersRouter);
 
 const user = {
   company: "בנק הפועלים",
@@ -18,17 +13,6 @@ const vote = {
   without: 20,
 };
 
-const port = process.env.PORT || 3002;
-
-function addcookie(req, res, next) {
-  res.cookie("role", user.role, { maxAge: 90000000000, httpOnly: true });
-  next();
+exports.getUser=(req,res)=>{
+    if(req.cookies.role === 'public')
 }
-
-app.get("/vote", (req, res) => {
-  res.send(vote);
-});
-
-app.listen(port, function () {
-  console.log("localhsot", port);
-});

@@ -4,7 +4,7 @@ var cookieParser = require("cookie-parser");
 const usersRouter = require("./router/users");
 
 app.use(addcookie());
-app.use("/users", addcookie, usersRouter);
+app.use("/users", usersRouter);
 
 const user = {
   company: "בנק הפועלים",
@@ -29,6 +29,9 @@ app.get("/vote", (req, res) => {
   res.send(vote);
 });
 
+app.get("/get-user", (req, res) => {
+  res.send(user);
+});
 app.listen(port, function () {
   console.log("localhsot", port);
 });

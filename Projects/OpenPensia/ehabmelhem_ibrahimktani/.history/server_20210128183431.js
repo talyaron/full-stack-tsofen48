@@ -4,7 +4,6 @@ var cookieParser = require("cookie-parser");
 const usersRouter = require("./router/users");
 
 app.use(addcookie());
-app.use("/users", addcookie, usersRouter);
 
 const user = {
   company: "בנק הפועלים",
@@ -20,15 +19,20 @@ const vote = {
 
 const port = process.env.PORT || 3002;
 
-function addcookie(req, res, next) {
-  res.cookie("role", user.role, { maxAge: 90000000000, httpOnly: true });
-  next();
+function addcookie(req, res,) {
+  res.cookie("role", "admin", { maxAge: 90000000000, httpOnly: true });
 }
 
+app.get("/stam", (req, res) => {
+  res.send({ messege: "hi from server" });
+});
 app.get("/vote", (req, res) => {
   res.send(vote);
 });
 
+app.get("/get-user", (req, res) => {
+  res.send(user);
+});
 app.listen(port, function () {
   console.log("localhsot", port);
 });
