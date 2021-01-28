@@ -7,18 +7,13 @@ export default function ExtraDetails(props) {
   useEffect(() => {
 
     
-    fetch('https://pensia-rema-hosen-backend.herokuapp.com/').then(response=>{
+      fetch(`https://pensia-rema-hosen-backend.herokuapp.com/${window.location.search}`).then(response=>{
     
     return response.json()}).then(res=>{
 
-      setArticlesDetails(res);
+      setArticlesDetails(res.articlesAboutDirector);
+      setShowMoreInfoBtn(res.isAdmin);
      
-    }) 
-    fetch(`http://localhost:3000/${window.location.search}`).then(response=>{
-      return response.json()}).then(res=>{
-    
-       setShowMoreInfoBtn(res.isAdmin);
-   
     }) 
 
   }, [])
