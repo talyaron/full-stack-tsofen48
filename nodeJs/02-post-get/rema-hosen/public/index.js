@@ -20,10 +20,17 @@ function getSortedImages(){
     })
 }
 
+function uniqueId(){
+    return "id" + Math.random().toString(16).slice(2)
+  }
+
 function handleSubmit(e) {
     e.preventDefault();
 
     let img = e.target.elements.img.value;
+    let score = 0;
+    
+    localStorage.setItem(img,score);
 
     fetch('/addImg', {
         method: 'POST',
