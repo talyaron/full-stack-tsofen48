@@ -15,34 +15,29 @@ function App() {
       .then((r) => r.json())
       .then((data) => {
         if (data.index === 1) {
-          setFlag(false);
+          setFlag(true);
           console.log(data);
         } else {
           console.log("it's not goo");
-          setFlag(true);
+          setFlag(false);
         }
-        setPersonal(data.user);
+        // setPersonal(data);
       });
     fetch("/users/vote")
       .then((r) => r.json())
       .then((data) => {
         if (data.index === 1) {
           console.log(data);
-          setFlag(false);
+          setFlag(true);
         } else {
           console.log("it's not goo");
-          setFlag(true);
+          setFlag(false);
         }
-        setVoted(data.vote);
+        // setVoted(data);
       });
   }, []);
 
   if (flag) {
-    return (
-      <div className="app">
-        <div className="contaner">you dont have authorized to join in</div>
-      </div>
-    );
   } else {
     return (
       <div className="app">

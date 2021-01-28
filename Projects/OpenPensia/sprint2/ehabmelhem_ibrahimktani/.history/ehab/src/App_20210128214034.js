@@ -21,7 +21,7 @@ function App() {
           console.log("it's not goo");
           setFlag(true);
         }
-        setPersonal(data.user);
+        // setPersonal(data);
       });
     fetch("/users/vote")
       .then((r) => r.json())
@@ -33,14 +33,16 @@ function App() {
           console.log("it's not goo");
           setFlag(true);
         }
-        setVoted(data.vote);
+        // setVoted(data);
       });
   }, []);
 
   if (flag) {
     return (
       <div className="app">
-        <div className="contaner">you dont have authorized to join in</div>
+        <div className="contaner">
+          you dont have authorized to 
+        </div>
       </div>
     );
   } else {
