@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node api/app.js",
+    "server": "cd api && npm run start",
     "app": "cd app && npm run start",
     "build:client": "cd app && npm run build",
     "iall": "npm i && cd app && npm i",
-    "startboth": "npm run server & npm run app"
+    "startboth": "npm run server && cd .. && npm run app"
   },
   "author": "",
   "license": "ISC",
