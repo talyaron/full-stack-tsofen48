@@ -10,6 +10,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+//right to left
+// document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl');
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -18,6 +18,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <body className='content'>
+        <button className='add-info-btn'> <a href='#' />יש לך מידע? לחצ/י כאן</button>
+        <Cards cards={cards} />
+        
+      </body>
     </div>
   );
 }
