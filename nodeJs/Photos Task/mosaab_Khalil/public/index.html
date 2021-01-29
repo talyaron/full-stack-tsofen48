@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <div id="alert"></div>
+</head>
+
+<body>
+    <form onsubmit="sendDataToServer(event)">
+        <input class="inputText1" type="text" placeholder="Enter Src Of Photo" name="src"/>
+        <br/>
+<input class="button1" type="submit" value="ADD" />
+    </form>
+    <br/><br/><br/>
+    <button class="button1" onclick="getPhotos()">show photos</button>
+<div class=".justify-content-center" id="allPhotosToShow" ><h1>Show The Photos To Vote !</h1></div>
+<br/><br/><br/>
+
+<button class="button1" onclick="GetPhotosPoints()">show Sorted By Rate</button>
+<div id="allPhotosWithPoints" ><h1>Show The Photos Sorted By Rate !</h1></div>
+    <script src="index.js"></script>
+</body>
+
+</html>

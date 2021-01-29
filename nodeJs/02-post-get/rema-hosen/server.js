@@ -40,7 +40,9 @@ app.post('/addImg', (req, res) => {
     const url= req.body;
     let id = uniqueId();
     let score =0;
-    const index = images.findIndex(img => img.id === id);
+
+    const index = images.findIndex(img => img.url === url.img);
+  
     if (index < 0 ) {
     images.push({id:id,url:url.img,score:score});
     }
