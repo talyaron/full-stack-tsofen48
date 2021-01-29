@@ -7,6 +7,7 @@ function App() {
   const [Currentprice, setCurrentprice] = useState(100);
   const [datas, setdatas] = useState([]);
   const [TotalLabel, setTotalLabel] = useState(["Total Amout:"]);
+  const [BtnGotoText, setBtnGotoText] = useState(["GotoSalProduct"]);
   
   function addproduct(){
     
@@ -54,14 +55,9 @@ function App() {
        <label><h1>{TotalLabel}</h1></label><label className="totalamount"><h1>{Currentprice}</h1></label>
       </div>
        <div className="products" >
-       <div className="product1" >
-           <label className='priceFirstproduct'>25</label> 
-           <img className="productPic1" src="https://sc01.alicdn.com/kf/HLB1BsjtRRLoK1RjSZFuq6xn0XXaV.jpg_350x350.jpg"></img>
-           <button className='btnadd' onClick="addproduct()"> </button>
-        </div>
         <Products array={datas} />
       </div>
-      <button className='btnDone' onClick="GoToProductSal()"> </button>
+      <button className='btnDone' onClick="GoToProductSal()">{BtnGotoText} </button>
     </div>
   );
 }
