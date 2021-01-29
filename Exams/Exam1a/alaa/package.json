@@ -1,5 +1,5 @@
 {
-  "name": "Ehab_Melhem",
+  "name": "alaa",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@material-ui/core": "^4.11.3"
-  }
+  "author": " <Alaa-S-M>",
+  "license": "ISC"
 }
