@@ -8,6 +8,7 @@ function App() {
   const [datas, setdatas] = useState([]);
   const [TotalLabel, setTotalLabel] = useState(["Total Amout:"]);
   const [BtnGotoText, setBtnGotoText] = useState(["GotoSalProduct"]);
+  const [AllPayment, setAllPayment] = useState([""]);
   
   function addproduct(){
     
@@ -36,6 +37,7 @@ function App() {
       .then((data) => {
          setdatas(data); //change the product compenent itself by usestate 
          setTotalLabel(`You have in your cart`+ data.CurrentProductAmount+`items`);
+         setAllPayment("Pay"+data.CurrentSalePrice);
          setBtnGotoText("Pay");
       });
   
@@ -57,6 +59,9 @@ function App() {
       </div>
        <div className="products" >
         <Products array={datas} />
+      </div>
+      <div className="AllPayment" >
+      <label><h1>{AllPayment}</h1></label>
       </div>
       <button className='btnDone' onClick="GoToProductSal()">{BtnGotoText} </button>
     </div>
