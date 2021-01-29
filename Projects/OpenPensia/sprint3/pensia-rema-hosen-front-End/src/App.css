@@ -1,0 +1,67 @@
+.container {
+  direction: rtl;
+  max-width: 900px;
+  max-width: 900px;
+  margin: auto;
+}
+ul {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  padding: 0;
+  border-bottom: solid 2px #d7d7d7cc;
+}
+li {
+  display: inline;
+
+}
+li a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  width: fit-content;
+  color: rgb(160, 149, 149);
+  font-weight: bolder;
+}
+.header {
+  width: 100%;
+  height: max-content;
+  background-color: rgb(41, 37, 53);
+  text-align: center;
+}
+.profileImg {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+.imgContainer {
+  padding-right: 35%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  text-align: center;
+  width: 30%;
+  height: 40%;
+}
+.header > .imgContainer > h3 {
+  color: white;
+  font-size: x-large;
+}
+.textContainer {
+  padding-right: 20px;
+}
+p {
+  color: rgb(160, 149, 149);
+}
+h4 {
+  color: rgb(41, 37, 53);
+}
+
+#pressed-a {
+  color: rgb(41, 37, 53);
+  border-bottom: 3px solid rgb(41, 37, 53);
+  padding: 10px;
+}
+#not-pressed-a {
+  color: rgb(160, 149, 149);
+  border-bottom: 2px solid rgb(160, 149, 149);
+}

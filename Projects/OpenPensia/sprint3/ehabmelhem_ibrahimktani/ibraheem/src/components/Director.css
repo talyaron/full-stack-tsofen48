@@ -1,0 +1,56 @@
+<<<<<<< Updated upstream
+.director2{
+    /* background-color: #3d4257;
+    height: 330px; */
+    display: flex;
+    flex-wrap: wrap;
+=======
+.director{
+    /* background-color: #3d4257;
+    height: 330px; */
+    display: flex;
+>>>>>>> Stashed changes
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    border-bottom: 2px solid #e2e2ea;
+<<<<<<< Updated upstream
+    /* border: 2px solid #e2e2ea; */
+=======
+>>>>>>> Stashed changes
+}
+
+#icon1{
+    /* color: green; */
+<<<<<<< Updated upstream
+}
+
+.director2 > p {
+    width: 200px;
+    /* border: 2px solid #e2e2ea; */
+    color: #3e4655;
+    cursor: pointer;
+}
+
+.active{
+    color: rgb(10, 245, 10);
+    cursor: pointer;
+}
+
+.disactive{
+    color: red;
+    cursor: pointer;
+}
+
+.normal{
+    color: #848fb5;
+    cursor: pointer;
+}
+.info{
+    color: #3e4655;
+    cursor: pointer;
+=======
+>>>>>>> Stashed changes
+}

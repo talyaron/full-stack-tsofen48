@@ -1,10 +1,25 @@
 const express = require('express');
 const app = express();
 var bodyParser = require('body-parser')
+var cookieParser = require('cookie-parser');
+const usersRouter = require('./routes/users');
 
 app.use(express.static('React/build'));
+app.use(cookieParser())
 app.use(bodyParser.json())
+app.use(checkAdmin);
 
+app.use('/users', usersRouter)
+
+function checkAdmin (req, res, next)  { //middleware
+  console.log(req.cookies)
+
+  if (req.cookies.role === 'admin') res.authorized = true;
+  else res.authorized = false;
+
+  res.authorized
+  next();
+}
 
 const directorInfo=[
   {organization:'בנק הפועלים',
