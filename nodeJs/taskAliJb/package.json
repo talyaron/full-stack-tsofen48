@@ -1,0 +1,19 @@
+{
+  "name": "taskalijb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node api/app.js",
+    "app": "cd app && npm run start",
+    "build:client": "cd app && npm run build",
+    "iall": "npm i && cd app && npm i",
+    "startboth": "npm run server & npm run app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
