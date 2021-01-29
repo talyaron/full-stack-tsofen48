@@ -19,7 +19,7 @@ const parliamentaryTools = [
     // res.cookie('role', 'admin', { maxAge: 90000000000, httpOnly: true });
 
 
-    res.send({ ok: true, parliamentaryTools });
+    res.send({ success:true,err:null,info:{parliamentaryTools} });
 
 
 };

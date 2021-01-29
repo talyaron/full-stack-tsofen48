@@ -12,11 +12,16 @@ let userType = 'לוח מעקב';
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/parliamentaryTools")
+    fetch("/parliamentaryTools/get-parliamentaryTools")
       .then((r) => r.json())
       .then((data) => {
-        console.log(data);
-        setData(data);
+        if(data.success==true){
+          console.log(data.info.parliamentaryTools);
+          setData(data.info.parliamentaryTools);
+        }else{
+          alert(data.err)
+        }
+        
       });
   }, []);
 
