@@ -1,4 +1,5 @@
 let form = document.getElementById("form");
+<<<<<<< Updated upstream
 let input = document.getElementById("input");
 let getuser = document.getElementById("getuser");
 let div = document.getElementById("container");
@@ -34,3 +35,14 @@ form.addEventListener("submit", (e) => {
 //   .then((data) => {
 //     console.log(data);
 //   });
+=======
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
+fetch("/get-users")
+  .then((r) => r.json())
+  .then((data) => {
+    console.log(data);
+  });
+>>>>>>> Stashed changes
