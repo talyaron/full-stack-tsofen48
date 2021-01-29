@@ -19,15 +19,15 @@ const urls = [
     { url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnnyiqUs6vrwBbwYZyt-iDa7a_YmdnK5z_jw&usqp=CAU", score: 20 }
 ];
 
-const my_stuff = [];
+const my_stuff = [{total:1000}];
 
 app.post('/add_stuff', (req, res) => {
     const {url, score} = req.body;
     const index = my_stuff.findIndex(a => a.url === url);
-
-    if (index === -1) {
-        // totalPrice = totalPrice - score;
-        console.log(totalPrice)
+    const aa = my_stuff[0].total;
+    if (index === -1 && (my_stuff[0].total - score) >= 0) {
+        my_stuff[0].total =  my_stuff[0].total - score;
+        console.log(aa)
         my_stuff.push({ url: url, score: score })
     }
     else{
