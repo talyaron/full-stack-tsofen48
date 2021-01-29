@@ -36,6 +36,7 @@ function App() {
       .then((data) => {
          setdatas(data); //change the product compenent itself by usestate 
          setTotalLabel(`You have in your cart`+ data.CurrentProductAmount+`items`);
+         setBtnGotoText("Pay");
       });
   
     }
