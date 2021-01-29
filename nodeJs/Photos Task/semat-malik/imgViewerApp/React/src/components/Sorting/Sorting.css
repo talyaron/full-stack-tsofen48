@@ -1,0 +1,32 @@
+.listSortedImg{
+   
+    color:#3D4257 ;
+    display: grid;
+    grid-auto-flow: column; 
+    grid-gap: 10px;
+}
+
+.box {
+    align-self: center;
+}
+hr.top{
+    border: 1px solid #3D4257;
+  }
+    img {
+      width: 100%;
+      transition: transform 500ms ease;
+      
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+    .circle{
+        margin-right: 10px;
+
+   background: #c96161;
+   border-radius: 100%;
+   color: white;
+   width: 1.6em;
+   text-align: center;
+   display: inline-block;
+    }
