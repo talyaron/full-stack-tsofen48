@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+.product{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+
+}
+
+
+
+
+
