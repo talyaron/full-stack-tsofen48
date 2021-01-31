@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.net/tsofn48', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://Semat:cacWBcNOZTuu1pEB@cluster0.7w7pv.mongodb.net/test', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
