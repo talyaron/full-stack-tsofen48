@@ -13,8 +13,19 @@ db.once('open',  ()=> {
    console.log('we are connected to DB')
 });
 
+const Kittyschema=new mongoose.Schema({
+    name:String
+});
 
+const Kittem=mongoose.model('Kittyschema',Kittyschema);
+const pilpel=new Kittem({name:'pilpel'});
+pilpel.save();
 
+let kittens = [{ name: "Zildjian" }, { name: "lara" }];
+
+Kittem.insertMany(kittens, (doc) => {
+  console.log(doc);
+});
 
 
 const PORT = process.env.PORT || 3006;
