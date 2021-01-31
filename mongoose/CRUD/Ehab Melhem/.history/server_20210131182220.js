@@ -18,7 +18,6 @@ const Cat = mongoose.model("Cat", { name: String });
 const kitty = new Cat({ name: "Zildjian" });
 kitty.save().then(() => console.log("meow"));
 
-
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {

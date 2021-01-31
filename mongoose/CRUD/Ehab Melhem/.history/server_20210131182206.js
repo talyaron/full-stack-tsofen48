@@ -5,19 +5,15 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/ehabmelhem",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect("mongodb://localhost:27017/test", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const Cat = mongoose.model("Cat", { name: String });
 
 const kitty = new Cat({ name: "Zildjian" });
 kitty.save().then(() => console.log("meow"));
-
 
 const PORT = process.env.PORT || 3006;
 
