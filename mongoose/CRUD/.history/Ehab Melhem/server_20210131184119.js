@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/ehabmelhem",
+  "mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.net/tsofn48",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
@@ -23,19 +23,13 @@ const Kittyschema = new mongoose.Schema({
 const Kitten = mongoose.model("kittyschema", Kittyschema);
 
 const pilpel = new Kitten({ name: "pilpel" });
-const rwed = new Kitten({ name: "rwed" });
-// pilpel.save().then(() => console.log("saved to DB"));
-// rwed.save().then(() => {
-//   console.log("save rwed to db");
-// });
+//   pilpel.save().then(()=>console.log('saved to DB'));
+
 let kittens = [{ name: "asd" }, { name: "sad" }];
 
 app.post("/send-kitten-name", (req, res) => {
   const { name } = req.body;
-  var add = new Kitten({ name: name });
-  add.save().then(() => {
-    console.log("add " + name + "to the db");
-  });
+
   console.log(name);
   res.send({ ok: true });
 });

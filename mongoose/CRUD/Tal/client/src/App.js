@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 
 
 //import components
@@ -7,11 +7,19 @@ import React from 'react';
 
 function App() {
 
+  const [kittens, setKittens] = useState([]);
+
+  useEffect(()=>{
+    fetch('/get-kittens')
+    .then(r=>r.json())
+    .then(data=>setKittens(data.kittens))
+  },[])
+
   function handleSubmit(e){
     e.preventDefault();
     const name = e.target.children.name.value;
     e.target.children.name.value = '';
-    
+
     fetch('/send-kitten-name',{
       method:'post',
       headers:{
@@ -26,6 +34,10 @@ function App() {
     <div className="App">
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder='kitten name' name='name'></input>
+        {kittens.map((kitten, index)=>{
+          return(<p key={index}>{kitten.name}</p>)
+        })
+        }
       </form>
     </div>
   );
