@@ -6,7 +6,7 @@
   height: 40vmin;
   pointer-events: none;
 }
-.add-info-btn{
+button{
   background-color:rgb(61, 66, 87);
   color: rgb(226, 227, 230);
   width: 60%;
@@ -19,14 +19,14 @@
   outline:none !important;
   
 }
-.candidate-img{ 
+/* .candidate-img{ 
   object-fit: cover;
   width: 200px ;
   height: 200px;
   border-radius: 50%;
   border: solid  rgb(167, 172, 188);
 
-}
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
