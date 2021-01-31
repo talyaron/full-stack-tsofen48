@@ -13,11 +13,26 @@ db.once('open',  ()=> {
    console.log('we are connected to DB')
 });
 
-const kittySchema = new mongoose.Schema({
-    name: String
-  });
+const Kittyschema = new mongoose.Schema({
+  name: String
 
-  const Kitten = mongoose.model('Kitten', kittySchema);
+}); 
+
+const Kitten = mongoose.model('kittyschema', Kittyschema); 
+
+const pilpel = new Kitten({name:'pilpel2'}); 
+  // pilpel.save().then(()=>console.log('saved to DB'));
+
+let kittens = [{name:'asd'},{name:"sad"}];
+
+
+
+app.post('/send-kitten-name',(req, res)=>{
+  const {name} = req.body;
+  
+  console.log(name)
+  res.send({ok:true})
+})
 
 
 
