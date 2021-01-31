@@ -1,0 +1,10 @@
+.amount-remain{
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    margin-left: 50%;
+    padding: 1%;
+}
