@@ -6,6 +6,8 @@ app.use(bodyParser.json());
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.net/tsofn48', { useNewUrlParser: true, useUnifiedTopology: true });
+const { ObjectId } = require('mongodb');
+
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -55,12 +57,32 @@ app.get('/get-kittens', (req, res) => {
 
     try {
         //get from DB
-        Kitten.find({ name: 'pilpel' }).then(docs => {
+        Kitten.find({}).then(docs => {
             res.send({ kittens: docs });
         })
     } catch (e) {
         res.send({ error: e })
     }
+})
+
+//update
+app.put('/update-kitten-name', (req, res) => {
+    try {
+        const { id, newName } = req.body;
+        console.log(id, newName);
+        const _id = ObjectId(id);
+
+        Kitten.updateOne({ _id }, { name: newName }).then(doc => {
+            console.log(doc)
+        }).catch(e=>{
+            console.error(e)    
+        })
+
+        res.send({ ok: true })
+    } catch (e) {
+        console.error(e)
+    }
+
 })
 
 

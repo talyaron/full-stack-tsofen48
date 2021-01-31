@@ -3,7 +3,7 @@ import React, { useEffect, useState} from 'react';
 
 
 //import components
-
+import Kitten from './components/Kitten/Kitten';
 
 function App() {
 
@@ -35,7 +35,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <input type='text' placeholder='kitten name' name='name'></input>
         {kittens.map((kitten, index)=>{
-          return(<p key={index}>{kitten.name}</p>)
+          return(<Kitten key={index} kitten={kitten}></Kitten>)
         })
         }
       </form>
