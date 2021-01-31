@@ -24,11 +24,11 @@ function App() {
         body: JSON.stringify({ filter }),
       })
         .then((r) => r.json())
-        .then((data) => {return (
-          
-        )});
+        .then((data) => setKittens(data.kittens));
     } else {
-      
+      fetch("/get-kittens")
+        .then((r) => r.json())
+        .then((data) => setKittens(data.kittens));
     }
   }
 
