@@ -14,16 +14,54 @@ db.once('open',  ()=> {
 });
 
 const kittySchema = new mongoose.Schema({
-    name:String
+    name: String,
+    imgSrc: String,
+    age: Number,
 });
+
+  
 
 const Kitten = mongoose.model('kittySchema', kittySchema);
 
 let kittens = [{name:'mosh'}, {name:'pilpil'}];
 
-Kitten.insertMany(kittens, data=>{console.log(data)})
+Kitten.find({ name: 'mosh'}, function (err, docs) {console.log(docs.length)});
 
+// Kitten.insertMany(kittens, data=>{console.log(data)})
 
+  
+  app.post("/send-kitten-name", (req, res) => {
+    const { name, age, src } = req.body;
+    var add = new Kitten({ name: name, age: age, imgSrc: src });
+    add.save().then(() => {
+      console.log("add " + name + " to the db");
+    });
+    console.log(name);
+    res.send({ ok: true });
+  });
+  
+  app.get("/get-kittens-age", (req, res) => {
+    const { age } = req.query;
+    try {
+      //get from DB
+      Kitten.find({ age: age }).then((docs) => {
+        res.send({ kittens: docs });
+      });
+    } catch (e) {
+      res.send({ error: e });
+    }
+  });
+  app.get("/get-kittens", (req, res) => {
+    const { name } = req.query;
+    try {
+      //get from DB
+      Kitten.find({ name: name }).then((docs) => {
+        res.send({ kittens: docs });
+      });
+    } catch (e) {
+      res.send({ error: e });
+    }
+  });
 
 const PORT = process.env.PORT || 3006;
 
