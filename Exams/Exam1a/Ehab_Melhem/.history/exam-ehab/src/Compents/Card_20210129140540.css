@@ -1,0 +1,6 @@
+.card > img {
+  width: 100px;
+}
+.card {
+  display: flex;
+}
