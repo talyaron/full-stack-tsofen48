@@ -4,8 +4,16 @@ app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.net/tsofn48', { useNewUrlParser: true, useUnifiedTopology: true });
 
-require('dotenv').config()
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open',  ()=> {
+   console.log('we are connected to DB')
+});
+
+
 
 
 
