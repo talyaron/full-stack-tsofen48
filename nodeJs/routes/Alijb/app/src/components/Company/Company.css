@@ -1,0 +1,9 @@
+.main {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: large;
+}
+
+.p {
+  color: yellow;
+}
