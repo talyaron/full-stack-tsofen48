@@ -56,7 +56,7 @@ app.post("/send-kitten-name", (req, res) => {
       res.send({ ok: false, error: e });
     }
   } catch (error) {
-    res.send({ ok: false, error: e });
+    res.send({ ok: false, error: error });
   }
 });
 
@@ -70,7 +70,7 @@ app.post("/get-kitten-filter", (req, res) => {
       res.send({ kittens: docs });
     });
   } catch (error) {
-    res.send({ ok: false, error: e });
+    res.send({ ok: false, error: error });
   }
 });
 
