@@ -32,10 +32,7 @@ let kittens = [{ name: "asd" }, { name: "sad" }];
 
 app.post("/send-kitten-name", (req, res) => {
   const { name } = req.body;
-  var add = new Kitten({ name: name });
-  add.save().then(() => {
-    console.log("add " + name + "to the db");
-  });
+const 
   console.log(name);
   res.send({ ok: true });
 });
