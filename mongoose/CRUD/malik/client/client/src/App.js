@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+
+//import components
+
 
 function App() {
+
+  function handleSubmit(e){
+    e.preventDefault();
+    const name = e.target.children.name.value;
+    e.target.children.name.value = '';
+    
+    fetch('/send-kitten-name',{
+      method:'post',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({name})
+    }).then(r=>r.json())
+    .then(data=>console.log(data))
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form onSubmit={handleSubmit}>
+        <input type='text' placeholder='kitten name' name='name'></input>
+      </form>
     </div>
   );
 }
