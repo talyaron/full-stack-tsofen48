@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import CatCard from "./components/CatCard/CatCard";
 
 //import components
-
 function App() {
   const [kittens, setKittens] = useState([]);
 
@@ -14,17 +13,23 @@ function App() {
   }, []);
 
   function handleFilter(e) {
+    e.preventDefault();
     const filter = e.target.children.filter.value;
-
-    fetch("/get-kitten-filter", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ filter }),
-    })
-      .then((r) => r.json())
-      .then((data) => setKittens(data.kittens));
+    if (filter !== "") {
+      fetch("/get-kitten-filter", {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ filter }),
+      })
+        .then((r) => r.json())
+        .then((data) => {return (
+          
+        )});
+    } else {
+      
+    }
   }
 
   function handleSubmit(e) {
