@@ -14,6 +14,26 @@ db.once('open',  ()=> {
 });
 
 
+const Kittyschema = new mongoose.Schema({
+    name: String
+  
+  }); 
+  
+  const Kitten = mongoose.model('kittyschema', Kittyschema); 
+  
+  const pilpel = new Kitten({name:'pilpel'}); 
+//   pilpel.save().then(()=>console.log('saved to DB'));
+  
+  let kittens = [{name:'asd'},{name:"sad"}];
+
+
+
+  app.post('/send-kitten-name',(req, res)=>{
+    const {name} = req.body;
+    
+    console.log(name)
+    res.send({ok:true})
+})
 
 
 

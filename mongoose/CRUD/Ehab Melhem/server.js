@@ -16,6 +16,7 @@ db.once("open", () => {
   console.log("we are connected to DB");
 });
 
+
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {
