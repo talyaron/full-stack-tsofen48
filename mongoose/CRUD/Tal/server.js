@@ -15,8 +15,9 @@ db.once('open', () => {
 
 
 const Kittyschema = new mongoose.Schema({
-    name: String
-
+    name: String,
+    imgSrc: String,
+    age: Number
 });
 
 const Kitten = mongoose.model('kittyschema', Kittyschema);
@@ -28,6 +29,8 @@ let kittens = [{ name: 'asd' }, { name: "sad" }];
 
 
 
+//create
+
 app.post('/send-kitten-name', (req, res) => {
     try {
         const { name } = req.body;
@@ -36,14 +39,27 @@ app.post('/send-kitten-name', (req, res) => {
 
         if (name.length > 0) {
             let newKitten = new Kitten({ name });
-            newKitten.save().then(()=>console.log('kiten saved'))
+            newKitten.save().then(() => console.log('kiten saved'))
             res.send({ ok: true })
-        } else{
+        } else {
             throw new Error('name is empty string')
         }
-        
+
     } catch (e) {
         res.send({ ok: false, error: e })
+    }
+})
+
+//read
+app.get('/get-kittens', (req, res) => {
+
+    try {
+        //get from DB
+        Kitten.find({ name: 'pilpel' }).then(docs => {
+            res.send({ kittens: docs });
+        })
+    } catch (e) {
+        res.send({ error: e })
     }
 })
 
