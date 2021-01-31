@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD:Exams/Exam1a/AliJb/api/package.json
   "bugs": {
     "url": "https://github.com/MosaabRkia/TsofenHeroku/issues"
   },
@@ -21,5 +22,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "node": "^15.4.0"
+=======
+  "dependencies": {
+    "express": "^4.17.1"
+>>>>>>> rema:Exams/Exam1a/Rema2/package.json
   }
 }
