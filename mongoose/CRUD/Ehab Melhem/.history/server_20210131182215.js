@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/ehabmelhem",
+  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/test",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
