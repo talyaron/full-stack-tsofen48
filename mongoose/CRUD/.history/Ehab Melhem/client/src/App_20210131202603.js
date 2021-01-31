@@ -28,6 +28,8 @@ function App() {
       .then((data) => {
         console.log(data);
       });
+    setSrc("");
+    setAge(0);
   }
   const ByAge = (e) => {
     fetch(`/get-kittens-age?age=${age}`)

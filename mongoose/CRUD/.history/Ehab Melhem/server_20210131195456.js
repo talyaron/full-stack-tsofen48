@@ -36,34 +36,23 @@ app.post("/send-kitten-name", (req, res) => {
   const { name, age, src } = req.body;
   var add = new Kitten({ name: name, age: age, imgSrc: src });
   add.save().then(() => {
-    console.log("add " + name + " to the db");
+    console.log("add " + name + "to the db");
   });
   console.log(name);
   res.send({ ok: true });
 });
 
-app.get("/get-kittens-age", (req, res) => {
-  const { age } = req.query;
-  try {
-    //get from DB
-    Kitten.find({ age: age }).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
 app.get("/get-kittens", (req, res) => {
-  const { name } = req.query;
   try {
     //get from DB
-    Kitten.find({ name: name }).then((docs) => {
+    Kitten.find({ name: "pilpel" }).then((docs) => {
       res.send({ kittens: docs });
     });
   } catch (e) {
     res.send({ error: e });
   }
 });
+
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {

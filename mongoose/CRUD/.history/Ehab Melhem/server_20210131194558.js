@@ -18,8 +18,6 @@ db.once("open", () => {
 
 const Kittyschema = new mongoose.Schema({
   name: String,
-  imgSrc: String,
-  age: Number,
 });
 
 const Kitten = mongoose.model("kittyschema", Kittyschema);
@@ -33,37 +31,15 @@ const rwed = new Kitten({ name: "rwed" });
 let kittens = [{ name: "asd" }, { name: "sad" }];
 
 app.post("/send-kitten-name", (req, res) => {
-  const { name, age, src } = req.body;
-  var add = new Kitten({ name: name, age: age, imgSrc: src });
+  const { name } = req.body;
+  var add = new Kitten({ name: name });
   add.save().then(() => {
-    console.log("add " + name + " to the db");
+    console.log("add " + name + "to the db");
   });
   console.log(name);
   res.send({ ok: true });
 });
 
-app.get("/get-kittens-age", (req, res) => {
-  const { age } = req.query;
-  try {
-    //get from DB
-    Kitten.find({ age: age }).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
-app.get("/get-kittens", (req, res) => {
-  const { name } = req.query;
-  try {
-    //get from DB
-    Kitten.find({ name: name }).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {
@@ -71,3 +47,15 @@ app.listen(PORT, () => {
 });
 //  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/test"
 //read
+
+// app.get('/get-kittens', (req, res) => {
+
+//   try {
+//       //get from DB
+//       Kitten.find({ name: 'pilpel' }).then(docs => {
+//           res.send({ kittens: docs });
+//       })
+//   } catch (e) {
+//       res.send({ error: e })
+//   }
+// })

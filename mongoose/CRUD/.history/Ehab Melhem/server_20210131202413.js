@@ -36,7 +36,7 @@ app.post("/send-kitten-name", (req, res) => {
   const { name, age, src } = req.body;
   var add = new Kitten({ name: name, age: age, imgSrc: src });
   add.save().then(() => {
-    console.log("add " + name + " to the db");
+    console.log("add " + name + "to the db");
   });
   console.log(name);
   res.send({ ok: true });

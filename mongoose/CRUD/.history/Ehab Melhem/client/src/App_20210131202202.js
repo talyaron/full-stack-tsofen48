@@ -28,6 +28,8 @@ function App() {
       .then((data) => {
         console.log(data);
       });
+    setSrc("");
+    setAge(0);
   }
   const ByAge = (e) => {
     fetch(`/get-kittens-age?age=${age}`)
@@ -66,10 +68,8 @@ function App() {
           placeholder="kitten img"
           name="img"
         ></input>
-        <button type="submit">submit</button>
       </form>
-      <button onClick={ByAge}>ByAGE</button>
-      <button onClick={ByName}>ByName</button>
+
       {all.map((elm) => (
         <div>
           <h3>
