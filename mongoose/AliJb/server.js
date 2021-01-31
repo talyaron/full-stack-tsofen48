@@ -18,6 +18,8 @@ db.once("open", () => {
 
 const Kittyschema = new mongoose.Schema({
   name: String,
+  imgSrc: String,
+  age: Number,
 });
 
 const Kitten = mongoose.model("kittyschema", Kittyschema);
@@ -30,17 +32,60 @@ const pilpel = new Kitten({ name: "pilpel" });
 // Cat.insertMany(kittens, (doc) => {
 //   console.log(doc);
 // });
+//   Cat.insertMany([(name: name)], (doc) => {
+//     console.log(doc);
+//   });
 
 let kittens = [{ name: "asd" }, { name: "sad" }];
 
+//insert
 app.post("/send-kitten-name", (req, res) => {
-  const { name } = req.body;
-  const userKitten = new Kitten({ name: name });
-  userKitten.save().then(() => console.log(name, "saved to db"));
-  //   Cat.insertMany([(name: name)], (doc) => {
-  //     console.log(doc);
-  //   });
-  res.send({ ok: true, name: name });
+  try {
+    const { name, age, imgSrc } = req.body;
+
+    if (typeof name !== "string") {
+      throw new Error("name is not a String");
+    }
+
+    if (name.length > 0) {
+      const userKitten = new Kitten({ name, imgSrc, age });
+      userKitten.save().then(() => console.log(name, "saved to db"));
+
+      res.send({ ok: true, name: name });
+    } else {
+      res.send({ ok: false, error: e });
+    }
+  } catch (error) {
+    res.send({ ok: false, error: error });
+  }
+});
+
+//filter
+app.post("/get-kitten-filter", (req, res) => {
+  try {
+    const { filter } = req.body;
+
+    Kitten.find({ name: filter }).then((docs) => {
+      console.log(docs);
+      res.send({ kittens: docs });
+    });
+  } catch (error) {
+    res.send({ ok: false, error: error });
+  }
+});
+
+//get read
+
+//read
+app.get("/get-kittens", (req, res) => {
+  try {
+    //get from DB
+    Kitten.find({}).then((docs) => {
+      res.send({ kittens: docs });
+    });
+  } catch (e) {
+    res.send({ error: e });
+  }
 });
 
 const PORT = process.env.PORT || 3006;
