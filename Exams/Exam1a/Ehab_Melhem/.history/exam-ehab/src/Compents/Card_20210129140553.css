@@ -1,0 +1,7 @@
+.card > img {
+  width: 70px;
+}
+.card {
+  display: flex;
+  align-items: center;
+}

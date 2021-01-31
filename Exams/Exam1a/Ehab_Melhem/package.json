@@ -9,5 +9,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "parser": "^0.1.4"
+  }
 }
