@@ -9,10 +9,29 @@ mongoose.connect('mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.ne
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open',  ()=> {
-   console.log('we are connected to DB')
+db.once('open', () => {
+    console.log('we are connected to DB')
 });
 
+
+const kittySchema = new mongoose.Schema({
+    name: String,
+    imgSrc:String
+});
+
+const Kitten = mongoose.model('kittySchema', kittySchema);
+
+const plipel = new Kitten({name:'pilpel'})
+//create
+// plipel.save().then(doc=>{console.log(doc)})
+
+let kittens = [{name:'mosh'}, {name:'grafield'}];
+
+// Kitten.insertMany(kittens, (doc)=>{
+//     console.log(doc)
+// })
+
+// app.
 
 
 
