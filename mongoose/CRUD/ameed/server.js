@@ -27,13 +27,25 @@ let kittens = [{name:'asd'},{name:"sad"}];
 
 
 
-app.post('/send-kitten-name',(req, res)=>{
-  const {name} = req.body;
-  
-  console.log(name)
-  res.send({ok:true})
-})
 
+app.post('/send-kitten-name', (req, res) => {
+  try {
+      const { name } = req.body;
+
+      if (typeof name !== 'string') throw new Error('name is not a string')
+
+      if (name.length > 0) {
+          let newKitten = new Kitten({ name });
+          newKitten.save().then(()=>console.log('kiten saved'))
+          res.send({ ok: true })
+      } else{
+          throw new Error('name is empty string')
+      }
+      
+  } catch (e) {
+      res.send({ ok: false, error: e })
+  }
+})
 
 
 
