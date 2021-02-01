@@ -1,9 +1,5 @@
-var randomId = function () {
-  // Math.random should be unique because of its seeding algorithm.
-  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-  // after the decimal.
-  return "_" + Math.random().toString(36).substr(2, 9);
-};
+let randomId = () => "_" + Math.random().toString(36).substr(2, 9);
+
 let articlesAboutDirector = [
   {
     id: randomId(),
@@ -35,4 +31,33 @@ let articlesAboutDirector = [
   },
 ];
 
-module.exports =  articlesAboutDirector ;
+// handlers
+exports.getArticles = (req, res) => {
+  res.send({ articles: articlesAboutDirector, isAdmin: true });
+};
+
+exports.getArticleById = (req, res) => {
+  res.send({
+    status: "this functions is not ready yet - it's under constructions",
+    message: "This route functionality is not yet defined!",
+  });
+};
+
+exports.createArticle = (req, res) => {
+  res.send({
+    status: "this functions is not ready yet - it's under constructions",
+    message: "This route functionality is not yet defined!",
+  });
+};
+exports.updateArticle = (req, res) => {
+  res.send({
+    status: "this functions is not ready yet - it's under constructions",
+    message: "This route functionality is not yet defined!",
+  });
+};
+exports.deleteArticle = (req, res) => {
+  res.send({
+    status: "this functions is not ready yet - it's under constructions",
+    message: "This route functionality is not yet defined!",
+  });
+};
