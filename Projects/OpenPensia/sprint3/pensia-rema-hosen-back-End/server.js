@@ -2,40 +2,18 @@ const express = require("express");
 const app = express();
 var cors = require("cors");
 var cookieParser = require("cookie-parser");
-const port = process.env.PORT;
-let articlesAboutDirector = require("./routes/article");
-
-
-let admins=[{userName:"rema",role:"admin"}];
-
-app.use(cookieParser());
+const articleRouter = require("./routes/articlesRoute");
+const usersRouter = require("./routes/usersRoute");
 
 app.use(cors());
 app.use(express.json());
-app.get("/",userType, function (req, res) {
+app.use(cookieParser());
 
-  
-  res.send({articlesAboutDirector,isAdmin:true});
-});
+// app routes
+app.use("/article", articleRouter);
+app.use("/users", usersRouter);
 
-
-function userType (req,res,next){
-  console.log('cookie',req.cookie);
-  let userName = req.query.userName;
-  let userIsAdmin = admins.find(user =>{
-    return user.userName == userName;
-  })
-  let isAdmin = false;
-
-  if(userIsAdmin){
-    isAdmin = true;
-    res.cookie('role', userIsAdmin.role, { maxAge: 90000000000, httpOnly: true });
-    next()
-  }else{
-    res.cookie('role', 'public', { maxAge: 90000000000, httpOnly: true });
-  }
-  res.send({articlesAboutDirector:[],isAdmin})
-
-}
-
-app.listen(port || 3000);
+app.listen(
+  process.env.PORT || 3000,
+  () => `Server running on port ${process.env.PORT || 3000} `
+);
