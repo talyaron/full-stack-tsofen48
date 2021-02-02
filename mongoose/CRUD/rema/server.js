@@ -15,27 +15,55 @@ db.once('open',  ()=> {
 
 
 const Kittyschema = new mongoose.Schema({
-    name: String
+    name: String,
+    imgSrc: String,
+    age: Number
   
   }); 
   
   const Kitten = mongoose.model('kittyschema', Kittyschema); 
   
-  const pilpel = new Kitten({name:'pilpel'}); 
+  // const pilpel = new Kitten({name:'pilpel'}); 
 //   pilpel.save().then(()=>console.log('saved to DB'));
   
-  let kittens = [{name:'asd'},{name:"sad"}];
+  // let kittens = [{name:'asd'},{name:"sad"}];
 
 
 
   app.post('/send-kitten-name',(req, res)=>{
-    const {name} = req.body;
-    const caati = new Kitten({name:name}); 
-    caati.save().then(()=>console.log('saved to DB'));
-    console.log(name)
+    const {cat} = req.body;
+
+    const catii = new Kitten({name:cat.name,imgSrc:cat.image,age:cat.age}); 
+    catii.save().then(()=>console.log('saved to DB'));
     res.send({ok:true})
 })
 
+
+app.post('/search-by-name',(req, res)=>{
+  const name = req.body;
+  try {
+    //get from DB
+    console.log(name);
+    Kitten.find({name:name}).then(docs => {
+        res.send({ kittens: docs });
+    })
+} catch (e) {
+    res.send({ error: e })
+}
+  res.send({ok:true})
+})
+
+// app.get('/get-kittens', (req, res) => {
+
+//   try {
+//       //get from DB
+//       Kitten.find(req.name).then(docs => {
+//           res.send({ kittens: docs });
+//       })
+//   } catch (e) {
+//       res.send({ error: e })
+//   }
+// })
 
 
 const PORT = process.env.PORT || 3006;
