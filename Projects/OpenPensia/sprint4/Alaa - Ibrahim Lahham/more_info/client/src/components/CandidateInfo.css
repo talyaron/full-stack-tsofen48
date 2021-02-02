@@ -1,0 +1,21 @@
+.company-name{
+    color: rgb(167, 172, 188);
+    font-size: 20px;
+    margin-bottom: 10%;
+    padding-top:3%;
+  }
+  
+  .candidate-img{ 
+    object-fit: cover;
+    width: 200px ;
+    height: 200px;
+    border-radius: 50%;
+    border: solid  rgb(167, 172, 188);
+  
+  }
+  
+  .candidate-name{
+    color: rgb(253, 253, 253);
+    font-size: 24px;
+    padding: 5%;
+  }

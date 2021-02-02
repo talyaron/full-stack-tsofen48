@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  /* position: relative; */
+  /* font-family: ; */
 }
 
 .App-header {
@@ -10,11 +10,8 @@
   background-color: rgb(61, 66, 87);
   display: block;
   top:0;
-  
 }
-body{
-  /* position:absolute; */
-}
+
 .add-info-btn{
   background-color:rgb(61, 66, 87);
   color: rgb(226, 227, 230);
@@ -32,16 +29,14 @@ body{
   background-color:rgb(49, 53, 77);
   
 }
-.company-name{
+/* moved to CandidateInfo component */
+/* .company-name{
   color: rgb(167, 172, 188);
   font-size: 20px;
   margin-bottom: 10%;
   padding-top:3%;
 }
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 
-=======
 .candidate-img{ 
   object-fit: cover;
   width: 200px ;
@@ -50,23 +45,14 @@ body{
   border: solid  rgb(167, 172, 188);
 
 }
->>>>>>> Stashed changes
-=======
-.candidate-img{ 
-  object-fit: cover;
-  width: 200px ;
-  height: 200px;
-  border-radius: 50%;
-  border: solid  rgb(167, 172, 188);
 
-}
->>>>>>> main
 .candidate-name{
   color: rgb(253, 253, 253);
   font-size: 24px;
   padding: 5%;
-}
-nav{
+} */
+/* moved to NavigationBar component */
+/* nav{
   background-color: white;
   width: 100%;
   text-align: center;
@@ -99,4 +85,4 @@ li{
 }
 .non-active-nav{
   color: rgb(167, 172, 188);
-}
+} */
