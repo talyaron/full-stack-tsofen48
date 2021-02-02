@@ -5,17 +5,22 @@ import SendVote from "./components/SendVote";
 import p1 from "./p1.PNG";
 import p2 from "./p2.PNG";
 import p3 from "./p3.PNG";
+import {useState,useEffect} from 'react';
 
-const directors = [{ img : p1, name : "רונית אברמוזון רוקח", unlikeColor: false, likeColor : true },
-{ img : p2, name : "עיסאווי פריג", unlikeColor: true, likeColor : false },
-{ img : p3, name : " דליה לב", unlikeColor: false, likeColor : true }]
+// const directors = [{ img : p1, name : "רונית אברמוזון רוקח", unlikeColor: false, likeColor : true },
+// { img : p2, name : "עיסאווי פריג", unlikeColor: true, likeColor : false },
+// { img : p3, name : " דליה לב", unlikeColor: false, likeColor : true }]
 
 function App() {
+  const [directors,setDirectors] = useState([]);
+  useEffect(()=>{
+    fetch('/voting/get-director-information').then(r=>r.json()).then(data=>{
+      console.log(data);
+      setDirectors(data);
+    })
+  },[])
   return (
-<<<<<<< Updated upstream
     <body>
-=======
->>>>>>> Stashed changes
     <div className="container">
       <Header />
       <h1 id="directir_select">בחר/י שני דירקטורים רגילים</h1>
@@ -32,10 +37,7 @@ function App() {
       <SendVote />
 
     </div>
-<<<<<<< Updated upstream
     </body>
-=======
->>>>>>> Stashed changes
 
   );
 }
