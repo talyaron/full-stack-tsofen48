@@ -15,13 +15,15 @@ db.once('open',  ()=> {
 
 
 const Kittyschema = new mongoose.Schema({
-    name: String
+    name: String,
+    imgSrc: String,
+    age:Number
   
   }); 
   
   const Kitten = mongoose.model('kittyschema', Kittyschema); 
   
-  const pilpel = new Kitten({name:'pilpel'}); 
+  //const pilpel = new Kitten({name:'pilpel', imgSrc: String,age:Number}); 
   //pilpel.save().then(()=>console.log('saved to DB'));
   
   let kittens = [{name:'asd'},{name:"sad"}];
@@ -29,10 +31,28 @@ const Kittyschema = new mongoose.Schema({
 
 
   app.post('/send-kitten-name',(req, res)=>{
-    const {name} = req.body;
-    
-    console.log(name)
-    res.send({ok:true})
+    try {
+        const { name } = req.body.name;
+        const { imgSrc } = req.body.imgSrc;
+        const { age } = req.body.age;
+
+        if (typeof name !== 'string') {
+          console.log('no length')
+          throw 'name is not a string'
+        }
+
+        if (name.length > 0) {
+            let newKitten = new Kitten({ name, imgSrc, age });
+            newKitten.save().then(()=>console.log('kiten saved'))
+            res.send({ ok: true })
+        } else{
+          console.log('no length')
+            throw 'n error occured'
+        }
+        
+    } catch (e) {
+        res.send({ ok: false })
+    }
 })
 
 
