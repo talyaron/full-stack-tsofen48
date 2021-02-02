@@ -13,12 +13,39 @@ db.once('open',  ()=> {
    console.log('we are connected to DB')
 });
 
-const kittySchema = new mongoose.Schema({
-    name: String
-  });
+const Kittyschema = new mongoose.Schema({
+  name: String
 
-  const Kitten = mongoose.model('Kitten', kittySchema);
+}); 
 
+const Kitten = mongoose.model('kittyschema', Kittyschema); 
+
+const pilpel = new Kitten({name:'pilpel2'}); 
+  // pilpel.save().then(()=>console.log('saved to DB'));
+
+let kittens = [{name:'asd'},{name:"sad"}];
+
+
+
+
+app.post('/send-kitten-name', (req, res) => {
+  try {
+      const { name } = req.body;
+
+      if (typeof name !== 'string') throw new Error('name is not a string')
+
+      if (name.length > 0) {
+          let newKitten = new Kitten({ name });
+          newKitten.save().then(()=>console.log('kiten saved'))
+          res.send({ ok: true })
+      } else{
+          throw new Error('name is empty string')
+      }
+      
+  } catch (e) {
+      res.send({ ok: false, error: e })
+  }
+})
 
 
 

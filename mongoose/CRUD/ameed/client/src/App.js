@@ -7,12 +7,29 @@ import React from 'react';
 
 function App() {
 
+  function handleSubmit(e){
+    e.preventDefault();
+    const name = e.target.children.name.value;
+    e.target.children.name.value = '';
+    
+    fetch('/send-kitten-name',{
+      method:'post',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({name})
+    }).then(r=>r.json())
+    .then(data=>console.log(data))
+  }
   
   return (
     <div className="App">
-      hi
+      <form onSubmit={handleSubmit}>
+        <input type='text' placeholder='kitten name' name='name'></input>
+      </form>
     </div>
   );
-}
+  }
 
+  
 export default App;
