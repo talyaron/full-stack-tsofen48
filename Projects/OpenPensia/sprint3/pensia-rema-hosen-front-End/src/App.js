@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ExtraDetails from './components/ExtraDetails/ExtraDetails';
 import Details from './components/Details/Details';
+import AddArticle from './components/AddArticle/AddArticle';
 
 export default function App() {
   let setPressed= (e)=>{
@@ -28,7 +29,7 @@ export default function App() {
               <Link onClick={setPressed}  to="/details">סיכום פרטים</Link>
             </li>
             <li>
-              <Link onClick={setPressed} to="/extraDetails">עוד מידע</Link>
+              <Link onClick={setPressed} to="/extra-details">עוד מידע</Link>
             </li>
             <li>
               <Link onClick={setPressed}  to="/vote">ניתוני הצבעה</Link>
@@ -40,7 +41,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/extraDetails">
+          <Route path="/extra-details">
             <ExtraDetails />
           </Route>
           <Route path="/vote">
@@ -48,6 +49,9 @@ export default function App() {
           </Route>
           <Route path="/details">
             <Details />
+          </Route>
+          <Route path="/add-article">
+            <AddArticle></AddArticle>
           </Route>
         </Switch>
       </div>
