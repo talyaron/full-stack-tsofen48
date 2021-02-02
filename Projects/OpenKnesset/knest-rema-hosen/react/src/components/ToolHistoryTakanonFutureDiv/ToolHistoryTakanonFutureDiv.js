@@ -2,10 +2,6 @@ import React,{useState,useEffect} from "react";
 import "./ToolHistoryTakanonFutureDiv.css";
 import Tooltip from 'react-tooltip-lite';
 
-// const TOOL = {title:'כונוס הכנסת בזמן הפגרה',text:'הגשת דרישה ל יו"ר הכנסת על ידי 25 ח"כיים לכינוס  מליאה מיוחדת שתדון ב הצעה לסדר היום.'};
-// const HISTORY=['15.7.19 הצעה לסדר היום בנושא: "הכישלון הלאומי המתמשך בקליטת יהודי אתיופיה"','10.7.19  הצעה לסדר היום בנושא: "הצורך הדחוף לבחון את המחדלים..'];
-// const FUTURE=['22.8.19 הצעה לסדר היום בנושא: "תקצוב עמותות העוסקת בהנגשת מידע פרלמנטרי"'];
-// const TAKANON={takanon:'כינוס הכנסת בתקופת הפוגרה(תיקונים מספר 107,121 ו-128)',text:'21. (א)  25 חברי הכנסת הדורשים לכנס את הכנסת בתקופת הפגרה , בהתאם לסעיף 9(ב) לחוק הכנסת , רשאים לפרט בדרישתם נושא אחד או שני נושאים ; יושב ראש הכנסת יעמיד את ..'};
 
 export const ToolHistoryTakanonFutureDiv = () => {
 
@@ -14,19 +10,25 @@ export const ToolHistoryTakanonFutureDiv = () => {
   const [FUTURE, setFUTURE] = useState([]);
   const [TAKANON, setTAKANON] = useState({});
 
-  // useEffect(() => {
+  useEffect(() => {
 
-    
-  //     fetch(`https://pensia-rema-hosen-backend.herokuapp.com/${window.location.search}`).then(response=>{
-    
-  //   return response.json()}).then(res=>{
-     
-  //     setArticlesDetails(res.articlesAboutDirector);
-  //     setShowMoreInfoBtn(res.isAdmin);
-     
-  //   }) 
+    fetch('/get-tool')
+    .then(r=>r.json())
+    .then(data=>setATOOL(data.TOOL))
+  
+    fetch('/get-history')
+    .then(r=>r.json())
+    .then(data=>setHISTORY(data.HISTORY))
 
-  // }, [])
+    fetch('/get-future')
+    .then(r=>r.json())
+    .then(data=>setFUTURE(data.FUTURE))
+
+    fetch('/get-takanon')
+    .then(r=>r.json())
+    .then(data=>setTAKANON(data.TAKANON))
+
+  }, [])
  
 
     return (
