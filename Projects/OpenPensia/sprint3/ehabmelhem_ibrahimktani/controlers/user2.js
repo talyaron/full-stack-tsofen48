@@ -3,20 +3,37 @@
 // import p3 from "./ibraheem/src/p3.PNG";
 const express = require("express");
 const app = express();
-
+// const p1 = require("../ibraheem/src/p1.PNG");
 const user = {
-  company : "בנק הפועלים",
-  perception : 18.3,
+  company: "בנק הפועלים",
+  perception: 18.3,
 };
 
-const directors = [{ img : "p1.PNG", name : "רונית אברמוזון רוקח", unlikeColor: false, likeColor : true },
-{ img : "p2.PNG", name : "עיסאווי פריג", unlikeColor: true, likeColor : false },
-{ img : "p3.PNG", name : " דליה לב", unlikeColor: false, likeColor : true }]
+const directors = [
+  {
+    img: "/p1.PNG",
+    name: "רונית אברמוזון רוקח",
+    unlikeColor: false,
+    likeColor: true,
+  },
+  { img: "/p2.PNG", name: "עיסאווי פריג", unlikeColor: true, likeColor: false },
+  { img: "/p3.PNG", name: " דליה לב", unlikeColor: false, likeColor: true },
+];
+exports.checkUser = (req, res) => {
+  let index = 0;
+  if (req.cookies.role === "public") {
+    index = 1;
+    res.send({  index: index });
+  } else {
+    index = -1;
+    res.send({ index: index });
+  }
+};
 
 exports.sendHeaderInformation = (req, res, next) => {
-    res.send(user);
+  res.send(user);
 };
 
 exports.sendDirectorInformation = (req, res, next) => {
-    res.send(directors);
+  res.send(directors);
 };
