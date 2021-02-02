@@ -5,7 +5,7 @@ function CandidateInfo(props) {
     return (
         <div>
             <div className='company-name'>
-                {candidateInfo.companyName}{console.log(props)}
+                {candidateInfo.companyName}
             </div>
             <img className='candidate-img' alt='candidate' src={candidateInfo.imgSrc} />
             <div className='candidate-name'>
