@@ -1,0 +1,32 @@
+.contaner {
+  width: 390px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+.contaner > p {
+  text-align: center;
+  margin-top: 40px;
+}
+.thump {
+  border: 1px solid black;
+  font-size: 55px !important;
+  margin: 0 auto !important;
+}
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contaner {
+    position: relative;
+    top: 0px;
+  }
+}
