@@ -14,7 +14,7 @@ const companies = [
 
   exports.getCompanies =  (req, res) => {
 
-   
+
 
 
     res.send({ ok: true, companies });
