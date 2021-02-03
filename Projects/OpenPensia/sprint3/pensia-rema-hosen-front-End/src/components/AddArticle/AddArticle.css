@@ -1,0 +1,42 @@
+.addArticle input,
+label {
+  display: block;
+}
+.addArticle {
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.addArticle input {
+  width: 350px;
+  height: 35px;
+  display: block;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+
+.addArticle label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.addArticle button {
+  width: 300px;
+  height: 45px;
+  border: solid 2px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 15px;
+  right: 25px;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  outline: none;
+}
+
+.addArticle button:hover {
+  color: black;
+  background-color: white;
+}

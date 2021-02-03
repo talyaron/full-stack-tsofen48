@@ -16,21 +16,40 @@ function App() {
 
   useEffect(() => {
 
-    fetch('/get-articles')
+    fetch('/articles/get-Articles')
       .then(r => r.json())
-      .then(articles => setArticles(articles))
+      .then(articles => {
+        if(articles.success!==false)
+       { console.log("am in"); setArticles(articles.articles)}
+      }
+        );
 
-    fetch('/get-nav-tabs')
+    fetch('/navTabs/get-NavTabs')
       .then(r => r.json())
-      .then(navTabs => setNavTabs(navTabs));
+      .then(navTabs =>{ 
+        if(navTabs.success!==false)
+          {  console.log("am in");setNavTabs(navTabs.navTabs);}
+      });
 
-    fetch('/send-candidate-info', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ candidateName })
-    })
+      fetch('/candidate/get-CandidateInfo')
       .then(r => r.json())
-      .then(candidateInfo => setCandidateInfo(candidateInfo))
+      .then(candidateInfo =>{
+        if(candidateInfo.success!==false){
+          console.log("am in");
+         setCandidateInfo(candidateInfo[0])
+        }else{
+          alert(candidateInfo.err);
+        }
+        });
+
+
+  //  fetch('/candidate/get-CandidateInfo', {
+ //     method: 'POST',
+  //    headers: { 'Content-Type': 'application/json' },
+  //    body: JSON.stringify({ candidateName })
+   // })
+   //   .then(r => r.json())
+    //  .then(candidateInfo => console.log(candidateInfo.candidateInfo))
 
   }, []);
 
