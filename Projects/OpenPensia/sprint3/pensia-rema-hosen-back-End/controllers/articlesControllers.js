@@ -1,39 +1,38 @@
-let randomId = () => "_" + Math.random().toString(36).substr(2, 9);
+const mongoose = require("mongoose");
+mongoose.connect(
+  "mongodb+srv://pensia:RZzwlzbt6LkEY6OW@first-cluster.s9zoz.mongodb.net/open-pensia",
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
+const { ObjectId } = require("mongodb");
 
-let articlesAboutDirector = [
-  {
-    id: randomId(),
-    articleSource: "כתבה מוואלה",
-    articleSubTitle: "כתבה על שיפור מכירות ובמחסני חשמל ",
-    linkToArticle:
-      "https://www.pinterest.com/pin/461196818093484412/?d=t&mt=signup",
-  },
-  {
-    id: randomId(),
-    articleSource: "כתבה מוואלה",
-    articleSubTitle: "כתבה על שיפור מכירות ובמחסני חשמל ",
-    linkToArticle:
-      "https://www.pinterest.com/pin/461196818093484412/?d=t&mt=signup",
-  },
-  {
-    id: randomId(),
-    articleSource: "כתבה מוואלה",
-    articleSubTitle: "כתבה על שיפור מכירות ובמחסני חשמל ",
-    linkToArticle:
-      "https://www.pinterest.com/pin/461196818093484412/?d=t&mt=signup",
-  },
-  {
-    id: randomId(),
-    articleSource: "כתבה מוואלה",
-    articleSubTitle: "כתבה על שיפור מכירות ובמחסני חשמל ",
-    linkToArticle:
-      "https://www.pinterest.com/pin/461196818093484412/?d=t&mt=signup",
-  },
-];
+const db = mongoose.connection;
+let randomId = () => "_" + Math.random().toString(36).substr(2, 9);
+let articlesAboutDirector = [];
+
+try {
+  db.on("error", console.error.bind(console, "connection error:"));
+  db.once("open", () => {
+    console.log("we are connected to DB");
+  });
+} catch (error) {
+  console.log(error);
+}
+
+const articleSchema = new mongoose.Schema({
+  articleSource: String,
+  articleSubTitle: String,
+  linkToArticle: String,
+});
+
+const Article = mongoose.model("articleSchema", articleSchema);
 
 // handlers
 exports.getArticles = (req, res) => {
-  res.send({ articles: articlesAboutDirector, isAdmin: true });
+  Article.find(function (err, articles) {
+    if (err) return console.error(err);
+
+    res.send({ articles: articles, isAdmin: true });
+  });
 };
 
 exports.getArticleById = (req, res) => {
@@ -44,10 +43,18 @@ exports.getArticleById = (req, res) => {
 };
 
 exports.createArticle = (req, res) => {
-  res.send({
-    status: "this functions is not ready yet - it's under constructions",
-    message: "This route functionality is not yet defined!",
-  });
+  let articleToAdd = {
+    articleSource: req.body.source,
+    articleSubTitle: req.body.subTitle,
+    linkToArticle: req.body.linkToArticle,
+  };
+  const article = new Article(articleToAdd);
+  try {
+    article.save().then(() => console.log("new article saved to DB"));
+    res.send({ success: true, addedArticle: articleToAdd });
+  } catch (error) {
+    res.send({ success: false, error: error });
+  }
 };
 exports.updateArticle = (req, res) => {
   res.send({

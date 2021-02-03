@@ -1,14 +1,32 @@
-// let randomId = () => "_" + Math.random().toString(36).substr(2, 9);
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://rema06:6m30hsL0v0jsdnXh@cluster0.eua4t.mongodb.net/open-knest', { useNewUrlParser: true, useUnifiedTopology: true });
 
-let HISTORY=[
-    '15.7.19 הצעה לסדר היום בנושא: "הכישלון הלאומי המתמשך בקליטת יהודי אתיופיה"','10.7.19  הצעה לסדר היום בנושא: "הצורך הדחוף לבחון את המחדלים..'
-];
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open',  ()=> {
+   console.log('we are connected to DB')
+});
 
+
+const HistorySchema = new mongoose.Schema({
+    date: String
+  }); 
+  
+  const history = mongoose.model('HistorySchema', HistorySchema); 
+
+  // const historyItem = new history({ date: '10.7.19  הצעה לסדר היום בנושא: "הצורך הדחוף לבחון את המחדלים..'});
+  // historyItem.save().then(()=>console.log('saved to DB'));
 
 // handlers
 exports.getHISTORY = (req, res) => {
-
-   res.send({ HISTORY: HISTORY});
+  try {
+    //get from DB
+    history.find({}).then((HISTORY) => {
+      res.send({ HISTORY: HISTORY});
+    });
+  } catch (e) {
+    res.send({ error: e });
+  }
   };
 
  exports.getHISTORYById = (req, res) => {

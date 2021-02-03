@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 2px -2px #ccc;
+  height: 30px;
+}
+.items {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 1px;
+  color: #a2abc7;
+  cursor: pointer;
+}
+.active {
+  color: #526196;
+  border-bottom: 2px solid #6270a0;
+}
