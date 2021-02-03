@@ -1,20 +1,41 @@
 
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://rema06:6m30hsL0v0jsdnXh@cluster0.eua4t.mongodb.net/open-knest', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open',  ()=> {
+   console.log('we are connected to DB')
+});
+
+
+const SuggestionSchema = new mongoose.Schema({
+  subject: String,
+  explanation : String,
+  member : String
+  }); 
+  
+  const suggestion = mongoose.model('SuggestionSchema', SuggestionSchema); 
+
+  // const suggestionToAdd = new suggestion({    
+  // subject:'אלימות במגזר הערבי',
+  // explanation:'....',
+  // member:'רימה'});
+
+  // suggestionToAdd.save().then(()=>console.log('saved to DB'));
+
 let randomId = () => "_" + Math.random().toString(36).substr(2, 9);
-
-let suggestions=[
-   {
-       id:randomId(),
-       subject:'אלימות במגזר הערבי',
-       explanation:'....',
-       member:'רימה'
-   }
-]
-
 
 // handlers
 exports.getSuggestions = (req, res) => {
-  
-   res.send({ Suggestions: suggestions});
+  try {
+    //get from DB
+    suggestion.find({}).then((suggestions) => {
+      res.send({ Suggestions: suggestions});
+    });
+  } catch (e) {
+    res.send({ error: e });
+  }
  
   };
 
@@ -26,16 +47,12 @@ exports.getSuggestions = (req, res) => {
  };
  exports.createSuggestions = (req, res) => {
    
-  let itemToAdd = {
-    id:randomId(),
+  const suggestionToAdd = new suggestion({    
     subject:req.body.suggestion.subject,
     explanation:req.body.suggestion.explanation,
-    member:req.body.suggestion.member};
-    suggestions.push(itemToAdd);
-  
-   res.send(suggestions);
-   
+    member:req.body.suggestion.member});
 
+  suggestionToAdd.save().then(()=>console.log('saved to DB'));
  };
  exports.updateSuggestions = (req, res) => {
    res.send({

@@ -3,6 +3,8 @@ app = express();
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(express.static("react/build"));
+
 // var cookieParser = require("cookie-parser"); 
 const toolRouter = require("./routes/toolRoute"); 
 const takanonRoute = require("./routes/takanonRoute"); 

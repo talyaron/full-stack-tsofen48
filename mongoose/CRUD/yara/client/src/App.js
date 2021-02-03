@@ -7,7 +7,7 @@ import React from 'react';
 
 function App() {
   function handleSubmit(e){
-    e.preventDefault();
+    /*e.preventDefault();
     const name = e.target.children.name.value;
     e.target.children.name.value = '';
     
@@ -18,7 +18,7 @@ function App() {
       },
       body:JSON.stringify({name})
     }).then(r=>r.json())
-    .then(data=>console.log(data))
+    .then(data=>console.log(data))*/
   }
   
   return (
