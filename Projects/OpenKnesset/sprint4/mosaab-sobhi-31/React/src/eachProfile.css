@@ -1,0 +1,75 @@
+body{
+    display:block;
+}
+#icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    
+}
+.LineInList{
+    position: relative;
+    border: 1px solid;
+    border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  padding: 26px 0px 0px 0px;
+  border: 1px solid rgba(170, 159, 159, 0.5);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+
+}
+
+#Name{
+    position: absolute;
+    right: 56px;
+    top: 34px;
+}
+#dislike{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 4px;
+    left: 121px;
+    top: 25px;
+    transform: rotate(180deg);
+transform: matrix(1, 1, 1, 1, 0);
+opacity: 1;
+}
+
+#like{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 25px;
+    left: 68px;
+    
+}
+.buttonToInfo{
+    position: absolute;
+    top: 30px;
+    left: 21px;
+    border-radius: 50px;
+    
+}
+.FullList{
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+#id{
+    font: normal normal normal 16px/21px Assistant;
+letter-spacing: 0.1px;
+color: #324483;
+opacity: 1
+}
+.buttonToInfo{
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background: #324483 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.tittleOfBars{
+    color:#324483;
+}

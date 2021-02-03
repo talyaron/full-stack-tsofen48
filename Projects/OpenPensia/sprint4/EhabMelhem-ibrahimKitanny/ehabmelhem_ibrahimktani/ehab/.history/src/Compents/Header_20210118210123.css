@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: #3d4257;
+}
+.header__text {
+  color: #a8adbd;
+}
+.header__text > h4 {
+  font-weight: 600;
+}
+.header__text {
+  width: 230px;
+  display: flex;
+  margin-left: 150px;
+  justify-content: space-between;
+}
+.avatar {
+  margin-top: 40px !important;
+  width: fit-content;
+  margin: 0 auto;
+}

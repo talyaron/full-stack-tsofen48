@@ -1,0 +1,12 @@
+.information__data > h1 {
+  font-size: 50px;
+  padding: 50px;
+  padding-top: 40px;
+}
+.information {
+  justify-content: space-between;
+  display: flex;
+}
+.info__middle {
+  border-left: 1px solid gray;
+}

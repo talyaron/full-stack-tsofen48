@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.items {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 2px solid blue;
+}
