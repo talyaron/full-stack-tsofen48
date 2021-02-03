@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rema's first site :-)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" class="input" name="img">
+        <input type="submit" class="button"  value='Add'>
+    </form>
+
+    <button class="button" onclick="getImages()">Show Images</button>
+    <div class="imagesContainer">
+        <div id="root"></div>
+    </div>
+
+    <button class="button" onclick="getSortedImages()">Sort By Scores</button>
+    <div class="SortedImagesContainer">
+        <div id="Sortedroot"></div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
