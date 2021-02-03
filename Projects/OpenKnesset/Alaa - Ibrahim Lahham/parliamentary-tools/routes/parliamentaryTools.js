@@ -23,7 +23,7 @@ try{
 function isAdmin(req, res, next) {
 
     if (req.cookies.role !== 'admin') {
-        res.send({ success: false,err:"Your not able to see the content",info:null });
+        res.send({ success: false,err:"not found!",err:"Your not able to see the content",info:null });
     } else {
         next();
     }

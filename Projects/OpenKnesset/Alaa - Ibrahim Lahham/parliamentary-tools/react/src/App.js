@@ -12,17 +12,42 @@ let userType = 'לוח מעקב';
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("/parliamentaryTools/get-parliamentaryTools")
-      .then((r) => r.json())
-      .then((data) => {
-        if(data.success==true){
-          console.log(data.info.parliamentaryTools);
-          setData(data.info.parliamentaryTools);
-        }else{
-          alert(data.err)
+ 
+      getStory();
+      async function getStory() {
+        try {
+            let parliamentaryTools = await getparliamentaryTools();
+           // let answer = await getAnswer(number);
+            //console.log(answer);
+            console.log({parliamentaryTools});
+            if (parliamentaryTools) {
+              console.log("ok Get story!");
+              setData(parliamentaryTools);
+            }
+            
+        } catch (e) {
+          console.log("not ok Get story!");
+          
+            console.log(typeof e)
+            console.error(e)
         }
-        
-      });
+    }
+      function getparliamentaryTools() {
+        return new Promise((resolve, reject) => {
+            fetch('/parliamentaryTools/get-parliamentaryTools')
+                .then(r => r.json())
+                .then(data => {
+                  if(data.success===true){
+                   // console.log(data.info.parliamentaryTools);
+                   console.log("Resolved!");
+                    resolve(data.parliamentaryTools);
+                  }else{
+                    console.log("in Reject!")
+                    reject(data.err)
+                  }
+                })
+        })
+    }
   }, []);
 
   return (
