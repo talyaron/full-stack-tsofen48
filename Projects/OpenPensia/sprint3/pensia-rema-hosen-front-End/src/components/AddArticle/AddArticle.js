@@ -8,13 +8,14 @@ export default function AddArticle() {
           e.preventDefault();
           console.log();
           let { source, subTitle, linkToArticle } = e.target.children;
+          console.log('dsfds',e.target.children);
           source = source.value;
           subTitle = subTitle.value;
           linkToArticle = linkToArticle.value;
 
           console.log(source);
 
-          fetch("/", {
+          fetch("http://localhost:3000/article", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             headers: {
               "Content-Type": "application/json",
