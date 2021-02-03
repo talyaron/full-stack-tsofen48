@@ -34,6 +34,7 @@ const ex1 = mongoose.model('Ex1', Ex1);
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 let searchResults;
 
 app.get('/searchInput',(req, res)=>{
@@ -42,10 +43,15 @@ app.get('/searchInput',(req, res)=>{
    ex1.find({name: searchtext}/*{age: searchtext}*/).then(data=>{
    res.send({data})
 =======
+=======
+>>>>>>> Stashed changes
 app.post('searchInput',(req, res)=>{
    const {searchtext} = req.body;
    ex1.find({searchtext}).then(data=>{
    res.send(data)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 })
 })
@@ -53,6 +59,7 @@ app.post('searchInput',(req, res)=>{
 
 
 const ProfilesArr =[{name:"mosaab",age:21},{name:"example",age:20}];
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
 
@@ -63,11 +70,16 @@ searchResults = doc
     })
 })*/
 =======
+=======
+>>>>>>> Stashed changes
 app.get('/GetData',(req,res)=>{
     profile.find({}).then(doc=>{
 
     })
 })
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 app.post('/GetData',(req, res)=>{
     let {name,age,SrcImage} = req.body;
@@ -82,7 +94,11 @@ app.post('/GetData',(req, res)=>{
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const PORT = process.env.PORT || 3001;
+=======
+const PORT = process.env.PORT || 3000;
+>>>>>>> Stashed changes
 =======
 const PORT = process.env.PORT || 3000;
 >>>>>>> Stashed changes
