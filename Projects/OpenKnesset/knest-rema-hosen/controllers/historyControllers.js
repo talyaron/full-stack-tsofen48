@@ -17,11 +17,6 @@ const HistorySchema = new mongoose.Schema({
   // const historyItem = new history({ date: '10.7.19  הצעה לסדר היום בנושא: "הצורך הדחוף לבחון את המחדלים..'});
   // historyItem.save().then(()=>console.log('saved to DB'));
 
-// let HISTORY=[
-//     '15.7.19 הצעה לסדר היום בנושא: "הכישלון הלאומי המתמשך בקליטת יהודי אתיופיה"','10.7.19  הצעה לסדר היום בנושא: "הצורך הדחוף לבחון את המחדלים..'
-// ];
-
-
 // handlers
 exports.getHISTORY = (req, res) => {
   try {

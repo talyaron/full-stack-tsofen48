@@ -18,8 +18,6 @@ const ToolSchema = new mongoose.Schema({
 //   const toolItem = new tool({ title: 'כונוס הכנסת בזמן הפגרה',text:'הגשת דרישה ל יו"ר הכנסת על ידי 25 ח"כיים לכינוס  מליאה מיוחדת שתדון ב הצעה לסדר היום.'});
 //   toolItem.save().then(()=>console.log('saved to DB'));
 
-// let TOOL = {title:'כונוס הכנסת בזמן הפגרה',text:'הגשת דרישה ל יו"ר הכנסת על ידי 25 ח"כיים לכינוס  מליאה מיוחדת שתדון ב הצעה לסדר היום.'};
-
 // handlers
   exports.getTOOL = (req, res) => {
     try {

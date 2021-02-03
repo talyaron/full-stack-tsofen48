@@ -19,10 +19,6 @@ const FutureSchema = new mongoose.Schema({
   // const futureItem = new future({ date: '22.8.19 הצעה לסדר היום בנושא: "תקצוב עמותות העוסקת בהנגשת מידע פרלמנטרי"' });
   // futureItem.save().then(()=>console.log('saved to DB'));
 
-// let FUTURE=[
-//      '22.8.19 הצעה לסדר היום בנושא: "תקצוב עמותות העוסקת בהנגשת מידע פרלמנטרי"'
-// ]
-
 
 // handlers
 exports.getFUTURE = (req, res) => {
