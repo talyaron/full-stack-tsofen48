@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const suggestionsControllers = require("../controllers/suggestionsControllers");
+const { userType } = require("../controllers/rolesControllers");
 
 router
   .route("/")
-  .get(suggestionsControllers.getSuggestions)
+  .get(userType,suggestionsControllers.getSuggestions)
   .post(suggestionsControllers.createSuggestions);
 
 router
