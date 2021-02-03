@@ -1,0 +1,6 @@
+.information__data > h1 {
+  font-size: 50px;
+}
+.information {
+  display: flex;
+}

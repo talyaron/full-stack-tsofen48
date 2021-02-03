@@ -8,11 +8,15 @@ app.use(cookieParser())
 
 app.use(express.static('rct/build'));
 //app.use(bodyParser.json())
-app.use(check);
+
+// app.use(check);
 app.use('/company', companyRouter)
 
 
 function check(req,res,next){
+
+  // res.cookie('public', 'public', { maxAge: 9000000, httpOnly: true });
+
   console.log(req.cookies)
   
   
