@@ -3,11 +3,14 @@ app = express();
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(express.static("react/build"));
+
 // var cookieParser = require("cookie-parser"); 
 const toolRouter = require("./routes/toolRoute"); 
 const takanonRoute = require("./routes/takanonRoute"); 
 const futureRoute = require("./routes/futureRoute"); 
 const historyRoute = require("./routes/historyRoute"); 
+const suggestionsRoute = require("./routes/suggestionsRoute"); 
 
 // app.use(cookieParser());
 
@@ -17,6 +20,8 @@ app.use("/get-tool", toolRouter);
 app.use("/get-takanon", takanonRoute);
 app.use("/get-future", futureRoute);
 app.use("/get-history", historyRoute);
+app.use("/post-suggestion", suggestionsRoute);
+
 
        
 
