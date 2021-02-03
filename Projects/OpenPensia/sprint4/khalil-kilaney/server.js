@@ -16,7 +16,7 @@ const articles = [
   ]
 
 app.get('/get-articles-list',(req, res)=>{
-    res.send(votes)
+    res.send(articles)
   })
 
 

@@ -1,15 +1,30 @@
 import './content.css'
 import Block from '../blocks/block'
+import React, { useState, useEffect } from 'react';
 
-function content() {
-    return (
-        <div className="content">
-          <Block title='כתבה בynet' text='כתבה על שיפור מכירות ובמחסני חשמל' link='צפייה בכתבה'/>
-          <Block title='כתבה בynet' text='כתבה על שיפור מכירות ובמחסני חשמל' link='צפייה בכתבה'/>
-          <Block title='כתבה בynet' text='כתבה על שיפור מכירות ובמחסני חשמל' link='צפייה בכתבה'/>
+function Content() {
+  const [articles, setArticles] = useState([]);
 
-        </div>
-    );
+  useEffect(() => {
+    fetch('/get-articles-list')
+      .then(r => r.json())
+      .then(data => {
+        console.log(data)
+        setArticles(data);
+      })
+  }, [])
+  return (
+    <div className="content">
+      {articles.map((article, index) => {
+        return (<Block
+          key={index}
+          title={article.title}
+          subtitle={article.subtitle}
+          url={article.url}
+        />)
+      })}
+    </div>
+  );
 }
 
-export default content;
+export default Content;
