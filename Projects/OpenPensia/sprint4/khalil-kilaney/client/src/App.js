@@ -11,7 +11,7 @@ function App() {
         </div>
 
         <div className='image'>
-          <img src={person} />
+          <img src={person} alt=''/>
           <h2>עיסאווי פריג’</h2>
         </div>
       </header>
@@ -25,7 +25,7 @@ function App() {
         </div>
 
         <div className="btn">
-          <a>יש לך מידע? לחצ/י כאן</a>
+          <a href='/'>יש לך מידע? לחצ/י כאן</a>
         </div>
 
         <Content />
