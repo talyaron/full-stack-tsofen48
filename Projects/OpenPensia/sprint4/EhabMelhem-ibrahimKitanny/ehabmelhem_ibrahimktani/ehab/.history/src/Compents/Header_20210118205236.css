@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  text-align: center;
+}
+.header__text {
+  width: 200px;
+  display: flex;
+}
+.avatar {
+  width: fit-content;
+  margin: 0 auto;
+}

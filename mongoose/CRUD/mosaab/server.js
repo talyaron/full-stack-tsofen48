@@ -33,21 +33,27 @@ const ex1 = mongoose.model('Ex1', Ex1);
 
 
 
-app.post('searchInput',(req, res)=>{
+let searchResults;
+
+app.get('/searchInput',(req, res)=>{
    const {searchtext} = req.body;
-   ex1.find({searchtext}).then(data=>{
-   res.send(data)
+   console.log(searchtext)
+   ex1.find({name: searchtext}/*{age: searchtext}*/).then(data=>{
+   res.send({data})
 })
 })
 
 
 
 const ProfilesArr =[{name:"mosaab",age:21},{name:"example",age:20}];
-app.get('/GetData',(req,res)=>{
-    profile.find({}).then(doc=>{
 
+
+
+/*app.get('/GetData',(req,res)=>{
+    profile.find({}).then(doc=>{
+searchResults = doc
     })
-})
+})*/
 app.post('/GetData',(req, res)=>{
     let {name,age,SrcImage} = req.body;
 
@@ -60,7 +66,7 @@ app.post('/GetData',(req, res)=>{
   
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log(`Listening on Port: ${PORT}`);

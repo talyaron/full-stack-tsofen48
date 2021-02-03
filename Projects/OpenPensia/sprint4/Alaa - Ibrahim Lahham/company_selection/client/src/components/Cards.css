@@ -3,9 +3,9 @@
     width: 90%;
     margin: auto;
 }
-.card{
+a {
     display: flex;
-    
+    text-decoration: none;
     width: auto;
     text-align: right;
     padding: 3%;
