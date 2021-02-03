@@ -3,7 +3,7 @@ import './App.css';
 //import YARA from "./superlogo.png";
 import React, { useState ,useEffect} from 'react';
 //components
-import Vote from './components/vote';
+import Vote from './components/Vote.js';
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
   }, [])
   return (
     <div>
+        
       <header className="App-header">
         <div className="container-title">
           <h3>בנק הפועלים</h3>
@@ -31,9 +32,9 @@ function App() {
         <div className="poalim">תבחר/י מי יהיו הדרקטורים בנק הפועלים</div>
       </header>
        <div className="choose">בחר/י שני דירקטורים רגילים</div>
-      <div>
+       <div>
         {voting.map((vote, index) => {
-
+        
           return (<Vote
             key={index}
             logo={vote.logo}

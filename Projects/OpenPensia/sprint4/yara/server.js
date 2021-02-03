@@ -13,7 +13,7 @@ app.use('/vote', voting)
  
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3200;
 app.listen(port, () => { console.log(`\x1b[36m Server running on port ${port}  🔥`) });
 
 

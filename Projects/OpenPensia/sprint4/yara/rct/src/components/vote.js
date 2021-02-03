@@ -1,9 +1,9 @@
 
-import './vote.css';
+import './Vote.css';
 import React, { useState } from 'react';
 
 
-function vote(props) {
+function Vote(props) {
     return (
     
         <div className="icon">
@@ -22,4 +22,4 @@ function vote(props) {
 
     );
 }
-export default vote
+export default Vote
