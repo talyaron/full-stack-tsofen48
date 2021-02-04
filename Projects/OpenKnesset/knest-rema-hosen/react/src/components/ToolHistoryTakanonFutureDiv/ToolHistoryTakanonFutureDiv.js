@@ -12,9 +12,39 @@ export const ToolHistoryTakanonFutureDiv = () => {
 
   useEffect(() => {
 
-    fetch('/get-tool')
-    .then(r=>r.json())
-    .then(data=>setATOOL(data.TOOL))
+    getStory();
+    async function getStory() {
+      try {
+          let tool = await getTool();
+          if (tool) {
+            console.log("the data is in");
+            setATOOL(tool)
+          }
+          
+      } catch (e) {
+        console.log("error!");
+      }
+  }
+  function getTool() {
+    return new Promise((resolve, reject) => {
+            fetch('/get-tool')
+            .then(r=>r.json())
+            .then(data => {
+              if(data.TOOL){
+               console.log("Resolved!");
+                resolve(data.TOOL);
+              }else{
+                console.log("rejected")
+                reject(data.err)
+              }
+            })
+    })
+}
+
+
+    // fetch('/get-tool')
+    // .then(r=>r.json())
+    // .then(data=>setATOOL(data.TOOL))
   
     fetch('/get-history')
     .then(r=>r.json())
