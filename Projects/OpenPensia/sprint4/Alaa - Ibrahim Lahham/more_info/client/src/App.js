@@ -1,81 +1,68 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 //components
-import Cards from './components/Cards.js';
+import CandidateInfo from './components/CandidateInfo';
+import Articles from './components/Articles.js';
+import Button from './components/Button';
+import NavigationBar from './components/NavigationBar';
 
-//change font family
-
-let cards = getCardsFromDataBase();
+let candidateName = 'עיסאווי';
 
 function App() {
+
+  const [articles, setArticles] = useState([]);
+  const [navTabs, setNavTabs] = useState([]);
+  const [candidateInfo, setCandidateInfo] = useState([]);
+
+  useEffect(() => {
+
+    fetch('/articles/get-Articles')
+      .then(r => r.json())
+      .then(articles => {
+        if(articles.success!==false)
+       { console.log("am in"); setArticles(articles.articles)}
+      }
+        );
+
+    fetch('/navTabs/get-NavTabs')
+      .then(r => r.json())
+      .then(navTabs =>{ 
+        if(navTabs.success!==false)
+          {  console.log("am in");setNavTabs(navTabs.navTabs);}
+      });
+
+      fetch('/candidate/get-CandidateInfo')
+      .then(r => r.json())
+      .then(candidateInfo =>{
+        if(candidateInfo.success!==false){
+          console.log("am in");
+         setCandidateInfo(candidateInfo[0])
+        }else{
+          alert(candidateInfo.err);
+        }
+        });
+
+
+  //  fetch('/candidate/get-CandidateInfo', {
+ //     method: 'POST',
+  //    headers: { 'Content-Type': 'application/json' },
+  //    body: JSON.stringify({ candidateName })
+   // })
+   //   .then(r => r.json())
+    //  .then(candidateInfo => console.log(candidateInfo.candidateInfo))
+
+  }, []);
+
   return (
     <div className='App'>
       <header className='App-header'>
-        <div className='company-name'>
-          בנק הפועלים
-        </div>
-        <img className='candidate-img' src='https://www.lego.com/cdn/cs/set/assets/blt0bf03ae97678db52/Batman2_App_Sidekick-Tall1.jpg?fit=crop&format=jpg&quality=80&width=800&height=600&dpr=1' />
-        <div className='candidate-name'>
-          עיסאווי פריג'
-        </div>
-        <nav>
-          <ul>
-            <li className='non-active-nav'>
-              <a href='#' /> סיכום פרטים
-          </li>
-            <li className='active-nav'>
-              <a href='#' />עוד מידע
-          </li>
-            <li className='non-active-nav'>
-              <a href='#' /> נתוני הצבעה
-          </li>
-          </ul>
-        </nav>
+        <CandidateInfo candidateInfo={candidateInfo} className='candidate-info' />
+        <NavigationBar navTabs={navTabs} />
       </header>
-
-      <body className='content'>
-        <button className='add-info-btn'> <a href='#' />יש לך מידע? לחצ/י כאן</button>
-        <Cards cards={cards} />
-        
-      </body>
-
+      <Button className='add-info-btn' content='יש לך מידע? לחצ/י כאן' href='#' />
+      <Articles articles={articles} />
     </div>
   );
 }
 
 export default App;
-
-function getCardsFromDataBase() {
-  return [
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    },
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    },
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    },
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    },
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    },
-    {
-      title: 'עיסאווי פריג – ויקיפדיה',
-      subTitle: 'הוא פוליטיקאי ערבי-ישראלי שכיהן כחבר הכנסת מטעם מפלגת מרצ',
-      link: 'https://he.wikipedia.org/wiki/%D7%A2%D7%99%D7%A1%D7%90%D7%95%D7%95%D7%99_%D7%A4%D7%A8%D7%99%D7%92%27'
-    }
-  ];
-}

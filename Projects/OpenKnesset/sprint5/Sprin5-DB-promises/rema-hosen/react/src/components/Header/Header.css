@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.747);
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.option {
+  margin-left: 70px;
+}
+.userTag {
+  margin-left: 10px;
+  color: transparent;
+  text-shadow: 0 0 0 #6e94b5c9;
+  font-weight: 100;
+}
