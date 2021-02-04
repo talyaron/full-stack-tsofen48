@@ -6,6 +6,7 @@ import React from 'react';
 
 
 function App() {
+
   function handleSubmit(e){
     e.preventDefault();
     const name = e.target.children.name.value;
