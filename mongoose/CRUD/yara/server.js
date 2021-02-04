@@ -29,17 +29,25 @@ Kittem.insertMany(kittens, (doc) => {
 
 app.post('/send-kitten-name',(req, res)=>{
 <<<<<<< HEAD
+<<<<<<< HEAD
   const {name} = req.body;
   
   console.log(name)
   res.send({ok:true})
 })
 =======
+=======
+>>>>>>> main
   const {name}=req.body;
   let newKitten = new Kittem({ name });
   newKitten.save();
   res.send({ ok: true })
 })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 
 
 >>>>>>> main
