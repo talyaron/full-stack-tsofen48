@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  /* position: relative; */
+}
+
+.App-header {
+
+  font-size: calc(10px + 2vmin);
+  color: black;
+  display: block;
+  top:0;
+  
+}
+
+.company-name{
+  color: rgb(167, 172, 188);
+  font-size: 20px;
+  margin-bottom: 10%;
+  padding-top:10%;
+  text-align: center;
+}
+
+a.login{
+  float: left;
+  font-size: 20px;
+  margin-bottom: 10%;
+  text-decoration: none;
+  border:none;
+}
