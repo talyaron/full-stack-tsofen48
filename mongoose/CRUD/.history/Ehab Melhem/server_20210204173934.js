@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 // mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/ehabmelhem
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://ehab:e0iVP2mdpxBvW2OZ@cluster0.ojjnq.mongodb.net/newdb",
+  "mongodb+srv://ehab:qY8VXm1OSE8HclJ7@cluster0.jnzgj.mongodb.net/firstdb",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
@@ -17,18 +17,15 @@ db.once("open", () => {
   console.log("we are connected to DB");
 });
 
-const first = new mongoose.Schema({
+const Kittyschema = new mongoose.Schema({
   name: String,
   imgSrc: String,
   age: Number,
 });
 
-const Kitten = mongoose.model("newsechma", first);
+const Kitten = mongoose.model("kittyschema", Kittyschema);
 
-// const pilpel = new Kitten({ name: "Ehab", imgSrc: "null", age: 19 });
-// pilpel.save().then(() => {
-//   console.log("add success full");
-// });
+const pilpel = new Kitten({ name: "pilpel" });
 // pilpel.save().then(() => console.log("saved to DB"));
 // rwed.save().then(() => {
 //   console.log("save rwed to db");
