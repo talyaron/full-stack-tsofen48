@@ -1,0 +1,15 @@
+.contaner {
+  width: 390px;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) {
+  .contaner {
+    margin-top: 200px;
+  }
+}

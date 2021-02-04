@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.items {
+  border: 1px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+}
