@@ -23,7 +23,7 @@ const first = new mongoose.Schema({
   age: Number,
 });
 
-const Kitten = mongoose.model("newsechma", first);
+// const Kitten = mongoose.model("newsechma", first);
 
 // const pilpel = new Kitten({ name: "Ehab", imgSrc: "null", age: 19 });
 // pilpel.save().then(() => {

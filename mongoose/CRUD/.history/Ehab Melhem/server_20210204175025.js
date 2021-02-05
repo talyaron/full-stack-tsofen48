@@ -25,48 +25,48 @@ const first = new mongoose.Schema({
 
 const Kitten = mongoose.model("newsechma", first);
 
-// const pilpel = new Kitten({ name: "Ehab", imgSrc: "null", age: 19 });
-// pilpel.save().then(() => {
-//   console.log("add success full");
-// });
+const pilpel = new Kitten({ name: "Ehab", imgSrc: "null", age: 19 });
+pilpel.save().then(() => {
+  console.log("add success full");
+});
 // pilpel.save().then(() => console.log("saved to DB"));
 // rwed.save().then(() => {
 //   console.log("save rwed to db");
 // });
-let kittens = [{ name: "asd" }, { name: "sad" }];
+// let kittens = [{ name: "asd" }, { name: "sad" }];
 
-app.post("/send-kitten-name", (req, res) => {
-  const { name, age, src } = req.body;
-  var add = new Kitten({ name: name, age: age, imgSrc: src });
-  add.save().then(() => {
-    console.log("add " + name + " to the db");
-  });
-  console.log(name);
-  res.send({ ok: true });
-});
+// app.post("/send-kitten-name", (req, res) => {
+//   const { name, age, src } = req.body;
+//   var add = new Kitten({ name: name, age: age, imgSrc: src });
+//   add.save().then(() => {
+//     console.log("add " + name + " to the db");
+//   });
+//   console.log(name);
+//   res.send({ ok: true });
+// });
 
-app.get("/get-kittens-age", (req, res) => {
-  const { age } = req.query;
-  try {
-    //get from DB
-    Kitten.find({ age: age }).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
-app.get("/get-kittens", (req, res) => {
-  const { name } = req.query;
-  try {
-    //get from DB
-    Kitten.find({ name: name }).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
+// app.get("/get-kittens-age", (req, res) => {
+//   const { age } = req.query;
+//   try {
+//     //get from DB
+//     Kitten.find({ age: age }).then((docs) => {
+//       res.send({ kittens: docs });
+//     });
+//   } catch (e) {
+//     res.send({ error: e });
+//   }
+// });
+// app.get("/get-kittens", (req, res) => {
+//   const { name } = req.query;
+//   try {
+//     //get from DB
+//     Kitten.find({ name: name }).then((docs) => {
+//       res.send({ kittens: docs });
+//     });
+//   } catch (e) {
+//     res.send({ error: e });
+//   }
+// });
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {
