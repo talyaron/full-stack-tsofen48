@@ -1,0 +1,17 @@
+const express = require("express");
+var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
+const app = express();
+app.use(bodyParser.json());
+app.use(cookieParser());
+const companyRouter = require("./routs/company");
+
+// app.use(express.static("client/build"));
+// app.use('/company', companyRouter)
+
+app.get("/get")
+
+const port = process.env.PORT || 3002;
+app.listen(port, () => {
+  console.log(`\x1b[36m Server running on port ${port}  🔥`);
+});
