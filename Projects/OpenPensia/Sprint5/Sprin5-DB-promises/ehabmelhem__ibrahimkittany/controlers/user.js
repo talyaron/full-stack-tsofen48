@@ -16,19 +16,8 @@ db.once("open", () => {
   console.log("we are connected to DB");
 });
 
-const vote = new mongoose.Schema({
-  with: Number,
-  without: Number,
-});
-const header = new mongoose.Schema({
-  name: String,
-  src: String,
-  company: String,
-  role: String,
-});
-const vote__model = mongoose.model("vote", vote);
-const header__model = mongoose.model("header", header);
-var add = new header__model({
+
+var add = new Header__model({
   name: "איהאב מלחם",
   company: "בנק הפועלים",
   src:
@@ -39,7 +28,7 @@ var add_vote = new vote__model({
   with: 80,
   without: 20,
 });
-app.use(addAuth);
+
 
 // app.get("/add-all-the-data", (req, res) => {
 //   add.save().then(() => {
@@ -51,13 +40,7 @@ app.use(addAuth);
 //   res.send({ Ok: true });
 // });
 
-function addAuth(req, res, next) {
-  header__model.find({ name: "איהאב מלחם" }).then((docs) => {
-    res.cookie("role", docs.role, { maxAge: 90000000000, httpOnly: true });
-  });
-  console.log("Aaaaaa");
-  next();
-}
+
 
 exports.sendVote = (req, res, next) => {
   let index = 0;
@@ -76,7 +59,7 @@ exports.sendUser = (req, res, next) => {
   let index = 0;
   if (req.cookies.role === "public") {
     index = 1;
-    header__model.find({ name: "איהאב מלחם" }).then((docs) => {
+    Header__model.find({ name: "איהאב מלחם" }).then((docs) => {
       res.send({ user: docs, index: index });
     });
   } else {

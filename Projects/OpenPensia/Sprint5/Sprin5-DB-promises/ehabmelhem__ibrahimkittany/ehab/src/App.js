@@ -47,13 +47,13 @@ function App() {
   const [voted, setVoted] = useState([]);
   const [flag, setFlag] = useState(false);
   useEffect(async () => {
-    let first = await getUser();
-    let second = await getVote();
-    setPersonal(first.user);
-    setVoted(second.data.vote);
-    setFlag(second.flag);
-    console.log("this is first ", first.user);
-    console.log("this is seconde ", second.data.vote);
+    let user = await getUser();
+    let vote = await getVote();
+    setPersonal(user.user);
+    setVoted(vote.data.vote);
+    setFlag(vote.flag);
+    console.log("this is first ", user.user);
+    console.log("this is seconde ", vote.data.vote);
   }, []);
 
   if (flag) {
