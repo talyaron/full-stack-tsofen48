@@ -14,6 +14,20 @@ import Screen from './components/screen.js';
 
 function App() {
   
+  const [companies, setCompanies] = useState([]);
+
+  useEffect(() => {
+    fetch('/login/login')
+      .then(r => r.json())
+      .then(data => {
+        console.log(data)
+        setCompanies(data.companies);
+      })
+  }, [])
+
+
+
+
 
   const [companies, setCompanies] = useState([]);
 
