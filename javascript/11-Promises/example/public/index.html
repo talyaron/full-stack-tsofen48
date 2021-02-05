@@ -9,19 +9,20 @@
 
 <body>
     <script>
-
-        // fetch('/get-best-answer')
-        //     .then(r => r.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         if (data.number) {
-        //             fetch(`/get-answer?number=${data.number}`)
-        //                 .then(r => r.json())
-        //                 .then(data => {
-        //                     console.log(data)
-        //                 })
-        //         }
-        //     })
+/*
+         fetch('/get-best-answer')
+             .then(r => r.json())
+             .then(data => {
+                 console.log(data)
+                 if (data.number) {
+                     fetch(`/get-answer?number=${data.number}`)
+                         .then(r => r.json())
+                         .then(data => {
+                             console.log(data)
+                         })
+                 }
+             })
+             */
         async function getStory() {
             try {
                 let number = await getNumber();
