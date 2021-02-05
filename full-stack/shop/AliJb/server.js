@@ -46,12 +46,12 @@ const company = mongoose.model("companyschema", companyschema);
 //   console.log(error)      // Failure
 // });
 
-const newcomp = new company({
-  logo:
-    "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg",
-  name: "פרשמרקט",
-  par: "קמעונאות מזון",
-});
+// const newcomp = new company({
+//   logo:
+//     "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg",
+//   name: "פרשמרקט",
+//   par: "קמעונאות מזון",
+// });
 
 // newcomp.save().then(()=>console.log('saved to DB'));
 
@@ -72,6 +72,10 @@ const mock_data = [
     test: "test",
   },
 ];
+
+app.get("/get-data", (req, res) => {
+  res.send({ ok: true });
+});
 
 app.get("/get-connect", (req, res) => {
   try {

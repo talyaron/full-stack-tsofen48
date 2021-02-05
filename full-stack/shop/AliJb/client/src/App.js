@@ -62,7 +62,13 @@ function App() {
 
           <div>
             <Link to="/about">
-              <button type="button">Click Me!</button>
+              <button type="button">About Screen</button>
+            </Link>
+            <Link to="/users">
+              <button type="button">users Screen</button>
+            </Link>
+            <Link to="/">
+              <button type="button">Home Screen</button>
             </Link>
           </div>
 
