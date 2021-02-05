@@ -16,10 +16,22 @@ function App() {
       });
   }, []);
 
+  function loginFunc() {
+    fetch("/login/login")
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+    return <div>Ok Login Success!</div>;
+  }
+
   function Home() {
     return (
       <div>
-        <div>
+        {loginFunc()}
+
+        {/* <div>
           {companies.map((list, index) => {
             return (
               <Screen
@@ -30,7 +42,7 @@ function App() {
               />
             );
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -4,11 +4,12 @@ var cookieParser = require("cookie-parser");
 const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
-const companyRouter = require("./routs/company");
+
+const loginRouter = require("./routs/login");
 
 app.use(express.static("client/build"));
-// app.use('/company', companyRouter)
-
+app.use("/login", loginRouter);
+const userSchema = require("./schema/User");
 //DB Conn
 const mongoose = require("mongoose");
 mongoose.connect(
@@ -29,6 +30,8 @@ const companyschema = new mongoose.Schema({
 });
 
 const company = mongoose.model("companyschema", companyschema);
+
+// const User = mongoose.model("userSchema", userSchema);
 
 // company.insertMany([
 //   { logo: 'https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg', name: 'פרשמרקט', par: 'קמעונאות מזון' },
