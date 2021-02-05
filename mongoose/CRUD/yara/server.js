@@ -28,15 +28,33 @@ Kittem.insertMany(kittens, (doc) => {
 });
 
 app.post('/send-kitten-name',(req, res)=>{
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const {name} = req.body;
+  
+  console.log(name)
+  res.send({ok:true})
+})
+=======
+=======
+>>>>>>> main
   const {name}=req.body;
   let newKitten = new Kittem({ name });
   newKitten.save();
   res.send({ ok: true })
 })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
+
+
+>>>>>>> main
 
 
 
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Listening on Port: ${PORT}`);

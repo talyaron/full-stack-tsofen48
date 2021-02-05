@@ -7,7 +7,15 @@ import React from 'react';
 
 function App() {
   function handleSubmit(e){
+<<<<<<< HEAD
+<<<<<<< HEAD
+    e.preventDefault();
+=======
     /*e.preventDefault();
+>>>>>>> main
+=======
+    /*e.preventDefault();
+>>>>>>> main
     const name = e.target.children.name.value;
     e.target.children.name.value = '';
     
@@ -18,7 +26,15 @@ function App() {
       },
       body:JSON.stringify({name})
     }).then(r=>r.json())
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .then(data=>console.log(data))
+=======
     .then(data=>console.log(data))*/
+>>>>>>> main
+=======
+    .then(data=>console.log(data))*/
+>>>>>>> main
   }
   
   return (

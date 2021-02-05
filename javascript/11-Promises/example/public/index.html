@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+/*
+         fetch('/get-best-answer')
+             .then(r => r.json())
+             .then(data => {
+                 console.log(data)
+                 if (data.number) {
+                     fetch(`/get-answer?number=${data.number}`)
+                         .then(r => r.json())
+                         .then(data => {
+                             console.log(data)
+                         })
+                 }
+             })
+             */
+        async function getStory() {
+            try {
+                let number = await getNumber();
+                let answer = await getAnswer(number);
+                console.log(answer);
+                if (answer) {
+                    console.log('there was an answer.......')
+                }
+            } catch (e) {
+                console.log(typeof e)
+                console.error(e)
+            }
+        }
+        console.log('this was writen after the function')
+
+        getStory();
+
+        // getNumber().then(number=>{console.log(number)}).catch(e=>{console.error(e)})
+
+        function getNumber() {
+            return new Promise((resolve, reject) => {
+                fetch('/get-best-answer')
+                    .then(r => r.json())
+                    .then(data => {
+                        if (data.number) {
+                            resolve(data.number)
+                        } else {
+                            reject('Errror!!!!!')
+                        }
+                    })
+            })
+        }
+
+        function getAnswer(number) {
+            return new Promise((resolve, reject) => {
+                fetch(`/get-answer?number=${number}`)
+                    .then(r => r.json())
+                    .then(data => {
+                        resolve(data.answer)
+                    }).catch(e => {
+                        resolve(e)
+                    })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
