@@ -1,8 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.f963f655.chunk.css",
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "main.js": "/static/js/main.b05bf7c1.chunk.js",
     "main.js.map": "/static/js/main.b05bf7c1.chunk.js.map",
+=======
+    "main.js": "/static/js/main.44b29530.chunk.js",
+    "main.js.map": "/static/js/main.44b29530.chunk.js.map",
+>>>>>>> Stashed changes
+=======
+    "main.js": "/static/js/main.44b29530.chunk.js",
+    "main.js.map": "/static/js/main.44b29530.chunk.js.map",
+>>>>>>> Stashed changes
     "runtime-main.js": "/static/js/runtime-main.120a949f.js",
     "runtime-main.js.map": "/static/js/runtime-main.120a949f.js.map",
     "static/js/2.27ffcfab.chunk.js": "/static/js/2.27ffcfab.chunk.js",
@@ -17,6 +27,14 @@
     "static/js/runtime-main.120a949f.js",
     "static/js/2.27ffcfab.chunk.js",
     "static/css/main.f963f655.chunk.css",
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "static/js/main.b05bf7c1.chunk.js"
+=======
+    "static/js/main.44b29530.chunk.js"
+>>>>>>> Stashed changes
+=======
+    "static/js/main.44b29530.chunk.js"
+>>>>>>> Stashed changes
   ]
 }
