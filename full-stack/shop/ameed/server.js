@@ -5,9 +5,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser())
 const companyRouter = require('./routs/company');
+const loginRouter = require('./routs/loginRouter');
 
 app.use(express.static('client/build'));
 // app.use('/company', companyRouter)
+app.use('/login', loginRouter)
 
 //DB Conn
 const mongoose = require('mongoose');
