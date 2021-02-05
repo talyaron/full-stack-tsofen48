@@ -1,0 +1,21 @@
+.container-gifts{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+}
+.container-gifts>img{
+    width : 100px;
+    height : 100px;
+    margin-right :3%;
+    margin-left :3%;
+}
+.cart_items>p{
+    text-align: center;
+    width : 300px;
+    font-weight: bold;
+    margin-left: 47%;
+}
+
+.cart_items{
+    margin-left: 50%;
+}
