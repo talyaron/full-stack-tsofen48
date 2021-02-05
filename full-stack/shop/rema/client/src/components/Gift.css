@@ -1,0 +1,52 @@
+.gift_container{
+    display:grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    width: 50%;
+    position: relative;
+    height: 300px;
+}
+
+.gift_container>.gift_icon{
+    width:200px;
+    height:200px;
+    position: absolute;
+    top: 10%;
+    right: 40%;
+}
+.gift_container>button{
+    position:absolute;
+    top: 40%;
+    right: 5%;
+    background-color:lavender;
+    color: black;
+    border: 2px solid #555555;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 200px;
+}
+.gift_container>button:hover{
+    background-color: #555555;
+    color: white;
+}
+.gift_container>.cost{
+    position:absolute;
+    top: 45%;
+    left: 10%;
+    width: 100px;
+    border: none;
+    font-size: x-large;
+}
+.giftID{
+    display:none;
+}
+
+
+
+    
