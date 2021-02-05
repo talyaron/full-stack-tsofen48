@@ -1,8 +1,16 @@
 const express = require("express");
 app = express();
-var cookieParser = require("cookie-parser");
+
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(express.static("client/build"));
+
+// var cookieParser = require("cookie-parser");
+// app.use(cookieParser());
+const toolRouter = require("./routes/kittyRoute");
+
+// app routes
+app.use("/getKitty", toolRouter);
 
 const mongoose = require("mongoose");
 mongoose.connect(
@@ -76,20 +84,37 @@ app.post("/get-kitten-filter", (req, res) => {
 
 //get read
 
-//read
-app.get("/get-kittens", (req, res) => {
-  try {
-    //get from DB
-    Kitten.find({}).then((docs) => {
-      res.send({ kittens: docs });
-    });
-  } catch (e) {
-    res.send({ error: e });
-  }
-});
-
 const PORT = process.env.PORT || 3006;
 
 app.listen(PORT, () => {
   console.log(`Listening on Port: ${PORT}`);
 });
+
+// const express = require("express");
+// app = express();
+
+// var bodyParser = require("body-parser");
+// app.use(bodyParser.json());
+// app.use(express.static("client/build"));
+
+// // var cookieParser = require("cookie-parser");
+// const toolRouter = require("./routes/toolRoute");
+// const takanonRoute = require("./routes/takanonRoute");
+// const futureRoute = require("./routes/futureRoute");
+// const historyRoute = require("./routes/historyRoute");
+// const suggestionsRoute = require("./routes/suggestionsRoute");
+
+// // app.use(cookieParser());
+
+// // app routes
+// app.use("/get-tool", toolRouter);
+// app.use("/get-takanon", takanonRoute);
+// app.use("/get-future", futureRoute);
+// app.use("/get-history", historyRoute);
+// app.use("/post-suggestion", suggestionsRoute);
+
+// const PORT = process.env.PORT || 3006;
+
+// app.listen(PORT, () => {
+//   console.log(`Listening on Port: ${PORT}`);
+// });
