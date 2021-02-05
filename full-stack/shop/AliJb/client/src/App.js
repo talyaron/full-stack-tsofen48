@@ -16,10 +16,22 @@ function App() {
       });
   }, []);
 
+  function loginFunc() {
+    fetch("/login/login")
+      .then((r) => r.json())
+      .then((data) => {
+        console.log(data);
+      });
+
+    return <div>Ok Login Success!</div>;
+  }
+
   function Home() {
     return (
       <div>
-        <div>
+        {loginFunc()}
+
+        {/* <div>
           {companies.map((list, index) => {
             return (
               <Screen
@@ -30,7 +42,7 @@ function App() {
               />
             );
           })}
-        </div>
+        </div> */}
       </div>
     );
   }
@@ -62,7 +74,13 @@ function App() {
 
           <div>
             <Link to="/about">
-              <button type="button">Click Me!</button>
+              <button type="button">About Screen</button>
+            </Link>
+            <Link to="/users">
+              <button type="button">users Screen</button>
+            </Link>
+            <Link to="/">
+              <button type="button">Home Screen</button>
             </Link>
           </div>
 

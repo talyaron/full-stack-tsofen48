@@ -4,11 +4,12 @@ var cookieParser = require("cookie-parser");
 const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
-const companyRouter = require("./routs/company");
+
+const loginRouter = require("./routs/login");
 
 app.use(express.static("client/build"));
-// app.use('/company', companyRouter)
-
+app.use("/login", loginRouter);
+const userSchema = require("./schema/User");
 //DB Conn
 const mongoose = require("mongoose");
 mongoose.connect(
@@ -30,6 +31,8 @@ const companyschema = new mongoose.Schema({
 
 const company = mongoose.model("companyschema", companyschema);
 
+// const User = mongoose.model("userSchema", userSchema);
+
 // company.insertMany([
 //   { logo: 'https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg', name: 'פרשמרקט', par: 'קמעונאות מזון' },
 //   { logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaBGcvDXYbWULauODr04g1qY0v5TZq1rL_nw&usqp=CAU', name: 'הולמס פלייס', par: 'חדרי כושר' },
@@ -46,12 +49,12 @@ const company = mongoose.model("companyschema", companyschema);
 //   console.log(error)      // Failure
 // });
 
-const newcomp = new company({
-  logo:
-    "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg",
-  name: "פרשמרקט",
-  par: "קמעונאות מזון",
-});
+// const newcomp = new company({
+//   logo:
+//     "https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/7e/d9/c7/7ed9c7ec-7022-b21e-a391-10cfe7cf14ef/source/256x256bb.jpg",
+//   name: "פרשמרקט",
+//   par: "קמעונאות מזון",
+// });
 
 // newcomp.save().then(()=>console.log('saved to DB'));
 
@@ -72,6 +75,10 @@ const mock_data = [
     test: "test",
   },
 ];
+
+app.get("/get-data", (req, res) => {
+  res.send({ ok: true });
+});
 
 app.get("/get-connect", (req, res) => {
   try {
