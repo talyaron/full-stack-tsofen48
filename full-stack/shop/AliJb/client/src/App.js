@@ -60,6 +60,12 @@ function App() {
             </ul>
           </nav>
 
+          <div>
+            <Link to="/about">
+              <button type="button">Click Me!</button>
+            </Link>
+          </div>
+
           {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
           <Switch>
