@@ -1,0 +1,10 @@
+.card3{
+    border-radius: 10px;
+    background-color: rgb(2, 16, 138);
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}
+.card3 img{
+    width: 90px;
+}
