@@ -20,10 +20,10 @@ function Cart(props) {
 
     function addName(){
         fetch('/get-name').then(r => r.json()).then(data => {
-            console.log(data[0]);
+            console.log(data);
             //setRemainedGifts(data);
-            setAa(data[0]);
-            setBb(data[2].name);
+            setAa(data[0].name);
+            setBb(data[1].name);
             console.log(data)
         })
     }
@@ -31,8 +31,8 @@ function Cart(props) {
     return (
         <div className="cart_items">
             <button onClick={addName}> Get random Names </button>
-            <div>{aa.name}</div> 
-            <div>{bb.name}</div> 
+            <div>{aa}</div> 
+            <div>{bb}</div> 
         </div>
         
     );
