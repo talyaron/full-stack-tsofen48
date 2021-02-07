@@ -1,6 +1,12 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
 //components
 import Screen from "./components/screen.js";
 
@@ -22,16 +28,29 @@ function App() {
       .then((data) => {
         console.log(data);
       });
-
-    return <div>Ok Login Success!</div>;
+    return <div>Ok Login Success</div>;
   }
+
+  // function HomeButton() {
+  //   let history = useHistory();
+
+  //   function handleClick() {
+  //     history.push("/About");
+  //   }
+
+  //   return (
+  //     <button type="button" onClick={handleClick}>
+  //       Go home
+  //     </button>
+  //   );
+  // }
 
   function Home() {
     return (
       <div>
         {loginFunc()}
 
-        {/* <div>
+        <div>
           {companies.map((list, index) => {
             return (
               <Screen
@@ -42,7 +61,7 @@ function App() {
               />
             );
           })}
-        </div> */}
+        </div>
       </div>
     );
   }
