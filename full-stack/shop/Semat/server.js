@@ -39,15 +39,18 @@ name: 'פרשמרקט', par: 'קמעונאות מזון' });
 //read
 app.get("/get-companies", (req, res) => {
   
+ 
+  
+  res.send({ ok: true });
 
-    try {
-        //get from DB
-        company.find({}).then(docs => {
-            res.send({ companies: docs });
-        })
-    } catch (e) {
-        res.send({ error: e })
-    }
+    // try {
+    //     //get from DB
+    //     company.find({}).then(docs => {
+    //         res.send({ companies: docs });
+    //     })
+    // } catch (e) {
+    //     res.send({ error: e })
+    // }
 });
 
 

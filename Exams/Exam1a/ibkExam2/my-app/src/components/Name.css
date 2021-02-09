@@ -1,0 +1,30 @@
+.container-names{
+    /* width : 300px; */
+    margin-left: 50%;
+    align-items: center;
+}
+.search-names{
+    /* width : 300px; */
+    margin-top :5%;
+    display: flex;
+    /* margin-left: 45%;
+    align-items: center; */
+}
+.search-names>button{
+    /* width : 300px; */
+    margin-left :1%;
+    /* margin-left: 45%;
+    align-items: center; */
+}
+/* .container-names>img{
+    width : 100px;
+    height : 100px;
+    margin-right :3%;
+    margin-left :3%;
+} */
+button{
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+}
