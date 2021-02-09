@@ -1,0 +1,20 @@
+.grid-container {
+  position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+  }
+  .grid-item {
+    position: relative;
+    padding: 10px;
+    text-align: right;
+    background-color:white;
+    max-width: 500px;
+    min-width: 200px;
+  }
+
+  h2{
+    position: relative;
+    margin-top: 0%;
+  }
