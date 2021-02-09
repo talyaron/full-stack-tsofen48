@@ -12,7 +12,7 @@ db.once('open',  ()=> {
 const SuggestionSchema = new mongoose.Schema({
   subject: String,
   explanation : String,
-  member : String
+  member :[String]
   }); 
   
   const suggestion = mongoose.model('SuggestionSchema', SuggestionSchema); 
@@ -47,10 +47,16 @@ exports.getSuggestions = (req, res) => {
  };
  exports.createSuggestions = (req, res) => {
    
+  let knestMembers = [];
+
+  req.body.suggestion.member.forEach(member => {
+
+    knestMembers.push(member?.value);
+  });
   const suggestionToAdd = new suggestion({    
     subject:req.body.suggestion.subject,
     explanation:req.body.suggestion.explanation,
-    member:req.body.suggestion.member});
+    member:knestMembers});
 
   suggestionToAdd.save().then(()=>console.log('saved to DB'));
  };
