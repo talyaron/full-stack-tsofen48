@@ -12,41 +12,42 @@ let gifts = [{ number: '1', src: 'https://i.pinimg.com/236x/e7/6c/a4/e76ca44f19c
 
 let reminedGifts = [];
 
-app.get('/get-gifts', (req,res) =>{
-  res.send(gifts);
-})
+// app.get('/get-gifts', (req,res) =>{
+//   res.send(gifts);
+// })
 
-app.post('/add-gift', (req,res) =>{
-  let number = req.body.number;
-  //console.log(req.body)
-  console.log(number)
-  gifts = gifts.filter(gift => gift.number != number);
-  console.log(gifts)
-  res.send(number);
+// app.post('/add-gift', (req,res) =>{
+//   let number = req.body.number;
+//   //console.log(req.body)
+//   console.log(number)
+//   gifts = gifts.filter(gift => gift.number != number);
+//   console.log(gifts)
+//   res.send(number);
 
-})
+// })
 
 
-const names = [
-  { name:"ibbibib" }
-];
+const namesArray = [];
 
 app.post('/add-name', (req, res) => {
-  const name = req.body;
-  console.log(name);
+  const names = req.body;
   console.log(names);
-  names.push({name});
+  names.map(n=>{
+    namesArray.push({'name':n});
+  })
+  console.log(namesArray);
+  //names.push({'name':  });
     res.send({ ok: true });
   });
 
   app.get('/get-name', (req,res) =>{
-    // let first = Math.floor(Math.random() * 5) + 1;
-    // let second = Math.floor(Math.random() * 5) + 1;
-    // let objNames=[];
-    // objNames.push(names[first]);
-    // objNames.push(names[second]);
-    console.log(names);
-    res.send(names);
+    let first = Math.floor(Math.random() * 5) + 1;
+    let second = Math.floor(Math.random() * 5) + 1;
+    let objNames=[];
+    objNames.push(namesArray[first]);
+    objNames.push(namesArray[second]);
+    console.log(objNames);
+    res.send(objNames);
   })
   
 

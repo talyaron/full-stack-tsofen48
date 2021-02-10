@@ -19,3 +19,7 @@
 .cart_items{
     margin-left: 50%;
 }
+
+.cart_items>div{
+    margin :2%
+}
