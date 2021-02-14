@@ -10,6 +10,10 @@ const usersRouter = require("./users/usersRouter");
 
 app.use('/users', usersRouter);
 
+const questionsRouter = require("./questions/questionsRouter");
+
+app.use('/questions', questionsRouter);
+
 
 
 // kitty .save().then(() => console.log('kitti was saved to DB')); //save
