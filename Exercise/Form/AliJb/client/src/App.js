@@ -1,23 +1,21 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-
-import Lottery from "./components/Lottery";
-
+import QuestionForm from "./components/QuestionForm";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useHistory,
 } from "react-router-dom";
-import API from "./api";
 
 export default function App() {
   // register is false login is true
   const [registerOrLogin, setRegisterOrLogin] = useState(false);
   const [alreadyRegisted, setAlreadyRegisted] = useState(false);
   const [loginSuccess, setLoginSuccess] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [user, setUser] = useState("");
 
   function handleSignUp(e) {
     e.preventDefault();
@@ -61,6 +59,7 @@ export default function App() {
 
           if (response.data.ok) {
             setLoginSuccess(true);
+            setUser(username);
           }
         },
         (error) => {
@@ -69,9 +68,8 @@ export default function App() {
       );
   }
 
-  function FormsPageButton(params) {
+  function FormsPageButton() {
     let history = useHistory();
-
     function handleClick() {
       history.push("/FormsPage");
     }
@@ -83,10 +81,55 @@ export default function App() {
     );
   }
 
+  function submitForm(e) {
+    e.preventDefault();
+    const question = e.target.children.question.value;
+
+    setQuestions([...questions, question]);
+    console.log(questions);
+  }
+
+  function submitQuestionsToServer() {
+    axios
+      .post("/submit-questions", {
+        questions,
+        user,
+      })
+      .then(
+        (response) => {
+          console.log(response);
+
+          if (response.data.ok) {
+            console.log("Ok");
+          }
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }
+
   function FormsPage() {
     return (
       <div>
-        <h1>hi</h1>
+        <form onSubmit={submitForm}>
+          <input type="text" placeholder="Add question" name="question"></input>
+          <input type="submit" placeholder="su"></input>
+        </form>
+
+        <div>
+          {questions.map((question, index) => {
+            return (
+              <div key={index}>
+                <p key={index}>{question.id}</p>
+
+                <QuestionForm info={question} />
+              </div>
+            );
+          })}
+        </div>
+
+        <button onClick={submitQuestionsToServer}>Submit Questions</button>
       </div>
     );
   }
