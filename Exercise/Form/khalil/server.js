@@ -11,6 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 mongoose.connect('mongodb+srv://khaleal:HelloAgain123@cluster0.glmjg.mongodb.net/test', { useNewUrlParser: true, useUnifiedTopology: true });
 const User = mongoose.model('User', { username: String, password: String }); //schema
 
+const Question = mongoose.model('Questions', {text: String}); //schema
+// const questions = new Question({ text: 'question text'}); //instance
+
 // const user = new User({ username: 'Kitti', password: '123' }); //instance
 // user.save().then(() => console.log('User was saved to DB')); //save
 
@@ -51,5 +54,13 @@ app.post("/signup", (req, res) => {
 });
 
 
+app.post("/send-questions",  (req, res) => {
+    const { questions } = req.body;
+    console.log("Questions: ", questions);
+    questions.forEach(element => {
+        const q = new Question({ text: element.text});
+        q.save().then(() => console.log('Question (', element.text, ') was saved to DB'));
+    });
+});
 
 app.listen(3000, () => { console.log('listen on port 3000') });

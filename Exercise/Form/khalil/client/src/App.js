@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from "react";
+import QuestionsAdd from "./components/QuestionsAdd"
 
 // import {
 //   BrowserRouter as Router,
@@ -93,6 +94,7 @@ export default function App() {
         <input type="password" name="password" placeholder="Password"></input>
         <button type="submit">Signup</button>
       </form>
+      <QuestionsAdd></QuestionsAdd>
     </div>
   );
 }
