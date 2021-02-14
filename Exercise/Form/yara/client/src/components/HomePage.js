@@ -1,74 +1,64 @@
-import React, { useEffect } from "react";
-function Home(props) {
+import './HomePage.css'
+import React, { useState,useEffect } from "react";
+function HomePage(props) {
+    const [user,Setuser]=useState();
+    const [password,Setpassword]=useState();
+    const [newuser,SetNewuser]=useState();
+    const [newpassword,SetNewpassword]=useState();
+    useEffect(()=>{
+        document.getElementById("Succeful").hidden="true";
+    })
+    function LogIn(){
 
-    const candidateNames = props.candidateNames;
-    // console.log(candidateNames)
-    const setCandidateNames = props.setCandidateNames;
-//     useEffect(() => {
-//     fetch('/set-candidate', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json'
-//         }, body: JSON.stringify({ name })
-//       })
-//         .then(r => r.json())
-//         .then(candidateNames => {
-//           console.log(candidateNames)
-//           setCandidateNames(candidateNames);
-//         });
-//    }, [])
-    function addCandidate() {
-        // useEffect(() => {
-            let candidateName = document.querySelector('.add-candidate-input');
-            let name = !!candidateName && candidateName.value;
-            candidateName.value = '';
-            candidateNames.push(name);
-            setCandidateNames(candidateNames);
-            if (candidateNames.length >= 5) {
-                let lotteryButton = document.querySelector('.lottery-btn');
-                !!lotteryButton && lotteryButton.classList.remove('hide');
-            }
-
-            // !!name && fetch('/add-candidate', {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   }, body: JSON.stringify({ name })
-            // })
-            //   .then(r => r.json());
-        // }, [])
+        fetch("/Login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({user:user,password:password}),
+          })
+            .then((r) => r.json())
+            .then((data) => {
+              console.log(data)
+            });
+            console.log(user,password);
     }
-    function goToLottery() {
-        fetch('/add-candidates', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              }, body: JSON.stringify({ candidateNames })
-            })
-              .then(r => r.json());
+    function SignUp(){
+        document.getElementById("Succeful").hidden="false";
+        fetch("/SignUp", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({newuser:newuser,newpassword:newpassword}),
+          })
+            .then((r) => r.json())
+            .then((data) => {
+              console.log(data)
+            });
+            console.log(newuser,newpassword);
+            document.getElementById("Succeful").hidden="false";
     }
 
-    return <div className='body add_input'>
-        <div className="add-input">
-            <input className='add-candidate-input' placeholder="add candidate name"></input>
-            <button onClick={addCandidate}> Add </button>
-        </div >
 
-        <div className='candidates'>
-            {candidateNames.map(name => {
-                return (
-                    <div className='candidate-name'>
-                        {name}
-                    </div>
-                );
-
-            })}
+    return (<div>
+        <div className="green">
+        <input type="text" onChange={(e) => {
+        Setuser(e.target.value);}}></input>
+        <input type="password" onChange={(e) => {
+        Setpassword(e.target.value);}}></input>
+        <button onClick={LogIn}>Log in</button>
         </div>
-
-        <div className="lottery-btn hide">
-            <button onClick={goToLottery} > Go To Lottery </button>
-        </div >
-    </div>;
+        <br/>
+        <div className="yellow">
+        <input type="text" onChange={(e) => {
+        SetNewuser(e.target.value);}}></input>
+        <input type="password" onChange={(e) => {
+        SetNewpassword(e.target.value);}}></input>
+        <button onClick={SignUp}>Sign Up</button>
+        <label id="Succeful">Sign Up Succesfuly</label>
+        </div>
+    </div>)
 }
 
-export default Home;
+export default HomePage;
