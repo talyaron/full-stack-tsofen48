@@ -13,6 +13,9 @@ const Userschema = new mongoose.Schema({
      password:String,
   });
   
+const Quetionschema=new mongoose.Schema({
+    quetion:String,
+})
   const User = mongoose.model("Userschema", Userschema);
 
 
