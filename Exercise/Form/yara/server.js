@@ -17,11 +17,12 @@ const Quetionschema=new mongoose.Schema({
     quetion:String,
 })
   const User = mongoose.model("Userschema", Userschema);
-
+  const Questions=mongoose.model("Quetionschema",Quetionschema);
 
 //const kitty = new Cat({ name: 'Kitti', password:'jksdhfjds' }); //instance
 
 //kitty.save().then(() => console.log('kitti was saved to DB')); //save
+
 app.post('/Login',(req,res)=>{
     const {user,password}=req.body;
     //const {password}=req.body;
@@ -29,9 +30,12 @@ app.post('/Login',(req,res)=>{
     User.find( { name: user,password:password } ).then(row=>{
         if(row.length>0){
             console.log("success")
+            res.send({ok:"true"});
         }
+        res.send({ok:"false"});
         
     })
+    
     /*
     if(myCursor.password===password){
         res.send({ok:"true"});
@@ -47,6 +51,19 @@ app.post('/Login',(req,res)=>{
       Newuser.save().then(()=>console.log("ok"));
       
  })
+
+ app.post('/AddQuestions',(req,res)=>{
+    const {questions}=req.body;
+    //const {password}=req.body;
+    //console.log(Question);
+    questions.array.forEach(element => {
+        const NewQusetion=new Questions({quetion: element});
+    NewQusetion.save().then(()=>console.log("ok"));
+    });
+    
+    res.send({ok:"true"});
+    
+})
  
 
 
