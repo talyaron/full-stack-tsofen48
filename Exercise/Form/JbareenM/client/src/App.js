@@ -6,6 +6,10 @@ import React, { useEffect, useState } from "react";
 function App() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const [userDB, setUserDB] = useState("");
+  const [passDB, setPassDB] = useState("");
+
   const [name, setName] = useState("");
 
   useEffect(() => {
@@ -28,14 +32,14 @@ function App() {
       });
 
   }
-  const register = (e) => {
+  const handleRegister = (e) => {
 
       fetch("/send-user", {
         method: "post",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ userName, password }),
+        body: JSON.stringify({ userDB, passDB }),
       })
         .then((r) => r.json())
         .then((data) => {
@@ -64,18 +68,30 @@ function App() {
         ></input>
         <button type="submit">login</button>
       </form>
-      <button onClick={register}>register</button>
+      <form onSubmit={handleRegister}>
+      <input
+          onChange={(e) => {
+            setUserDB(e.target.value);
+          }}
+          type="text"
+          placeholder="username"
+          name="name"
+        ></input>
+        <input
+          onChange={(e) => {
+            setPassDB(e.target.value);
+          }}
+          type="password"
+          placeholder="password"
+          name="pass"
+        ></input>
+      <button type="submit">register</button>
+      </form>
+      
       
       <a>{name}</a>
 
-      {/* {all.map((elm) => (
-        <div>
-          <h3>
-            {elm.name} {elm.age}
-          </h3>
-          <img src={elm.imgSrc} alt="" />
-        </div>
-      ))} */}
+
     </div>
   );
 }
