@@ -1,7 +1,7 @@
 import './App.css';
 //import React, { useState, useEffect } from "react";
 import Home from './components/HomePage';
-//import Lottery from './components/Lottery';
+import Questions from './components/Questions';
 
 import {
   BrowserRouter as Router,
@@ -21,10 +21,10 @@ export default function App() {
         <nav >
           <ul>
             <li >
-              <Link to="/">Add Candidate</Link>
+              <Link to="/">login</Link>
             </li>
             <li>
-              <Link to="/about">Lottery</Link>
+              <Link to="/about">Questions</Link>
             </li>
           </ul>
         </nav>
@@ -32,8 +32,8 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/lottery">
-            
+          <Route path="/Questions">
+            <Questions/>
           </Route>
           <Route path="/">
 
