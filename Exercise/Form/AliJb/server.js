@@ -54,6 +54,28 @@ app.post("/register-user", (req, res) => {
   }
 });
 
+app.post("/login-user", (req, res) => {
+  try {
+    const { username, password } = req.body;
+    // console.log(password);
+    // console.log(username);
+    const temp = new UserForm({ username: username, password: password });
+    UserForm.findOne({ username, password }, function (err, doc) {
+      if (doc == null) {
+        res.send({
+          ok: false,
+          error: "no user was found in db or password is incorrect",
+        });
+      } else {
+        console.log("ok");
+        res.send({ ok: true });
+      }
+    });
+  } catch (error) {
+    res.send({ ok: false, error: error });
+  }
+});
+
 // app.get("/get-winners", (req, res) => {
 //   try {
 //     let first_winner = Math.floor(Math.random() * 6) + 1;
