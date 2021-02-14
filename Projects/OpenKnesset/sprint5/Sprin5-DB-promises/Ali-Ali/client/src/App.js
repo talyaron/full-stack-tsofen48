@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import axios from "axios";
-import API from "../api";
+// import API from "./api";
 
 function App() {
   const [data, setData] = useState([]);

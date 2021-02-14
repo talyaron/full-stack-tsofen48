@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import DescComp from "./Components/DescComp/DescComp";
 import Navbar from "./Components/NavBar/Navbar";
-
+import API from "./api";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -12,19 +13,31 @@ function App() {
   const [voteData, setVoteData] = useState([]);
 
   useEffect(() => {
-    fetch("/voteData/getUserData")
-      .then((r) => r.json())
-      .then((data) => {
-        console.log(data);
-        setUserData({ name: data.name, src: data.src, src: data.src });
-      });
+    axios
+      .all([API.get("/voteData/getUserData"), API.get("/voteData/getVoteData")])
+      .then((responseArr) => {
+        //this will be executed only when all requests are complete
+        setUserData({
+          name: responseArr[0].data.name,
+          company: responseArr[0].data.company,
+          src: responseArr[0].data.src,
+        });
 
-    fetch("/voteData/getVoteData")
-      .then((r) => r.json())
-      .then((data) => {
-        console.log(data);
-        setVoteData(data.vote);
+        setVoteData(responseArr[1].data.vote);
       });
+    // fetch("/voteData/getUserData")
+    //   .then((r) => r.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setUserData({ name: data.name, src: data.src, src: data.src });
+    //   });
+
+    // fetch("/voteData/getVoteData")
+    //   .then((r) => r.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     setVoteData(data.vote);
+    //   });
   }, []);
 
   return (
@@ -54,9 +67,9 @@ function App() {
       <div className="app">
         <div className="container">
           <Header
+            name={userData.name}
             company={userData.company}
             Icon={userData.src}
-            name={userData.name}
           />
           <Navbar />
           <DescComp withNum={voteData.positive} without={voteData.negative} />
