@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import Home from './components/HomePage';
-import Lottery from './components/Lottery';
+import Login from './pages/Login/Login';
+import FormCreate from './pages/FormCreate/FormCreate';
 
 import {
   BrowserRouter as Router,
@@ -12,16 +12,10 @@ import {
 
 export default function App() {
 
-  const [candidateNames, setCandidateNames] = useState([]);
+
 
   useEffect(() => {
-    fetch('/get-candidates')
-      .then(r => r.json())
-      .then(candidateNames => {
-        console.log(candidateNames)
-        setCandidateNames(candidateNames);
-      });
-      
+
   }, [])
 
 
@@ -31,10 +25,10 @@ export default function App() {
         <nav className='all-tabs'>
           <ul>
             <li className='active-nav'>
-              <Link to="/">Add Candidate</Link>
+              <Link to="/">Login</Link>
             </li>
             <li className='non-active-nav'>
-              <Link to="/about">Lottery</Link>
+              <Link to="/form-create">Form-create</Link>
             </li>
           </ul>
         </nav>
@@ -42,12 +36,12 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/lottery">
-            <Lottery />
+          <Route path="/form-create">
+            <FormCreate />
           </Route>
           <Route path="/">
 
-            <Home candidateNames={candidateNames} setCandidateNames={setCandidateNames} />
+            <Login />
           </Route>
         </Switch>
       </div>
