@@ -15,13 +15,13 @@ const Users = mongoose.model('Users', { name: String, pass:String }); //schema
 // user.save().then(() => console.log(user.name, 'was saved to DB')); //save
 
 app.post("/send-user", (req, res) => {
-    const { userName, password } = req.body;
-    console.log({user: userName, pass:password});
-    var add = new Users({ name: userName, pass:password });
+    const { userDB, passDB } = req.body;
+    console.log({user: userDB, pass:passDB});
+    var add = new Users({ name: userDB, pass:passDB });
     add.save().then(() => {
-      console.log("add " + userName + " to the db");
+      console.log("add " + userDB + " to the db");
     });
-    console.log(userName);
+    console.log(userDB);
     res.send({ ok: true });
   });
   
