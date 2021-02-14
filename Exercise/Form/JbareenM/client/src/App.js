@@ -1,99 +1,54 @@
-import "./App.css";
-import React, { useEffect, useState } from "react";
+import './App.css';
+import React, { useState, useEffect } from "react";
+import Login from './pages/Login/Login';
+import FormCreate from './pages/FormCreate/FormCreate';
 
-//import components
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
+export default function App() {
 
-  const [userDB, setUserDB] = useState("");
-  const [passDB, setPassDB] = useState("");
 
-  const [name, setName] = useState("");
 
   useEffect(() => {
-    console.log("stam");
-  }, []);
-  function handleSubmit(e) {
-    e.preventDefault();
-    const name = e.target.children.name.value;
-    e.target.children.name.value = "";
 
-    fetch(`/get-user?userName=${userName}`)
-      .then((r) => r.json())
-      .then((data) => {
-        console.log(data);
-        if(data.Users.length !== 0){
-            setName(userName);
-        }else{
-          setName("you are not a user!");
-        }
-      });
+  }, [])
 
-  }
-  const handleRegister = (e) => {
 
-      fetch("/send-user", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userDB, passDB }),
-      })
-        .then((r) => r.json())
-        .then((data) => {
-          console.log(data);
-        });
-  };
-  
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
-        <input
-          onChange={(e) => {
-            setUserName(e.target.value);
-          }}
-          type="text"
-          placeholder="username"
-          name="name"
-        ></input>
-        <input
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          type="password"
-          placeholder="password"
-          name="pass"
-        ></input>
-        <button type="submit">login</button>
-      </form>
-      <form onSubmit={handleRegister}>
-      <input
-          onChange={(e) => {
-            setUserDB(e.target.value);
-          }}
-          type="text"
-          placeholder="username"
-          name="name"
-        ></input>
-        <input
-          onChange={(e) => {
-            setPassDB(e.target.value);
-          }}
-          type="password"
-          placeholder="password"
-          name="pass"
-        ></input>
-      <button type="submit">register</button>
-      </form>
-      
-      
-      <a>{name}</a>
+    <Router>
+      <div>
+        <nav className='all-tabs'>
+          <ul>
+            <li className='active-nav'>
+              <Link to="/">Login</Link>
+            </li>
+            <li className='non-active-nav'>
+              <Link to="/form-create">Form-create</Link>
+            </li>
+          </ul>
+        </nav>
 
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/form-create">
+            <FormCreate />
+          </Route>
+          <Route path="/">
 
-    </div>
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
+
+
