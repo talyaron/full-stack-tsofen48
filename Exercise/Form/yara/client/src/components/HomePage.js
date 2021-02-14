@@ -1,5 +1,9 @@
 import './HomePage.css'
 import React, { useState,useEffect } from "react";
+import {
+    
+    Link
+  } from "react-router-dom";
 function HomePage(props) {
     const [user,Setuser]=useState();
     const [password,Setpassword]=useState();
@@ -47,7 +51,7 @@ function HomePage(props) {
         Setuser(e.target.value);}}></input>
         <input type="password" onChange={(e) => {
         Setpassword(e.target.value);}}></input>
-        <button onClick={LogIn}>Log in</button>
+        <Link to="/Questions"><button onClick={LogIn}>Log in</button></Link>
         </div>
         <br/>
         <div className="yellow">
