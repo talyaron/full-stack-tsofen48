@@ -1,13 +1,15 @@
 import "./App.css";
 import React, { useState } from "react";
 import axios from "axios";
-import QuestionForm from "./components/QuestionForm";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   useHistory,
 } from "react-router-dom";
+import { FormsPage2 } from "./View/FormsPage2";
+import { LoginPage } from "./View/LoginPage";
+import { FormsPageButton2 } from "./components/FormsPageButton2";
 
 export default function App() {
   // register is false login is true
@@ -74,11 +76,7 @@ export default function App() {
       history.push("/FormsPage");
     }
 
-    return (
-      <button type="button" onClick={handleClick}>
-        Go to Forms
-      </button>
-    );
+    return FormsPageButton2(handleClick);
   }
 
   function submitForm(e) {
@@ -110,59 +108,21 @@ export default function App() {
   }
 
   function FormsPage() {
-    return (
-      <div>
-        <form onSubmit={submitForm}>
-          <input type="text" placeholder="Add question" name="question"></input>
-          <input type="submit" placeholder="su"></input>
-        </form>
-
-        <div>
-          {questions.map((question, index) => {
-            return (
-              <div key={index}>
-                <p key={index}>{question.id}</p>
-
-                <QuestionForm info={question} />
-              </div>
-            );
-          })}
-        </div>
-
-        <button onClick={submitQuestionsToServer}>Submit Questions</button>
-      </div>
-    );
+    return FormsPage2(submitForm, questions, submitQuestionsToServer);
   }
 
   function Login() {
-    return (
-      <div>
-        {registerOrLogin === false ? (
-          <div>
-            <h1>SignUp</h1>
-            <form onSubmit={handleSignUp}>
-              <input type="text" placeholder="user name" name="name"></input>
-              <input type="text" placeholder="password" name="password"></input>
-              <input type="submit" placeholder="su"></input>
-            </form>
-          </div>
-        ) : (
-          <div>
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
-              <input type="text" placeholder="user name" name="name"></input>
-              <input type="text" placeholder="password" name="password"></input>
-              <input type="submit" placeholder="su"></input>
-
-              <div>{loginSuccess ? <FormsPageButton /> : <div></div>}</div>
-            </form>
-          </div>
-        )}
-        {alreadyRegisted === false ? null : <h1>User already Registed</h1>}
-      </div>
+    return LoginPage(
+      registerOrLogin,
+      handleSignUp,
+      handleLogin,
+      loginSuccess,
+      FormsPageButton,
+      alreadyRegisted
     );
   }
 
+  
   return (
     <Router>
       <div>
