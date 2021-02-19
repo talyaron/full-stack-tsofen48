@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 function Home({ candidateNames, setCandidateNames }) {
 
     function addCandidate() {
 
         let candidateName = document.querySelector('.add-candidate-input');
-        let name = !!candidateName && candidateName.value;
+        let name = !!candidateName && (candidateName.value != '') && candidateName.value;
         candidateName.value = '';
+
         if (candidateNames.find(el => el === name)) {
             alert(`${name} Already Exists in your list`);
             console.log('before the return');
@@ -35,7 +37,7 @@ function Home({ candidateNames, setCandidateNames }) {
         <div className='body add_input'>
             <div className="add-input">
                 <input className='add-candidate-input' placeholder="add candidate name"></input>
-                <button onClick={addCandidate}> Add </button>
+                <Button onClick={addCandidate} innerText='Add' />
             </div >
 
             <div className='candidates'>
@@ -51,7 +53,7 @@ function Home({ candidateNames, setCandidateNames }) {
 
             <div className="lottery-btn hide">
                 <Link to="/lottery" >
-                    <button onClick={goToLottery} > Go To Lottery </button>
+                    <Button onClick={goToLottery} innerText=' Go To Lottery' /> 
                 </Link>
             </div >
         </div>

@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import Button from './Button';
 
 function Lottery() {
 
@@ -8,7 +9,7 @@ function Lottery() {
     fetch('/get-selected-candidates')
       .then(r => r.json())
       .then(data => {
-        setSelectedCandidates(data);
+        setSelectedCandidates(data.candidates.map(candidateInfo => candidateInfo.name));
       });
 
   }
@@ -16,7 +17,7 @@ function Lottery() {
 
   return (
     <div className='body lottery'>
-      <button onClick={getTwoWinners} > get Two Winners </button>
+      <Button onClick={getTwoWinners} innerText='get Two Winners' />
       {selectedCandidates.map((candidate, index) => <p key={index}> {candidate} </p>)}
     </div>
   );
