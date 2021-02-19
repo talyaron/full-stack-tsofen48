@@ -11,7 +11,7 @@ function Form() {
         inputs.map(input => input.value = '');
         let bookInfo = {
             name: values[0],
-            year: values[1],
+            year: Number(values[1]),
             author: values[2]
         };
         fetch('/add-book', {
@@ -23,8 +23,7 @@ function Form() {
             .then(r => r.json())
             .then(data => {
                 let massage = data.success ? 'The Book Was Added Successfully' :
-                    (data.error ? data.error : 'Book not added! try again later');
-
+                    (data.error ? data.error : 'Something went wrong! try again later');
                 setConfirmMassage({ massage: massage, state: true });
                 setTimeout(() => {
                     setConfirmMassage({ massage: '', state: false });
@@ -34,9 +33,9 @@ function Form() {
     return (
         <form className='body' onSubmit={(e) => e.preventDefault()}>
             <div className="add-input">
-                <input name='name' className='add-candidate-input' placeholder="add book's name"></input>
-                <input name='year' className='add-candidate-input' placeholder="add book's year of publish"></input>
-                <input name='author' className='add-candidate-input' placeholder="add author's name"></input>
+                <input name='name' className='template-input' placeholder="add book's name"></input>
+                <input name='year' className='template-input' placeholder="add book's year of publish"></input>
+                <input name='author' className='template-input' placeholder="add author's name"></input>
                 <Button onClick={addBook} innerText='Add Book' type='submit' />
             </div >
 

@@ -31,7 +31,9 @@ app.post('/add-book', (req, res) => {
                     res.send({ error: 'book already Exists' });
                     return;
                 }
-                if (typeof bookInfo.year != Number) {
+                if (typeof bookInfo.year != 'number') {
+                    console.log(typeof bookInfo.year)
+                    console.log( bookInfo.year)
                     res.send({ error: 'the year is not a number' });
                     return;
                 }
@@ -46,17 +48,16 @@ app.post('/add-book', (req, res) => {
 });
 
 
-app.get('/get-book', (req, res) => {
+app.post('/get-books', (req, res) => {
     try {
         //get from DB
-        // Book.find({})
-        //     .then(candidatesData => {
-        //         if (candidatesData.length <= 2) {
-        //             res.send({ success: true, err: "not found!", candidates: candidatesData });
-        //         }
-        //         res.send({ success: true, err: "not found!", candidates: getRandomFromArray(candidatesData, 2) });
-        //     })
-        res.send({ ok: true })
+        const { bookName } = req.body;
+        Book.find({ name: bookName })
+            .then(BooksData => {
+                let books = [...BooksData].map((book) => ({ name: book.name, year: book.year, author: book.author }))
+                console.log(books);
+                res.send({ success: true, err: "not found!", books: books });
+            })
     } catch (e) {
         res.send({ error: e })
     }

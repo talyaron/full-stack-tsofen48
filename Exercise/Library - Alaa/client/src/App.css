@@ -1,3 +1,4 @@
+
 .all-tabs{
     background-color: white;
     width: 100%;
@@ -16,33 +17,30 @@
     margin-left: auto;
     
   }
-  li{
+  li,a{
+    text-decoration: none;
     list-style-type: none;
     padding:10px;
     width: 100%;
     cursor: pointer;
     font-size: 18px;
-  }
-  .active-nav{
-    display: flexbox;
-    color:rgb(94, 108, 157);
-    border-bottom: solid rgb(94, 108, 157);
-  
-  }
-  .non-active-nav{
-    color: rgb(167, 172, 188);
-  }
+  } 
+ 
   Link{
-      text-decoration: none;
+    text-decoration: none;
   }
   .body{
+    display: table;
       margin: auto;
       width:80%;
       text-align: center;
       margin-top: 10%;
   }
-
+  .book-search{
+    display: block;
+  }
   .add-input,.shaw-data{
+    display: block;
     width: 50%;
     margin: auto;
     text-align: center;
@@ -70,15 +68,25 @@ input{
     border: none;
     margin: 1%;
 }
-.hide{
-    display: none;
+.nav{
+  color: rgb(167, 172, 188);
+}
+.active-nav{
+  display: flexbox;
+  color:rgb(94, 108, 157);
+  border-bottom: solid rgb(94, 108, 157);
+
 }
 
-.candidates{
+/* .hide{
+    display: none;
+} */
+
+/* .candidates{
     margin-top: 5%;
 }
 .confim-massage{
   margin: auto;
   padding: 10px;
   
-}
+} */
