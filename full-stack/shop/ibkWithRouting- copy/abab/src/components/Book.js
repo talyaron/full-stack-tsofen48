@@ -22,28 +22,7 @@ function Book(props) {
     const [passUser2, setPassUser2] = useState('');
     const [signUpStatus, setSignUpStatus] = useState(false);
     const [loginStatus, setLoginStatus] = useState(false);
-    // const {totalAmount, setTotalAmount} = props.amount;
-    // console.log(props.totalAmount);
 
-    // function addHandler() {
-    //     if(addCounter.includes(parseInt(props.number))){
-    //         alert('you added the gift already');
-    //     }
-    //     else{
-    //     fetch('/add-gift', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }, body: JSON.stringify(props)
-    //     })
-    //         .then(r => r.json()).then(data => {
-    //             console.log(data);
-    //             addCounter.push(data);
-    //             console.log(addCounter);
-    //         })
-    //         setTotalAmount(totalAmount-(props.price));
-    //     }
-    // }
 
     function handleName(e) {
         setName(e.target.value);

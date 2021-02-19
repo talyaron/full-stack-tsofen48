@@ -116,30 +116,30 @@ const booksCollection = mongoose.model("booksSchema", booksSchema);
 
 
 exports.register = async (req, res, next) => {
-  try{
-  console.log("dddddddddddddddddddddddddddddddddddddddd")
-  const data = req.body;
-  console.log(data);
+  try {
+    console.log("dddddddddddddddddddddddddddddddddddddddd")
+    const data = req.body;
+    console.log(data);
 
-  if (typeof data.loginUser !== "string" ) throw new Error("name is not a string");
+    if (typeof data.loginUser !== "string") throw new Error("name is not a string");
 
-  const userFlag = await registerCollection.findOne({ user: data.loginUser });
-  console.log('user:', userFlag)
-  // if (user !== null) {
-  //     res.send({ ok: false, message: 'user with such user name already exists' })
-  // } else {
+    const userFlag = await registerCollection.findOne({ user: data.loginUser });
+    console.log('user:', userFlag)
+    // if (user !== null) {
+    //     res.send({ ok: false, message: 'user with such user name already exists' })
+    // } else {
 
-  if ((data.loginUser.length > 0 && data.passUser.length > 0) && (!userFlag)) {
-    
-    let newRegister = new registerCollection({ user: data.loginUser, password: data.passUser });
-    newRegister.save().then(() => console.log("register saved"));
-    res.send({ ok: true });
-  
-  } else {
-    throw new Error("user is empty string");
-  }
+    if ((data.loginUser.length > 0 && data.passUser.length > 0) && (!userFlag)) {
 
-  } catch(e) {
+      let newRegister = new registerCollection({ user: data.loginUser, password: data.passUser });
+      newRegister.save().then(() => console.log("register saved"));
+      res.send({ ok: true });
+
+    } else {
+      throw new Error("user is empty string");
+    }
+
+  } catch (e) {
     res.send({ ok: false, error: e });
   }
 
@@ -171,43 +171,62 @@ exports.questions = async (req, res, next) => {
   //  try {
   //get from DB
   console.log('uuuuuuuuuuuuuuu');
-  const {questions} = req.body;
+  const { questions } = req.body;
   console.log(questions);
   //uestions.map(q => {
-    let newQuestion = new questionsCollection({ question: questions });
-    newQuestion.save().then(() => console.log("question saved"));
+  let newQuestion = new questionsCollection({ question: questions });
+  newQuestion.save().then(() => console.log("question saved"));
   //})
   res.send({ ok: true });
-  
+
 };
 
 
 exports.addBook = async (req, res, next) => {
-  try{
-  console.log("dddddddddddddddddddddddddddddddddddddddd")
-  const data = req.body;
-  console.log(data);
+  try {
+    console.log("dddddddddddddddddddddddddddddddddddddddd")
+    const data = req.body;
+    console.log(data);
 
-  if (typeof data.name !== "string" ) throw new Error("name is not a string");
+    if (typeof data.name !== "string") throw new Error("name is not a string");
 
-  const nameFlag = await booksCollection.findOne({ bookName: data.name });
-  console.log('user:', nameFlag)
-  // if (user !== null) {
-  //     res.send({ ok: false, message: 'user with such user name already exists' })
-  // } else {
+    const nameFlag = await booksCollection.findOne({ bookName: data.name });
+    console.log('user:', nameFlag)
+    // if (user !== null) {
+    //     res.send({ ok: false, message: 'user with such user name already exists' })
+    // } else {
 
-  if ((data.name.length > 0 && data.writer.length > 0 && data.date.length) && (!nameFlag)) {
-    
-    let newRegister = new booksCollection({ bookName: data.name, bookWriter: data.writer, bookDate:data.date });
-    newRegister.save().then(() => console.log("book saved"));
-    res.send({ ok: true });
-  
-  } else {
-    throw new Error("book is empty string");
-  }
+    if ((data.name.length > 0 && data.writer.length > 0 && data.date.length) && (!nameFlag)) {
 
-  } catch(e) {
+      let newRegister = new booksCollection({ bookName: data.name, bookWriter: data.writer, bookDate: data.date });
+      newRegister.save().then(() => console.log("book saved"));
+      res.send({ ok: true });
+
+    } else {
+      throw new Error("book is empty string");
+    }
+
+  } catch (e) {
     res.send({ ok: false, error: e });
   }
 }
+
+exports.searchBook = async (req, res, next) => {
+  console.log("dddddddddddddddddddddddddddddddddddddddd")
+  const data = req.body;
+  console.log(data);
+  console.log(data.searchName);
+  const bookFlag = await booksCollection.findOne({ bookName: data.searchName });
+  console.log('user:', bookFlag);
+
+  if (bookFlag == null) {
+    res.send({ ok: false, message: 'couldnt find such a book'  })
+  } else {
+    
+      res.send({ ok: true, data: bookFlag})
+    
+  }
+}
+
+
 
