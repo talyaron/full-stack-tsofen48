@@ -31,14 +31,15 @@ app.post('/add-book', (req, res) => {
                     res.send({ error: 'book already Exists' });
                     return;
                 }
-            });
-        // if (typeof bookInfo.year != Number) {
-        //     res.send({ error: 'the year is not a number' });
-        // }
-        const newBook = new Book({ name: bookInfo.name, year: bookInfo.year, author: bookInfo.author });
-        newBook.save().then(() => console.log("book added successfully!"));
+                if (typeof bookInfo.year != Number) {
+                    res.send({ error: 'the year is not a number' });
+                    return;
+                }
+                const newBook = new Book({ name: bookInfo.name, year: bookInfo.year, author: bookInfo.author });
+                newBook.save().then(() => console.log("book added successfully!"));
+                res.send({ success: true, err: '', data: bookInfo });
 
-        res.send({ success: true, err: '', data: bookInfo });
+            });
     } catch (e) {
         res.send({ error: e })
     }
