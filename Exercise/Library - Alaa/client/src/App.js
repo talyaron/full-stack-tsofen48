@@ -13,7 +13,6 @@ import {
 export default function App() {
 
   function toggleClassName(e) {
-    console.log(e.target.tagName)
     if (e.target.tagName.toLowerCase() != 'a') {
       e.target = e.target.parentNode;
     }

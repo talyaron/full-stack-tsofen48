@@ -1,9 +1,9 @@
 
 
-function Button({onClick, innerText, type='text' ,style=''}){
+function Button({onClick, innerText, className,key='', type='text' ,style=''}){
 
     return(
-        <button onClick={onClick} type={type}> {innerText} </button>
+        <button key={key} onClick={onClick} type={type} className={className}>  {innerText} </button>
     );
 }
 
