@@ -56,11 +56,14 @@ app.post('/Login',(req,res)=>{
     const {questions}=req.body;
     //const {password}=req.body;
     //console.log(Question);
+    let newQuetions=questions;
+    newQuetions.save();
+    /*
     questions.array.forEach(element => {
         const NewQusetion=new Questions({quetion: element});
     NewQusetion.save().then(()=>console.log("ok"));
     });
-    
+    */
     res.send({ok:"true"});
     
 })

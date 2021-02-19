@@ -1,17 +1,38 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://tal3:lqPlF8vfOm7Vd2Qt@tal-test1.m39if.mongodb.net/tsofn48', {useNewUrlParser: true, useUnifiedTopology: true});
+app.use(express.json());
+app.use(express.static('public'));
 
+let candidates = [];
+function getRandomFromArray(arr, elementsNumber) {
+    if (elementsNumber >= arr.length) {
+        return arr
+    }
+    let selected = [];
+    for (let i = 0; i < elementsNumber; i++) {
+        let randomNumber = Math.floor(Math.random() * arr.length);
+        selected.push(arr[randomNumber]);
+    }
+    return selected;
+}
+app.post('/add-candidates', (req, res) => {
+    const { candidateNames } = req.body;
+    candidateNames.map((name) => {
+        if (!candidates.find((n) => n === name)) {
+            candidates.push(name);
+        }
 
-const Cat = mongoose.model('Cat', { name: String, souls:Number }); //schema
+    });
+    res.send({ ok: candidates });
+})
 
-const kitty = new Cat({ name: 'Kitti', souls:9 }); //instance
+app.get('/get-selected-candidates', (req, res) => {
+    if (candidates.length <= 2) {
+        res.send(candidates);
+    }
+    res.send(getRandomFromArray(candidates, 2));
+})
 
-kitty.save().then(() => console.log('kitti was saved to DB')); //save
-
- 
-
-
- 
-app.listen(3000, ()=>{console.log('listen on port 3000')});
+// Server run
+const port = process.env.PORT || 3001;
+app.listen(port, () => { console.log(`\x1b[36m Server running on port ${port}  🔥`) });
