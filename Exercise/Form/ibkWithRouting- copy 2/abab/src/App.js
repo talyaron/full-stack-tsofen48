@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 // import Gift from './components/Gift';
 // import Cart from './components/Cart';
 import Login from './components/Login';
-import Book from './components/Book';
 import FormBuilder from './components/FormBuilder';
 import {
   BrowserRouter as Router,
@@ -43,7 +42,7 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
 
-          {/* <Route path="/goToSearch"> */}
+          {/* <Route path="/pay"> */}
             {/* <p id="sum_available">total sum available {totalAmount}</p> */}
             {/* <Link to="/"><button className="add-to-cart">Buy More</button></Link> */}
           {/* </Route> */}
@@ -58,9 +57,7 @@ export default function App() {
               return <Gift src={gift.src} price={gift.price} number={gift.number} amount={{ totalAmount, setTotalAmount }} />
             })} */}
             {/* <Link to="/goToCart"><button className="add-to-cart">Go To Cart</button></Link> */}
-            {/* <Login /> */}
-            <Book />
-            {/* <Link to="/goToSearch"><button className="add-to-cart">Go To Search</button></Link> */}
+            <Login />
           </Route>
         </Switch>
       </div>

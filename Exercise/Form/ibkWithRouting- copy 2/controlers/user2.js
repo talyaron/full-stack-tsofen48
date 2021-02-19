@@ -49,15 +49,6 @@ const questionsSchema = new mongoose.Schema(
 
 const questionsCollection = mongoose.model("questionsSchema", questionsSchema);
 
-
-
-
-
-const booksSchema = new mongoose.Schema(
-  { bookName: String, bookWriter: String, bookDate: String }
-);
-
-const booksCollection = mongoose.model("booksSchema", booksSchema);
 //*********** */
 
 // const dc = new directorsCollection({ direct:[
@@ -180,34 +171,3 @@ exports.questions = async (req, res, next) => {
   res.send({ ok: true });
   
 };
-
-
-exports.addBook = async (req, res, next) => {
-  try{
-  console.log("dddddddddddddddddddddddddddddddddddddddd")
-  const data = req.body;
-  console.log(data);
-
-  if (typeof data.name !== "string" ) throw new Error("name is not a string");
-
-  const nameFlag = await booksCollection.findOne({ bookName: data.name });
-  console.log('user:', nameFlag)
-  // if (user !== null) {
-  //     res.send({ ok: false, message: 'user with such user name already exists' })
-  // } else {
-
-  if ((data.name.length > 0 && data.writer.length > 0 && data.date.length) && (!nameFlag)) {
-    
-    let newRegister = new booksCollection({ bookName: data.name, bookWriter: data.writer, bookDate:data.date });
-    newRegister.save().then(() => console.log("book saved"));
-    res.send({ ok: true });
-  
-  } else {
-    throw new Error("book is empty string");
-  }
-
-  } catch(e) {
-    res.send({ ok: false, error: e });
-  }
-}
-
