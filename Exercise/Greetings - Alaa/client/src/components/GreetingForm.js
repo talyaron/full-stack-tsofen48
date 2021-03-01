@@ -11,7 +11,7 @@ function GreetingForm() {
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            body: JSON.stringify({ greetingImageSrc, greetingText })
+            body: JSON.stringify({ greetingText, greetingImageSrc })
         })
             .then(data => {
                 data.ok && document.getElementById("myForm").reset();
