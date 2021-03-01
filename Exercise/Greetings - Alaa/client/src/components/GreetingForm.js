@@ -33,12 +33,12 @@ function GreetingForm() {
     return (
         <form id='myForm' onSubmit={addGreeting}>
             <div>
-                <label > Enter Greeting Image URL:</label >
-                <input type='text' placeholder='image URL' name='greetingImageSrc' />
+                <label > Enter Greeting Text:</label >
+                <input type='text' placeholder='greeting text' name='greetingText' />
             </div>
             <div>
-                <label > Enter Greeting Image Text:</label >
-                <input type='text' placeholder='greeting text' name='greetingText' />
+                <label > Enter Greeting Image:</label >
+                <input type='text' placeholder='image URL' name='greetingImageSrc' />
             </div>
             <div>
                 <button type='submit'> Add Greeting</button>
