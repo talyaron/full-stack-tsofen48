@@ -1,5 +1,5 @@
 import './App.css';
-
+import GreetingForm from './components/GreetingForm';
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +24,7 @@ export default function App() {
         <ul onClick={toggleClassName}>
           <Link className='nav active-nav' to="/">
             <li>
-              Page 1
+              Greeting Form
           </li>
           </Link>
           <Link className='nav' to="/page2">
@@ -42,7 +42,7 @@ export default function App() {
           <h1>page2</h1>
         </Route>
         <Route path="/">
-          <h1>page1</h1>
+          <GreetingForm />
         </Route>
       </Switch>
     </Router>
