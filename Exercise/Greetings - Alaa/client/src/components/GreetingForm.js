@@ -2,12 +2,34 @@ import './GreetingForm.css';
 
 function GreetingForm() {
 
+    function addGreeting(e) {
+        e.preventDefault();
+        let greetingImageSrc = e.target.elements.greetingImageSrc.value,
+            greetingText = e.target.elements.greetingText.value;
+        fetch('/add-greeting', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({ greetingImageSrc, greetingText })
+        })
+            .then(data => {
+                data.ok && document.getElementById("myForm").reset();
+                console.log(data);
+            })
+
+    }
+
     return (
-        <form>
-            <lable> Enter Greeting Image URL:</lable>
-            <input type='text' placeholder='image URL' />
-            <lable> Enter Greeting Image Text:</lable>
-            <input type='text' placeholder='greeting text' />
+        <form id='myForm' onSubmit={addGreeting}>
+            <div>
+                <label > Enter Greeting Image URL:</label >
+                <input type='text' placeholder='image URL' name='greetingImageSrc' />
+            </div>
+            <div>
+                <label > Enter Greeting Image Text:</label >
+                <input type='text' placeholder='greeting text' name='greetingText' />
+            </div>
             <div>
                 <button type='submit'> Add Greeting</button>
             </div>

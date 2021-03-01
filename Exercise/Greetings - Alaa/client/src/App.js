@@ -10,7 +10,7 @@ import {
 export default function App() {
 
   function toggleClassName(e) {
-    if (e.target.tagName.toLowerCase() != 'a') {
+    if (e.target.tagName.toLowerCase() !== 'a') {
       e.target = e.target.parentNode;
     }
     let allTabs = document.querySelectorAll('nav>ul>a');
