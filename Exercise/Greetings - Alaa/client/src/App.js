@@ -27,7 +27,7 @@ export default function App() {
               Page 1
           </li>
           </Link>
-          <Link className='nav' to="#">
+          <Link className='nav' to="/page2">
             <li>
               Page 2
             </li>
@@ -38,11 +38,11 @@ export default function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/test">
-
+        <Route path="/page2">
+          <h1>page2</h1>
         </Route>
         <Route path="/">
-
+          <h1>page1</h1>
         </Route>
       </Switch>
     </Router>
