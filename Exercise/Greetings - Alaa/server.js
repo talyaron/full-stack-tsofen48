@@ -1,3 +1,4 @@
+const { json } = require('body-parser');
 const express = require('express');
 const app = express();
 app.use(express.json());
@@ -14,6 +15,20 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
     console.log('we are connected to DB')
 });
+
+app.post('/add-greeting', (req, res) => {
+
+    try {
+        let { greetingImageSrc, greetingText } = req.body;
+        console.log(`GreetingImageSrc= ${greetingImageSrc}, greetingText= ${greetingText}`);
+
+    } catch (e) {
+        console.log(` error ${e} happened! `);
+    }
+
+    res.send({ ok: true });
+});
+
 
 
 
