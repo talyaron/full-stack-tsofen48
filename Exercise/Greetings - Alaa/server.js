@@ -28,8 +28,8 @@ app.post('/add-greeting', (req, res) => {
         let { greetingText, greetingImageSrc } = req.body;
         Greeting.find({ text: greetingText, src: greetingImageSrc })
             .then(greetings => {
-                if (greetings.length != 0) {
-                    res.send({ error: 'greeting already Exists' });
+                if (greetings.length > 0) {
+                    res.send({ err: 'Greeting already Exists' });
                     return;
                 }
                 const newGreeting = new Greeting({ text: greetingText, src: greetingImageSrc });
@@ -38,7 +38,7 @@ app.post('/add-greeting', (req, res) => {
             });
 
     } catch (e) {
-        res.send(` error ${e} happened! `);
+        res.send({ err: e });
     }
 });
 

@@ -1,9 +1,12 @@
 import './GreetingForm.css';
+import { useState } from 'react';
 
 function GreetingForm() {
+    const [confirmMassage, setConfirmMassage] = useState({ massage: '', state: false });
 
     function addGreeting(e) {
         e.preventDefault();
+        setConfirmMassage({ massage: confirmMassage, state: false });
         let greetingImageSrc = e.target.elements.greetingImageSrc.value,
             greetingText = e.target.elements.greetingText.value;
         fetch('/add-greeting', {
@@ -13,9 +16,16 @@ function GreetingForm() {
             },
             body: JSON.stringify({ greetingText, greetingImageSrc })
         })
+            .then(r => r.json())
             .then(data => {
-                data.ok && document.getElementById("myForm").reset();
-                console.log(data);
+                document.getElementById("myForm").reset();
+                console.log(data)
+                let massage = data.success ? 'The Greeting Was Added Successfully' :
+                    (data.err ? data.err : 'Something went wrong! try again later');
+                setConfirmMassage({ massage: massage, state: true });
+                setTimeout(() => {
+                    setConfirmMassage({ massage: '', state: false });
+                }, 7000);
             })
 
     }
@@ -33,7 +43,9 @@ function GreetingForm() {
             <div>
                 <button type='submit'> Add Greeting</button>
             </div>
+            {confirmMassage.state ? <div className='confim-massage'> <h2> {confirmMassage.massage}</h2></div> : ''}
         </form>
+
     );
 }
 
