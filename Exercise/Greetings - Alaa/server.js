@@ -42,8 +42,26 @@ app.post('/add-greeting', (req, res) => {
     }
 });
 
+app.get('/get-random-greeting', (req, res) => {
+    try {
+        Greeting.find({})
+            .then(greetings => {
+                if (greetings.length == 0) {
+                    res.send({ err: 'No Greetings Found!' });
+                    return;
+                }
+                let randomIndex = randomNumberFromInterval(0, greetings.length - 1);
+                let randomGreeting = { greetingText: greetings[randomIndex].text, greetingImageSrc: greetings[randomIndex].src };
+                res.send({ success: true, err: '', data: randomGreeting });
+            });
+    } catch (e) {
+        res.send({ err: e });
+    }
+})
 
-
+function randomNumberFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 // Server run
 const port = process.env.PORT || 3001;

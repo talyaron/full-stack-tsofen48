@@ -1,5 +1,7 @@
 import './App.css';
 import GreetingForm from './components/GreetingForm';
+import RandomGreeting from './components/RandomGreeting';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,9 +29,9 @@ export default function App() {
               Greeting Form
           </li>
           </Link>
-          <Link className='nav' to="/page2">
+          <Link className='nav' to="/random-greeting">
             <li>
-              Page 2
+              Get Random Greeting
             </li>
           </Link>
         </ul>
@@ -38,8 +40,8 @@ export default function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/page2">
-          <h1>page2</h1>
+        <Route path="/random-greeting">
+          <RandomGreeting />
         </Route>
         <Route path="/">
           <GreetingForm />
