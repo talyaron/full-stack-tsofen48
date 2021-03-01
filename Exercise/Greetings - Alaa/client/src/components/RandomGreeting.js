@@ -6,14 +6,14 @@ function RandomGreeting() {
     const [greeting, setGreeting] = useState({ greetingText: '', greetingImageSrc: '' });
 
     function getRandomGreeting() {
-        fetch('/get-random-greeting')
+        fetch('/get-one-random-greeting')
             .then(res => res.json())
             .then(res => {
                 if (res.err) {
                     console.log(`error: ${res.err}`);
                     return;
                 }
-                setGreeting(res.data);
+                setGreeting({ greetingText: res.data.text, greetingImageSrc: res.data.src });
             });
     }
 
@@ -24,7 +24,7 @@ function RandomGreeting() {
             </div>
             <div className='greeting-display'>
                 <h1> {greeting.greetingText} </h1>
-                <img src={greeting.greetingImageSrc} />
+                <img alt='' src={greeting.greetingImageSrc} />
             </div>
         </div>
     );

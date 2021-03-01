@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 app.use(express.static('public'));
+//for bonus
+var random = require('mongoose-simple-random');
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://alaa:Hqd4WuQHYcpIfsLszXVr@cluster0.wvoxj.mongodb.net/greetings', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -16,12 +18,16 @@ db.once('open', () => {
     console.log('we are connected to DB')
 });
 
-
 const greetingSchema = new mongoose.Schema({
     text: String,
     src: String
 });
+// for bonus
+greetingSchema.plugin(random);
+
 const Greeting = mongoose.model('greetingSchema', greetingSchema);
+
+
 
 app.post('/add-greeting', (req, res) => {
     try {
@@ -42,6 +48,7 @@ app.post('/add-greeting', (req, res) => {
     }
 });
 
+//original solution
 app.get('/get-random-greeting', (req, res) => {
     try {
         Greeting.find({})
@@ -54,6 +61,30 @@ app.get('/get-random-greeting', (req, res) => {
                 let randomGreeting = { greetingText: greetings[randomIndex].text, greetingImageSrc: greetings[randomIndex].src };
                 res.send({ success: true, err: '', data: randomGreeting });
             });
+    } catch (e) {
+        res.send({ err: e });
+    }
+})
+
+//bonus solution
+app.get('/get-one-random-greeting', (req, res) => {
+    try {
+
+        Greeting.findOneRandom(function (err, element) {
+            if (err) res.send({ err });
+            else res.send({ success: true, err: '', data: element });
+        });
+
+        // .then(greeting => {
+        //     console.log(greeting)
+        //     if (greeting.length == 0) {
+        //         res.send({ err: 'No Greetings Found!' });
+        //         return;
+        //     }
+
+        //     let randomGreeting = { greetingText: greeting.text, greetingImageSrc: greeting.src };
+        //     res.send({ success: true, err: '', data: randomGreeting });
+        // });
     } catch (e) {
         res.send({ err: e });
     }
