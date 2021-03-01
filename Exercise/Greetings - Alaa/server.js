@@ -75,16 +75,6 @@ app.get('/get-one-random-greeting', (req, res) => {
             else res.send({ success: true, err: '', data: element });
         });
 
-        // .then(greeting => {
-        //     console.log(greeting)
-        //     if (greeting.length == 0) {
-        //         res.send({ err: 'No Greetings Found!' });
-        //         return;
-        //     }
-
-        //     let randomGreeting = { greetingText: greeting.text, greetingImageSrc: greeting.src };
-        //     res.send({ success: true, err: '', data: randomGreeting });
-        // });
     } catch (e) {
         res.send({ err: e });
     }
