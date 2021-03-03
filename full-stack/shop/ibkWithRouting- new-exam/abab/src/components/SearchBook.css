@@ -1,0 +1,68 @@
+/* .container-gifts{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+}
+.container-gifts>img{
+    width : 100px;
+    height : 100px;
+    margin-right :3%;
+    margin-left :3%;
+} */
+
+.login-container{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.login-container>*{
+    margin-top: 2%;
+}
+
+.active { 
+    /* position: relative; */
+    width : fit-content;
+    height : fit-content;
+    border: 2px solid #15151a ;
+    background-color: rgb(187, 146, 71);
+    padding: 1%;
+    margin-left: 20%;
+}
+
+.info-books-retrieve{
+    padding: 1%;
+    color: whitesmoke;
+    background-color: purple;
+}
+
+.image-retrieve{
+    width : 250px;
+    height: 250px;
+    /* margin-left: 35%; */
+}
+
+.blessing-retrieve{
+    margin-top: 40%;
+    width : 250px;
+    border: violet;
+    height: fit-content;
+    background-color: blueviolet;
+    color: whitesmoke;
+    text-align: center;
+    align-items: center;
+    /* justify-items: center;
+    align-content: center; */
+    
+
+}
+
+.retrieve-data{
+    width: fit-content;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+}

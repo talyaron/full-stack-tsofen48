@@ -1,0 +1,37 @@
+.amount-remain{
+  width: fit-content;
+  align-items: center;
+  text-align: center;
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+  margin-left: 50%;
+  padding: 1%;
+}
+
+.pay button, .pay p ,.add-to-cart{
+  width: 150px;
+  align-items: center;
+  text-align: center;
+  /* background-color: purple;
+  color: white; */
+  font-weight: bold;
+  margin-left: 52%;
+  padding: 1%;
+}
+
+.pay button,.add-to-cart{
+  background-color: purple;
+  color: white;
+}
+
+#sum_available{
+    font-weight: bold;
+    margin-left: 45%;
+}
+
+.search-book{
+  margin-top : 1%;
+  margin-left : 45%;
+  background-color: orchid;
+}
