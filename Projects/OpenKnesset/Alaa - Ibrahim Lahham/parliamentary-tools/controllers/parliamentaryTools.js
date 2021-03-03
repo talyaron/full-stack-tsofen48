@@ -14,10 +14,7 @@ const Kittyschema = new mongoose.Schema({
   content: String,
  
 });
-
-
 const ParliamentaryTools = mongoose.model('kittyschema', Kittyschema);
-
 
   exports.getParliamentaryTools =  (req, res) => {
     console.log("in controller!!!!")
