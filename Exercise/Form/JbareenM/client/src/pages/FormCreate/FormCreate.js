@@ -1,45 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
+
+
+import './FormCreate.css'
+
+//components
+import InputQuestion from './InputQuestion';
+
 
 const FormCreate = () => {
-    const [all, setAll] = useState([]);
 
-    function handleQues(e) {
-        e.preventDefault();
-        let { question } = e.target.children;
-        question = question.value;
-        setAll([...all, { question: question }])
-        console.log(all)
+    const [questions, setQuestions] = useState([]);
 
+    function updateQuestion(text, index) {
+       
+        const tempQuestions = [...questions]
+        console.log(tempQuestions)
+        tempQuestions[index] = text;
+        setQuestions(tempQuestions);
+        console.log(tempQuestions)
+    }
+    function addQuestion() {
+        setQuestions([...questions, ''])
     }
 
-    function handleDB(e) {
+    function handleSubmit(e) {
         e.preventDefault();
-        console.log(all)
-        fetch("/questions/add", {
+
+        fetch('/questions/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ all })
-        }).then(r => r.json())
-            .then(data => { console.log(data) })
+            body: JSON.stringify({ questions })
+        })
+            .then(r => r.json())
+            .then(data => {
+                console.log(data);
+
+            })
     }
 
     return (
         <div>
-            <form onSubmit={handleQues}>
-                <input name='question' type='text' placeholder='question' />
-                <button type='submit'>Add</button>
-                {all.map((elm) => (
-                    <div>
-                        <h3>
-                            {elm.question} 
-                        </h3>
-                    </div>
-                ))}
+            <h1>Questions</h1>
+            <button onClick={addQuestion} >Add Question</button>
+            <form className='formCreate'>
+                {questions.map((question, index) => {
+                    return <InputQuestion key={index} index={index} updateQuestion={updateQuestion} />
+                })}
+                <button type='submit' onClick={handleSubmit}>Submit</button>
             </form>
-
-            <button onClick={handleDB}>Submit form</button>
         </div>
     )
 }
