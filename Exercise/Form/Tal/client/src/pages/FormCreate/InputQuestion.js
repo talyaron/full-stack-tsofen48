@@ -5,7 +5,7 @@ const InputQuestion = props => {
     const {updateQuestion, index} = props;
 
     return (
-        <input type='text' placeholder='Write the question' onKeyUp={(e)=>{updateQuestion(e.target.value, index)}}/>
+        <input type='text' placeholder='Write the question' onSubmit={(e)=>{updateQuestion(e.target.value, index)}}/>
     )
 }
 

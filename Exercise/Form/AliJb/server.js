@@ -3,6 +3,8 @@ const app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 // Router
+var User = require("./User/UserSchemas");
+var Question = require("./Question/QuestionSchema");
 
 var cors = require("cors");
 
@@ -15,32 +17,25 @@ app.use(function (req, res, next) {
   next();
 });
 
-const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://ali1:vl4mY1oSLNqojuZd@cluster0.rfya4.mongodb.net/test1?retryWrites=true&w=majority",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+app.post("/submit-questions", (req, res) => {
+  try {
+    const { questions, user } = req.body;
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-  console.log("we are connected to DB");
+    questions.map((question) => {
+      const temp = new Question({ question: question, username: user });
+      temp.save().then(() => console.log("Question was saved in DB!"));
+    });
+  } catch (error) {
+    res.send({ ok: false, error: error });
+  }
 });
-
-const UserFormschema = new mongoose.Schema({
-  username: String,
-  password: String,
-});
-
-const UserForm = mongoose.model("UserForm", UserFormschema);
 
 app.post("/register-user", (req, res) => {
   try {
     const { username, password } = req.body;
-    // console.log(password);
-    // console.log(username);
-    const temp = new UserForm({ username: username, password: password });
-    UserForm.findOne({ username }, function (err, doc) {
+
+    const temp = new User({ username: username, password: password });
+    User.findOne({ username }, function (err, doc) {
       if (doc == null) {
         temp.save().then(() => console.log("user was saved in DB!"));
         res.send({ ok: true });
@@ -57,10 +52,7 @@ app.post("/register-user", (req, res) => {
 app.post("/login-user", (req, res) => {
   try {
     const { username, password } = req.body;
-    // console.log(password);
-    // console.log(username);
-    const temp = new UserForm({ username: username, password: password });
-    UserForm.findOne({ username, password }, function (err, doc) {
+    User.findOne({ username, password }, function (err, doc) {
       if (doc == null) {
         res.send({
           ok: false,
@@ -75,30 +67,6 @@ app.post("/login-user", (req, res) => {
     res.send({ ok: false, error: error });
   }
 });
-
-// app.get("/get-winners", (req, res) => {
-//   try {
-//     let first_winner = Math.floor(Math.random() * 6) + 1;
-//     let second_winner = Math.floor(Math.random() * 6) + 1;
-//     while (first_winner === second_winner) {
-//       second_winner = Math.floor(Math.random() * 6) + 1;
-//     }
-//     UserLot.find({ counter: { $in: [first_winner, second_winner] } }).then(
-//       (docs) => {
-//         console.log(docs);
-//         res.send({ winners: docs });
-//       }
-//     );
-//   } catch (e) {
-//     res.send({ error: e });
-//   }
-// });
-
-// const Cat = mongoose.model("Cat", { name: String, souls: Number }); //schema
-
-// const kitty = new Cat({ name: "Kitti", souls: 9 }); //instance
-
-// kitty.save().then(() => console.log("kitti was saved to DB")); //save
 
 app.listen(3002, () => {
   console.log("listen on port 3002");

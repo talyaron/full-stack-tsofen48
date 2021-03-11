@@ -1,23 +1,23 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-
-import Lottery from "./components/Lottery";
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useHistory,
 } from "react-router-dom";
-import API from "./api";
+import { FormsPage2 } from "./View/FormsPage2";
+import { LoginPage } from "./View/LoginPage";
+import { FormsPageButton2 } from "./components/FormsPageButton2";
 
 export default function App() {
   // register is false login is true
   const [registerOrLogin, setRegisterOrLogin] = useState(false);
   const [alreadyRegisted, setAlreadyRegisted] = useState(false);
   const [loginSuccess, setLoginSuccess] = useState(false);
+  const [questions, setQuestions] = useState([]);
+  const [user, setUser] = useState("");
 
   function handleSignUp(e) {
     e.preventDefault();
@@ -61,6 +61,7 @@ export default function App() {
 
           if (response.data.ok) {
             setLoginSuccess(true);
+            setUser(username);
           }
         },
         (error) => {
@@ -69,57 +70,59 @@ export default function App() {
       );
   }
 
-  function FormsPageButton(params) {
+  function FormsPageButton() {
     let history = useHistory();
-
     function handleClick() {
       history.push("/FormsPage");
     }
 
-    return (
-      <button type="button" onClick={handleClick}>
-        Go to Forms
-      </button>
-    );
+    return FormsPageButton2(handleClick);
+  }
+
+  function submitForm(e) {
+    e.preventDefault();
+    const question = e.target.children.question.value;
+
+    setQuestions([...questions, question]);
+    console.log(questions);
+  }
+
+  function submitQuestionsToServer() {
+    axios
+      .post("/submit-questions", {
+        questions,
+        user,
+      })
+      .then(
+        (response) => {
+          console.log(response);
+
+          if (response.data.ok) {
+            console.log("Ok");
+          }
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
   }
 
   function FormsPage() {
-    return (
-      <div>
-        <h1>hi</h1>
-      </div>
-    );
+    return FormsPage2(submitForm, questions, submitQuestionsToServer);
   }
 
   function Login() {
-    return (
-      <div>
-        {registerOrLogin === false ? (
-          <div>
-            <h1>SignUp</h1>
-            <form onSubmit={handleSignUp}>
-              <input type="text" placeholder="user name" name="name"></input>
-              <input type="text" placeholder="password" name="password"></input>
-              <input type="submit" placeholder="su"></input>
-            </form>
-          </div>
-        ) : (
-          <div>
-            <h1>Login</h1>
-            <form onSubmit={handleLogin}>
-              <input type="text" placeholder="user name" name="name"></input>
-              <input type="text" placeholder="password" name="password"></input>
-              <input type="submit" placeholder="su"></input>
-
-              <div>{loginSuccess ? <FormsPageButton /> : <div></div>}</div>
-            </form>
-          </div>
-        )}
-        {alreadyRegisted === false ? null : <h1>User already Registed</h1>}
-      </div>
+    return LoginPage(
+      registerOrLogin,
+      handleSignUp,
+      handleLogin,
+      loginSuccess,
+      FormsPageButton,
+      alreadyRegisted
     );
   }
 
+  
   return (
     <Router>
       <div>
