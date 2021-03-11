@@ -11,7 +11,7 @@ exports.add = async (req, res) => {
     const savedQuestions = new Question({questions:questions})
     console.log('questions:', savedQuestions)
 
-    let savedQuestionsResult = await savedQuestions.save()
+    let savedQuestionsResult = await savedQuestions.save();
     
     res.send({ok:true, questions,savedQuestions,savedQuestionsResult})
 
