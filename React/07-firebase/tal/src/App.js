@@ -1,7 +1,33 @@
+import { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { DB } from './controlers/firebase';
+
 function App() {
+  const [tests, setTests] = useState([]);
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+
+    DB.collection('test').onSnapshot(testsDB => {
+      const testsArr = []
+      testsDB.forEach(testDB=>{
+        console.log()
+        testsArr.push(testDB.data())
+      })
+      setTests(testsArr)
+    })
+  }, [])
+
+  function handleClick() {
+    DB.collection('test').add({ hello: text, date: new Date() });
+
+  }
+
+  function handleInput(e){
+    setText(e.target.value)
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +35,13 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <input type='text' placeholder='Enter text' defaultValue={text} onKeyUp={handleInput} />
+        <button onClick={handleClick} >
           Learn React
-        </a>
+        </button>
+        {tests.map((test, i)=>{
+          return <p key={i}>{test.hello}</p>
+        })}
       </header>
     </div>
   );
